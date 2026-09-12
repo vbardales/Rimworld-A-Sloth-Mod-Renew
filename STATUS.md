@@ -1,4 +1,8 @@
 ---
+localization: complete
+translation_en: complete
+translation_fr: complete
+settings_audit: not_applicable
 mod:          A Sloth Mod Renew (unofficial)
 packageId:    nelim.aslothmodrenew
 repo:         Rimworld-A-Sloth-Mod-Renew
@@ -12,15 +16,120 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
+  - defect: About.xml description lacks the final formatted Source code on GitHub link required before publication
   - unverified: the fifteen scenarios in TESTING.md, none played
   - unverified: prioritize F and G (natural spawning and trade), and L (original-mod incompatibility warning)
-  - defect: the dessicated corpse has only its _east texture, the other faces are rotations of it
-  - feature: no translations, so the animal stays "sloth" in every language
+  - unverified: scenario I must check the inherited east-only dessicated corpse in game; the limited artwork alone is not an established runtime defect
+  - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-09-12, the mod's own session
+updated:      2026-09-13, workflow audit
 ---
 
 # A Sloth Mod Renew — status
+
+## Current workflow audit — 2026-09-13
+
+This section and the front matter supersede the historical status conclusions below;
+older results are preserved, not silently certified again. **Previous stage: done.
+Initial audit stage: horsMonoRepo; after the explicit icon-style override: preTest; after correcting scenario O: done.** Stage values here are literal workflow states, not numeric
+codes: dansMonoRepo -> horsMonoRepo -> ModIcon generated ("ModIcon générée") -> Preview
+generated ("Preview générée") -> preOptions -> options -> l10n -> preTest -> done -> tested.
+The user explicitly accepted the existing icon style on 2026-09-13. This scoped override closes the icon gate; the later independent validations remain valid. The original audit decision is preserved here as history.
+
+### Scope and revision
+
+- Audited at approximately 01:31 CEST on 2026-09-13 against
+  `53ce7ea64515e064a1a968311d2de34eb312d6fa` plus the current working tree.
+- Standalone Git root: `C:/Users/nelim/Documents/rimworld/ASlothModRenew`;
+  actual distributed root: its `Mod/` subdirectory. Art, tests and development documentation
+  remain outside that directory. No assembly or build project is shipped or present.
+- Pre-existing changes: modified CHANGELOG.md, STATUS.md and TESTING.md; untracked
+  `Mod/Languages/` containing the two French XML files. Those files were included in the audit.
+  This audit changes only STATUS.md and adds `Tests/Audit-2026-09-13.sha256`, a SHA-256
+  inventory of every distributed file. It does not commit, publish, develop or regenerate art.
+- Read `../AGENTS.md`, `../PUBLISHING.md`, `../STYLE_RIMWORLD.md`,
+  `../MOD_SETTINGS.md` and `../TRANSLATIONS.md`; the supplied audit prompt overrides
+  conflicting historical rules, particularly settings runtime requirements.
+
+### Ordered gate findings
+
+| Transition | Current evidence and result |
+| --- | --- |
+| dansMonoRepo -> horsMonoRepo | **Validated.** Independent .git and Git root; origin points to the exact GitHub repository. Live `gh repo view vbardales/Rimworld-A-Sloth-Mod-Renew --json name,isPrivate,url,defaultBranchRef` returned public, main. `git ls-remote origin HEAD` returned the audited commit. Initial sandbox access failed; the read-only checks succeeded with elevated access. STATUS and English README, ATTRIBUTION and CHANGELOG exist. Package `nelim.aslothmodrenew`, display name, repository and folder consistently identify the same continuation without requiring literal equality. |
+| horsMonoRepo -> ModIcon generated | **Validated with explicit user style override, 2026-09-13.** The initial audit blocked this gate; the user subsequently accepted the existing style. Directly viewed the shipped PNG: the mascot has two open eyes and no top-right ponytail, contrary to the explicit ModIcon style. Its round sloth head, branch, dark background and outlined treatment are recognizable, and its PNG format, 128 x 128 dimensions and 24,497-byte size pass. The development/build part is otherwise established for this XML-only port; compilation and compiled-artifact freshness are **not applicable**. |
+| ModIcon generated -> Preview generated | **Validated independently.** Directly inspected the delivered 896 x 504 PNG (539,157 bytes) and the 268-pixel thumbnail. High oblique view, floor-dominated composition, restrained ochre/cool-shadow palette, lit sloth, empty title area, no readable face or clipping. No concrete camera defect or remaining visual doubt was observed. No historical generation report or recorded comparison with a game screenshot is required. |
+| Preview generated -> preOptions | **Validated independently for the stated gate.** English description and title; Renew/unofficial naming is consistent. Preview article A is reduced in primary ink; Renew is reduced in secondary ink; unofficial occupies its own line. Green accent #B5C52C is visibly distinct from ochre secondary #E8BE85 at both inspected sizes. HTML and palette agree with the rendered image. The separate publication-description formatting defect is recorded below. |
+| preOptions -> options | **Not applicable justified / gate passes.** See settings inventory below. |
+| options -> l10n | **Validated independently.** Five owned texts, five nonempty French injections, native English Def fallback; handles checked against installed game types. Current checker completed with 11,587 defs indexed, five keys checked, zero errors and no unresolved targets reported. |
+| l10n -> preTest | **Validated independently offline.** Uses Core animal parents, race/body/life-stage/stat/sound/material references and no third-party code. Core references were inspected in installed Core Defs. No mandatory external dependency, assembly, mod extension or LoadFolders exists in this mod. More Vanilla Biomes and Alpha Biomes are optional and guarded by their actual installed names. Installed package IDs and all four 1.6 biome targets with wildAnimals were checked in Workshop folders 1931453053 and 1841354677 and their LoadFolders. No extra loadAfter for these Def-only targets is needed to make the guarded XPath additions coherent. No optional integration was tested in game. |
+| preTest -> done | **Validated after correction, 2026-09-13.** The initial audit found scenario O inconsistent with the shipped French resources. It now specifies preconditions, actions and expected EN/FR labels, descriptions, generated text, save/reload behavior and log checks. Scenarios A–O are ready for execution. The previously executed 95 automated/XML checks and five successful injection-path checks remain applicable: only documentation changed. |
+| done -> tested | **Not verified.** No game scenarios executed, no attributable current game logs reviewed, no FR/EN runtime UI check, and no new-game or existing-save validation. Installed game data supports offline checks only. No settings or RIMMSQOL interaction is claimed. |
+
+### Settings audit
+
+Inventory covers both Sloth Defs, both biome patches, all distributed files and the complete
+source inventory. This is a fixed-content animal: movement, hunger, taming, breeding, combat,
+trade tags and biome weights are authored balance values, not a promised player configuration
+contract. Optional biome additions activate when those biome mods are present; they introduce
+no controls, persistence model or player input. No concrete player need justifies exposing
+these internal constants as new options for this port. There are no inherited custom settings,
+settings-only XML instructions, C# sources, assemblies, ModSettings, MainButtonDef or custom
+settings-page mechanism. Thus neither an empty page nor a shortcut is defined.
+
+`settings_audit: not_applicable` is justified by that inventory. Input bounds, reset, stored
+defaults/migration, change application, save/reload and shortcut sharing tests are not applicable.
+No RIMMSQOL or other customization integration was executed or certified. Per the audit prompt,
+absence verification in these sources suffices for this gate; it does not claim in-game testing.
+
+### Executed checks and limits
+
+- `pwsh -NoProfile -File Tests/Test-Mod.ps1`: **PASS, 95 checks**, current local French files
+  included. XML parsing, metadata, Wildness, texture references and all four optional-mod
+  combinations passed on synthetic fixtures. This is not the RimWorld patch engine.
+- `powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-DefInjected.ps1
+  -TransMod ./Mod`: **PASS**, five paths, zero errors, no unresolved targets reported.
+  Reviewed all five source/French pairs and both patches: no extra owned text, parameters,
+  grammar tokens, duplicate per-type keys, empty entries or hardcoded UI. Game-generated
+  labels and Core-owned resources still need the documented FR/EN runtime checks.
+- PNG files decoded and dimensions/lengths read with System.Drawing; direct visual inspection
+  performed using the actual Mod/About files and Art/preview-268.png. Existing contrast/font
+  measurements are historical supporting evidence, not newly executed measurements.
+- Root and distributed ATTRIBUTION.md have identical SHA-256 hashes. Local original source
+  inventory and About.xml contain no licence or reuse permission. The detailed external
+  rights review dated 2026-09-12 below remains the documented basis for `licence: silent`;
+  those external Steam pages were not re-fetched in this audit. No new permission is inferred.
+  Absence of LICENSE is justified for this unlicensed third-party content; do not invent one.
+  Public/unofficial designation and notice match the project's recorded silent-source policy.
+- `git diff --check`: passed before the audit edit; repeated after it. The manifest fixes the
+  exact local payload covered by these checks, including uncommitted language resources.
+
+### Scenario O correction — 2026-09-13
+
+The user requested the fix after accepting the icon style. Updated only TESTING.md and
+STATUS.md; preserved prior changes and test history. Reviewed the scenario against both
+French XML files and the existing English/French checklist. The distributed payload remains
+identical to Tests/Audit-2026-09-13.sha256, so prior offline results are retained without
+claiming a new test run. No game test was performed; tested_on remains empty.
+
+### Required follow-up and separate publication issues
+
+The user explicitly overrode the icon-style validation on 2026-09-13: the existing icon is accepted without alteration. This applies only to its style; previously checked format, size and installation remain valid. The resulting stage advances from horsMonoRepo to preTest. The subsequent user-requested fix reconciled TESTING.md scenario O with the shipped French resources and the newer translation checks, advancing preTest -> done. No image was changed and no runtime test is implied by this override.
+
+For the next transition, done -> tested, execute
+the functional scenarios and record versions, results and logs before tested. These missing
+game checks are unverified work, not evidence of a broken animal.
+
+Before publication, replace the raw GitHub-description ending with the required final
+`[url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew]Source code on GitHub[/url]`.
+The URL already exists and is correct; the defect is its format and placement, not a missing
+repository. This publication-specific requirement does not retroactively negate separation.
+
+Optional limitation: the upstream east-only dessicated texture is deliberately retained in
+scenario I. The file inventory establishes that limitation, not a rendering crash or missing
+texture error; its runtime behavior remains unverified. No extra corpse artwork is required
+solely to improve the workflow status. There is no additional Preview reservation.
+
+## Historical status and evidence (superseded where noted above)
 
 Status card, read by a sweep over every mod rather than by asking each thread one at a time. It
 lives at the root, never inside `Mod/`, so Steam never receives it.
@@ -41,8 +150,39 @@ Offline checks and visual QA are complete; runtime validation remains outstandin
   updated since 23 July 2021. The author's unrelated Steam activity does not change this category.
 - **`remaining`** — the 15 manual scenarios remain unplayed. Prioritize F and G for natural
   spawning and trade, and L for the in-game incompatibility warning. The declaration itself
-  is present in `Mod/About/About.xml` and covered by the automated checks. Missing translations
-  and the single dessicated-corpse texture remain known upstream limitations.
+  is present in `Mod/About/About.xml` and covered by the automated checks. Translation runtime
+  checks and the single dessicated-corpse texture remain outstanding.
+
+## Translation audit — 2026-09-13
+
+Applied the shared `../PUBLISHING.md` and `../TRANSLATIONS.md` gate to the current
+`Mod/` files. The historical `stage: done` is preserved; translation completeness
+certifies offline readiness only. No in-game test or publication was performed.
+
+- Inventory: `Defs/ThingDefs_Animals.xml` owns five texts: ThingDef `Sloth.label`,
+  `Sloth.description`, `Sloth.tools.left_claw.label`, `Sloth.tools.right_claw.label`,
+  and PawnKindDef `Sloth.label`. Both claw handles come from the original English
+  tool labels, with spaces normalized to underscores, rather than numeric indices.
+- English: all five original Def values are nonempty English and remain the native
+  fallback; no redundant English DefInjected files are required.
+- French: five entries in `Languages/French/DefInjected/ThingDef/Sloth.xml` and
+  `Languages/French/DefInjected/PawnKindDef/Sloth.xml`. Meaning and terminology reviewed;
+  no parameters, grammar tokens or rich-text tags occur in these owned strings.
+- Scope: no assembly, C# source, settings UI, Keyed calls, custom text fields,
+  LoadFolders or version-specific content. Both biome patch files only add numeric
+  wild-animal weights, including their optional integrations; they add no text.
+  Referenced Core life stages, body parts, leather, stats and generated corpse labels
+  remain game-owned resources. No dependency translation keys are introduced or reused.
+  About metadata, attribution, technical IDs, paths and documentation are outside this gate.
+- Validation: `powershell -NoProfile -ExecutionPolicy Bypass -File
+  ../scripts/Check-DefInjected.ps1 -TransMod ./Mod` indexed 11,587 defs and checked
+  all five injection keys: zero errors, no unresolved targets reported.
+  `pwsh -NoProfile -File Tests/Test-Mod.ps1` passed 95 checks, including parsing both
+  language files. An inventory comparison verified exactly five unique, nonempty
+  French entries across the two Def types; English source values were reviewed separately.
+- Runtime: English and French checks are documented in TESTING.md and remain
+  `unverified` above, including life stages, corpses, trader labels and clipping.
+  Revalidate these three fields after changes to Defs, patches or language resources.
 
 ## What this mod is no longer a straight port of
 

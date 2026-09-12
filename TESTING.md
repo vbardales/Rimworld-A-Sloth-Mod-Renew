@@ -13,6 +13,15 @@ most of what follows asks one question: *did ThatRubishGamer's animal survive th
 exceptions are B and C, which test the repair, and F and G, which test the two changes this port
 made on purpose so that the animal can be met at all.
 
+## Translation checks — English and French
+
+Run scenario A in each language. Inspect Wildlife, a selected sloth, its information card,
+trader stock and combat tool labels. English must show `sloth`, the original description,
+`left claw` and `right claw`; French must show `paresseux`, the French description,
+`griffe gauche` and `griffe droite`. Check baby, juvenile and adult sloths and a corpse
+for generated labels, raw keys, English fallback, formatting errors and clipping.
+Record the game version, language and results in STATUS.md. These checks have not been run.
+
 ## Load order
 
 ```
@@ -226,12 +235,29 @@ Twelve in-game days of gestation, so this needs a long save or dev-mode ageing.
 - `About/Preview.png` is 896 × 504 and about 520 Ko, under Steam's hard megabyte.
 - Both images are new art made for this port and are named as such in `ATTRIBUTION.md`.
 
-## O — other languages
+## O — English and French localization
 
-- The mod ships **no translation files**, so in French the animal stays *sloth* and the description
-  stays in English. That is the upstream state and is not a fault.
-- Worth one look only to confirm nothing logs about a missing `Languages` folder, because nothing
-  should: the folder's absence is normal.
+Preconditions: RimWorld 1.6, this port enabled and the original disabled; dev mode available.
+Use a disposable new colony and a copy of an existing save containing sloths. English text
+comes from the original Def values; French uses the two shipped DefInjected files.
+
+- Select English, restart as prompted and run scenario A. Inspect Wildlife, a selected sloth,
+  its information card, trader stock (scenario G) and both claw tool labels. Expect `sloth`,
+  the English description from ThingDefs_Animals.xml, `left claw` and `right claw`.
+- Select French, restart as prompted and repeat. Expect `paresseux`, the complete description
+  from Languages/French/DefInjected/ThingDef/Sloth.xml, `griffe gauche` and `griffe droite`.
+  The PawnKind label must also be `paresseux`; English fallback for these owned texts fails.
+- Inspect baby, juvenile and adult sloths and a corpse in each language. Generated labels
+  must use the selected language and the translated animal name, without raw keys, broken
+  formatting or clipped text. Core-owned life-stage and corpse wording uses Core translations.
+- Save and reload the existing test colony in each language; repeat the label and information
+  card checks. Switch back to English and verify that the English texts return.
+- Review Player.log after each language run: expect no translation/injection errors naming
+  this mod or its Sloth fields. Record game version, active mods, language, save type,
+  observed results and relevant log excerpts in STATUS.md. Missing trader stock is
+  inconclusive for that surface, not a translation failure.
+
+Execution: **not run**. These are expected results, not a runtime validation claim.
 
 ## What cannot be tested offline
 
@@ -260,6 +286,8 @@ These fixtures do not validate installed third-party biome names, Core inheritan
 actual RimWorld patch engine. Scenarios A–O remain necessary for runtime validation.
 
 Latest offline run: 2026-09-12 — **PASS, 93 checks**.
+Audit run: 2026-09-13 — **PASS, 95 checks**, including the two French XML files.
+Scenario O corrected on 2026-09-13 to match those resources; distributed files unchanged.
 Manual execution: **not run**. For each scenario record game version, active mods, steps,
 observed result, PASS/FAIL/INCONCLUSIVE and any relevant log excerpt. Random non-occurrence
 (spawning, stock, bonding) is inconclusive, not proof of a broken feature.
