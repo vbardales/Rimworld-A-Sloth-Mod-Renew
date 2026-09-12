@@ -128,3 +128,37 @@ The continuation statement in README and About.xml permits updating and publishi
 continuation if the maintainer does not respond within a reasonable time, with all credit
 preserved. This is the maintainer's stated condition, not a newly granted licence for the
 original author's assets. This audit does not assign MIT, CC or another licence to them.
+
+## Preview overlay recomposition — 2026-09-12
+
+- Source: `Art/Preview.png`, copied byte-for-byte from the existing text-free
+  `Art/Preview-source.png`. The illustration was retained, not replaced; the original
+  full-resolution file remains available at its existing path. The crop remains at 50% 86%.
+- Composition: `Art/preview.html`; sole colour reference: `Art/preview-palette.json`.
+  Rebuild and checks: `Art/render-preview.cjs` (Node with playwright and sharp, installed
+  Chrome). The HTML loads the palette and reads the highest stable supported version from
+  the shipped `Mod/About/About.xml`; this currently produces the 1.6 badge.
+- Palette rationale: the veil comes from the broad cool, shadowed plank-floor surface.
+  The vivid accent follows the olive-green food in the sloth bowl, with saturation and
+  lightness increased for the rule and badge. This significant feeding detail supplies a
+  yellow-green family distinct from the dominant ochre of the wood and fur. The secondary ink follows the dominant
+  ochre wood-and-fur family, brightened for contrast; it is not an average pixel colour.
+- The title retains its wording; the summary now reads "One slow, harmless animal, brought forward."
+  The version appears only in the badge. Strong title words, the reduced article and the summary share the primary ink; Renew
+  uses the secondary ink. The
+  unofficial tag is on its own line. Position, spacing, shadow and badge geometry follow
+  `../STYLE_RIMWORLD.md`; title size is 46 px.
+- Actual fonts verified through Chrome platform-font data: Segoe UI (including its Semibold
+  title and Bold badge faces). Capture waits for `document.fonts.ready` and image decoding.
+- Output: `Mod/About/Preview.png`, 896 x 504, 539157 bytes (below 900 kB).
+  Thumbnail: `Art/preview-268.png`. Both were visually inspected: no overlap or clipped text,
+  title and version identifiable, rule visible. The summary is intended for full-size viewing.
+- Contrast evidence: `Art/preview-background.png` and `Art/preview-qa.json`. Every background
+  pixel within each text rectangle was checked, without relying on text shadows. Minimum
+  ratios: title 9.11:1, summary 6.02:1, tag 5.61:1; badge digits 9.73:1 on its opaque fill.
+- No publication was performed.
+
+- Updated title hierarchy: A and Renew are direct spans at 65% (29.9 px), weight 600;
+  Renew uses secondary ink, A primary ink. Sloth Mod remains 46 px. Verified visually
+  at both sizes, including reduced words and accent separation. Additional minimum contrast:
+  A 11.47:1, Renew 7.23:1. No illustration replacement or publication.
