@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The same two-biome idea as Biomes_Vanilla.xml, extended to the biome mods that have somewhere a
+  sloth could plausibly live. Each block is guarded by PatchOperationFindMod, so with the mod absent
+  nothing runs and nothing is logged.
+
+  The guard matches the mod's NAME as it appears in its About.xml, not its packageId - that is what
+  PatchOperationFindMod reads. For the record:
+
+    Alpha Biomes         sarg.alphabiomes            Sarg
+    More Vanilla Biomes  zylle.MoreVanillaBiomes     Zylle
+
+  Commonality is read against each biome's own list rather than copied across, because these lists
+  are not scaled alike: the cloud forest runs on the vanilla rainforest's numbers, while the
+  feralisk jungle divides everything by ten because the spiders eat it.
+
+  Not patched, and why:
+    AB_OcularForest, AB_GelatinousSuperorganism, AB_TarPits, AB_PropaneLakes,
+    AB_PyroclasticConflagration, AB_ForsakenCrags, AB_MechanoidIntrusion,
+    AB_GallatrossGraveyard    nothing there for a slow arboreal herbivore to eat or climb
+    AB_IdyllicMeadows         open grassland, and no trees is the whole point of it
+    ZBiome_Marsh              temperate, and the vanilla temperate swamp was left out for the
+                              same reason: a sloth is a tropical animal
+    Biomes! Islands           stops at 1.5, so there is nothing to patch in 1.6 yet
+-->
+<Patch>
+
+  <!-- Cloud forest: constant fog, montane tropical forest, monkeys at 1 and iguanas at 0.3.
+       This is the single best fit anywhere in the collection, vanilla included, so it takes the
+       rainforest's own value rather than a reduced one. -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>More Vanilla Biomes</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="ZBiome_CloudForest"]/wildAnimals</xpath>
+      <value>
+        <Sloth>0.5</Sloth>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Alpha Biomes</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <!-- Miasmic mangrove: tropical swamp with worse diseases, and the same animal list as the
+             vanilla tropical swamp. Same value as that swamp, 0.4. -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BiomeDef[defName="AB_MiasmicMangrove"]/wildAnimals</xpath>
+          <value>
+            <Sloth>0.4</Sloth>
+          </value>
+        </li>
+
+        <!-- Mycotic jungle: giant mushrooms instead of trees, and a thin animal list with no
+             monkey and no capybara. Something to climb and rough vegetation to eat, so the sloth
+             fits, but below the biome's 0.5 tier. -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BiomeDef[defName="AB_MycoticJungle"]/wildAnimals</xpath>
+          <value>
+            <Sloth>0.3</Sloth>
+          </value>
+        </li>
+
+        <!-- Feralisk infested jungle: a jungle, so the habitat is right, but every commonality
+             there is a tenth of the rainforest's because the spiders eat what spawns. A sloth
+             cannot run and cannot fight, so it takes the bottom of that scale. -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BiomeDef[defName="AB_FeraliskInfestedJungle"]/wildAnimals</xpath>
+          <value>
+            <Sloth>0.05</Sloth>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

@@ -85,6 +85,7 @@
     </race>
     <tradeTags>
       <li>AnimalCommon</li>
+      <li>AnimalUncommon</li>
     </tradeTags>
   </ThingDef>
   

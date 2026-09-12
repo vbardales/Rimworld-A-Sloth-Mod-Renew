@@ -2,7 +2,7 @@
 <ModMetaData>
   <name>A Sloth Mod Renew</name>
   <author>ThatRubishGamer - 1.6 port: nelim</author>
-  <packageId>nelim.aslothmod</packageId>
+  <packageId>nelim.aslothmodrenew</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
@@ -17,11 +17,21 @@ WHAT IT ADDS
 
 One animal, the sloth. Body size 0.15, a fifth of an ordinary animal's hunger, half its health, thirteen years of life. It moves at 0.7 cells per second, slower than a colonist walking. It eats rough vegetation, yields light leather, cannot be trained at all, and will never turn manhunter: not when a taming attempt fails, not when it is hurt.
 
-It arrives by trader rather than by biome. The mod tags it as a common animal for traders and adds it to no biome, so no colony will find one in the wild. That is how its author wrote it and it is left alone.
+It lives in tropical rainforest and tropical swamp, and exotic traders sell it. See "What this update changed on purpose" below: in the original it was in neither place.
 
 WHAT CHANGED IN THE 1.6 UPDATE
 
 One line, and it is the line that mattered. Wildness stopped being a field of RaceProperties in 1.6 and became a StatDef declared under statBases. The old form is not an error, it is simply never read, and the stat defaults to -1, outside the range the game uses - so the sloth tamed for almost nothing instead of sitting at 0.50. Nothing else in the file needed touching, and no balance value was changed.
+
+WHAT THIS UPDATE CHANGED ON PURPOSE
+
+The line above is repair. This is not, and it is said plainly rather than buried: the original sloth could not be obtained in a normal game at all. It was in no biome's wild animal list, so it never spawned on a map, and its only trade tag was AnimalCommon, which no trader in Core or the five expansions sells or buys. Vanilla's hare carries that tag alone and is caught in the wild, never bought. An animal in neither place exists only in the files.
+
+Two changes fix that, and nothing else was touched. The tag AnimalUncommon was added, the one carried by the monkey, the iguana, the tortoise and the megasloth, and the one exotic caravans and orbital ships actually sell. And a patch adds the sloth to tropical rainforest at 0.5 and tropical swamp at 0.4, read against the monkey at 1 and the guinea pig at 0.25 already in those lists.
+
+If you run More Vanilla Biomes or Alpha Biomes, the sloth is added to their jungles too: cloud forest 0.5, miasmic mangrove 0.4, mycotic jungle 0.3, and feralisk infested jungle 0.05, that last one low because every animal in that biome is, the spiders having eaten the difference. Neither mod is required. Without them those patches do nothing at all.
+
+A purist port would have left both alone. Left alone here means an animal nobody can ever meet.
 
 Content mod: removing it mid-save will lose any sloth already in play.
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Puts the sloth in the two biomes that can hold one.
+
+  The original shipped no biome entry at all, and its only trade tag was AnimalCommon, which no
+  vanilla trader sells or buys: across Core and the five expansions, tradeTagsSell names only
+  AnimalFarm, AnimalPet, AnimalFighter, AnimalUncommon and AnimalExotic. So the animal existed and
+  could be reached by nothing. This patch and the AnimalUncommon tag in the def are what make it
+  obtainable; they are a deliberate departure from the original and are recorded as such in
+  ATTRIBUTION.md.
+
+  Commonality is read against the neighbours already in these lists: monkey 1, capybara and
+  tortoise 0.5, guinea pig 0.25, cobra 0.15. A sloth is neither rare nor a crowd, and it is the
+  slowest thing on the map, so a good share of the ones that spawn will be eaten before a colonist
+  ever sees them.
+-->
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
+    <value>
+      <Sloth>0.5</Sloth>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
+    <value>
+      <Sloth>0.4</Sloth>
+    </value>
+  </Operation>
+
+</Patch>
