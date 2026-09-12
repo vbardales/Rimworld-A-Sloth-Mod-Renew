@@ -13,8 +13,7 @@ tested_on:
 workshop:
 remaining:
   - unverified: the fifteen scenarios in TESTING.md, none played
-  - unverified: F and G, whether the animal now reaches a colony at all, which nothing outside the game settles
-  - defect: no incompatibleWith for the original mod, so both can be enabled at once and the last one loaded wins in silence
+  - unverified: prioritize F and G (natural spawning and trade), and L (original-mod incompatibility warning)
   - defect: the dessicated corpse has only its _east texture, the other faces are rotations of it
   - feature: no translations, so the animal stays "sloth" in every language
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
@@ -29,9 +28,8 @@ lives at the root, never inside `Mod/`, so Steam never receives it.
 This card is in English, like the repository around it: README, changelog, testing notes,
 attribution and every commit message.
 
-The fields above were deduced from disk on 2026-09-12 by the sweep, which left two of them
-corrupted — `licence` read `licence_ou:` and `licence_at` had swallowed a `vitrine:` key. They are
-repaired here, along with the four the sweep could not know:
+The fields above reflect the repository audit and completed preview work on 2026-09-12.
+Offline checks and visual QA are complete; runtime validation remains outstanding:
 
 - **`stage`** — `done`. The port is whole: wildness moved from a `RaceProperties` field to a stat
   under `statBases`, which is the one line 1.6 required. Two pictures were made for it. `TESTING.md`
@@ -41,9 +39,10 @@ repaired here, along with the four the sweep could not know:
   seen running. No animal spawned, no information card read, no trader stock opened.
 - **`licence`** — `silent`. No explicit terms found; the original mod has not been
   updated since 23 July 2021. The author's unrelated Steam activity does not change this category.
-- **`remaining`** — the sweep's catch-all line is replaced by five real ones, now that `TESTING.md`
-  exists. F and G stand apart: they are the two the design change below turns on, and neither can
-  be settled outside the game.
+- **`remaining`** — the 15 manual scenarios remain unplayed. Prioritize F and G for natural
+  spawning and trade, and L for the in-game incompatibility warning. The declaration itself
+  is present in `Mod/About/About.xml` and covered by the automated checks. Missing translations
+  and the single dessicated-corpse texture remain known upstream limitations.
 
 ## What this mod is no longer a straight port of
 
@@ -66,12 +65,13 @@ Two changes fix that and nothing else was touched:
 
 This is design rather than porting, and `ATTRIBUTION.md` says so in those words.
 
-## Decisions still open
+## Ready for in-game validation
 
-- **The banner at thumbnail size.** `About/Preview.png` passes every test in `STYLE_RIMWORLD.md`
-  except the first, which it passes only just: shrunk to the 268 px the Workshop grid draws, the
-  claws stop reading and the animal is a pale shape on a post. Tightening the crop would push the
-  title over the lit floor.
+- **Preview complete.** The final composition was inspected at 896 x 504 and 268 px wide.
+  The previous thumbnail review is closed; source, palette, typography and contrast evidence
+  are documented below.
+- **Next step:** execute scenarios A–O in `TESTING.md` and record the game version, active
+  mods, observed results and relevant logs. Keep `tested_on` empty until a game run is recorded.
 
 The `workshop` field is empty because the item does not exist yet. No `PublishedFileId.txt` was
 carried over: the original's names their item, not ours.
