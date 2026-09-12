@@ -19,14 +19,13 @@ made on purpose so that the animal can be met at all.
 nelim.aslothmodrenew    this mod    after Core and all official expansions
 ```
 
-`<loadAfter>` names Core and the six expansions, which is all this mod needs: it inherits
+`<loadAfter>` names Core and the five expansions, which is all this mod needs: it inherits
 `AnimalThingBase` and `AnimalKindBase` from Core and touches nothing else.
 
 **The original must stay off.** `ThatRubishGamer.RubishMods.SlothMod`
 ([2253087891](https://steamcommunity.com/sharedfiles/filedetails/?id=2253087891)) defines the same
-two defs under the same `defName`, `Sloth`. Nothing declares this: `<incompatibleWith>` is **not**
-in `About.xml`, so the mod list will let both be enabled and the log will be the only warning. See
-scenario L, and decide there whether to add the declaration before publishing.
+two defs under the same `defName`, `Sloth`. `About.xml` now declares the original in
+`incompatibleWith`. Scenario L checks the resulting warning in the game.
 
 No other mod in the local collection defines `Sloth`. Vanilla's **megasloth** is a different def
 and a different animal, and is only a nuisance in the debug search box.
@@ -43,7 +42,7 @@ and a different animal, and is only a nuisance in the debug search box.
 | `Failed to find any textures at` | `Graphic_Multi.Init` | The same fault one level up: no rotation found at all. |
 | `Could not find parent node named` | `XmlInheritance.ResolveParents` | One of the two Core templates is gone: `AnimalThingBase` or `AnimalKindBase`. This mod declares no abstract def of its own. |
 | `Adding duplicate` | `DefDatabase.Add` | The original mod is enabled alongside this port. |
-| `Could not find type named` | `DirectXmlToObject.ClassTypeOf` | There is no `Class=` anywhere in this mod, so a line here would mean Core renamed something under one of the two parents. |
+| `Could not find type named` | `DirectXmlToObject.ClassTypeOf` | Check the named type and file; patches use explicit `Class` attributes, and defs also inherit Core types. |
 
 Lines naming other mods are not ours to fix, and are worth leaving in whatever gets pasted back.
 
@@ -114,8 +113,8 @@ Both chances are 0, which is unusual enough to be worth proving.
 **The scenario that matters most.** Without it the animal is reachable by nothing but the debug
 menu, which is the state the original shipped in.
 
-- Start or reveal a **tropical rainforest** map. Sloths must appear in the Wildlife tab within a
-  few days, and at 0.5 against the monkey's 1 they should be a little rarer than monkeys.
+- Start or reveal a **tropical rainforest** map. Watch for sloths in the Wildlife tab over several
+  days or map rerolls. Absence alone is inconclusive because selection is random; at 0.5 against the monkey's 1 they should be a little rarer than monkeys.
 - Same in **tropical swamp**, at 0.4.
 - Check a temperate forest, a boreal forest and a desert: **no sloths**. A sloth in an unpatched
   biome means an xpath matched something it should not have.
@@ -203,13 +202,11 @@ Twelve in-game days of gestation, so this needs a long save or dev-mode ageing.
 
 ## L — the collision with the original
 
-- Enable `ThatRubishGamer.RubishMods.SlothMod` alongside this port. Nothing prevents it: this mod
-  declares no `<incompatibleWith>`.
-- Expect `Adding duplicate` in the log, naming `Sloth`. Whichever loads last wins, silently, and if
-  that is the original then the wildness fault is back with no other visible sign.
-- **Decision to take from this scenario:** add `<incompatibleWith>` naming the original to
-  `About.xml`, or accept that the two can be enabled together. The sister port Dalmatians Renew
-  declares it; this one does not, and there is no reason for the difference.
+- On a disposable test configuration, enable the original alongside this port.
+- Confirm the mod list warns about the incompatibility declared in `About.xml`.
+  This declaration is a warning, not a guarantee that the user cannot proceed.
+- Disable the original before loading a colony and confirm the warning disappears.
+- Load with this port alone: no duplicate `Sloth` definitions should be reported.
 
 ## M — saves
 
@@ -224,7 +221,7 @@ Twelve in-game days of gestation, so this needs a long save or dev-mode ageing.
 
 ## N — the mod list entry and the Workshop page
 
-- The name reads `A Sloth Mod Renew`, the author line credits ThatRubishGamer first.
+- The name reads `A Sloth Mod Renew (unofficial)`, the author line credits ThatRubishGamer first.
 - `About/ModIcon.png` is drawn at about 32 px in the mod list. It is 128 × 128 and 24 Ko.
 - `About/Preview.png` is 896 × 504 and about 520 Ko, under Steam's hard megabyte.
 - Both images are new art made for this port and are named as such in `ATTRIBUTION.md`.
@@ -243,3 +240,26 @@ a colony depends on runtime selection: map generation reading the biome's animal
 stock generation reading the trade tags. Reading the defs shows only that both doors are now
 unlocked, never that anyone walks through them. Everything else in this file is a reading of the
 information card, which is exactly where the silent fault hid.
+
+## Automated checks
+
+Run from the repository root with PowerShell:
+
+```powershell
+./Tests/Test-Mod.ps1
+```
+
+The script checks XML parsing, metadata (including the unofficial suffix, GitHub description
+link and original-mod incompatibility), the Wildness migration, race linkage, trader tag,
+training/manhunter settings, life-stage alignment and referenced directional textures.
+It applies the shipped XPath expressions and patch operations to synthetic biome fixtures in
+four configurations: neither optional mod, each separately, and both together. It checks exact
+commonalities, untouched wildlife and unpatched biomes. Missing patch targets fail the run.
+
+These fixtures do not validate installed third-party biome names, Core inheritance, or the
+actual RimWorld patch engine. Scenarios A–O remain necessary for runtime validation.
+
+Latest offline run: 2026-09-12 — **PASS, 93 checks**.
+Manual execution: **not run**. For each scenario record game version, active mods, steps,
+observed result, PASS/FAIL/INCONCLUSIVE and any relevant log excerpt. Random non-occurrence
+(spawning, stock, bonding) is inconclusive, not proof of a broken feature.
