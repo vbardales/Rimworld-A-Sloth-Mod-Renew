@@ -10,24 +10,81 @@ visibility:   public
 detached:     yes
 stage:        done
 licence:      silent
-licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3)
+licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
 dependencies: none
 showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - defect: About.xml description lacks the final formatted Source code on GitHub link required before publication
   - unverified: the fifteen scenarios in TESTING.md, none played
   - unverified: prioritize F and G (natural spawning and trade), and L (original-mod incompatibility warning)
   - unverified: scenario I must check the inherited east-only dessicated corpse in game; the limited artwork alone is not an established runtime defect
   - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
+  - unverified: whether a Workshop item already exists for this mod (Virginie mentioned a possible 0.1.0 pre-publish, but no PublishedFileId.txt, GitHub tag/release or local Workshop content folder confirms it)
+  - feature: no PUBLICATION.md yet (required at tested -> prepublished, not before)
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-09-13, workflow audit
+updated:      2026-09-27, workflow audit
 ---
 
 # A Sloth Mod Renew — status
 
-## Current workflow audit — 2026-09-13
+## Current workflow audit — 2026-09-27
+
+Re-audited against the live working tree (`e93882a` plus one same-session fix), per
+`AUDIT.md`: verified files and actual tool output rather than trusting the previous audit's
+own conclusions. One real, previously mis-classified blocker was found and fixed; one
+documentation gap was filled; everything else the 2026-09-13 audit below established still
+holds on direct re-check. **Stage: `done`**, unchanged in name but now actually earned — see
+"What changed today" below for why it was not, quietly, until this pass.
+
+### What changed today
+
+- **The `Preview générée -> preOptions` description-link defect was real and blocking, not a
+  separate publication footnote.** `PUBLISHING.md`'s 2026-09-13 precision is explicit: the
+  `<description>` must *end*, after the credits, with
+  `[url=URL_DU_DEPOT]Source code on GitHub[/url]`, and "un défaut constaté bloque cette
+  transition tant qu'il n'est pas corrigé." The 2026-09-13 audit below recorded the raw URL
+  mid-text as a "separate publication issue" and still passed the gate — that was a
+  misreading of its own cited rule. Fixed today: the mid-text raw GitHub line was removed
+  from `Mod/About/About.xml`, and the description now ends with the BBCode link, after the
+  credits and the AI-assistance line. Re-ran `Tests/Test-Mod.ps1`: still 95/95.
+- **`preTest -> done` requires a written, justified Pickle scope; this mod had none at all**,
+  not even a "zero, and why" line. Added one to `TESTING.md`: no assembly, no window, no
+  button, no settings page — nothing of this mod's own making for a Gherkin runner to click
+  through. What Pickle exists for ("only a running game can show this") is already the
+  fifteen manual scenarios' job here.
+- **Original-mod git check (requested by Virginie):** searched GitHub for a repository by
+  ThatRubishGamer or matching the original mod. None exists — the only hit for the name is
+  this port's own repository. There is nothing to fork or base a PR on; `ATTRIBUTION.md`'s
+  existing "no repository" claim is confirmed rather than superseded.
+- **`.dds` search:** none in this repository. All four textures are `.png`; nothing to move
+  out of git or add to `.gitignore` for this mod.
+- **Evidence folders:** none exist, tracked or on disk — no `Tests/Pickle/Evidence/`, no
+  `evidence/`. Nothing to prune, minify or gitignore for this mod; `TESTING.md`'s Pickle-scope
+  section above already states there will be none to produce.
+- Re-verified rather than re-derived: `Tests/Test-Mod.ps1` (95/95), `Check-DefInjected.ps1`
+  (11,587 defs indexed, 5 keys, 0 errors), the shipped `ModIcon.png` and `Preview.png` by
+  direct inspection, `TESTING.md` for `@wip` (none) and scenario count (fifteen, A-O),
+  `About.xml` for `incompatibleWith` (present) and `loadAfter` (the six official
+  IDs, correctly guarding the two optional biome patches instead).
+- **Not done today, and not claimed:** no scenario was played in RimWorld. `tested_on` stays
+  empty. No image was regenerated, no icon touched — `chain rule 2` reserves that to the
+  mod's owner, and today's audit made no request for one.
+
+### Read today, and what stays read
+
+`AUDIT.md`, `PUBLISHING.md` (description/link and `PUBLICATION.md` sections),
+`STYLE_RIMWORLD.md` (icon override already recorded below, re-read only to confirm nothing new
+applies), `MOD_SETTINGS.md` and `TRANSLATIONS.md` (spot-checked against this mod's actual
+absence of settings/Keyed code, both still match). `WORKSHOP_COMMENTS.md`,
+`scripts/SEARCHING.md`, the `PickleTools/*` guides, `Rimworld-Release-Admin/docs/OPERATIONS.md`
+and `Rimworld-Ticket-Dispatcher/docs/*` were **not** opened this pass: this mod has no Pickle
+suite (justified above), no CI workflow, no tag and no release, so none of their content
+currently applies. Revisit them once a `PUBLICATION.md` and a CI publish are actually being
+set up for this mod, not before — re-reading them now would answer nothing this repository
+can act on yet.
+
+## Historical audit — 2026-09-13
 
 This section and the front matter supersede the historical status conclusions below;
 older results are preserved, not silently certified again. **Previous stage: done.

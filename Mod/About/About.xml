@@ -37,13 +37,13 @@ A purist port would have left both alone. Left alone here means an animal nobody
 
 Content mod: removing it mid-save will lose any sloth already in play.
 
-Source, changelog and the full account of the port: https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew
-
 The original states no licence anywhere - no file, nothing in its About, no repository, nothing on its Workshop page. This port therefore rests on the Workshop's own custom for abandoned mods: named credit to the author, and a takedown on request.
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
-The update work was done with the help of an AI assistant (Claude, by Anthropic).</description>
+The update work was done with the help of an AI assistant (Claude, by Anthropic).
+
+[url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew]Source code on GitHub[/url]</description>
   <!-- The source mod defines the same defNames as this port. RimWorld resolves a duplicate defName by
        load order and logs nothing, so with both enabled one silently stands in for the other and the
        faults this port fixes come back unannounced. -->
