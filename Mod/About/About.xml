@@ -35,6 +35,10 @@ If you run More Vanilla Biomes or Alpha Biomes, the sloth is added to their jung
 
 A purist port would have left both alone. Left alone here means an animal nobody can ever meet.
 
+OPTIONAL COMPATIBILITY
+
+A Dog Said... Animal Prosthetics 2 and [XND] Nocturnal Animals (Continued) both hand-list which animals they affect by name, and the sloth was on neither list, so both were silent no-ops without a patch. This mod adds it to ADS 2's three surgery categories and gives it a nocturnal cycle in Nocturnal Animals, matching its own "sleeps most of the day" description. Better Crossbreeding needed nothing: its crossbreeding field is opt-in and empty by default. None of the three is required.
+
 Content mod: removing it mid-save will lose any sloth already in play.
 
 The original states no licence anywhere - no file, nothing in its About, no repository, nothing on its Workshop page. This port therefore rests on the Workshop's own custom for abandoned mods: named credit to the author, and a takedown on request.
@@ -57,5 +61,14 @@ The update work was done with the help of an AI assistant (Claude, by Anthropic)
     <li>Ludeon.RimWorld.Biotech</li>
     <li>Ludeon.RimWorld.Anomaly</li>
     <li>Ludeon.RimWorld.Odyssey</li>
+    <!-- Optional: its ExtendedRaceProperties class must already be loaded for
+         Compat_NocturnalAnimals.xml to attach it. -->
+    <li>Mlie.XNDNocturnalAnimals</li>
   </loadAfter>
+  <!-- Optional: this port must load before it so Compat_ADogSaidAnimalProsthetics2.xml can add
+       Sloth to its category recipeUsers lists before its own z_Category_Patches.xml copies
+       them onto the real surgery recipes. Cross-mod patch order is mod load order. -->
+  <loadBefore>
+    <li>SamBucher.ADogSaidAnimalProsthetics2</li>
+  </loadBefore>
 </ModMetaData>

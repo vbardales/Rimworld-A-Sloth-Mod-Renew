@@ -94,6 +94,21 @@ This is design, not porting, and calling it anything else would be dishonest. Th
 the alternative was to republish an animal that no player could ever meet. Nothing else about the
 sloth was decided here.
 
+## Optional compatibility with three other mods
+
+Checked on request, 2026-09-28. Not existence gaps like the two above — the sloth is reachable
+without any of this — but three other mods a player might run alongside it, and what actually
+happens when they do.
+
+| Mod | What it does without a patch here | What was added |
+|---|---|---|
+| **A Dog Said... Animal Prosthetics 2** (`SamBucher.ADogSaidAnimalProsthetics2`) | Nothing. It keeps its own hand-curated `recipeUsers` lists on three abstract `RecipeDef`s and ships no compatibility folder for this mod; Sloth is on none of its lists, so surgery offers only vanilla amputation, same as with ADS not installed at all | `Patches/Compat_ADogSaidAnimalProsthetics2.xml` adds Sloth to all three categories, guarded by `PatchOperationFindMod`. `<loadBefore>` is declared: ADS copies those lists onto the real recipes at its own load time, so this port must load first or the addition arrives after the copy and does nothing — the exact mechanism Dalmatians Renew already solved the same way |
+| **[XND] Nocturnal Animals (Continued)** (`Mlie.XNDNocturnalAnimals`) | Nothing. It hand-lists specific vanilla defNames (Hare, Cat, the big cats, several birds) and Sloth, not being vanilla, is on none of them | `Patches/Compat_NocturnalAnimals.xml` adds its `NocturnalAnimals.ExtendedRaceProperties` extension with `bodyClock: Nocturnal`, guarded the same way. Nocturnal rather than Crepuscular because it matches the animal's own description, "sleeps most of the day and eats the rest" - unchanged since the original mod, not something invented for this |
+| **Better Crossbreeding** (`DizzyEevee.BetterCrossbreeding`) | Nothing, and nothing was added. It only extends vanilla 1.6's own `canCrossBreedWith` field, which is opt-in and empty by default; Sloth declares no crossbreeding partners in either mod's absence or presence. Adding some would mean inventing which species a sloth can cross with and what the offspring becomes - a creative decision, not a compatibility fix, and outside what a port does |
+
+None of the three is a dependency. All three checks were read from the actual installed files, not
+assumed from a mod's name or description.
+
 ## Where this came from
 
 The port was done inside a private pack that had gathered two dozen abandoned animal mods, where

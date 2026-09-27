@@ -22,7 +22,7 @@ not this mod is installed. There is no interaction of this mod's own making for 
 through: no dialog it opens, no field it validates, no list it populates. What Gherkin is for here
 — "the mod's own interface, proven only by a running game" — has nothing to attach to.
 
-The fifteen scenarios above already are the "only a running game can show this" list a Pickle suite
+The nineteen scenarios above already are the "only a running game can show this" list a Pickle suite
 would otherwise hold: spawning, trader stock, the stat card. Writing them a second time as Gherkin
 would drive the same clicks through a runner built for exercising windows this mod does not have,
 for no fact a human reading the Wildlife tab does not already settle. If a future version adds a
@@ -43,8 +43,11 @@ Record the game version, language and results in STATUS.md. These checks have no
 nelim.aslothmod         this mod    after Core and all official expansions
 ```
 
-`<loadAfter>` names Core and the five expansions, which is all this mod needs: it inherits
-`AnimalThingBase` and `AnimalKindBase` from Core and touches nothing else.
+`<loadAfter>` names Core and the five expansions, which is all this mod strictly needs: it inherits
+`AnimalThingBase` and `AnimalKindBase` from Core and touches nothing else. It also names
+`Mlie.XNDNocturnalAnimals`, optional, so that mod's `ExtendedRaceProperties` class is available
+when `Compat_NocturnalAnimals.xml` attaches it. `<loadBefore>` separately names
+`SamBucher.ADogSaidAnimalProsthetics2`, optional in the other direction: see scenarios P through R.
 
 **The original must stay off.** `ThatRubishGamer.RubishMods.SlothMod`
 ([2253087891](https://steamcommunity.com/sharedfiles/filedetails/?id=2253087891)) defines the same
@@ -274,13 +277,50 @@ comes from the original Def values; French uses the two shipped DefInjected file
 
 Execution: **not run**. These are expected results, not a runtime validation claim.
 
+## P — A Dog Said... Animal Prosthetics 2, load order correct
+
+Same shape as Dalmatians Renew's scenario C, because it is the same mechanism: ADS 2 keeps its own
+`recipeUsers` lists and copies them onto the real surgery recipes at its own load time, so an
+addition made after that copy goes into a list nothing reads again.
+
+- Enable ADS 2, this mod **before** it in the list, as `<loadBefore>` asks.
+- Tame a sloth and a husky. Open the Health tab of each, then the operations list.
+- **The two lists must match**: prosthetic and bionic limb installs, and old-wound treatment, on
+  both. A sloth offering only amputation means the addition did not reach ADS 2's copy in time.
+
+## Q — A Dog Said... Animal Prosthetics 2, load order wrong
+
+The negative control. Skip it and `<loadBefore>` is a claim nobody checked.
+
+- Same as P, but move this mod **after** ADS 2 in the list.
+- Expect the sloth's operations to be **gone**, the husky's unaffected, and nothing in the log to
+  say why. If they are still there in this configuration, the load-order claim above is wrong and
+  needs correcting, not celebrating.
+
+## R — A Dog Said... Animal Prosthetics 2 absent
+
+- Enable this mod with ADS 2 switched off entirely.
+- It must load, the sloth must be whole, and `Compat_ADogSaidAnimalProsthetics2.xml` must say
+  nothing: `PatchOperationFindMod` finding no match is silent by design.
+- The Health tab then offers vanilla amputation and euthanasia only.
+
+## S — Nocturnal Animals (Continued)
+
+- Enable `Mlie.XNDNocturnalAnimals` alongside this mod, in either load order: this patch only adds
+  a ModExtension to the sloth's own def and does not depend on that mod's own patches running
+  first or last.
+- Watch a tamed sloth's schedule over a full day. It should sleep through most of daylight hours
+  and be active mostly at night, matching the animal's own description.
+- With the mod absent, confirm the sloth keeps vanilla animal behavior and nothing logs.
+
 ## What cannot be tested offline
 
-Scenarios F and G are the ones that matter and the ones no file can settle. Whether a sloth reaches
-a colony depends on runtime selection: map generation reading the biome's animal list, and trader
-stock generation reading the trade tags. Reading the defs shows only that both doors are now
-unlocked, never that anyone walks through them. Everything else in this file is a reading of the
-information card, which is exactly where the silent fault hid.
+Scenarios F, G and P are the ones that matter most and the ones no file can settle. Whether a sloth
+reaches a colony depends on runtime selection: map generation reading the biome's animal list, and
+trader stock generation reading the trade tags. Whether it gets ADS 2's surgery depends on the same
+kind of runtime fact, one mod's patch reading a list another mod's patch just changed. Reading the
+defs shows only that these doors are now unlocked, never that anyone walks through them. Everything
+else in this file is a reading of the information card, which is exactly where the silent fault hid.
 
 ## Automated checks
 

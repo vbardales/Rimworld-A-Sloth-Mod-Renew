@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  [XND] Nocturnal Animals (Continued) (Mlie.XNDNocturnalAnimals, Workshop 2269731409, itself a
+  continuation of XeoNovaDan.NocturnalAnimals) does not infer an animal's activity cycle from any
+  vanilla field: it hand-lists specific vanilla defNames - Hare, Cat, the big cats, several birds
+  - and adds its own NocturnalAnimals.ExtendedRaceProperties ModExtension to each by name. Sloth
+  is not vanilla and is absent from every one of its patch files, so it is silently unaffected
+  whether or not this mod runs, exactly like the trade tag and biome gaps ATTRIBUTION.md already
+  documents for the port itself.
+
+  Real sloths are active mostly at night and sleep through most of the day, which is the animal's
+  own flavour text in Defs/ThingDefs_Animals.xml ("sleeps most of the day and eats the rest") -
+  Nocturnal fits that description better than Crepuscular, which this mod reserves for dawn/dusk
+  feeders such as the hare. No balance value changes: this only lets the sloth's already-declared
+  sleep pattern show up as an actual daily cycle when this specific mod is present.
+
+  Guarded by PatchOperationFindMod on the mod's display name, so it remains fully optional:
+  without it, this file changes nothing and logs nothing. loadAfter is declared in About.xml so
+  the mod's assembly - which defines NocturnalAnimals.ExtendedRaceProperties - is present before
+  this operation resolves the class.
+-->
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[XND] Nocturnal Animals (Continued)</li>
+    </mods>
+    <match Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName="Sloth"]</xpath>
+      <value>
+        <li Class="NocturnalAnimals.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

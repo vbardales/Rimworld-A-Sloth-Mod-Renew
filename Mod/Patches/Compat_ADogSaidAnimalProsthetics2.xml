@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  A Dog Said... Animal Prosthetics 2 (SamBucher.ADogSaidAnimalProsthetics2, Workshop 3238353862)
+  does not read RaceProperties or a body type to decide which animals get medieval, simple
+  prosthetic and bionic surgery: it keeps three of its own abstract RecipeDefs, ADS_Cat1/2/3,
+  each carrying a hand-curated <recipeUsers> list, and copies that list onto the real surgery
+  recipes at its own load-later Patches/z_Category_Patches.xml. An animal absent from all three
+  lists offers only vanilla amputation and euthanasia, the same as one with no mod installed at
+  all. Sloth is absent - it is not vanilla, and ADS ships no compatibility folder for this mod -
+  so without this patch, ADS is silently a no-op for it whether or not it is installed.
+
+  Dalmatians Renew hit the exact same gap and solved it the same way: this port copies that
+  pattern rather than inventing a new one. Sloth is added to all three categories, the same
+  breadth Dalmatians uses, rather than picking one: nothing about a 0.15 body size argues for
+  excluding it from any of the three, and ADS's own list already carries animals just as small
+  (Cat, Monkey, Lynx).
+
+  Guarded by PatchOperationFindMod on the mod's display name, so ADS remains fully optional:
+  without it, this file changes nothing and logs nothing.
+-->
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>A Dog Said... Animal Prosthetics 2</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/RecipeDef[@Name="ADS_Cat1"]/recipeUsers</xpath>
+          <value>
+            <li>Sloth</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/RecipeDef[@Name="ADS_Cat2"]/recipeUsers</xpath>
+          <value>
+            <li>Sloth</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/RecipeDef[@Name="ADS_Cat3"]/recipeUsers</xpath>
+          <value>
+            <li>Sloth</li>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

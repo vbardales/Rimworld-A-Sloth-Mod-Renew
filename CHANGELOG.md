@@ -31,6 +31,14 @@ First release of the 1.6 update of **A Sloth Mod**, by ThatRubishGamer.
     **Alpha Biomes** (miasmic mangrove 0.4, mycotic jungle 0.3, feralisk infested jungle 0.05),
     each guarded by `PatchOperationFindMod`. Neither mod is a dependency.
   - This is design rather than porting, and `ATTRIBUTION.md` says so in those words.
+- **Optional compatibility with three other mods**, checked against their actual installed files:
+  - `Patches/Compat_ADogSaidAnimalProsthetics2.xml` adds Sloth to all three of ADS 2's surgery
+    categories, which hand-list eligible animals and had none for it. `<loadBefore>` declared, the
+    same fix Dalmatians Renew needed for the same mod.
+  - `Patches/Compat_NocturnalAnimals.xml` gives the sloth a nocturnal cycle in [XND] Nocturnal
+    Animals (Continued), which also hand-lists vanilla defNames only. `<loadAfter>` declared.
+  - Better Crossbreeding needed no patch: it only extends vanilla 1.6's opt-in
+    `canCrossBreedWith`, empty by default, and this port invents no crossbreeding partners.
 
 ### Changed
 

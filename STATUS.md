@@ -16,17 +16,44 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - unverified: the fifteen scenarios in TESTING.md, none played
-  - unverified: prioritize F and G (natural spawning and trade), and L (original-mod incompatibility warning)
+  - unverified: the nineteen scenarios in TESTING.md, none played
+  - unverified: prioritize F and G (natural spawning and trade), P (ADS 2 surgery, load order), and L (original-mod incompatibility warning)
   - unverified: scenario I must check the inherited east-only dessicated corpse in game; the limited artwork alone is not an established runtime defect
   - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
   - unverified: whether a Workshop item already exists for this mod (Virginie mentioned a possible 0.1.0 pre-publish, but no PublishedFileId.txt, GitHub tag/release or local Workshop content folder confirms it)
   - feature: no PUBLICATION.md yet (required at tested -> prepublished, not before)
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-09-27, workflow audit
+updated:      2026-09-28, compatibility patches added
 ---
 
 # A Sloth Mod Renew — status
+
+## Optional compatibility with three other mods — 2026-09-28
+
+On request ("ne pas oublier la compatibilité ADS, Better Crossbreeding et Nocturnal Animals"),
+checked all three against their actual installed files under
+`C:\Program Files (x86)\Steam\steamapps\workshop\content\294100`, not assumed from a name.
+
+- **A Dog Said... Animal Prosthetics 2** (`SamBucher.ADogSaidAnimalProsthetics2`, Workshop
+  3238353862) hand-lists eligible animals on three abstract `RecipeDef`s and copies those lists
+  onto the real surgery recipes at its own load time; Sloth was on none of them, same gap
+  Dalmatians Renew already hit. Added `Patches/Compat_ADogSaidAnimalProsthetics2.xml`, guarded by
+  `PatchOperationFindMod`, plus `<loadBefore>SamBucher.ADogSaidAnimalProsthetics2</loadBefore>` -
+  without it the addition arrives after ADS 2's own copy and does nothing. Scenarios P (correct
+  order), Q (negative control, wrong order) and R (mod absent) added to `TESTING.md`.
+- **[XND] Nocturnal Animals (Continued)** (`Mlie.XNDNocturnalAnimals`, Workshop 2269731409) does
+  the same with vanilla defNames only. Added `Patches/Compat_NocturnalAnimals.xml` attaching its
+  own `NocturnalAnimals.ExtendedRaceProperties` extension, `bodyClock: Nocturnal` - matching the
+  animal's own description rather than inventing one - guarded the same way, plus an optional
+  `<loadAfter>` so the class is available. Scenario S added.
+- **Better Crossbreeding** (`DizzyEevee.BetterCrossbreeding`, Workshop 3520675842) needed nothing:
+  it only extends vanilla 1.6's own `canCrossBreedWith`, opt-in and empty by default. No patch, and
+  `ATTRIBUTION.md` says why rather than leaving the mod unmentioned.
+
+None of the three is in Virginie's active mod list today except the Nocturnal Animals continuation;
+none becomes a dependency here either way. `Tests/Test-Mod.ps1`: 97/97 (up from 95, the two new
+patch files parsing). `Check-DefInjected.ps1`: still 0 errors, with an expected, harmless note that
+its patch simulator does not model `PatchOperationAddModExtension`.
 
 ## Icon replacement and Art/ cleanup — 2026-09-27, later same day
 

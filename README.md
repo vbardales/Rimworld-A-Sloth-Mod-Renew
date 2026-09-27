@@ -81,6 +81,23 @@ commonality in that biome is a tenth of the rainforest's, the spiders having eat
 A purist port would have left both alone. This one does not, because "left alone" here means an
 animal nobody can ever meet.
 
+## Optional compatibility
+
+Three other mods were checked against the actual installed files, not assumed from their name:
+
+- **A Dog Said... Animal Prosthetics 2** hand-lists which animals get its surgery, and Sloth was on
+  none of its lists. `Patches/Compat_ADogSaidAnimalProsthetics2.xml` adds it to all three, the same
+  fix Dalmatians Renew already needed for the same reason.
+- **[XND] Nocturnal Animals (Continued)** does the same by hand-listing vanilla defNames only.
+  `Patches/Compat_NocturnalAnimals.xml` gives the sloth a nocturnal cycle, matching its own
+  description: it already says it sleeps most of the day.
+- **Better Crossbreeding** needed nothing: it only extends vanilla 1.6's opt-in
+  `canCrossBreedWith`, and inventing crossbreeding partners for the sloth would be new content, not
+  a compatibility fix.
+
+None of the three is required. See `ATTRIBUTION.md` for what each mod does on its own and why these
+particular values were chosen.
+
 ## Terms
 
 The original **states no licence anywhere** — no file in the mod, nothing in its `About.xml`, no
