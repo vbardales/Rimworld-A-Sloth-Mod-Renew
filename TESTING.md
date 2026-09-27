@@ -40,7 +40,7 @@ Record the game version, language and results in STATUS.md. These checks have no
 ## Load order
 
 ```
-nelim.aslothmodrenew    this mod    after Core and all official expansions
+nelim.aslothmod         this mod    after Core and all official expansions
 ```
 
 `<loadAfter>` names Core and the five expansions, which is all this mod needs: it inherits

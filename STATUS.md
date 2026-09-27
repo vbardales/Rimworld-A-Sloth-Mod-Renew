@@ -4,7 +4,7 @@ translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
 mod:          A Sloth Mod Renew (unofficial)
-packageId:    nelim.aslothmodrenew
+packageId:    nelim.aslothmod
 repo:         Rimworld-A-Sloth-Mod-Renew
 visibility:   public
 detached:     yes
@@ -112,7 +112,7 @@ The user explicitly accepted the existing icon style on 2026-09-13. This scoped 
 
 | Transition | Current evidence and result |
 | --- | --- |
-| dansMonoRepo -> horsMonoRepo | **Validated.** Independent .git and Git root; origin points to the exact GitHub repository. Live `gh repo view vbardales/Rimworld-A-Sloth-Mod-Renew --json name,isPrivate,url,defaultBranchRef` returned public, main. `git ls-remote origin HEAD` returned the audited commit. Initial sandbox access failed; the read-only checks succeeded with elevated access. STATUS and English README, ATTRIBUTION and CHANGELOG exist. Package `nelim.aslothmodrenew`, display name, repository and folder consistently identify the same continuation without requiring literal equality. |
+| dansMonoRepo -> horsMonoRepo | **Validated.** Independent .git and Git root; origin points to the exact GitHub repository. Live `gh repo view vbardales/Rimworld-A-Sloth-Mod-Renew --json name,isPrivate,url,defaultBranchRef` returned public, main. `git ls-remote origin HEAD` returned the audited commit. Initial sandbox access failed; the read-only checks succeeded with elevated access. STATUS and English README, ATTRIBUTION and CHANGELOG exist. Package `nelim.aslothmod`, display name, repository and folder consistently identify the same continuation without requiring literal equality. |
 | horsMonoRepo -> ModIcon generated | **Validated with explicit user style override, 2026-09-13.** The initial audit blocked this gate; the user subsequently accepted the existing style. Directly viewed the shipped PNG: the mascot has two open eyes and no top-right ponytail, contrary to the explicit ModIcon style. Its round sloth head, branch, dark background and outlined treatment are recognizable, and its PNG format, 128 x 128 dimensions and 24,497-byte size pass. The development/build part is otherwise established for this XML-only port; compilation and compiled-artifact freshness are **not applicable**. |
 | ModIcon generated -> Preview generated | **Validated independently.** Directly inspected the delivered 896 x 504 PNG (539,157 bytes) and the 268-pixel thumbnail. High oblique view, floor-dominated composition, restrained ochre/cool-shadow palette, lit sloth, empty title area, no readable face or clipping. No concrete camera defect or remaining visual doubt was observed. No historical generation report or recorded comparison with a game screenshot is required. |
 | Preview generated -> preOptions | **Validated independently for the stated gate.** English description and title; Renew/unofficial naming is consistent. Preview article A is reduced in primary ink; Renew is reduced in secondary ink; unofficial occupies its own line. Green accent #B5C52C is visibly distinct from ochre secondary #E8BE85 at both inspected sizes. HTML and palette agree with the rendered image. The separate publication-description formatting defect is recorded below. |

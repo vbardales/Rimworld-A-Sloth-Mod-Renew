@@ -18,7 +18,7 @@ foreach ($file in Get-ChildItem $ModRoot -Recurse -Filter *.xml) {
 $about = Read-Xml (Join-Path $ModRoot 'About/About.xml')
 $meta = $about.ModMetaData
 Assert ($meta.name -eq 'A Sloth Mod Renew (unofficial)') 'Unofficial title missing'
-Assert ($meta.packageId -eq 'nelim.aslothmodrenew') 'Package identity changed'
+Assert ($meta.packageId -eq 'nelim.aslothmod') 'Package identity changed'
 Assert ($meta.supportedVersions.li -contains '1.6') '1.6 support missing'
 Assert ($meta.incompatibleWith.li -contains 'ThatRubishGamer.RubishMods.SlothMod') 'Original collision not declared'
 Assert ($meta.description.Contains('https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew')) 'GitHub missing from description'
