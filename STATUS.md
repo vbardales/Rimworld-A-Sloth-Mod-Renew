@@ -28,6 +28,25 @@ updated:      2026-09-27, workflow audit
 
 # A Sloth Mod Renew — status
 
+## Icon replacement and Art/ cleanup — 2026-09-27, later same day
+
+The owner replaced `Mod/About/ModIcon.png` herself (chain rule 2 reserves this to her; no
+session generated or altered it) with a render that finally matches the family style this repo
+otherwise uses: three-quarter head, top-right ponytail, thick outline, sparkle, near-black
+background. It shipped at 1254x1254 and over a megabyte — same problem as the icon it replaced,
+Steam publishing `Mod/` unfiltered for a 32 px use. On her explicit instruction ("réduis le
+poids/taille de l'icône"), resized to 128x128, 23310 bytes; readable at a 32 px thumbnail. Full
+render kept at `Art/ModIcon-source.png`, `Art/Make-ModIcon.ps1` rewritten to reproduce this from
+it. `Art/ModIcon.ico`, a local Explorer-folder convenience with no bearing on the shipped mod,
+rebuilt from the corrected icon.
+
+The owner also removed the Preview generation pipeline from `Art/`: `preview.html`,
+`render-preview.cjs`, `Preview-source.png`, `preview-268.png`, `preview-palette.json`,
+`preview-qa.json`, the old `Make-ModIcon.ps1`. `Mod/About/Preview.png` itself is untouched and
+still the 896x504 file validated on 2026-09-12. Nothing was recovered from git history: the
+banner does not need rebuilding, and every deleted file is still reachable at `49962c1^` if that
+changes. `Tests/Test-Mod.ps1` re-run after both changes: still 95/95.
+
 ## Current workflow audit — 2026-09-27
 
 Re-audited against the live working tree (`e93882a` plus one same-session fix), per
