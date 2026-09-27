@@ -16,17 +16,47 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - unverified: the nineteen scenarios in TESTING.md, none played
+  - unverified: the nineteen manual scenarios in TESTING.md, none played
   - unverified: prioritize F and G (natural spawning and trade), P (ADS 2 surgery, load order), and L (original-mod incompatibility warning)
   - unverified: scenario I must check the inherited east-only dessicated corpse in game; the limited artwork alone is not an established runtime defect
   - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
   - unverified: whether a Workshop item already exists for this mod (Virginie mentioned a possible 0.1.0 pre-publish, but no PublishedFileId.txt, GitHub tag/release or local Workshop content folder confirms it)
+  - unverified: the five Pickle scenarios in Tests/Pickle/ are written but never run; see the Abstract-def uncertainty noted in 03-compat.feature
   - feature: no PUBLICATION.md yet (required at tested -> prepublished, not before)
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-09-28, compatibility patches added
+updated:      2026-09-28, Pickle suite written
 ---
 
 # A Sloth Mod Renew — status
+
+## Pickle suite written — 2026-09-28, later same day
+
+Reversed the "no Pickle scope" call recorded below under the compatibility work: it conflated
+"no interface to click" with "nothing Pickle can check." `Tests/Pickle/` now holds a five-scenario
+suite using only Pickle's own built-in `raw stat` and `was patched by mod` steps — no PickleTools
+dependency, no local C# assembly, no save loaded by any scenario, all five running at the main
+menu against the already-built def database.
+
+- `01-repair.feature`: both defs load, `Wildness` reads 0.5 from `statBases` (the fact this whole
+  port exists to fix), the two vanilla biome patches applied. No `@requires` tag: this is the
+  minimal pass.
+- `02-optional-biomes.feature`: cloud forest / the three Alpha Biomes jungles patched, each gated
+  on its own mod so the scenario skips cleanly rather than fail on a def that does not exist
+  without that mod.
+- `03-compat.feature`: Sloth added to ADS 2's three surgery categories, and patched with a
+  nocturnal cycle when Nocturnal Animals (Continued) is present.
+
+**One real uncertainty, not smoothed over**: `ADS_Cat1/2/3` are `Abstract="True"` RecipeDefs, kept
+only as XPath patch targets, and whether Pickle's `def` lookup can resolve an Abstract def by name
+was not verified here - it cannot be, without running the game. The feature file's own comment
+gives the fallback (check a concrete surgery recipe's `recipeUsers` field instead) if a run reports
+"no such def" rather than a pass or a fail.
+
+What the suite still cannot reach, and stays in the manual scenarios: whether the sloth actually
+spawns on a generated map (F), whether a trader actually stocks one (G), whether ADS 2's Health tab
+actually lists the copied operations (P). A green Pickle run proves a patch mechanism fired against
+a real installed file; it does not prove what a colonist sees. None of the five scenarios has been
+run - this section records what was written, not a result.
 
 ## Optional compatibility with three other mods — 2026-09-28
 

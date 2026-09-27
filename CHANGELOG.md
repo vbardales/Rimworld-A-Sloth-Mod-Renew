@@ -39,6 +39,9 @@ First release of the 1.6 update of **A Sloth Mod**, by ThatRubishGamer.
     Animals (Continued), which also hand-lists vanilla defNames only. `<loadAfter>` declared.
   - Better Crossbreeding needed no patch: it only extends vanilla 1.6's opt-in
     `canCrossBreedWith`, empty by default, and this port invents no crossbreeding partners.
+- **A Pickle suite** (`Tests/Pickle/`), using only Pickle's own built-in steps: the `Wildness`
+  repair and every guarded patch's real effect, checked at the main menu with no save, no custom
+  C# and no capture. See `Tests/Pickle/README.md` for what it does and does not reach.
 
 ### Changed
 

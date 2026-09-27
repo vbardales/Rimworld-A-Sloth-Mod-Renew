@@ -9,3 +9,12 @@
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Textures: source only, never the compressed game format
+*.dds
+
+# In-game test evidence (Pickle reports, captures, Player.log). Kept on disk only, never in git:
+# screenshots and logs grow without limit. What is worth versioning is a short text summary under
+# docs/runs/, one line per run. TESTING.md says which files are worth keeping.
+Tests/Pickle/Evidence/
+evidence/

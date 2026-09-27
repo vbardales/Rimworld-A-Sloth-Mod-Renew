@@ -1,0 +1,8 @@
+# The "with optionals" pass: all four mods this port has an optional patch for, together. None
+# is mutually incompatible with another, so one combined pass covers all four rather than one
+# pass per mod; each scenario that needs one is gated by its own @requires tag regardless.
+# Ids read from each mod's own About.xml / Workshop page, 2026-09-28.
+zylle.MoreVanillaBiomes                    1931453053
+sarg.alphabiomes                           1841354677
+SamBucher.ADogSaidAnimalProsthetics2       3238353862
+Mlie.XNDNocturnalAnimals                   2269731409

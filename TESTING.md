@@ -13,20 +13,28 @@ most of what follows asks one question: *did ThatRubishGamer's animal survive th
 exceptions are B and C, which test the repair, and F and G, which test the two changes this port
 made on purpose so that the animal can be met at all.
 
-## Pickle scope: none, and why
+## Pickle scope: written 2026-09-28, narrower than it first looks
 
-This mod ships no assembly, no `MainButtonDef`, no window, no button and no settings page. Every
-fact these scenarios check — the wildness value on the information card, whether the animal is in
-the Wildlife tab, whether a trader stocks it — is read off a vanilla screen that exists whether or
-not this mod is installed. There is no interaction of this mod's own making for Pickle to click
-through: no dialog it opens, no field it validates, no list it populates. What Gherkin is for here
-— "the mod's own interface, proven only by a running game" — has nothing to attach to.
+This mod ships no assembly, no `MainButtonDef`, no window and no button, so there is nothing of
+its own making for Pickle to click through — no dialog it opens, no field it validates. That part
+of the original reasoning here stands. What was wrong was concluding from it that Pickle had
+nothing to offer at all: `raw stat` and `was patched by mod`, both built into Pickle itself,
+answer exactly the two facts that matter here without needing a UI or even a save — see
+`Tests/Pickle/README.md` for what they check and why the def database alone is enough.
 
-The nineteen scenarios above already are the "only a running game can show this" list a Pickle suite
-would otherwise hold: spawning, trader stock, the stat card. Writing them a second time as Gherkin
-would drive the same clicks through a runner built for exercising windows this mod does not have,
-for no fact a human reading the Wildlife tab does not already settle. If a future version adds a
-`ModSettings` page or any other UI, this section is the one to revisit.
+What Pickle's suite still cannot reach: whether the sloth actually **spawns** on a generated map
+(scenario F), whether a trader actually **stocks** one (scenario G), whether ADS 2's Health tab
+actually **lists** the copied operations (scenario P). Those are outcomes of map generation and
+trade-stock generation, runtime facts a patch check cannot stand in for, and they stay in the
+nineteen manual scenarios above. A green Pickle run proves the mechanism fired against the real
+installed file; it does not prove what a colonist sees.
+
+**Evidence to keep, if a run is played and archived**: nothing. Every scenario is a def-database
+assertion with no capture step and no `@review` tag, so a run's only useful output is its
+pass/fail verdict and, on a failure, the attached stat/patch breakdown Pickle prints for that
+scenario. A one-line result per pass belongs in `docs/runs/`, per `AGENTS.md`; the full report
+under `Tests/Pickle/Evidence/` is disposable once that line is written, per `AUDIT.md`'s Pickle
+section on archived reports.
 
 ## Translation checks — English and French
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>A Sloth Mod Renew - Pickle tests</name>
+  <author>Nelim</author>
+  <packageId>nelim.aslothmod.pickletests</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>In-game functional tests for A Sloth Mod Renew, run by Pickle. Development only: never published.
+
+Every scenario reads the def database at the main menu - no save is loaded, and none is needed: this mod ships two Defs and four guarded XML patches, nothing that only shows up in a running colony. What still needs a human (whether the sloth actually spawns in a rainforest, whether a trader actually stocks it) stays in ../../../TESTING.md, unverified until played; see that file's "Pickle scope" note.</description>
+  <modDependencies>
+    <li>
+      <packageId>nelim.aslothmod</packageId>
+      <displayName>A Sloth Mod Renew</displayName>
+    </li>
+    <li>
+      <packageId>rimworks.pickle</packageId>
+      <displayName>Pickle</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3791648678</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>nelim.aslothmod</li>
+    <li>rimworks.pickle</li>
+    <!-- Optional: present only in the "avec facultatifs" pass. Load order does not matter for the
+         "was patched" and "raw stat" checks below, which read the def database after all patches
+         have run; it matters for zylle.MoreVanillaBiomes, sarg.alphabiomes,
+         SamBucher.ADogSaidAnimalProsthetics2 and Mlie.XNDNocturnalAnimals only in the sense that
+         they must be enabled at all, which the pass's dependency map already ensures. -->
+  </loadAfter>
+</ModMetaData>
