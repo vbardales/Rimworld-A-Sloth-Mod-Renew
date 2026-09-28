@@ -11,6 +11,7 @@ detached:     yes
 stage:        done
 licence:      silent
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
+upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
 tested_on:
