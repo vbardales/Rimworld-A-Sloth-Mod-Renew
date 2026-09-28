@@ -102,8 +102,7 @@ Licence and what was carried over: see ATTRIBUTION.md in the source repository.
 ```
 
 To verify before pasting, none of it done yet: the author credit for More Vanilla Biomes (read its page;
-its `packageId` is `zylle.MoreVanillaBiomes`), that "Codex" is really what was used (copied from the
-Dalmatians text, not from this session's history), the four Workshop links opened, and the sentence
+its `packageId` is `zylle.MoreVanillaBiomes`), the four Workshop links opened, and the sentence
 saying what the automated runs cover, which is left out until a run is green.
 
 ## Images
@@ -247,3 +246,8 @@ Hi ThatRubishGamer! I ported your sloth to 1.6 (unofficially, credit and a link 
 
 Check the last comments of each page first, and whether it takes comments, as `WORKSHOP_COMMENTS.md`
 asks. The `<ID of this mod>` placeholder is filled once the item exists.
+
+Note on the "AI-generated" section: the mention of Codex (OpenAI) rests on the owner's word of 2026-09-28,
+not on the Git history. No commit carries a Codex trailer; four commits of 2026-09-12 and 2026-09-13
+(`2b9bbc4`, `43f2850`, `53ce7ea`, `b3ffdb8`) carry no trailer at all and are not from a Claude session
+of this repository.
