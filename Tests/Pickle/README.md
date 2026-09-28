@@ -49,8 +49,10 @@ if a run reports "no such def" instead of a pass or a fail.
 - **Unattended, minimal pass**:
   `powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod ASlothModRenew`.
 - **Unattended, with optionals**:
-  `powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod ASlothModRenew -DepMap Tests/Pickle/wsl-deps.avec-facultatifs.map`.
-- Or deposit both as tickets with `Submit-PickleRun.ps1` rather than launching directly - see
-  `AUDIT.md`, "Déposer un run au lieu de le lancer".
+  `powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod ASlothModRenew -DepMap wsl-deps.avec-facultatifs.map`.
+  `-DepMap` takes a bare filename, looked for in `Tests/Pickle/`; a path separator makes it a
+  full path instead, which a relative one then fails to resolve.
+- No session launches either directly: deposit both as tickets with `Submit-PickleRun.ps1`
+  instead - see `AUDIT.md`, "Déposer un run au lieu de le lancer".
 
 Nothing here clicks through OS input, opens a window, or needs a fixture.
