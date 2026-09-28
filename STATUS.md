@@ -58,6 +58,11 @@ actually lists the copied operations (P). A green Pickle run proves a patch mech
 a real installed file; it does not prove what a colonist sees. None of the five scenarios has been
 run - this section records what was written, not a result.
 
+**Both passes deposited as tickets, 2026-09-28 08:31**, per `AUDIT.md`'s "Déposer un run au lieu de
+le lancer": minimal pass `20260928-083123-510-fa14`, avec facultatifs `20260928-083132-791-98ce`.
+Registered with TicketDispatcher first. Neither has run yet; this line is replaced with the actual
+result once `RUN_DONE` arrives for both, not left standing after.
+
 ## Optional compatibility with three other mods — 2026-09-28
 
 On request ("ne pas oublier la compatibilité ADS, Better Crossbreeding et Nocturnal Animals"),
