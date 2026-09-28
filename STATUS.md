@@ -67,13 +67,20 @@ three feature files and in `Tests/Pickle/README.md`; evidence at
 `.pickle-state\rimworld-ticket-dispatcher\logs\20260928-083123-510-fa14.log`. **Not yet
 resubmitted** - see the ticket noted immediately below once it exists.
 
-**Avec facultatifs pass `98ce`: provenance compromised, its result is not evidence either way.**
-It took the lock and began staging around 08:32, while these fixes were being edited on disk -
-`AUDIT.md` is explicit that the tree must stay fixed from deposit to `RUN_DONE`, and this session
-broke that rule by editing mid-run instead of waiting. Whatever `98ce` reports, it may have staged
-a mix of the broken and the fixed feature files rather than either cleanly: treat its verdict as
-inconclusive, not as a second confirmation of the two mistakes above or a clean pass on the fix.
-A fresh ticket for both passes follows once the corrected tree is committed and pushed.
+**Avec facultatifs pass `98ce`, RUN_DONE: stall, exit 3, no report.** Its provenance was already
+compromised - it took the lock while the fixes above were still being edited on disk, against
+`AUDIT.md`'s rule to keep the tree fixed between a ticket's deposit and its `RUN_DONE` - but the
+stall itself turned out to have a real, unrelated cause, found in the saved
+`Tests/Pickle/Evidence/avec-facultatifs/Player.log`: a `TypeLoadException` on
+`VEF.Maps.TileMutatorWorker_PlantsWithCommonality`, a type Alpha Biomes needs from Vanilla
+Expanded Framework. **`wsl-deps.avec-facultatifs.map` never listed VEF** -
+`OskarPotocki.VanillaFactionsExpanded.Core`, Alpha Biomes' own hard dependency, not this port's -
+and the staging script does not resolve a mod's dependencies recursively, exactly the trap
+`PickleTools/Authoring/README.md` warns about. The failed type load cascaded into over a thousand
+"BadTexture" material warnings until the watchdog gave up on a log that had stopped growing.
+
+Fixed: VEF (Workshop 2023507013) added to the map, before Alpha Biomes. A fresh ticket for both
+passes follows now that the map is corrected and the tree is committed and pushed.
 
 ## Optional compatibility with three other mods — 2026-09-28
 

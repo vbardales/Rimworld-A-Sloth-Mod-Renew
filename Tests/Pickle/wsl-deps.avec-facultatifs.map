@@ -2,6 +2,15 @@
 # is mutually incompatible with another, so one combined pass covers all four rather than one
 # pass per mod; each scenario that needs one is gated by its own @requires tag regardless.
 # Ids read from each mod's own About.xml / Workshop page, 2026-09-28.
+#
+# Vanilla Expanded Framework is Alpha Biomes' own hard dependency (not this mod's, not staged by
+# default), and it is missing here on purpose in the first version of this file: that omission
+# stalled the first "avec facultatifs" run (98ce, 2026-09-28) on a TypeLoadException from a VEF
+# type Alpha Biomes could not resolve, cascading into thousands of "BadTexture" material warnings
+# until the watchdog gave up. The staging script copies only this mod's own direct dependencies,
+# not a dependency's dependencies - see PickleTools/Authoring/README.md, "it is not a recursive
+# dependency resolver". Listed before Alpha Biomes: prerequisites go before their consumers.
+OskarPotocki.VanillaFactionsExpanded.Core  2023507013
 zylle.MoreVanillaBiomes                    1931453053
 sarg.alphabiomes                           1841354677
 SamBucher.ADogSaidAnimalProsthetics2       3238353862
