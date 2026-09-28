@@ -67,7 +67,7 @@ expected on `@requires`.** Both reds were the suite's own authoring mistakes, no
 `def "Sloth"` is ambiguous between its `ThingDef` and its `PawnKindDef`, and `was patched by mod`
 matches the display name, not the packageId this suite had written everywhere. Both fixed in the
 three feature files and in `Tests/Pickle/README.md`; evidence at
-`Tests/Pickle/Evidence/minimal`, log at
+`docs/runs/2026-09-28-pickle.md` (the evidence folder itself was deleted once superseded by `minimal-3`), log at
 `.pickle-state\rimworld-ticket-dispatcher\logs\20260928-083123-510-fa14.log`. **Not yet
 resubmitted** - see the ticket noted immediately below once it exists.
 
