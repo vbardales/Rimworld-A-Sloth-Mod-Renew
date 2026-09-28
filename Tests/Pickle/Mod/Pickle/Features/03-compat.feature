@@ -10,12 +10,13 @@ Feature: optional compatibility with two other mods
   # surgery recipe and a field check on its recipeUsers instead.
   @requires:SamBucher.ADogSaidAnimalProsthetics2
   Scenario: Sloth is added to all three ADS 2 surgery categories
-    Then def "ADS_Cat1" was patched by mod "nelim.aslothmod"
-    And def "ADS_Cat2" was patched by mod "nelim.aslothmod"
-    And def "ADS_Cat3" was patched by mod "nelim.aslothmod"
+    Then def "ADS_Cat1" was patched by mod "A Sloth Mod Renew (unofficial)"
+    And def "ADS_Cat2" was patched by mod "A Sloth Mod Renew (unofficial)"
+    And def "ADS_Cat3" was patched by mod "A Sloth Mod Renew (unofficial)"
 
   # Only Compat_NocturnalAnimals.xml ever touches the Sloth ThingDef itself - the biome and trade
-  # patches touch BiomeDefs and RecipeDefs, never this one - so this attribution is unambiguous.
+  # patches touch BiomeDefs and RecipeDefs, never this one - so this attribution is unambiguous
+  # once the type is named; "Sloth" alone is ambiguous with the PawnKindDef of the same name.
   @requires:Mlie.XNDNocturnalAnimals
   Scenario: Sloth gets a nocturnal cycle from Nocturnal Animals (Continued)
-    Then def "Sloth" was patched by mod "nelim.aslothmod"
+    Then def "Sloth" of type "ThingDef" was patched by mod "A Sloth Mod Renew (unofficial)"

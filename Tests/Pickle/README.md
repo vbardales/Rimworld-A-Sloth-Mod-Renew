@@ -27,7 +27,19 @@ the mechanism fired against the real installed file; it does not prove what a co
 **Known uncertainty, 03-compat's first scenario**: `ADS_Cat1`/`Cat2`/`Cat3` are `Abstract="True"`
 RecipeDefs, kept only as XPath patch targets, and it is not verified here that Pickle's `def`
 lookup can resolve an Abstract def by name. See the comment in the feature file for the fallback
-if a run reports "no such def" instead of a pass or a fail.
+if a run reports "no such def" instead of a pass or a fail. Still untested after the first run
+below: the minimal pass never reaches this scenario, it needs ADS 2 present.
+
+**First run, 2026-09-28, minimal pass (`fa14`): 1 green, 2 red, 4 skipped as expected.** Both
+reds were the suite's own mistake, not the mod's, and are fixed:
+
+- `def "Sloth" raw stat ...` and `def "Sloth" was patched ...` are ambiguous - `Sloth` names both
+  a `ThingDef` and a `PawnKindDef`. Every such step now names `of type "ThingDef"` explicitly.
+- `was patched by mod` matches the mod's **display name**, not its packageId, unlike `mod {string}
+  is loaded` and its relatives. Every such step now reads `"A Sloth Mod Renew (unofficial)"`.
+
+Neither mistake was visible from the synthetic offline checks in `Tests/Test-Mod.ps1`, which is
+exactly the gap a real run closes.
 
 ## Setup, once
 

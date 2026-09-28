@@ -58,10 +58,22 @@ actually lists the copied operations (P). A green Pickle run proves a patch mech
 a real installed file; it does not prove what a colonist sees. None of the five scenarios has been
 run - this section records what was written, not a result.
 
-**Both passes deposited as tickets, 2026-09-28 08:31**, per `AUDIT.md`'s "Déposer un run au lieu de
-le lancer": minimal pass `20260928-083123-510-fa14`, avec facultatifs `20260928-083132-791-98ce`.
-Registered with TicketDispatcher first. Neither has run yet; this line is replaced with the actual
-result once `RUN_DONE` arrives for both, not left standing after.
+**Minimal pass `fa14`, RUN_DONE 2026-09-28: red, exit 1, one attempt, 1/7 green, 4 skipped as
+expected on `@requires`.** Both reds were the suite's own authoring mistakes, not the mod's:
+`def "Sloth"` is ambiguous between its `ThingDef` and its `PawnKindDef`, and `was patched by mod`
+matches the display name, not the packageId this suite had written everywhere. Both fixed in the
+three feature files and in `Tests/Pickle/README.md`; evidence at
+`Tests/Pickle/Evidence/minimal`, log at
+`.pickle-state\rimworld-ticket-dispatcher\logs\20260928-083123-510-fa14.log`. **Not yet
+resubmitted** - see the ticket noted immediately below once it exists.
+
+**Avec facultatifs pass `98ce`: provenance compromised, its result is not evidence either way.**
+It took the lock and began staging around 08:32, while these fixes were being edited on disk -
+`AUDIT.md` is explicit that the tree must stay fixed from deposit to `RUN_DONE`, and this session
+broke that rule by editing mid-run instead of waiting. Whatever `98ce` reports, it may have staged
+a mix of the broken and the fixed feature files rather than either cleanly: treat its verdict as
+inconclusive, not as a second confirmation of the two mistakes above or a clean pass on the fix.
+A fresh ticket for both passes follows once the corrected tree is committed and pushed.
 
 ## Optional compatibility with three other mods — 2026-09-28
 

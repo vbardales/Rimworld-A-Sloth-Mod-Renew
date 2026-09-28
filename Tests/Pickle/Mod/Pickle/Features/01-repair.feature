@@ -12,9 +12,10 @@ Feature: the sloth exists and the 1.6 repair holds
   # what went missing before the fix - see TESTING.md scenarios B and C for the same fact read
   # off the in-game information card instead.
   Scenario: wildness reads from statBases, not from the legacy race field
-    Then def "Sloth" raw stat "Wildness" is 0.5
+    Then def "Sloth" of type "ThingDef" raw stat "Wildness" is 0.5
 
-  # The two vanilla biome entries always apply: no optional mod guards them.
+  # The two vanilla biome entries always apply: no optional mod guards them. "was patched by mod"
+  # matches the display name, not the packageId - unlike "mod {string} is loaded" and friends.
   Scenario: the two vanilla biomes are patched
-    Then def "TropicalRainforest" was patched by mod "nelim.aslothmod"
-    And def "TropicalSwamp" was patched by mod "nelim.aslothmod"
+    Then def "TropicalRainforest" was patched by mod "A Sloth Mod Renew (unofficial)"
+    And def "TropicalSwamp" was patched by mod "A Sloth Mod Renew (unofficial)"
