@@ -20,7 +20,7 @@ remaining:
   - unverified: prioritize F and G (natural spawning and trade), P (ADS 2 surgery, load order), and L (original-mod incompatibility warning)
   - unverified: scenario I must check the inherited east-only dessicated corpse in game; the limited artwork alone is not an established runtime defect
   - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
-  - unverified: whether a Workshop item already exists for this mod (Virginie mentioned a possible 0.1.0 pre-publish, but no PublishedFileId.txt, GitHub tag/release or local Workshop content folder confirms it)
+  - noted 2026-09-28 (Virginie): no PublishedFileId means no prepublication. `workshop` stays empty, and the CHANGELOG gets no 0.1.0 entry until an item is actually created
   - unverified: the five Pickle scenarios in Tests/Pickle/ are written but never run; see the Abstract-def uncertainty noted in 03-compat.feature
   - feature: no PUBLICATION.md yet (required at tested -> prepublished, not before)
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
@@ -105,8 +105,8 @@ checked all three against their actual installed files under
   `ATTRIBUTION.md` says why rather than leaving the mod unmentioned.
 
 None of the three is in Virginie's active mod list today except the Nocturnal Animals continuation;
-none becomes a dependency here either way. `Tests/Test-Mod.ps1`: 97/97 (up from 95, the two new
-patch files parsing). `Check-DefInjected.ps1`: still 0 errors, with an expected, harmless note that
+none becomes a dependency here either way. `Tests/Test-Mod.ps1`: 140 checks after 2026-09-28 (95 before the compat patches; it now also runs ADS 2 and Nocturnal Animals against synthetic fixtures in all four combinations, and asserts loadBefore/loadAfter, no hard dependency, and the description ending on the GitHub link). 
+`Check-DefInjected.ps1`: still 0 errors, with an expected, harmless note that
 its patch simulator does not model `PatchOperationAddModExtension`.
 
 ## Icon replacement and Art/ cleanup — 2026-09-27, later same day

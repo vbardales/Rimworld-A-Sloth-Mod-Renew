@@ -21,6 +21,12 @@ Assert ($meta.name -eq 'A Sloth Mod Renew (unofficial)') 'Unofficial title missi
 Assert ($meta.packageId -eq 'nelim.aslothmod') 'Package identity changed'
 Assert ($meta.supportedVersions.li -contains '1.6') '1.6 support missing'
 Assert ($meta.incompatibleWith.li -contains 'ThatRubishGamer.RubishMods.SlothMod') 'Original collision not declared'
+# ADS 2 copies its category lists at its own load time, so this port must load before it.
+Assert ($meta.loadBefore.li -contains 'SamBucher.ADogSaidAnimalProsthetics2') 'loadBefore ADS 2 missing'
+Assert ($meta.loadAfter.li -contains 'Mlie.XNDNocturnalAnimals') 'loadAfter Nocturnal Animals missing'
+Assert (-not ($meta.loadAfter.li -contains 'SamBucher.ADogSaidAnimalProsthetics2')) 'ADS 2 must not be in loadAfter'
+Assert (-not $meta.modDependencies) 'Optional mods must not become hard dependencies'
+Assert ($meta.description.TrimEnd().EndsWith('[url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew]Source code on GitHub[/url]')) 'Description must end with the Source code on GitHub link'
 Assert ($meta.description.Contains('https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew')) 'GitHub missing from description'
 $defs = Read-Xml (Join-Path $ModRoot 'Defs/ThingDefs_Animals.xml')
 $thing = $defs.SelectSingleNode('/Defs/ThingDef[defName="Sloth"]')
@@ -57,6 +63,15 @@ function Invoke-Patch($Operation, $Document, [string[]]$ActiveMods) {
                 $null = $targets[0].AppendChild($Document.ImportNode($child, $true))
             }
         }
+        'PatchOperationAddModExtension' {
+            $targets = $Document.SelectNodes($Operation.xpath)
+            Assert ($targets.Count -eq 1) "Patch target missing or ambiguous: $($Operation.xpath)"
+            $ext = $targets[0].SelectSingleNode('modExtensions')
+            if ($null -eq $ext) { $ext = $targets[0].AppendChild($Document.CreateElement('modExtensions')) }
+            foreach ($child in $Operation.value.ChildNodes) {
+                $null = $ext.AppendChild($Document.ImportNode($child, $true))
+            }
+        }
         default { throw "Unsupported patch operation: $($Operation.GetAttribute('Class'))" }
     }
 }
@@ -85,4 +100,25 @@ foreach ($mask in 0..3) {
         Assert ($biome.wildAnimals.Monkey -eq '1') 'Patch altered existing wildlife'
     }
 }
-Write-Output "PASS: $checks checks; all XML parsed; four optional-mod configurations verified on synthetic fixtures."
+# Compat patches: A Dog Said 2 (three category recipes) and Nocturnal Animals (mod extension).
+$ads = 'A Dog Said... Animal Prosthetics 2'; $noct = '[XND] Nocturnal Animals (Continued)'
+foreach ($mask in 0..3) {
+    $active = @()
+    if ($mask -band 1) { $active += $ads }
+    if ($mask -band 2) { $active += $noct }
+    $fixture = [xml]('<Defs><ThingDef><defName>Sloth</defName></ThingDef>' +
+        (('ADS_Cat1','ADS_Cat2','ADS_Cat3' | ForEach-Object { "<RecipeDef Name=`"$_`" Abstract=`"True`"><recipeUsers><li>Cat</li></recipeUsers></RecipeDef>" }) -join '') + '</Defs>')
+    foreach ($file in Get-ChildItem (Join-Path $ModRoot 'Patches') -Filter 'Compat_*.xml') {
+        $patch = Read-Xml $file.FullName
+        foreach ($operation in $patch.Patch.Operation) { Invoke-Patch $operation $fixture $active }
+    }
+    foreach ($cat in 'ADS_Cat1','ADS_Cat2','ADS_Cat3') {
+        $users = @($fixture.SelectNodes("Defs/RecipeDef[@Name='$cat']/recipeUsers/li").InnerText)
+        Assert ($users -contains 'Cat') "Patch altered existing recipeUsers: $cat"
+        Assert ((@($users | Where-Object { $_ -eq 'Sloth' }).Count) -eq [int](($mask -band 1) -ne 0)) "Wrong Sloth entry in $cat, configuration $mask"
+    }
+    $ext = $fixture.SelectNodes("Defs/ThingDef[defName='Sloth']/modExtensions/li[@Class='NocturnalAnimals.ExtendedRaceProperties']")
+    Assert ($ext.Count -eq [int](($mask -band 2) -ne 0)) "Wrong nocturnal extension count, configuration $mask"
+    if ($ext.Count) { Assert ($ext[0].bodyClock -eq 'Nocturnal') 'bodyClock must be Nocturnal' }
+}
+Write-Output "PASS: $checks checks; all XML parsed; biome and compat configurations verified on synthetic fixtures."
