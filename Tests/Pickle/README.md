@@ -47,7 +47,7 @@ mistakes, none the mod's, and invisible to `Tests/Test-Mod.ps1`'s synthetic fixt
 
 - **Minimal** (`01` and `04` apply; `02` and `03` skip every scenario on `@requires`): no
   `-DepMap` needed.
-- **With optionals** (`wsl-deps.avec-facultatifs.map`): all four mods this port has a guarded
+- **With optionals** (`wsl-deps.avec-facultatifs.map`, which also names this mod itself between Nocturnal Animals and ADS 2 to set its declared load order): all four mods this port has a guarded
   patch for, together - none conflicts with another, so one pass covers all four rather than one
   per mod.
 
