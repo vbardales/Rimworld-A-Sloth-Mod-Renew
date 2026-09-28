@@ -8,7 +8,7 @@ means reread. Updated 2026-09-28.
 |---|---|---|---|
 | `AGENTS.md` | 90d51374 | fully | yes: gates, evidence policy, CI publication rules |
 | `AUDIT.md` | 90d51374 | fully | yes: the chain, session title, Pickle ticket rules |
-| `PUBLISHING.md` | 90d51374 | description, licence, `PUBLICATION.md` and file-list sections; headings of the rest | partly: the CI section ("Publier par la CI") is **not** read yet |
+| `PUBLISHING.md` | 90d51374 | description, licence, `PUBLICATION.md`, file list, "À chaque mise à jour", "Publier par la CI" (first half); headings of the rest | yes |
 | `MOD_SETTINGS.md` | 90d51374 | criteria only | yes: settings `not_applicable` |
 | `TRANSLATIONS.md` | 90d51374 | criteria only | yes: DefInjected coverage |
 | `STYLE_RIMWORLD.md` | 90d51374 | fully | yes: banner and icon |
@@ -17,7 +17,7 @@ means reread. Updated 2026-09-28.
 | `PickleTools/README.md`, `Authoring/README.md`, `docs/steps.md` | current checkout | catalogue lines and authoring sections 1 to 4 | yes |
 | Pickle's own `Docs/steps.md` (GitHub, main) | fetched 2026-09-28 | Defs, Mods, Stats, World setup, Debug | yes |
 | `PickleTools/Headless/README.md` | - | no | later, if a run misbehaves |
-| `Rimworld-Release-Admin/docs/OPERATIONS.md` | 112 lines | no | needed before any CI publication |
+| `Rimworld-Release-Admin/docs/OPERATIONS.md` | 112 lines, read 2026-09-28 | fully | yes: no item yet, so first publication is in-game upload of a private item; CI needs a numeric `PublishedFileId.txt` first; `
 | `Rimworld-Ticket-Dispatcher/docs/WELCOME.md`, `SUBMIT.md` | - | no; the dispatcher's reply summarised them | not needed so far |
 
 ## What the register says about this mod's neighbours
