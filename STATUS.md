@@ -21,7 +21,7 @@ remaining:
   - unverified: scenario I must check the inherited east-only dessicated corpse in game; the limited artwork alone is not an established runtime defect
   - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
   - noted 2026-09-28 (Virginie): no PublishedFileId means no prepublication. `workshop` stays empty, and the CHANGELOG gets no 0.1.0 entry until an item is actually created
-  - unverified: the five Pickle scenarios in Tests/Pickle/ are written but never run; see the Abstract-def uncertainty noted in 03-compat.feature
+  - unverified: the Pickle suite (4 features, 7 scenarios) has run three times, never green end to end; the corrections from those runs are awaiting a fourth pair
   - feature: no PUBLICATION.md yet (required at tested -> prepublished, not before)
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
 updated:      2026-09-28, Pickle suite written
@@ -29,10 +29,14 @@ updated:      2026-09-28, Pickle suite written
 
 # A Sloth Mod Renew — status
 
+## Pickle runs 1 to 3 — 2026-09-28, results and the fourth attempt
+
+`fa14` (minimal) 1 green, 2 red; `f197` (minimal, corrected) 2 green, 1 red, 4 skipped; `98ce` (with optionals) stalled, exit 3; `2ae1` (with optionals, VEF added) ran all 7: 4 green, 3 red. Every red was the suite's own mistake, none the mod's: an `of type` qualifier that only exists on `exists`, so `raw stat` and `was patched` cannot use it; Abstract RecipeDefs (`ADS_Cat1/2/3`) invisible to Pickle's lookup; and, earlier, the display-name-versus-packageId and missing-VEF mistakes below. **The bug the suite exists for was never wrong**: nothing failed on the mod. Corrected now: the stat is read off a spawned sloth (`04-sloth-stat.feature`, needs the `test-colony` save; the spawn cell is a guess), ADS 2 is checked by load order and by its own copy on `InstallDentureAnimal`, Nocturnal Animals by load order and `was patched` without a type. Full account in `Tests/Pickle/README.md`. Evidence of the four runs is in `Tests/Pickle/Evidence/` (disk only, gitignored). A fourth pair of tickets follows. The upstream oddity (a message suggesting a qualifier the step does not accept) is worth telling Pickle's maintainers; nothing goes to them without the owner's word.
+
 ## Pickle suite written — 2026-09-28, later same day
 
 Reversed the "no Pickle scope" call recorded below under the compatibility work: it conflated
-"no interface to click" with "nothing Pickle can check." `Tests/Pickle/` now holds a five-scenario
+"no interface to click" with "nothing Pickle can check." `Tests/Pickle/` first held a five-scenario
 suite using only Pickle's own built-in `raw stat` and `was patched by mod` steps — no PickleTools
 dependency, no local C# assembly, no save loaded by any scenario, all five running at the main
 menu against the already-built def database.

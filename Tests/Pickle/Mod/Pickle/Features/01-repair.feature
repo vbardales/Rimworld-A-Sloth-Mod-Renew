@@ -1,18 +1,14 @@
 # No save needed: everything here reads the def database at the main menu, where it already
-# stands built - raw stat and was-patched steps do not require a running colony.
+# stands built - was-patched and mod-order steps do not require a running colony.
+# The Wildness value itself is read off a spawned animal in 04-sloth-stat.feature: Pickle's
+# "raw stat" step cannot tell the Sloth ThingDef from the Sloth PawnKindDef, and its "of type"
+# qualifier exists only on "exists" (found by the first two runs, 2026-09-28).
 
-Feature: the sloth exists and the 1.6 repair holds
+Feature: the sloth exists and the biome patches applied
 
   Scenario: both defs load
     Then def "Sloth" of type "ThingDef" exists
     And def "Sloth" of type "PawnKindDef" exists
-
-  # The whole reason this port exists: <wildness> inside <race> stopped being read in 1.6 and
-  # silently defaulted to -1. raw stat proves the XML statBases entry itself, which is exactly
-  # what went missing before the fix - see TESTING.md scenarios B and C for the same fact read
-  # off the in-game information card instead.
-  Scenario: wildness reads from statBases, not from the legacy race field
-    Then def "Sloth" of type "ThingDef" raw stat "Wildness" is 0.5
 
   # The two vanilla biome entries always apply: no optional mod guards them. "was patched by mod"
   # matches the display name, not the packageId - unlike "mod {string} is loaded" and friends.
