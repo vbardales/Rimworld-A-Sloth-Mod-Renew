@@ -107,24 +107,27 @@ saying what the automated runs cover, which is left out until a run is green.
 
 ## Images
 
-- **Preview** (`Mod/About/Preview.png`, 896 x 504, about 0.53 MB): a sloth clinging to a post in
+- **Preview** (`Mod/About/Preview.png`, 896 x 504, about 0.73 MB): a sloth clinging to a post in
   lamplight, the title, an "(unofficial)" line and a `1.6` corner banner. Inspected 2026-09-13 and
-  2026-09-27. No text about anything that is not in the mod.
+  2026-09-27. No text about anything that is not in the mod. **2026-09-29, new house standard:**
+  `ModIcon.png` badged into the bottom-right corner, rotated -15°, scaled to 160 px, via
+  `Art/Add-PreviewBadge.ps1`. The unbadged illustration is kept at `Art/Preview.png` (the STYLE_RIMWORLD.md
+  source-without-overlay convention); `Mod/About/Preview.png` is the badged, shipped file.
 - **ModIcon** (`Mod/About/ModIcon.png`, 128 x 128, 23 KB): a sleeping sloth head with a ponytail and a
   sparkle, replaced by the owner on 2026-09-27 and shrunk on her instruction; readable at 32 px. This
-  file is hers to change; sessions do not generate icons.
+  file is hers to change; sessions do not generate icons. Only read to badge the Preview, never edited.
 
 ## Screenshots, in this order
 
 Steam shows the first image large under the Preview, and the gallery is uploaded by hand
-(`OPERATIONS.md`: SteamCMD sends the header image only), from `Art/Workshop/`, which does not exist
-yet and would also be the workflow's `--gallery-dir`. It holds only the images to upload, numbered
-`01-`, `02-`... in page order, each under 2 MB, each opened and looked at.
-
-None is produced. Proposal, all to be checked by the owner:
+(`OPERATIONS.md`: SteamCMD sends the header image only), from `Art/WorkshopScreenshots/`, which
+would also be the workflow's `--gallery-dir`. It holds only the images to upload, in page order.
+**2026-09-29, new house standard:** image 0 is a copy of the badged `Preview.png` itself, numbered
+`00-`; the in-game shots that follow keep `01-`, `02-`...
 
 | Order | File | What it shows | Source |
 |---|---|---|---|
+| 0 | `00-preview.png` | Copy of `Mod/About/Preview.png` (badged) | Done, 2026-09-29 |
 | 1 | `01-…` | A sloth clinging to a wooden post in the game's own camera, filling at least half the frame's height | Needs a Pickle capture feature (none written) or a manual capture |
 | 2 | `02-…` | The information card with Wildness 50 %, cropped tight with 16 px margin | Same |
 | 3 | `03-…` | A trader's stock offering a sloth | Needs a forced exotic trader; the sloth being obtainable that way is scenario G, not yet played |
