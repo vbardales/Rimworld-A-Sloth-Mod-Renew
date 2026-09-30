@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: complete
+translation_fr: partial
 settings_audit: not_applicable
 mod:          A Sloth Mod Renew (unofficial)
 packageId:    nelim.aslothmod
@@ -23,9 +23,10 @@ remaining:
   - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
   - noted 2026-09-28 (Virginie): no PublishedFileId means no prepublication. `workshop` stays empty, and the CHANGELOG gets no 0.1.0 entry until an item is actually created
   - unverified: the Pickle suite (4 features, 7 scenarios) has run three times, never green end to end; the corrections from those runs are awaiting a fourth pair
-  - feature: no PUBLICATION.md yet (required at tested -> prepublished, not before)
+  - feature: PUBLICATION.md drafted 2026-09-28; screenshots/Workshop-comments rows pending a first in-game upload
+  - unverified: French review by Virginie
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-09-28, Pickle suite written
+updated:      2026-09-30, French gender-agreement rule + FRENCH_REVIEW.md generated
 ---
 
 # A Sloth Mod Renew — status
@@ -345,6 +346,23 @@ certifies offline readiness only. No in-game test or publication was performed.
 - Runtime: English and French checks are documented in TESTING.md and remain
   `unverified` above, including life stages, corpses, trader labels and clipping.
   Revalidate these three fields after changes to Defs, patches or language resources.
+
+## Gender agreement and systematic French review — 2026-09-30
+
+`../TRANSLATIONS.md` added the three-segment `{PAWN_gender ? ...}` rule and the systematic
+French review by Virginie; every mod with a `Languages/French` folder had `translation_fr`
+reset to `unchecked`.
+
+- Gender agreement: neither French text agrees with a pawn. `Sloth.label` is an invariant
+  noun ("paresseux"); `Sloth.description` and both `tools.*.label` entries are impersonal or
+  fixed nouns, none an adjective or participle referring to the animal. No switch needed,
+  no defect.
+- `FRENCH_REVIEW.md` generated at the mod root by `_tools/Generate-FrenchReview.ps1`
+  (adapted from `FoodCourt/_tools/`, no `Mod/Languages/Keyed` or `Mod/Languages/English`
+  folder here — Original and English both resolve to the shipped Def's native fallback
+  text). Revision: working tree at `e280013`. All four rows resolved cleanly, no `?` flags.
+- `translation_fr` set to `partial`, not `complete`: only Virginie's own reading closes it,
+  per TRANSLATIONS.md section "Systematic French review by Virginie".
 
 ## What this mod is no longer a straight port of
 
