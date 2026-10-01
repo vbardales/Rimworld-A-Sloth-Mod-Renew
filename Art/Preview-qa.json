@@ -8,7 +8,7 @@
       "bounds": {
         "x": 48,
         "y": 30,
-        "width": 430,
+        "width": 342.171875,
         "height": 101.1875
       },
       "fonts": [
@@ -22,7 +22,7 @@
           "familyName": "RimWordFont",
           "postScriptName": "RimWordFont",
           "isCustomFont": true,
-          "glyphCount": 8
+          "glyphCount": 9
         }
       ]
     },
@@ -32,7 +32,7 @@
     },
     ".tag": {
       "bounds": {
-        "x": 267.703125,
+        "x": 149.015625,
         "y": 87.59375,
         "width": 148.234375,
         "height": 40
@@ -95,6 +95,16 @@
         "width": 430,
         "height": 198.65625
       }
+    }
+  },
+  "iconBadgeAlpha": {
+    "width": 1006,
+    "height": 926,
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1006,
+      "height": 926
     }
   }
 }
