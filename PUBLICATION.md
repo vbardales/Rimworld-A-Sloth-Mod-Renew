@@ -3,7 +3,7 @@
 What the Workshop page needs and the rest of the repository does not hold. It serves twice: for the
 first release, and for whoever takes the mod over.
 
-**Status: drafted, 2026-09-28.** No Workshop item exists for this mod: there is no
+**Status: drafted, 2026-09-28; item created 2026-10-01 (0.1.0 prepublication, `PublishedFileId.txt` 3811289805, private).** Earlier text below saying no item exists is superseded. Formerly: there was no
 `Mod/About/PublishedFileId.txt`, no `0.1.0` prepublication, no Git tag and no GitHub release (the
 CI creates the last two after a successful upload). Nothing below has been posted or pasted
 anywhere. The stage is `done`, not `tested` (see `STATUS.md`).
@@ -15,7 +15,7 @@ Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 - Nothing has been played in game. The nineteen manual scenarios of `TESTING.md` are unrun, and the
   Pickle suite (`Tests/Pickle/`, four features) has run three times without ever being green end to
   end; its last corrections are queued. Its verdict is in `STATUS.md` and `docs/runs/`.
-- No item exists yet. `OPERATIONS.md`: the CI cannot create an item, so the first publication is an
+- Item exists since 2026-10-01 (0.1.0 prepublication; CI can now update it). Before: `OPERATIONS.md`: the CI cannot create an item, so the first publication is an
   in-game upload of a private item, then `Mod/About/PublishedFileId.txt` committed and pushed at once,
   then the CI for every update.
 - The gallery is not made (see "Screenshots").

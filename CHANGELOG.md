@@ -60,3 +60,10 @@ animal list, so it reaches a colony through animal traders alone — the mod tag
 and stops there. And its calls are the boomrat's, borrowed from the base game, as its author left
 them. Deciding where sloths live, or giving one a voice of its own, would be design rather than a
 port.
+
+## [0.1.0] — 2026-10-01
+
+Creation of a `PublishedFileId.txt`. A first upload whose only purpose was to create the Workshop
+item (private, as Steam creates every item) and obtain `Mod/About/PublishedFileId.txt`. It contained
+`Mod/` as of commit `32466c5`, with nothing changed in `Mod/` since the upload apart from this file.
+It states neither that the mod is public nor that it is tested.

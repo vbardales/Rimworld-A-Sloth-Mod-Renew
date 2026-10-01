@@ -11,22 +11,22 @@ detached:     yes
 stage:        done
 licence:      silent
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
-upstream_mod_remotes: N/A
+upstream_mod_remotes: N/A (checked 2026-10-01: no repository of the author on GitHub; emipa606/ModRequests only mirrors the original About.xml, it is not a source repository)
 dependencies: none
 showcase:     complete
 tested_on:
-workshop:
+workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
   - unverified: the nineteen manual scenarios in TESTING.md, none played
   - unverified: prioritize F and G (natural spawning and trade), P (ADS 2 surgery, load order), and L (original-mod incompatibility warning)
   - unverified: scenario I must check the inherited east-only dessicated corpse in game; the limited artwork alone is not an established runtime defect
   - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
-  - noted 2026-09-28 (Virginie): no PublishedFileId means no prepublication. `workshop` stays empty, and the CHANGELOG gets no 0.1.0 entry until an item is actually created
-  - unverified: the Pickle suite (4 features, 7 scenarios) has run three times, never green end to end; the corrections from those runs are awaiting a fourth pair
-  - feature: PUBLICATION.md drafted 2026-09-28; screenshots/Workshop-comments rows pending a first in-game upload
+  - unverified: Pickle suite (7 scenarios) is green on the with-optionals pass (c57e, 2026-09-29, 7/7) but its provenance is compromised and the minimal pass last ran 47c6 (3/3, 4 skipped on @requires); a clean-tree rerun of both passes is owed
+  - feature: PUBLICATION.md drafted 2026-09-28; screenshots and Workshop-comments rows pending (item now exists, private)
   - unverified: French review by Virginie
+  - unverified: tested gate (2026-10-01 rule): no scenario left @wip, every conditional scenario played with its mod mounted, no manual test left to validate. Today: no @wip; conditional passes played (avec-facultatifs 7/7, provenance compromised, a clean-tree rerun is owed); the nineteen manual scenarios of TESTING.md are neither automated nor justified as not applicable, so they block `tested`
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-09-30, French gender-agreement rule + FRENCH_REVIEW.md generated
+updated:      2026-10-01, audit: PublishedFileId 3811289805 recorded, CHANGELOG 0.1.0, evidence minified, PROTOCOLS-READ refreshed
 ---
 
 # A Sloth Mod Renew — status
@@ -393,7 +393,7 @@ This is design rather than porting, and `ATTRIBUTION.md` says so in those words.
 - **Next step:** execute scenarios A–O in `TESTING.md` and record the game version, active
   mods, observed results and relevant logs. Keep `tested_on` empty until a game run is recorded.
 
-The `workshop` field is empty because the item does not exist yet. No `PublishedFileId.txt` was
+The `workshop` field names the item since 2026-10-01 (0.1.0 prepublication, commit 880c9d2).
 carried over: the original's names their item, not ours.
 
 The three categories `remaining` takes: `feature` for something missing from the first pass,

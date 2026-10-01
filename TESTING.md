@@ -29,7 +29,7 @@ trade-stock generation, runtime facts a patch check cannot stand in for, and the
 nineteen manual scenarios above. A green Pickle run proves the mechanism fired against the real
 installed file; it does not prove what a colonist sees.
 
-**Evidence to keep, if a run is played and archived**: nothing. Every scenario is a def-database
+**Evidence to keep, if a run is played and archived**: only `summary.md`, `summary.json`, `junit.xml` and the `evidence-complete.txt` marker of the latest run per pass (minified 2026-10-01: `report.html`, `messages.ndjson` and `Player.log` deleted unless a failure needs the log). Every scenario is a def-database
 assertion with no capture step and no `@review` tag, so a run's only useful output is its
 pass/fail verdict and, on a failure, the attached stat/patch breakdown Pickle prints for that
 scenario. A one-line result per pass belongs in `docs/runs/`, per `AGENTS.md`; the full report
