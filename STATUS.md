@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: complete
 settings_audit: not_applicable
 mod:          A Sloth Mod Renew (unofficial)
 packageId:    nelim.aslothmod
@@ -23,10 +23,9 @@ remaining:
   - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
   - unverified: Pickle suite (7 scenarios) is green on the with-optionals pass (c57e, 2026-09-29, 7/7) but its provenance is compromised and the minimal pass last ran 47c6 (3/3, 4 skipped on @requires); a clean-tree rerun of both passes is owed
   - feature: PUBLICATION.md drafted 2026-09-28; screenshots and Workshop-comments rows pending (item now exists, private)
-  - unverified: French review by Virginie
   - unverified: tested gate (2026-10-01 rule): no scenario left @wip, every conditional scenario played with its mod mounted, no manual test left to validate. Today: no @wip; conditional passes played (avec-facultatifs 7/7, provenance compromised, a clean-tree rerun is owed); the nineteen manual scenarios of TESTING.md are neither automated nor justified as not applicable, so they block `tested`
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-10-01, audit: PublishedFileId 3811289805 recorded, CHANGELOG 0.1.0, evidence minified, PROTOCOLS-READ refreshed
+updated:      2026-10-01, French review validated by Virginie (paresseux = species name, no pawn agreement)
 ---
 
 # A Sloth Mod Renew — status
