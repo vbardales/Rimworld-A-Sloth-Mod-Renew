@@ -12,6 +12,7 @@ Defs and four guarded patches, nothing a custom step would be needed to reach.
 | 02-optional-biomes | Cloud forest patched when More Vanilla Biomes is present; the three Alpha Biomes jungles patched when it is present | No |
 | 03-compat | With ADS 2: this port loads before it and its own copy ran on a concrete recipe. With Nocturnal Animals (Continued): this port loads after it and the Sloth def was patched | No |
 | 04-sloth-stat | `Wildness` reads 0.5 on a live spawned sloth, the fact this whole port repairs | Yes (`test-colony`) |
+| 05-gallery | Two `@review` captures for the Workshop gallery (three sloths, then one, in the zen meadow studio); pass `galerie` only | Yes (`nelim-zen-meadow-studio`) |
 
 Only 04 loads a save, because an animal has to exist to be read. Everything else reads the def
 database at the main menu.
