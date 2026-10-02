@@ -8,7 +8,7 @@
 # 50 %) and the trader's stock are menus and screens, taken by hand, not staged.
 # The cells around (154, 98) of the studio were not checked free: a blocked cell fails naming it.
 
-@review @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.stagedecor
+@review @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.stagedecor
 Feature: Gallery pictures of the sloth
 
   Background:
@@ -22,6 +22,7 @@ Feature: Gallery pictures of the sloth
   Scenario: the portrait, a single sloth filling half the frame
     Given Nelim's Pickle Tools: 1 adult animals of kind "Sloth" are spawned in a row from (154, 98), spacing 1
     And Nelim's Pickle Tools: the animals of kind "Sloth" have food at 100 percent
+    And Nelim's Pickle Tools: the animal "coat-1" stands at (154, 98) facing South
     When Nelim's Pickle Tools: I frame the cells (154, 98) to (154, 98) filling 50 percent of the screen
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "gallery sloth portrait"
