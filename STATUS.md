@@ -21,7 +21,7 @@ remaining:
   - unverified: prioritize F and G (natural spawning and trade), P (ADS 2 surgery, load order), and L (original-mod incompatibility warning)
   - unverified: scenario I must check the inherited east-only dessicated corpse in game; the limited artwork alone is not an established runtime defect
   - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
-  - unverified: Pickle suite (7 scenarios) is green on the with-optionals pass (c57e, 2026-09-29, 7/7) but its provenance is compromised and the minimal pass last ran 47c6 (3/3, 4 skipped on @requires); a clean-tree rerun of both passes is owed
+  - unverified: Pickle clean-tree passes minimal (19b0, 3/3) and with-optionals (b69a, 7/7) are green on 3682682; only the galerie pass (2d40, captures to open) is pending
   - feature: PUBLICATION.md drafted 2026-09-28; screenshots and Workshop-comments rows pending (item now exists, private)
   - unverified: tested gate (2026-10-01 rule): no scenario left @wip, every conditional scenario played with its mod mounted, no manual test left to validate. Today: no @wip; conditional passes played (avec-facultatifs 7/7, provenance compromised, a clean-tree rerun is owed); the nineteen manual scenarios of TESTING.md are neither automated nor justified as not applicable, so they block `tested`
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
