@@ -128,8 +128,8 @@ would also be the workflow's `--gallery-dir`. It holds only the images to upload
 | Order | File | What it shows | Source |
 |---|---|---|---|
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged) | Done, 2026-09-29 |
-| 1 | `1-…` | Three sloths in the meadow studio, framed close | Pickle `05-gallery`, pass `galerie` (run 2026-10-02, green but the pictures are unusable: sloth too small, see docs/runs) |
-| 2 | `2-…` | A single sloth alone in the frame (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle for the sloth, manual for the card |
+| 1 | `1-…` | The portrait: one sloth filling half the frame in the flower glade | Pickle `05-gallery` v2 (staged: golden hour, torch, close frame), pass `galerie`; first version green but unusable (sloth too small); v2 written 2026-10-02, not yet run |
+| 2 | `2-…` | The family: three sloths in a row (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle for the sloth, manual for the card |
 | 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader; the sloth being obtainable that way is scenario G, not yet played |
 
 The shots are `@review` evidence, not proof: a green capture scenario shows the journey ran, not that

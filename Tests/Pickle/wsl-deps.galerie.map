@@ -1,7 +1,9 @@
-# Pass "galerie": the zen meadow studio of PickleTools plus CoatSteps (animal spawning and framing),
-# for the pictures of feature 05 (Workshop gallery). A presentation set, staged only here so that no
-# other pass carries it. The fixture save it loads, nelim-zen-meadow-studio, is written by
-# PickleTools' own suite into the WSL Saves folder.
+# Pass "galerie": the zen meadow studio of PickleTools, with the staging tools (docs/STAGING.md in
+# PickleTools), for the pictures of feature 05 (Workshop gallery). A presentation set, staged only
+# here so that no other pass carries it. The fixture save it loads, nelim-zen-meadow-studio, is
+# written by PickleTools' own suite into the WSL Saves folder.
 nelim.pickletools.screenshotstudio   path:PickleTools/ScreenshotStudio/Mod
 nelim.pickletools.coatsteps   path:PickleTools/CoatSteps/Mod
+nelim.pickletools.camerazoom   path:PickleTools/CameraZoom/Mod
+nelim.pickletools.stagedecor   path:PickleTools/StageDecor/Mod
 nelim.aslothmod path:ASlothModRenew/Mod
