@@ -120,17 +120,17 @@ saying what the automated runs cover, which is left out until a run is green.
 ## Screenshots, in this order
 
 Steam shows the first image large under the Preview, and the gallery is uploaded by hand
-(`OPERATIONS.md`: SteamCMD sends the header image only), from `Art/WorkshopScreenshots/`, which
+(`OPERATIONS.md`: SteamCMD sends the header image only), from `Art/Gallery/`, which
 would also be the workflow's `--gallery-dir`. It holds only the images to upload, in page order.
-**2026-09-29, new house standard:** image 0 is a copy of the badged `Preview.png` itself, numbered
-`00-`; the in-game shots that follow keep `01-`, `02-`...
+**2026-09-29, new house standard:** image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, then `1-`, `2-`, per PUBLISHING.md, 2026-09-29):
+`0-`.
 
 | Order | File | What it shows | Source |
 |---|---|---|---|
-| 0 | `00-preview.png` | Copy of `Mod/About/Preview.png` (badged) | Done, 2026-09-29 |
-| 1 | `01-…` | Three sloths in the meadow studio, framed close | Pickle `05-gallery`, pass `galerie` (written 2026-10-02, not yet run) |
-| 2 | `02-…` | A single sloth alone in the frame (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle for the sloth, manual for the card |
-| 3 | `03-…` | A trader's stock offering a sloth | Needs a forced exotic trader; the sloth being obtainable that way is scenario G, not yet played |
+| 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged) | Done, 2026-09-29 |
+| 1 | `1-…` | Three sloths in the meadow studio, framed close | Pickle `05-gallery`, pass `galerie` (written 2026-10-02, not yet run) |
+| 2 | `2-…` | A single sloth alone in the frame (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle for the sloth, manual for the card |
+| 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader; the sloth being obtainable that way is scenario G, not yet played |
 
 The shots are `@review` evidence, not proof: a green capture scenario shows the journey ran, not that
 the image shows anything. The game's camera has a minimum zoom, at which a 0.15-size animal is small;
