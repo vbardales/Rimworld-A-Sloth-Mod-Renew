@@ -481,3 +481,8 @@ original author's assets. This audit does not assign MIT, CC or another licence 
   Renew uses secondary ink, A primary ink. Sloth Mod remains 46 px. Verified visually
   at both sizes, including reduced words and accent separation. Additional minimum contrast:
   A 11.47:1, Renew 7.23:1. No illustration replacement or publication.
+
+
+## Preview source migration — 2026-10-02
+
+Copy, typography, layout and palette are consolidated in `Art/Preview.config.json`. The canonical inputs are `Art/Preview-source.png`, `Art/echo.png` and `Art/ModIcon-source.png`; the shared renderer writes temporary diagnostics under ignored `Art/.render/`. Existing distributed Preview, gallery and ICO outputs were preserved because they were present and coherent; no render was run for this migration. Superseded JSON files and generated QA intermediates were removed. Nothing published.

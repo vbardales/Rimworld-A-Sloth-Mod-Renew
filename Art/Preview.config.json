@@ -2,17 +2,33 @@
   "title": "A Sloth Mod Renew (unofficial)",
   "titleSize": 46,
   "titleParts": [
-    { "text": "A ", "scale": 0.65, "font": "ui", "color": "secondary" },
-    { "text": "Sloth Mod", "scale": 1 },
-    { "text": "Renew", "scale": 0.65, "font": "ui", "color": "secondary", "breakBefore": true }
+    {
+      "text": "A ",
+      "scale": 0.65,
+      "font": "ui",
+      "color": "secondary"
+    },
+    {
+      "text": "Sloth Mod",
+      "scale": 1
+    },
+    {
+      "text": "Renew",
+      "scale": 0.65,
+      "font": "ui",
+      "color": "secondary",
+      "breakBefore": true
+    }
   ],
   "suffix": "",
   "tag": "(unofficial)",
   "tagInline": true,
-  "copyLines": ["A small, slow, harmless animal that sleeps most of the day."],
+  "copyLines": [
+    "A small, slow, harmless animal that sleeps most of the day."
+  ],
   "layout": "panel",
   "panelAnchor": "top-left",
-  "backgroundFile": "Preview.png",
+  "backgroundFile": "Preview-source.png",
   "backgroundPosition": "center",
   "backgroundSize": "cover",
   "echo": {
@@ -29,7 +45,7 @@
     "flipX": true
   },
   "iconBadge": {
-    "file": "ModIcon-cutout.png",
+    "file": "ModIcon-source.png",
     "corner": "bottom-left",
     "width": 180,
     "outline": false,
@@ -37,5 +53,12 @@
     "veilSize": 275,
     "veilLeft": -55,
     "veilBottom": -61
+  },
+  "palette": {
+    "veil": "#29262C",
+    "inkPrimary": "#F2ECE1",
+    "inkSecondary": "#F1B65E",
+    "accent": "#A8C81A",
+    "badgeInk": "#17120E"
   }
 }

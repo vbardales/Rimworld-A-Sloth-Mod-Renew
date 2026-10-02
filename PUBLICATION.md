@@ -232,23 +232,23 @@ to paste.
 Not seen working in game: the guard was checked against its real def names and run by Pickle only.
 
 ```
-Made a sloth port and it drops into your mangrove, mycotic and feralisk jungles. The feralisk one gets 0.05, since everything there is a tenth of normal :) Optional, does nothing without Alpha Biomes. Thanks for the biomes! [url=https://steamcommunity.com/sharedfiles/filedetails/?id=<ID of this mod>]A Sloth Mod Renew[/url]
+Made a sloth port and it drops into your mangrove, mycotic and feralisk jungles. The feralisk one gets 0.05, since everything there is a tenth of normal :) Optional, does nothing without Alpha Biomes. Thanks for the biomes! [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
 ```
 
 ### More Vanilla Biomes, 1931453053
 
 ```
-The cloud forest was the obvious home for a sloth, so my port adds one there (0.5, same as the vanilla rainforest). Optional patch, silent without your mod. Thanks! [url=https://steamcommunity.com/sharedfiles/filedetails/?id=<ID of this mod>]A Sloth Mod Renew[/url]
+The cloud forest was the obvious home for a sloth, so my port adds one there (0.5, same as the vanilla rainforest). Optional patch, silent without your mod. Thanks! [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
 ```
 
 ### A Sloth Mod (original), 2253087891
 
 ```
-Hi ThatRubishGamer! I ported your sloth to 1.6 (unofficially, credit and a link to your page are in the description). One line was broken, wildness, and the sloth was in no biome and no trader's stock, so I fixed both. Nothing else was touched, the textures are byte for byte yours. If you'd rather I take it down, just tell me and it's gone. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=<ID of this mod>]A Sloth Mod Renew[/url]
+Hi ThatRubishGamer! I ported your sloth to 1.6 (unofficially, credit and a link to your page are in the description). One line was broken, wildness, and the sloth was in no biome and no trader's stock, so I fixed both. Nothing else was touched, the textures are byte for byte yours. If you'd rather I take it down, just tell me and it's gone. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
 ```
 
 Check the last comments of each page first, and whether it takes comments, as `WORKSHOP_COMMENTS.md`
-asks. The `<ID of this mod>` placeholder is filled once the item exists.
+asks. The item id is 3811289805 since 2026-10-01 (private until the owner makes it public).
 
 Note on the "AI-generated" section: the mention of Codex (OpenAI) rests on the owner's word of 2026-09-28,
 not on the Git history. No commit carries a Codex trailer; four commits of 2026-09-12 and 2026-09-13
