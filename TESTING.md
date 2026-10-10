@@ -41,8 +41,8 @@ No manual scenario is left to tick by hand: each is automated, covered offline, 
 | B wildness | Pickle `04` (stat read off a live animal) plus offline. The card line itself is the game's drawing: not applicable |
 | C negative control | A one-time demonstration of the engine's handling of a broken def: not applicable |
 | D, E taming, manhunter | Values pinned offline. Consequences are the engine's: not applicable |
-| F natural spawn | The patch is asserted (`01`, `02`). Which animals a map picks is the game's random selection: not applicable, **pending Virginie's confirmation** |
-| G trade | Tag pinned offline. Stock generation is the game's and random: not applicable, **pending Virginie's confirmation** (TradeSteps exists, never played: `I buy 1 of "Sloth"` fails whenever the trader happens not to stock one) |
+| F natural spawn | **Automated, XML unit test**: `Test-Mod.ps1` applies the shipped XPath and patch operations to synthetic biome fixtures (neither optional mod, each alone, both) and checks the exact commonalities and the untouched biomes; Pickle `01` and `02` assert the same patches against the real installed defs. Which animals a generated map then picks is the engine's random selection: not tested |
+| G trade | Tag pinned offline (same kind of XML unit test as F). Stock generation is the game's and random: not applicable, **pending Virginie's confirmation** (TradeSteps exists, never played: `I buy 1 of "Sloth"` fails whenever the trader happens not to stock one) |
 | H, J, K food, leather, breeding | Values of the original, pinned offline since 2026-10-10. Behaviour is the engine's: not applicable |
 | I textures | Four files byte-identical to the original's (checked offline). The east-only dessicated corpse is the original's gap: not applicable |
 | L collision with the original | Pickle `06-incompat`, pass `incompat-slothmod` (new, never played) |
@@ -348,7 +348,7 @@ The negative control. Skip it and `<loadBefore>` is a claim nobody checked.
 
 ## What cannot be tested offline
 
-Scenarios F, G and the Health-tab list of P depend on runtime selection: map generation reading the biome's animal list, trader stock generation reading the trade tags, one mod's patch reading a list another mod's patch just changed. Reading the defs shows only that these doors are unlocked, never that anyone walks through them. They are recorded as not applicable above, with the mod's own part asserted, pending Virginie's confirmation.
+The runtime outcomes of scenarios F and G, and the Health-tab list of P, depend on runtime selection: map generation reading the biome's animal list, trader stock generation reading the trade tags, one mod's patch reading a list another mod's patch just changed. Reading the defs shows only that these doors are unlocked, never that anyone walks through them. The mod's own part is asserted for F and G (XML unit tests); G's stock and P's Health-tab list are recorded as not applicable above, pending Virginie's confirmation.
 
 ## Automated checks
 
