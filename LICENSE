@@ -1,0 +1,52 @@
+MIT License
+
+Copyright (c) 2026 Nelim
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+---------------------------------------------------------------------------
+SCOPE OF THE ABOVE
+
+The MIT licence above covers only what the 1.6 port added:
+
+  - the correction to the def: wildness moved from a race property to the
+    Wildness stat under statBases
+  - the AnimalUncommon trade tag and the biome patches that make the sloth
+    obtainable (Biomes_Vanilla.xml, Biomes_Mods.xml)
+  - the optional patches for A Dog Said... Animal Prosthetics 2 and
+    [XND] Nocturnal Animals (Continued), and the load-order declarations
+  - the French translation
+  - the tests, the packaging and the documentation
+  - the Preview.png and ModIcon.png artwork made for this port
+
+IT DOES NOT COVER THE ORIGINAL MOD. The sloth, its stats, its text and its four
+textures are ThatRubishGamer's work, reused here:
+
+  https://steamcommunity.com/sharedfiles/filedetails/?id=2253087891
+
+They never declared a licence for it, so none is granted here and none can be.
+It is redistributed under the usual practice for abandoned mods - explicit
+credit, a link to the original, and removal on request. This describes the
+publication policy; it does not grant a licence to the original work.
+
+If ThatRubishGamer asks for this to be taken down, it comes down.
+Immediately, and without discussion.
+
+ATTRIBUTION.md records what was taken and what was changed.

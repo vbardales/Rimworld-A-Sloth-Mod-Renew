@@ -11,6 +11,7 @@ visibility:   public
 detached:     yes
 workflow_stage: playTests[1.0.0]
 licence:      silent
+licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE to be added once the seven f156f38 tickets are done, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
 upstream_mod_remotes: N/A (checked 2026-10-01: no repository of the author on GitHub; emipa606/ModRequests only mirrors the original About.xml, it is not a source repository)
 dependencies: none
@@ -24,8 +25,8 @@ remaining:
   - unverified: gallery pictures 1 and 2: the feature was rewritten (8959996, b6dd6f0: framing steps, golden hour) after the unusable captures of pass 2d40 (sloth ~40 px); the rewritten pass has not run and its captures are not opened
   - feature: PUBLICATION.md drafted 2026-09-28; screenshots and Workshop-comments rows pending (item now exists, private)
   - unverified: seven initial Pickle tickets filed 2026-10-10 on f156f38 (tree frozen: no edit of Mod/ or Tests/ until their RUN_DONE): minimal, avec-facultatifs, incompat-slothmod, english, french, commerce, galerie; evidence under Tests/Pickle/Evidence/<pass>-f156f38; results to read, red ones replayed alone
-  - defect: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh, 2026-10-10), under the 0.30 floor; hue families 2 (OK). The source is the owner's: the session neither regenerates nor retouches it. Virginie decides to override or to redo; until she answers the criterion is not established and, read strictly, the retained state is makeSources (the Preview she validated on 2026-10-10 is an accepted composition, not a waiver of this measure)
-  - defect: 1.g / PUBLISHING.md, no LICENSE at the root or in Mod/ (ATTRIBUTION.md says the original has none). DalmatiansRenew precedent: MIT limited to the port's own contributions (licence_port). Needs Virginie's decision before a file is written
+  - 2.e: Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; hue families 2 (OK). Virginie decided in chat on 2026-10-11 to keep it ("on conserve preview"): override recorded, the criterion is waived for this source and the retained state stays playTests[1.0.0]
+  - defect: Mod/LICENSE missing (PUBLISHING.md wants it in the published folder); the root LICENSE exists since 2026-10-11. Add Mod/LICENSE with the About.xml comment fix once the seven tickets are done (a Mod/ commit now changes what they stage)
   - unverified: FRENCH_REVIEW.md regenerated 2026-10-10 with scripts/Make-FrenchReview.ps1 (the old one came from the mod's own generator, now scripts/Generate-FrenchReview.ps1); texts are unchanged since Virginie's review of 2026-10-01 but the new file's review line is empty: a session never fills it, Virginie records it
   - feature: writeDocs gaps seen early (11.b, 11.d): the About.xml description has no THANKS section (ADS 2, Nocturnal Animals, Alpha Biomes, More Vanilla Biomes, Pickle and RimLogging as development only) and no Workshop links on cited mod names; the description source is PUBLICATION.md, not yet synced
   - defect: Mod/About/About.xml carries a comment saying RimWorld resolves a duplicate defName by load order and logs nothing; TESTING.md (log table, `Adding duplicate`) and the new 06-incompat feature say the game does log it. Found by the 2026-10-10 read of Mod/ (first half of the 8.m review: Defs, the four patches, About.xml; no other defect). Fix after the seven tickets finish: a Mod/ commit while they are queued would change what they stage
