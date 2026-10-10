@@ -6,9 +6,10 @@ settings_audit: not_applicable
 mod:          A Sloth Mod Renew (unofficial)
 packageId:    nelim.aslothmod
 repo:         Rimworld-A-Sloth-Mod-Renew
+remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-stage:        done
+workflow_stage: playTests[1.0.0]
 licence:      silent
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
 upstream_mod_remotes: N/A (checked 2026-10-01: no repository of the author on GitHub; emipa606/ModRequests only mirrors the original About.xml, it is not a source repository)
@@ -25,10 +26,15 @@ remaining:
   - feature: PUBLICATION.md drafted 2026-09-28; screenshots and Workshop-comments rows pending (item now exists, private)
   - unverified: tested gate (2026-10-01 rule): no scenario left @wip, every conditional scenario played with its mod mounted, no manual test left to validate. Today: no @wip; conditional passes played (avec-facultatifs 7/7, provenance compromised, a clean-tree rerun is owed); the nineteen manual scenarios of TESTING.md are neither automated nor justified as not applicable, so they block `tested`
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-10-01, French review validated by Virginie (paresseux = species name, no pawn agreement)
+updated:      2026-10-10, re-audit against AUDIT.md (workflow_stage playTests[1.0.0]); root cleaned; ModIcon.png and Preview chain regenerated
+protocols_read_sha: 8dc7759df76e83f3ebe7489e18035a62f07089fe
 ---
 
 # A Sloth Mod Renew — status
+
+## Re-audit — 2026-10-10 (`workflow_stage: playTests[1.0.0]`, replaces `stage: done`)
+
+Old `done` maps to `playTests`. Out-of-game criteria of `writeTests` re-checked today: `Tests/Test-Mod.ps1` 139 checks green; French reviewed by Virginie (2026-10-01); Pickle suite written (`Tests/Pickle/`; minimal and with-optionals passes green on 3682682). Not established, hence `playTests`: the nineteen manual scenarios (TESTING.md) unplayed, gallery captures 1 and 2 unusable, no `code_review_sha`, no `tested_on`. Mod root cleaned: `.editorconfig` removed, `_tools/` became `scripts/`. `Mod/About/ModIcon.png` (older than `Art/ModIcon-source.png`) and the Preview chain (`Preview.png`, `Art/Gallery/0-preview.png`, both `.ico`) regenerated; the uncommitted changes to `Art/ModIcon-source.png` are the owner's. `ModIcon.png` is 30,706 bytes (limit 20 to 30 KB: borderline, to confirm).
 
 ## Pickle runs 1 to 3 — 2026-09-28, results and the fourth attempt
 
