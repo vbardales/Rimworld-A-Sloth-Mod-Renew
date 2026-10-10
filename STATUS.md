@@ -23,6 +23,7 @@ remaining:
   - unverified: Pickle clean-tree passes minimal (19b0, 3/3) and with-optionals (b69a, 7/7) are green on 3682682, before the Pickle suite changes and the icon chain regeneration; both are rerun on the frozen tree
   - unverified: gallery pictures 1 and 2: the feature was rewritten (8959996, b6dd6f0: framing steps, golden hour) after the unusable captures of pass 2d40 (sloth ~40 px); the rewritten pass has not run and its captures are not opened
   - feature: PUBLICATION.md drafted 2026-09-28; screenshots and Workshop-comments rows pending (item now exists, private)
+  - unverified: seven initial Pickle tickets filed 2026-10-10 on f156f38 (tree frozen: no edit of Mod/ or Tests/ until their RUN_DONE): minimal, avec-facultatifs, incompat-slothmod, english, french, commerce, galerie; evidence under Tests/Pickle/Evidence/<pass>-f156f38; results to read, red ones replayed alone
   - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ (no code_review_sha yet), tested_on and docs/runs/ lines written
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
 updated:      2026-10-10, re-audit against AUDIT.md (workflow_stage playTests[1.0.0]); root cleaned; ModIcon.png and Preview chain regenerated
