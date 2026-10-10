@@ -192,7 +192,7 @@ good commit and the next patch number, and the note reads "Rolls back to <what>,
 failed>". Version numbers only go up and an existing tag is refused. Visibility is not touched by the
 CI.
 
-**The rollback target is not chosen and cannot be yet**: no upload exists. The first real target is the
+**The rollback target is not chosen and cannot be yet**: no validated functional release has been published yet, so no rollback target has been selected. The first real target is the
 SHA of the 1.0.0 that passes its dry-run; write it here at that moment. Before the `publish`, every
 scenario that failed has a green replay, the gallery is done and the owner's manual validations are
 made; only the regression pass may follow it.
