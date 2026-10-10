@@ -26,6 +26,7 @@
   "copyLines": [
     "A small, slow, harmless animal that sleeps most of the day."
   ],
+  "modIconSource": "ModIcon-source.png",
   "layout": "panel",
   "panelAnchor": "top-left",
   "backgroundFile": "Preview-source.png",

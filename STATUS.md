@@ -27,14 +27,14 @@ remaining:
   - unverified: tested gate (2026-10-01 rule): no scenario left @wip, every conditional scenario played with its mod mounted, no manual test left to validate. Today: no @wip; conditional passes played (avec-facultatifs 7/7, provenance compromised, a clean-tree rerun is owed); the nineteen manual scenarios of TESTING.md are neither automated nor justified as not applicable, so they block `tested`
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
 updated:      2026-10-10, re-audit against AUDIT.md (workflow_stage playTests[1.0.0]); root cleaned; ModIcon.png and Preview chain regenerated
-protocols_read_sha: 8dc7759df76e83f3ebe7489e18035a62f07089fe
+protocols_read_sha: 1405c22e11d72011390df2af5013f748f6ed374b
 ---
 
 # A Sloth Mod Renew — status
 
 ## Re-audit — 2026-10-10 (`workflow_stage: playTests[1.0.0]`, replaces `stage: done`)
 
-Old `done` maps to `playTests`. Out-of-game criteria of `writeTests` re-checked today: `Tests/Test-Mod.ps1` 139 checks green; French reviewed by Virginie (2026-10-01); Pickle suite written (`Tests/Pickle/`; minimal and with-optionals passes green on 3682682). Not established, hence `playTests`: the nineteen manual scenarios (TESTING.md) unplayed, gallery captures 1 and 2 unusable, no `code_review_sha`, no `tested_on`. Mod root cleaned: `.editorconfig` removed, `_tools/` became `scripts/`. `Mod/About/ModIcon.png` (older than `Art/ModIcon-source.png`) and the Preview chain (`Preview.png`, `Art/Gallery/0-preview.png`, both `.ico`) regenerated; the uncommitted changes to `Art/ModIcon-source.png` are the owner's. `ModIcon.png` is 30,706 bytes (limit 20 to 30 KB: borderline, to confirm).
+Old `done` maps to `playTests`. Out-of-game criteria of `writeTests` re-checked today: `Tests/Test-Mod.ps1` 139 checks green; French reviewed by Virginie (2026-10-01); Pickle suite written (`Tests/Pickle/`; minimal and with-optionals passes green on 3682682). Not established, hence `playTests`: the nineteen manual scenarios (TESTING.md) unplayed, gallery captures 1 and 2 unusable, no `code_review_sha`, no `tested_on`. Mod root cleaned: `.editorconfig` removed, `_tools/` became `scripts/`. `Mod/About/ModIcon.png` (older than `Art/ModIcon-source.png`) and the Preview chain (`Preview.png`, `Art/Gallery/0-preview.png`, both `.ico`) regenerated; the uncommitted changes to `Art/ModIcon-source.png` are the owner's. `Art/Preview.config.json` now carries `modIconSource` (STYLE_RIMWORLD.md), so `Render-Preview.cjs` writes `ModIcon.png` itself: 128 x 128, 29,693 bytes, inside the 20 to 30 KB window. Readability at 32 px not yet checked.
 
 ## Pickle runs 1 to 3 — 2026-09-28, results and the fourth attempt
 
