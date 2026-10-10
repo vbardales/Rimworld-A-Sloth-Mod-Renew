@@ -15,3 +15,10 @@ Feature: the sloth exists and the biome patches applied
   Scenario: the two vanilla biomes are patched
     Then def "TropicalRainforest" was patched by mod "A Sloth Mod Renew (unofficial)"
     And def "TropicalSwamp" was patched by mod "A Sloth Mod Renew (unofficial)"
+
+  # The patches are asserted above ("was patched"); this asserts what they were for: the real biome
+  # defs now list the sloth among their wild animals. Pass "sans-facultatifs" (DefFieldSteps staged).
+  @requires:nelim.pickletools.deffields
+  Scenario: the rainforest and the swamp list the sloth as a wild animal
+    Then Nelim's Pickle Tools: the biome "TropicalRainforest" lists the wild animal "Sloth"
+    And Nelim's Pickle Tools: the biome "TropicalSwamp" lists the wild animal "Sloth"

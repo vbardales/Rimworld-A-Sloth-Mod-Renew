@@ -13,6 +13,7 @@ Defs and four guarded patches, nothing a custom step would be needed to reach.
 | 03-compat | With ADS 2: this port loads before it and its own copy ran on a concrete recipe. With Nocturnal Animals (Continued): this port loads after it and the Sloth def was patched | No |
 | 04-sloth-stat | `Wildness` reads 0.5 on a live spawned sloth, the fact this whole port repairs | Yes (`test-colony`) |
 | 05-gallery | Two `@review` captures for the Workshop gallery (three sloths, then one, in the zen meadow studio); pass `galerie` only | Yes (`nelim-zen-meadow-studio`) |
+| 08-trade | An exotic trader offers a sloth (`@flaky-stock`, may fail `[no-stock]`); a pirate merchant takes the colony's sloth | Yes (`test-colony`) |
 | 06-incompat | Pass `incompat-slothmod` only: the original A Sloth Mod is mounted beside this port and both stay loaded, in order (scenario L) | No |
 | 07-labels-english, 07-labels-french | The sloth is named `sloth` / `paresseux` in the inspect pane, with a `@review` capture; one language per pass (scenario O) | Yes (`test-colony`) |
 
@@ -48,8 +49,7 @@ mistakes, none the mod's, and invisible to `Tests/Test-Mod.ps1`'s synthetic fixt
 
 ## Passes
 
-- **Minimal** (`01` and `04` apply; `02` and `03` skip every scenario on `@requires`): no
-  `-DepMap` needed.
+- **Minimal** (`wsl-deps.sans-facultatifs.map`, which stages DefFieldSteps only; `01` and `04` apply; `02`, `03` and `06` skip on `@requires`).
 - **With optionals** (`wsl-deps.avec-facultatifs.map`, which also names this mod itself between Nocturnal Animals and ADS 2 to set its declared load order): all four mods this port has a guarded
   patch for, together - none conflicts with another, so one pass covers all four rather than one
   per mod.
@@ -61,6 +61,7 @@ mistakes, none the mod's, and invisible to `Tests/Test-Mod.ps1`'s synthetic fixt
   (`-Filter 'A Sloth Mod Renew - Pickle tests,!07-labels-english,!07-labels-french'`), since one of
   them fails in any given language by design.
 - **Galerie** (`wsl-deps.galerie.map`): `05` only.
+- **Commerce** (`wsl-deps.commerce.map`, TradeSteps): `08` only; `[no-stock]` failures of its `@flaky-stock` scenario are skips to study.
 
 ## Run
 

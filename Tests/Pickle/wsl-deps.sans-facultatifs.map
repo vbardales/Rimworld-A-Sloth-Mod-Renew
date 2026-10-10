@@ -1,0 +1,4 @@
+# Pass "sans-facultatifs": the minimal set plus the shared Def-field step (PickleTools/DefFieldSteps), which
+# Pickle's own def steps cannot replace: Sloth names a ThingDef and a PawnKindDef, and the biome and recipe
+# reads are not built in. Select it with -DepMap wsl-deps.sans-facultatifs.map; no optional gameplay mod here.
+nelim.pickletools.deffields   path:PickleTools/DefFieldSteps/Mod

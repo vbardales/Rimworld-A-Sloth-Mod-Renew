@@ -14,6 +14,7 @@
 # Animals (loadAfter) and BEFORE A Dog Said 2 (loadBefore), the same trap as Dalmatians Renew
 # pass 3. Naming the mod itself here, between the two, sets the order it declares. Without this
 # line the with-optionals pass would test a load order the metadata forbids.
+nelim.pickletools.deffields                path:PickleTools/DefFieldSteps/Mod
 OskarPotocki.VanillaFactionsExpanded.Core  2023507013
 zylle.MoreVanillaBiomes                    1931453053
 sarg.alphabiomes                           1841354677

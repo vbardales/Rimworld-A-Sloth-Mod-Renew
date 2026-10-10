@@ -1,0 +1,3 @@
+# Pass "commerce": a trader and the trade window (PickleTools/TradeSteps, never played). Only feature 08 applies.
+# The test colony must hold silver for any purchase; 08 buys nothing.
+nelim.pickletools.tradesteps   path:PickleTools/TradeSteps/Mod

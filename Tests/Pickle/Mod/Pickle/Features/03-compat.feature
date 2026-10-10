@@ -19,3 +19,13 @@ Feature: optional compatibility with two other mods
   Scenario: Sloth gets a nocturnal cycle from Nocturnal Animals (Continued)
     Then mod "nelim.aslothmod" loads after "Mlie.XNDNocturnalAnimals"
     And def "Sloth" was patched by mod "A Sloth Mod Renew (unofficial)"
+
+  # Scenario P (TESTING.md), automated 2026-10-10 on Virginie's decision. Read at def level: what the
+  # Health tab's operation list rests on (ThingDef.AllRecipes, AvailableNow), not the tab itself.
+  # "match" compares the surgery recipes of the two races by defName, so no ADS 2 recipe name is
+  # hardcoded; InstallDentureAnimal is the one concrete recipe known to be copied (see above).
+  # ADS_Cat1/2/3 are abstract, invisible to Pickle: concrete recipes only.
+  @requires:SamBucher.ADogSaidAnimalProsthetics2 @requires:nelim.pickletools.deffields
+  Scenario: ADS 2's surgeries are offered to the sloth like to a husky
+    Then Nelim's Pickle Tools: the recipe "InstallDentureAnimal" is offered for the race "Sloth"
+    And Nelim's Pickle Tools: the surgery recipes of the race "Sloth" match those of the race "Husky"

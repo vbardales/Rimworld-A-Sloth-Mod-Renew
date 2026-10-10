@@ -41,25 +41,26 @@ No manual scenario is left to tick by hand: each is automated, covered offline, 
 | B wildness | Pickle `04` (stat read off a live animal) plus offline. The card line itself is the game's drawing: not applicable |
 | C negative control | A one-time demonstration of the engine's handling of a broken def: not applicable |
 | D, E taming, manhunter | Values pinned offline. Consequences are the engine's: not applicable |
-| F natural spawn | **Automated, XML unit test**: `Test-Mod.ps1` applies the shipped XPath and patch operations to synthetic biome fixtures (neither optional mod, each alone, both) and checks the exact commonalities and the untouched biomes; Pickle `01` and `02` assert the same patches against the real installed defs. Which animals a generated map then picks is the engine's random selection: not tested |
-| G trade | **To automate (Virginie, 2026-10-10)**, with PickleTools' TradeSteps, requested from NPT: (1) an exotic trader (`Caravan_Outlander_Exotic`, `Orbital_Exotic`) offers a sloth, a step that **skips instead of failing** when the trader holds none (the stock is random, the test flickers, skipped results are studied); (2) a deterministic step: a trader that buys the tag (`Caravan_Outlander_PirateMerchant`) lists a tamed sloth on the player side. The tag itself is pinned offline. Waiting for the steps |
+| F natural spawn | **Automated, XML unit test**: `Test-Mod.ps1` applies the shipped XPath and patch operations to synthetic biome fixtures (neither optional mod, each alone, both) and checks the exact commonalities and the untouched biomes. Pickle `01` and `02` assert against the real installed defs that each patched biome lists the sloth among its wild animals (`the biome ... lists the wild animal`, DefFieldSteps). Which animals a generated map then picks is the engine's random selection: not tested |
+| G trade | **Automated, written 2026-10-10, never played** (`08-trade`, pass `commerce`, TradeSteps): (1) an exotic trader offers a sloth, tagged `@flaky-stock`: Pickle has no runtime skip, so a stockless trader fails with the prefix `[no-stock]`, read as a skip to study, not a defect; (2) a pirate merchant, which buys `AnimalUncommon`, takes the colony's sloth (deterministic). The tag is also pinned offline |
 | H, J, K food, leather, breeding | Values of the original, pinned offline since 2026-10-10. Behaviour is the engine's: not applicable |
 | I textures | Four files byte-identical to the original's (checked offline). The east-only dessicated corpse is the original's gap: not applicable |
 | L collision with the original | Pickle `06-incompat`, pass `incompat-slothmod` (new, never played) |
 | M saves | Add, swap and removal are the engine's; the `defName` is unchanged (stated in the README): not applicable |
 | N mod list entry, images | Offline (`Check-Status.ps1`, file sizes). The numbers in N were refreshed |
 | O English and French | Pickle `07-labels-english` / `07-labels-french`, one pass per language, `@review` captures read by Virginie |
-| P ADS 2 load order and copy | Pickle `03` (load order, ADS 2's own copy ran). **To automate (Virginie, 2026-10-10)**: a step asserting the surgery recipes are offered to a spawned sloth like to a husky, requested from NPT. Waiting for the step |
+| P ADS 2 load order and copy | Pickle `03` (never played): load order, ADS 2's own copy ran, `InstallDentureAnimal` offered for the race Sloth, and the surgery recipes of Sloth match those of Husky (def-level read, DefFieldSteps; not the Health tab itself) |
 | Q, R ADS 2 wrong order, absent | Q tests the engine's load order; R is the minimal pass (the guarded patch is silent): not applicable / covered by the minimal pass |
 | S Nocturnal Animals | Pickle `03` (loads after it, Sloth patched by this port). The schedule is that mod's behaviour: not applicable |
 
 ### Passes this mod needs
 
-1. **Minimal** (no `-DepMap`): `01` and `04`; `02`, `03` and `06` skip on `@requires`. Exclude the two language features.
+1. **Minimal** (`wsl-deps.sans-facultatifs.map`, which only stages DefFieldSteps): `01` and `04`; `02`, `03` and `06` skip on `@requires`. Exclude the two language features and `08`.
 2. **With optionals** (`wsl-deps.avec-facultatifs.map`): `02` and `03` as well. The four optional mods do not conflict, one pass covers them.
 3. **Declared incompatibility** (`wsl-deps.incompat-slothmod.map`): `06`, the original A Sloth Mod mounted beside this port.
 4. **Languages**: `07-labels-english` with `-Language English`, `07-labels-french` with `-Language French`.
 5. **Gallery** (`wsl-deps.galerie.map`): `05`; captures opened by Virginie.
+6. **Commerce** (`wsl-deps.commerce.map`): `08`.
 
 ## Translation checks — English and French
 
@@ -348,7 +349,7 @@ The negative control. Skip it and `<loadBefore>` is a claim nobody checked.
 
 ## What cannot be tested offline
 
-The runtime outcomes of scenarios F and G, and the Health-tab list of P, depend on runtime selection: map generation reading the biome's animal list, trader stock generation reading the trade tags, one mod's patch reading a list another mod's patch just changed. Reading the defs shows only that these doors are unlocked, never that anyone walks through them. The mod's own part is asserted for F and G (XML unit tests); G's stock and P's Health-tab list are recorded as not applicable above, pending Virginie's confirmation.
+The map draw of F, the trader draw of G and the Health tab of P depend on runtime selection: map generation reading the biome's animal list, trader stock generation reading the trade tags, one mod's patch reading a list another mod's patch just changed. Reading the defs shows only that these doors are unlocked, never that anyone walks through them. The mod's own part is asserted for F and G (XML unit tests); G's stock and P's Health-tab list are recorded as not applicable above, pending Virginie's confirmation.
 
 ## Automated checks
 

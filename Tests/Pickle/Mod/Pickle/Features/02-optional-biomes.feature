@@ -13,3 +13,13 @@ Feature: Sloth reaches the biomes two optional biome mods add
     Then def "AB_MiasmicMangrove" was patched by mod "A Sloth Mod Renew (unofficial)"
     And def "AB_MycoticJungle" was patched by mod "A Sloth Mod Renew (unofficial)"
     And def "AB_FeraliskInfestedJungle" was patched by mod "A Sloth Mod Renew (unofficial)"
+
+  @requires:nelim.pickletools.deffields @requires:zylle.MoreVanillaBiomes
+  Scenario: cloud forest lists the sloth as a wild animal
+    Then Nelim's Pickle Tools: the biome "ZBiome_CloudForest" lists the wild animal "Sloth"
+
+  @requires:nelim.pickletools.deffields @requires:sarg.alphabiomes
+  Scenario: the three Alpha Biomes jungles list the sloth as a wild animal
+    Then Nelim's Pickle Tools: the biome "AB_MiasmicMangrove" lists the wild animal "Sloth"
+    And Nelim's Pickle Tools: the biome "AB_MycoticJungle" lists the wild animal "Sloth"
+    And Nelim's Pickle Tools: the biome "AB_FeraliskInfestedJungle" lists the wild animal "Sloth"
