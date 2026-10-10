@@ -6,7 +6,7 @@ in game.
 
 ## [1.0.0] — unreleased
 
-On release: create the `v1.0.0` tag and the matching GitHub release, then publish to the Workshop.
+The CI creates the `v1.0.0` tag and the matching GitHub release after a successful Workshop upload.
 
 `Mod/About/ModIcon.png` and `Mod/About/Preview.png` were added on 11 September 2026. Both are new
 art, made for this port; neither comes from the original. The full-resolution renders and the page
@@ -52,14 +52,7 @@ First release of the 1.6 update of **A Sloth Mod**, by ThatRubishGamer.
 
 ### Notes
 
-That one line is the entire difference from the original file, byte for byte. No balance value was
-changed, and no defect was found to fix.
-
-Two traits are inherited on purpose rather than corrected. The sloth belongs to no biome's wild
-animal list, so it reaches a colony through animal traders alone — the mod tags it `AnimalCommon`
-and stops there. And its calls are the boomrat's, borrowed from the base game, as its author left
-them. Deciding where sloths live, or giving one a voice of its own, would be design rather than a
-port.
+The original stats, textures and sounds are preserved, apart from restoring the intended Wildness value. Biome and trader availability are deliberate additions to this port. The sloth retains the original boomrat calls.
 
 ## [0.1.0] — 2026-10-01
 

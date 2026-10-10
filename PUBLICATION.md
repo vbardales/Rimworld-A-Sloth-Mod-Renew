@@ -6,26 +6,22 @@ first release, and for whoever takes the mod over.
 **Status: drafted, 2026-09-28; item created 2026-10-01 (0.1.0 prepublication, `PublishedFileId.txt` 3811289805, private).** Earlier text below saying no item exists is superseded. Formerly: there was no
 `Mod/About/PublishedFileId.txt`, no `0.1.0` prepublication, no Git tag and no GitHub release (the
 CI creates the last two after a successful upload). Nothing below has been posted or pasted
-anywhere. The stage is `done`, not `tested` (see `STATUS.md`).
+anywhere. The workflow stage is `playTests[1.0.0]` (see `STATUS.md`).
 
 ## What blocks the publication
 
 Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
-- Nothing has been played in game. The nineteen manual scenarios of `TESTING.md` are unrun, and the
-  Pickle suite (`Tests/Pickle/`, four features) has run three times without ever being green end to
-  end; its last corrections are queued. Its verdict is in `STATUS.md` and `docs/runs/`.
-- Item exists since 2026-10-01 (0.1.0 prepublication; CI can now update it). Before: `OPERATIONS.md`: the CI cannot create an item, so the first publication is an
-  in-game upload of a private item, then `Mod/About/PublishedFileId.txt` committed and pushed at once,
-  then the CI for every update.
+- In-game verification is open. Earlier Pickle passes were green (minimal 3/3, with optionals 7/7, on `3682682`); everything written since is **not verified**: scenarios G, P, the incompatibility pass, the English and French label passes, the gallery rewrite and the biome-list assertions. Seven initial tickets were filed on `f156f38` on 2026-10-10. The nineteen scenarios of `TESTING.md` each have a disposition (automated, pinned offline or not applicable); none was played by hand. Verdicts are in `STATUS.md` and `docs/runs/`.
+- The Workshop item exists since 2026-10-01 (0.1.0 prepublication, private; the CI can now update it). History: the CI cannot create an item, so the first publication was an in-game upload of a private item, with `Mod/About/PublishedFileId.txt` committed and pushed at once.
 - The gallery is not made (see "Screenshots").
 - The rollback target cannot exist before the first publish (see "Fail fast").
 - The owner's manual validations (see below).
 
 ## Description
 
-The one-source standard of 2026-09-25 applies from the start, since no page exists yet to stay
-compatible with: the description is written once, in Markdown, in the block below. The CI converts it
+The one-source standard of 2026-09-25 applies: the item exists (private), but the page has not been
+written from this source yet. The description is written once, in Markdown, in the block below. The CI converts it
 to Steam BBCode and generates the plain-text `<description>` of `About.xml` from it
 (`--about-from-description`), and a dry-run or publish stops if they differ. **The hand-written
 `About.xml` description therefore changes at the first `--write`: read the diff, commit, redo the
@@ -59,14 +55,14 @@ Original mod: [A Sloth Mod](https://steamcommunity.com/sharedfiles/filedetails/?
 
 **On purpose, and not a repair.** The original sloth could not be obtained in a normal game. It was in no biome's wild animal list, and its only trade tag, `AnimalCommon`, is in no trader's sell or buy list in Core or the five expansions. This mod adds the tag `AnimalUncommon`, the one the monkey and the tortoise carry and the one exotic caravans and orbital ships sell, and adds the sloth to tropical rainforest (0.5) and tropical swamp (0.4). That is design, not porting, and it is said here rather than buried.
 
-No stat, tool, sound or texture was rebalanced. The defName is unchanged, so a save moves between the original and this mod without losing a sloth.
+No stat, tool, sound or texture was rebalanced. The sloth's defName is unchanged. Switching an existing save between the original mod and this continuation has not yet been validated in game.
 
 ## Optional compatibility
 
 None of these is required, and each patch does nothing when its mod is absent.
 
 - [More Vanilla Biomes](https://steamcommunity.com/sharedfiles/filedetails/?id=1931453053): the sloth joins the cloud forest (0.5).
-- [Alpha Biomes](https://steamcommunity.com/sharedfiles/filedetails/?id=1841354677): it joins the miasmic mangrove (0.4), the mycotic jungle (0.3) and the feralisk infested jungle (0.05, low because every animal there is).
+- [Alpha Biomes](https://steamcommunity.com/sharedfiles/filedetails/?id=1841354677): it joins the miasmic mangrove (0.4), the mycotic jungle (0.3) and the feralisk infested jungle (0.05, a low spawn weight, consistent with the other animals there).
 - [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862): it is offered the same animal surgeries as vanilla's huskies. This mod must load before it, which its metadata declares.
 - [Nocturnal Animals (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409): the sloth gets a nocturnal cycle, matching its own description.
 
@@ -107,30 +103,23 @@ saying what the automated runs cover, which is left out until a run is green.
 
 ## Images
 
-- **Preview** (`Mod/About/Preview.png`, 896 x 504, about 0.73 MB): a sloth clinging to a post in
-  lamplight, the title, an "(unofficial)" line and a `1.6` corner banner. Inspected 2026-09-13 and
-  2026-09-27. No text about anything that is not in the mod. **2026-09-29, new house standard:**
-  `ModIcon.png` badged into the bottom-right corner, rotated -15°, scaled to 160 px, via
-  `Art/Add-PreviewBadge.ps1`. The unbadged illustration is kept at `Art/Preview.png` (the STYLE_RIMWORLD.md
-  source-without-overlay convention); `Mod/About/Preview.png` is the badged, shipped file.
-- **ModIcon** (`Mod/About/ModIcon.png`, 128 x 128, 23 KB): a sleeping sloth head with a ponytail and a
-  sparkle, replaced by the owner on 2026-09-27 and shrunk on her instruction; readable at 32 px. This
-  file is hers to change; sessions do not generate icons. Only read to badge the Preview, never edited.
+- **Preview** (`Mod/About/Preview.png`, 896 x 504, about 0.55 MB): a sloth clinging to a post in lamplight, the title, an "(unofficial)" line and a `1.6` corner banner, with the ModIcon badge cropped by the bottom-left corner. Rendered by `node ../scripts/Render-Preview.cjs` from `Art/Preview-source.png` (illustration without overlay), `Art/echo.png` and `Art/Preview.config.json` (palette, title parts, `iconBadge` with `translate`); regenerated on 2026-10-10 and the crop validated by the owner the same day. Its mean value (0.272) is under the 0.30 floor of the source rule: the owner kept it on 2026-10-11.
+- **ModIcon** (`Mod/About/ModIcon.png`, 128 x 128, about 29 KB): a sleeping sloth head with a ponytail and a sparkle, from the owner's `Art/ModIcon-source.png` (changed 2026-10-04). Derived by `Render-Preview.cjs` (`modIconSource` key) and confirmed by the owner on 2026-10-10, readable at 32 px. The source is hers; sessions never edit it.
 
 ## Screenshots, in this order
 
 Steam shows the first image large under the Preview, and the gallery is uploaded by hand
 (`OPERATIONS.md`: SteamCMD sends the header image only), from `Art/Gallery/`, which
 would also be the workflow's `--gallery-dir`. It holds only the images to upload, in page order.
-**2026-09-29, new house standard:** image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, then `1-`, `2-`, per PUBLISHING.md, 2026-09-29):
+Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, then `1-`, `2-`, per PUBLISHING.md, 2026-09-29):
 `0-`.
 
 | Order | File | What it shows | Source |
 |---|---|---|---|
-| 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged) | Done, 2026-09-29 |
+| 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-10 |
 | 1 | `1-…` | The portrait: one sloth filling half the frame in the flower glade | Pickle `05-gallery` v2 (staged: golden hour, torch, close frame), pass `galerie`; first version green but unusable (sloth too small); v2 written 2026-10-02, not yet run |
 | 2 | `2-…` | The family: three sloths in a row (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle for the sloth, manual for the card |
-| 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader; the sloth being obtainable that way is scenario G, not yet played |
+| 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) is written, not yet played. A manual capture, or none |
 
 The shots are `@review` evidence, not proof: a green capture scenario shows the journey ran, not that
 the image shows anything. The game's camera has a minimum zoom, at which a 0.15-size animal is small;
@@ -160,9 +149,9 @@ drawn from `TESTING.md`; it is hers to change.
 | # | What to look at | Why a test cannot |
 |---|---|---|
 | 1 | Subscribe to the item once it exists, start a game with the installed copy, tame a sloth: the information card reads Wildness 50 % | The installed copy is what players get; the suite plays the working tree |
-| 2 | Scenario F: a sloth appears in a tropical rainforest or swamp map | Map generation is a runtime outcome no def check stands in for |
-| 3 | Scenario G: an exotic trader offers one | Same, for trade-stock generation |
-| 4 | Scenario P, with ADS 2: the Health tab offers the surgeries a husky is offered | The look of the tab is vanilla's; the patch mechanism is asserted |
+| 2 | Optional, F is automated (patches, biome lists) in `TESTING.md`: a sloth appears in a tropical rainforest or swamp map | Map generation is a runtime outcome no def check stands in for |
+| 3 | Optional, G is automated (`08-trade`, flaky stock): an exotic trader offers one | Same, for trade-stock generation |
+| 4 | Optional, P is automated at def level in `03`: with ADS 2, the Health tab offers the surgeries a husky is offered | The look of the tab is vanilla's; the patch mechanism is asserted |
 | 5 | A real save with a sloth, then the mod removed: the animal is destroyed | A changed mod list is the game's handling |
 | 6 | The gallery: which captures, in which order | A composition is a choice |
 | 7 | The description pasted on the page, read once more | The page is edited by hand after creation |
@@ -244,7 +233,7 @@ The cloud forest was the obvious home for a sloth, so my port adds one there (0.
 ### A Sloth Mod (original), 2253087891
 
 ```
-Hi ThatRubishGamer! I ported your sloth to 1.6 (unofficially, credit and a link to your page are in the description). One line was broken, wildness, and the sloth was in no biome and no trader's stock, so I fixed both. Nothing else was touched, the textures are byte for byte yours. If you'd rather I take it down, just tell me and it's gone. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
+Hi ThatRubishGamer! I ported your sloth to 1.6 (unofficially, credit and a link to your page are in the description). One line was broken, wildness, and the sloth was in no biome and no trader's stock, so I fixed both. I also added optional compatibility patches and French translations. Your textures and the original animal stats are preserved, apart from restoring Wildness. If you'd rather I take it down, just tell me and it's gone. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
 ```
 
 Check the last comments of each page first, and whether it takes comments, as `WORKSHOP_COMMENTS.md`
