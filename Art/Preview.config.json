@@ -48,6 +48,7 @@
   "iconBadge": {
     "file": "ModIcon-source.png",
     "corner": "bottom-left",
+    "translate": "-12%,14%",
     "width": 180,
     "outline": false,
     "veil": "radial",
