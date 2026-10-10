@@ -38,6 +38,15 @@ Assert ($thing.tradeTags.li -contains 'AnimalUncommon') 'Trader availability tag
 Assert ($thing.race.trainability -eq 'None') 'Training regression'
 Assert ($thing.race.manhunterOnDamageChance -eq '0' -and $thing.race.manhunterOnTameFailChance -eq '0') 'Manhunter regression'
 Assert ($thing.race.lifeStageAges.li.Count -eq $kind.lifeStages.li.Count) 'Life stage graphics mismatch'
+# Inherited values of the original animal (TESTING.md scenarios A, H, J, K): the port must not move them.
+Assert ($thing.race.baseBodySize -eq '0.15') 'Body size regression'
+Assert ($thing.race.foodType -eq 'VegetarianRoughAnimal') 'Food type regression'
+Assert ($thing.race.baseHungerRate -eq '0.20') 'Hunger rate regression'
+Assert ($thing.race.leatherDef -eq 'Leather_Light') 'Leather regression'
+Assert ($thing.race.petness -eq '0.15') 'Petness regression'
+Assert ($thing.race.mateMtbHours -eq '12' -and $thing.race.gestationPeriodDays -eq '12') 'Breeding regression'
+Assert ($thing.race.lifeExpectancy -eq '13') 'Life expectancy regression'
+Assert ($thing.statBases.MoveSpeed -eq '0.7' -and $thing.statBases.MarketValue -eq '75' -and $thing.statBases.ComfyTemperatureMin -eq '-30') 'Stat bases regression'
 foreach ($node in $kind.SelectNodes('.//texPath')) {
     $directions = if ($node.ParentNode.Name -eq 'bodyGraphicData') { @('north','south','east') } else { @('east') }
     foreach ($direction in $directions) {

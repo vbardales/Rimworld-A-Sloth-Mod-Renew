@@ -22,12 +22,7 @@ nothing to offer at all: `raw stat` and `was patched by mod`, both built into Pi
 answer exactly the two facts that matter here without needing a UI or even a save — see
 `Tests/Pickle/README.md` for what they check and why the def database alone is enough.
 
-What Pickle's suite still cannot reach: whether the sloth actually **spawns** on a generated map
-(scenario F), whether a trader actually **stocks** one (scenario G), whether ADS 2's Health tab
-actually **lists** the copied operations (scenario P). Those are outcomes of map generation and
-trade-stock generation, runtime facts a patch check cannot stand in for, and they stay in the
-nineteen manual scenarios above. A green Pickle run proves the mechanism fired against the real
-installed file; it does not prove what a colonist sees.
+What a running game would show and Pickle's suite does not assert: whether the sloth actually **spawns** on a generated map (scenario F), whether a trader actually **stocks** one (scenario G), whether ADS 2's Health tab actually **lists** the copied operations (scenario P). Those are outcomes of the game's own map generation, trade-stock generation and another mod's list copy: the mod's part (the patch, the tag, the load order) is asserted, and the disposition table below says what each of the nineteen scenarios became. A green Pickle run proves the mechanism fired against the real installed file; it does not prove what a colonist sees.
 
 **Evidence to keep, if a run is played and archived**: only `summary.md`, `summary.json`, `junit.xml` and the `evidence-complete.txt` marker of the latest run per pass (minified 2026-10-01: `report.html`, `messages.ndjson` and `Player.log` deleted unless a failure needs the log). Every scenario is a def-database
 assertion with no capture step and no `@review` tag, so a run's only useful output is its
@@ -35,6 +30,36 @@ pass/fail verdict and, on a failure, the attached stat/patch breakdown Pickle pr
 scenario. A one-line result per pass belongs in `docs/runs/`, per `AGENTS.md`; the full report
 under `Tests/Pickle/Evidence/` is disposable once that line is written, per `AUDIT.md`'s Pickle
 section on archived reports.
+
+## Disposition of the nineteen scenarios (2026-10-10, AUDIT.md 8.g and 8.k)
+
+No manual scenario is left to tick by hand: each is automated, covered offline, or justified not applicable. Rule applied: we test what the mod ships (two Defs, four patches, load-order declarations), not what the game does with them (`AUDIT.md`, "On ne teste pas le jeu"). `Tests/Test-Mod.ps1` (147 checks) pins every value of the Defs; Pickle plays only what needs a running game.
+
+| Scenario | Disposition |
+|---|---|
+| A exists and draws | Pickle: `04` spawns a live sloth; `07-labels-*` select it and assert `no errors were logged` |
+| B wildness | Pickle `04` (stat read off a live animal) plus offline. The card line itself is the game's drawing: not applicable |
+| C negative control | A one-time demonstration of the engine's handling of a broken def: not applicable |
+| D, E taming, manhunter | Values pinned offline. Consequences are the engine's: not applicable |
+| F natural spawn | The patch is asserted (`01`, `02`). Which animals a map picks is the game's random selection: not applicable, **pending Virginie's confirmation** |
+| G trade | Tag pinned offline. Stock generation is the game's and random: not applicable, **pending Virginie's confirmation** (TradeSteps exists, never played: `I buy 1 of "Sloth"` fails whenever the trader happens not to stock one) |
+| H, J, K food, leather, breeding | Values of the original, pinned offline since 2026-10-10. Behaviour is the engine's: not applicable |
+| I textures | Four files byte-identical to the original's (checked offline). The east-only dessicated corpse is the original's gap: not applicable |
+| L collision with the original | Pickle `06-incompat`, pass `incompat-slothmod` (new, never played) |
+| M saves | Add, swap and removal are the engine's; the `defName` is unchanged (stated in the README): not applicable |
+| N mod list entry, images | Offline (`Check-Status.ps1`, file sizes). The numbers in N were refreshed |
+| O English and French | Pickle `07-labels-english` / `07-labels-french`, one pass per language, `@review` captures read by Virginie |
+| P ADS 2 load order and copy | Pickle `03` (load order, ADS 2's own copy ran). The Health-tab list is ADS 2's behaviour; no Pickle step asks whether a recipe is offered to an animal: not applicable, **pending Virginie's confirmation** |
+| Q, R ADS 2 wrong order, absent | Q tests the engine's load order; R is the minimal pass (the guarded patch is silent): not applicable / covered by the minimal pass |
+| S Nocturnal Animals | Pickle `03` (loads after it, Sloth patched by this port). The schedule is that mod's behaviour: not applicable |
+
+### Passes this mod needs
+
+1. **Minimal** (no `-DepMap`): `01` and `04`; `02`, `03` and `06` skip on `@requires`. Exclude the two language features.
+2. **With optionals** (`wsl-deps.avec-facultatifs.map`): `02` and `03` as well. The four optional mods do not conflict, one pass covers them.
+3. **Declared incompatibility** (`wsl-deps.incompat-slothmod.map`): `06`, the original A Sloth Mod mounted beside this port.
+4. **Languages**: `07-labels-english` with `-Language English`, `07-labels-french` with `-Language French`.
+5. **Gallery** (`wsl-deps.galerie.map`): `05`; captures opened by Virginie.
 
 ## Translation checks — English and French
 
@@ -257,8 +282,8 @@ Twelve in-game days of gestation, so this needs a long save or dev-mode ageing.
 ## N — the mod list entry and the Workshop page
 
 - The name reads `A Sloth Mod Renew (unofficial)`, the author line credits ThatRubishGamer first.
-- `About/ModIcon.png` is drawn at about 32 px in the mod list. It is 128 × 128 and 24 Ko.
-- `About/Preview.png` is 896 × 504 and about 520 Ko, under Steam's hard megabyte.
+- `About/ModIcon.png` is drawn at about 32 px in the mod list. It is 128 × 128 and about 30 Ko (29,693 bytes at the 2026-10-10 render).
+- `About/Preview.png` is 896 × 504 and about 550 Ko, under Steam's hard megabyte.
 - Both images are new art made for this port and are named as such in `ATTRIBUTION.md`.
 
 ## O — English and French localization
@@ -323,12 +348,7 @@ The negative control. Skip it and `<loadBefore>` is a claim nobody checked.
 
 ## What cannot be tested offline
 
-Scenarios F, G and P are the ones that matter most and the ones no file can settle. Whether a sloth
-reaches a colony depends on runtime selection: map generation reading the biome's animal list, and
-trader stock generation reading the trade tags. Whether it gets ADS 2's surgery depends on the same
-kind of runtime fact, one mod's patch reading a list another mod's patch just changed. Reading the
-defs shows only that these doors are now unlocked, never that anyone walks through them. Everything
-else in this file is a reading of the information card, which is exactly where the silent fault hid.
+Scenarios F, G and the Health-tab list of P depend on runtime selection: map generation reading the biome's animal list, trader stock generation reading the trade tags, one mod's patch reading a list another mod's patch just changed. Reading the defs shows only that these doors are unlocked, never that anyone walks through them. They are recorded as not applicable above, with the mod's own part asserted, pending Virginie's confirmation.
 
 ## Automated checks
 
@@ -346,9 +366,10 @@ four configurations: neither optional mod, each separately, and both together. I
 commonalities, untouched wildlife and unpatched biomes. Missing patch targets fail the run.
 
 These fixtures do not validate installed third-party biome names, Core inheritance, or the
-actual RimWorld patch engine. Scenarios A–O remain necessary for runtime validation.
+actual RimWorld patch engine. The disposition table above says which scenarios Pickle plays and which are not applicable.
 
-Latest offline run: 2026-09-12 — **PASS, 93 checks**.
+Latest offline run: 2026-10-10 — **PASS, 147 checks** (8 added for scenarios A, H, J, K).
+Earlier: 2026-09-12 — PASS, 93 checks.
 Audit run: 2026-09-13 — **PASS, 95 checks**, including the two French XML files.
 Scenario O corrected on 2026-09-13 to match those resources; distributed files unchanged.
 Manual execution: **not run**. For each scenario record game version, active mods, steps,

@@ -1,0 +1,6 @@
+# Pass "incompat-slothmod": -DepMap wsl-deps.incompat-slothmod.map. Mounts the original A Sloth Mod
+# (ThatRubishGamer, Workshop 2253087891), which this port declares in incompatibleWith, to go and look
+# whether the incompatibility is still true (AUDIT.md, passes Pickle). The map name starts with
+# "incompat" so the staging accepts two mods declared incompatible. Ids read from the original's own
+# About.xml / Workshop page: to re-check on the page before the first ticket.
+ThatRubishGamer.RubishMods.SlothMod       2253087891

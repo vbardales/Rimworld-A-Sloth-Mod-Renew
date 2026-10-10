@@ -18,16 +18,15 @@ showcase:     complete
 tested_on:
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
-  - unverified: the nineteen manual scenarios in TESTING.md, none played
-  - unverified: prioritize F and G (natural spawning and trade), P (ADS 2 surgery, load order), and L (original-mod incompatibility warning)
-  - unverified: scenario I must check the inherited east-only dessicated corpse in game; the limited artwork alone is not an established runtime defect
-  - unverified: English and French in-game translation checks in TESTING.md, including generated labels and clipping
-  - unverified: Pickle clean-tree passes minimal (19b0, 3/3) and with-optionals (b69a, 7/7) are green on 3682682; the galerie pass (2d40) is green but its two captures are unusable (sloth ~40 px, camera too far): gallery pictures 1 and 2 need a close-camera step or a manual capture
+  - unverified: the nineteen scenarios of TESTING.md now have a disposition (table in TESTING.md, 2026-10-10): automated, pinned offline (Test-Mod.ps1, 147 checks green), or not applicable. Awaiting Virginie's confirmation for F (natural spawn), G (trade stock) and the Health-tab list of P; nothing is played in game yet
+  - unverified: new Pickle features never played: 06-incompat (pass incompat-slothmod, map ids to re-check on the original's Workshop page), 07-labels-english and 07-labels-french (one pass per language, @review captures to read)
+  - unverified: Pickle clean-tree passes minimal (19b0, 3/3) and with-optionals (b69a, 7/7) are green on 3682682, before the Pickle suite changes and the icon chain regeneration; both are rerun on the frozen tree
+  - unverified: gallery pictures 1 and 2: the feature was rewritten (8959996, b6dd6f0: framing steps, golden hour) after the unusable captures of pass 2d40 (sloth ~40 px); the rewritten pass has not run and its captures are not opened
   - feature: PUBLICATION.md drafted 2026-09-28; screenshots and Workshop-comments rows pending (item now exists, private)
-  - unverified: tested gate (2026-10-01 rule): no scenario left @wip, every conditional scenario played with its mod mounted, no manual test left to validate. Today: no @wip; conditional passes played (avec-facultatifs 7/7, provenance compromised, a clean-tree rerun is owed); the nineteen manual scenarios of TESTING.md are neither automated nor justified as not applicable, so they block `tested`
+  - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ (no code_review_sha yet), tested_on and docs/runs/ lines written
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
 updated:      2026-10-10, re-audit against AUDIT.md (workflow_stage playTests[1.0.0]); root cleaned; ModIcon.png and Preview chain regenerated
-protocols_read_sha: 1405c22e11d72011390df2af5013f748f6ed374b
+protocols_read_sha: 7f71f354104dac9f12d9a9b560680a398848a975
 ---
 
 # A Sloth Mod Renew — status

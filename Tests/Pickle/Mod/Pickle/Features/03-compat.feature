@@ -6,7 +6,7 @@ Feature: optional compatibility with two other mods
   # ("no def named 'ADS_Cat1' in any database"), so the categories cannot be asserted directly.
   # What can be asserted is the two facts the patch depends on: this port loads before ADS 2,
   # and ADS 2's own copy really ran on a concrete recipe. That Sloth is then in the copied list
-  # stays a manual check (TESTING.md scenario P).
+  # is ADS 2's own behaviour, recorded as not applicable (TESTING.md, disposition table, scenario P).
   @requires:SamBucher.ADogSaidAnimalProsthetics2
   Scenario: this port loads before ADS 2, whose copy onto real recipes ran
     Then mod "nelim.aslothmod" loads before "SamBucher.ADogSaidAnimalProsthetics2"
