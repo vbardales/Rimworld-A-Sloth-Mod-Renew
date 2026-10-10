@@ -49,7 +49,7 @@ No manual scenario is left to tick by hand: each is automated, covered offline, 
 | M saves | Add, swap and removal are the engine's; the `defName` is unchanged (stated in the README): not applicable |
 | N mod list entry, images | Offline (`Check-Status.ps1`, file sizes). The numbers in N were refreshed |
 | O English and French | Pickle `07-labels-english` / `07-labels-french`, one pass per language, `@review` captures read by Virginie |
-| P ADS 2 load order and copy | Pickle `03` (load order, ADS 2's own copy ran). The Health-tab list is ADS 2's behaviour; no Pickle step asks whether a recipe is offered to an animal: not applicable, **pending Virginie's confirmation** |
+| P ADS 2 load order and copy | Pickle `03` (load order, ADS 2's own copy ran). **To automate (Virginie, 2026-10-10)**: a step asserting the surgery recipes are offered to a spawned sloth like to a husky, requested from NPT. Waiting for the step |
 | Q, R ADS 2 wrong order, absent | Q tests the engine's load order; R is the minimal pass (the guarded patch is silent): not applicable / covered by the minimal pass |
 | S Nocturnal Animals | Pickle `03` (loads after it, Sloth patched by this port). The schedule is that mod's behaviour: not applicable |
 
