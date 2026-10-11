@@ -1,0 +1,20 @@
+{
+  "templateStamp": "ba64b0c1b25d",
+  "workshopId": "3811289805",
+  "packageId": "nelim.aslothmod",
+  "releaseTitle": "A Sloth Mod Renew (unofficial) {version}",
+  "requirePaths": [
+    "Defs"
+  ],
+  "forbidPaths": [
+    "Assemblies"
+  ],
+  "previewFile": "About/Preview.png",
+  "galleryDir": "Art/Gallery",
+  "aboutFromDescription": true,
+  "description": {
+    "file": "PUBLICATION.md",
+    "format": "markdown",
+    "heading": "^## Steam description$"
+  }
+}
