@@ -27,7 +27,7 @@ remaining:
   - unverified: seven initial Pickle tickets filed 2026-10-10 on f156f38 (tree frozen: no edit of Mod/ or Tests/ until their RUN_DONE): minimal, avec-facultatifs, incompat-slothmod, english, french, commerce, galerie; evidence under Tests/Pickle/Evidence/<pass>-f156f38; results to read, red ones replayed alone
   - 2.e: Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; hue families 2 (OK). Virginie decided in chat on 2026-10-11 to keep it ("on conserve preview"): override recorded, the criterion is waived for this source and the retained state stays playTests[1.0.0]
   - defect: Mod/LICENSE missing (PUBLISHING.md wants it in the published folder); the root LICENSE exists since 2026-10-11. Add Mod/LICENSE with the About.xml comment fix once the seven tickets are done (a Mod/ commit now changes what they stage)
-  - unverified: FRENCH_REVIEW.md regenerated 2026-10-10 with scripts/Make-FrenchReview.ps1 (the old one came from the mod's own generator, now scripts/Generate-FrenchReview.ps1); texts are unchanged since Virginie's review of 2026-10-01 but the new file's review line is empty: a session never fills it, Virginie records it
+  - unverified: FRENCH_REVIEW.md regenerated 2026-10-10 with scripts/Make-FrenchReview.ps1 (the mod's own generator was deleted 2026-10-11: the shared script does the job); texts are unchanged since Virginie's review of 2026-10-01 but the new file's review line is empty: a session never fills it, Virginie records it
   - feature: writeDocs gaps seen early (11.b, 11.d): the About.xml description has no THANKS section (ADS 2, Nocturnal Animals, Alpha Biomes, More Vanilla Biomes, Pickle and RimLogging as development only) and no Workshop links on cited mod names; the description source is PUBLICATION.md, not yet synced
   - defect: Mod/About/About.xml carries a comment saying RimWorld resolves a duplicate defName by load order and logs nothing; TESTING.md (log table, `Adding duplicate`) and the new 06-incompat feature say the game does log it. Found by the 2026-10-10 read of Mod/ (first half of the 8.m review: Defs, the four patches, About.xml; no other defect). Fix after the seven tickets finish: a Mod/ commit while they are queued would change what they stage
   - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ (no code_review_sha yet), tested_on and docs/runs/ lines written
@@ -87,7 +87,7 @@ reset to `unchecked`.
   noun ("paresseux"); `Sloth.description` and both `tools.*.label` entries are impersonal or
   fixed nouns, none an adjective or participle referring to the animal. No switch needed,
   no defect.
-- `FRENCH_REVIEW.md` generated at the mod root by `_tools/Generate-FrenchReview.ps1`
+- `FRENCH_REVIEW.md` generated at the mod root by `scripts/Make-FrenchReview.ps1 -ModRoot Mod` (shared)
   (adapted from `FoodCourt/_tools/`, no `Mod/Languages/Keyed` or `Mod/Languages/English`
   folder here — Original and English both resolve to the shipped Def's native fallback
   text). Revision: working tree at `e280013`. All four rows resolved cleanly, no `?` flags.
