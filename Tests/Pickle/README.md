@@ -12,7 +12,7 @@ Defs and four guarded patches, nothing a custom step would be needed to reach.
 | 02-optional-biomes | Cloud forest patched when More Vanilla Biomes is present; the three Alpha Biomes jungles patched when it is present | No |
 | 03-compat | With ADS 2: this port loads before it and its own copy ran on a concrete recipe. With Nocturnal Animals (Continued): this port loads after it and the Sloth def was patched | No |
 | 04-sloth-stat | `Wildness` reads 0.5 on a live spawned sloth, the fact this whole port repairs | Yes (`test-colony`) |
-| 05-gallery | Two `@review` captures for the Workshop gallery (three sloths, then one, in the zen meadow studio); pass `galerie` only | Yes (`nelim-zen-meadow-studio`) |
+| 05-gallery | Two `@review` captures for the Workshop gallery (one sloth, then three, in the Sanctuary's `flower-garden`); pass `galerie` only | Yes (`Nelims-tribe`) |
 | 08-trade | An exotic trader offers a sloth (`@flaky-stock`, may fail `[no-stock]`); a pirate merchant takes the colony's sloth | Yes (`test-colony`) |
 | 06-incompat | Pass `incompat-slothmod` only: the original A Sloth Mod is mounted beside this port and both stay loaded, in order (scenario L) | No |
 | 07-labels-english, 07-labels-french | The sloth is named `sloth` / `paresseux` in the inspect pane, with a `@review` capture; one language per pass (scenario O) | Yes (`test-colony`) |
@@ -60,7 +60,7 @@ mistakes, none the mod's, and invisible to `Tests/Test-Mod.ps1`'s synthetic fixt
   `-Language French` with `-Filter '07-labels-french'`. A run of the whole suite must exclude both
   (`-Filter 'A Sloth Mod Renew - Pickle tests,!07-labels-english,!07-labels-french'`), since one of
   them fails in any given language by design.
-- **Galerie** (`wsl-deps.galerie.map`): `05` only.
+- **Galerie** (`wsl-deps.galerie.map`, the Sanctuary's minimum mod list plus this port): `05` only.
 - **Commerce** (`wsl-deps.commerce.map`, TradeSteps): `08` only; `[no-stock]` failures of its `@flaky-stock` scenario are skips to study.
 
 ## Run

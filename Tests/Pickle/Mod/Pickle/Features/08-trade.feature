@@ -2,6 +2,7 @@
 # Uses PickleTools' TradeSteps, compiled and never played: the first run may only teach us the steps.
 # Sloth tradeTags AnimalCommon + AnimalUncommon (the tag the port added) are pinned offline.
 
+@requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.tradesteps
 Feature: traders and the sloth
 
   # RANDOM: whether an exotic trader's stock holds a sloth is the game's draw. Pickle has no runtime skip,
