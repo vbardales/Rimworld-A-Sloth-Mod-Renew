@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: mountPreview[1.0.0]
+workflow_stage: writeDocs[1.0.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE to be added once the seven f156f38 tickets are done, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
