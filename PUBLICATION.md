@@ -174,7 +174,7 @@ alone on the first line, in BBCode, or the CI refuses the note.
 ```
 [b]1.1.0[/b]
 
-Declared for RimWorld 1.7 as well as 1.6: the Steam tag set now lists both versions. The 1.7 run passed in English; no change to the sloth, its patches or its texts.
+Declared for RimWorld 1.7 as well as 1.6: the Steam tag set now lists both versions, and the header image has a new line-art sloth. The 1.7 run passed in English; no change to the sloth, its patches or its texts.
 ```
 
 ### 1.0.0

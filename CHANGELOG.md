@@ -10,7 +10,7 @@ Minor version for the RimWorld 1.7 tag (1.0.x becomes 1.1.0, never a patch).
 
 ### Changed
 
-- The Steam tag set lists 1.7 as well as 1.6 (`update_tags`); `supportedVersions` already did since 1.0.0. The RimWorld 1.7 run passed in English (3 of 3); no change to the sloth, its patches or its texts.
+- The header image has a new line-art echo (`Art/echo-source.png`, drawn from the accepted portrait capture) and the Steam tag set lists 1.7 as well as 1.6 (`update_tags`); `supportedVersions` already did since 1.0.0. The RimWorld 1.7 run passed in English (3 of 3); no change to the sloth, its patches or its texts.
 
 ## [1.0.0] - 2026-10-13
 
