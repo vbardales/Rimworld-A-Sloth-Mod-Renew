@@ -17,6 +17,7 @@ upstream_mod_remotes: N/A (checked 2026-10-01: no repository of the author on Gi
 dependencies: none
 showcase:     complete
 tested_on:
+tested_1_7:   yes (English only, AUDIT.md "Passe 1.7"; 2026-10-13, pass sans-facultatifs 3/3, Tests/Pickle/Evidence/p17-slothmod-01-repair; <li>1.7</li> only after Virginie confirms)
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
   - todo: Art/Preview.config.json now uses Art/echo-preview.png (flipX true, 2026-10-12). Regenerating the Preview (`node ../scripts/Render-Preview.cjs`, writes Mod/About/Preview.png and Art/Gallery/0-preview.png) is deferred: Mod/ is frozen until the two 0e09424 tickets finish. Then inspect at full size and at 268 px, set `echo_review_sha` and `social_preview_sha256`, send the GitHub social preview (PUBLISHING.md)
