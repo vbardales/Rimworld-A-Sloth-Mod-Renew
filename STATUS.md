@@ -18,6 +18,7 @@ dependencies: none
 showcase:     complete
 tested_on:
 tested_1_7:   yes
+code_review_sha: 0eceaa55063f10e05a3927de77b3aae1576b7654
 social_preview_sha256: 9210b672ed24604c83a2b21966e6d75bb9afa1531025d656e04cef8099a9880b
 echo_review_sha: 892e4983b90ba90d3d34d8259de0cbc395b4580d
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
@@ -32,7 +33,7 @@ remaining:
   - unverified: seven initial Pickle tickets played 2026-10-10 on f156f38 (evidence Tests/Pickle/Evidence/<pass>-f156f38): minimal, avec-facultatifs, english, french passed; commerce 1 pass + 1 [no-stock] flaky (the colony sloth is tradeable); galerie failed (fixture nelim-zen-meadow-studio deleted 2026-10-08) and incompat failed (exit 1, original 2253087891 not in the WSL cache). Fixed 2026-10-12: gallery moved to the Sanctuary (Nelims-tribe, flower-garden, 0e09424), original downloaded. Two tickets filed on 0e09424 (tree frozen on Mod/ and Tests/ until RUN_DONE): `20261012-042722-487-9b2f` galerie, `20261012-042723-091-b903` incompat; evidence under Tests/Pickle/Evidence/<pass>-0e09424. Read 2026-10-13: galerie accepted, 06 incompat green (1/1 on 0e09424); the [no-stock] commerce replay is optional
   - 2.e: Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; hue families 2 (OK). Virginie decided in chat on 2026-10-11 to keep it ("on conserve preview"): override recorded, the criterion is waived for this source and the retained state stays playTests[1.0.0]
   - unverified: FRENCH_REVIEW.md regenerated 2026-10-10 with scripts/Make-FrenchReview.ps1 (the mod's own generator was deleted 2026-10-11: the shared script does the job); texts are unchanged since Virginie's review of 2026-10-01 but the new file's review line is empty: a session never fills it, Virginie records it
-  - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ (no code_review_sha yet), tested_on and docs/runs/ lines written
+  - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ done 2026-10-13 (code_review_sha), tested_on and docs/runs/ lines written
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
 updated:      2026-10-10, re-audit against AUDIT.md (workflow_stage playTests[1.0.0]); root cleaned; ModIcon.png and Preview chain regenerated
 protocols_read_sha: 8ca1edc7ab50f4a7d9ecf725bcfa2641baa8fc8c
