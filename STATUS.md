@@ -19,6 +19,7 @@ showcase:     complete
 tested_on:    RimWorld 1.6.4871 (Pickle runs 2026-10-10 to 2026-10-13, Linux WSL) and RimWorld 1.7 unstable English (2026-10-13)
 tested_1_7:   yes
 dry_run: 1.0.0 on 5ac3a96ec6d2b8efe22aae7c747eccaf9b19ae5a, run 38400219841 (2026-10-13, green, same options and payload as run 38398534567; CHANGELOG [1.0.0] dated)
+publish: 1.0.0 uploaded 2026-10-13, run 38409430019 green (approved by Virginie), tag v1.0.0 and GitHub release created by the CI on 5ac3a96; item 3811289805 still private; public page not yet verified
 code_review_sha: 1b4aa0ab184cafefb9cde5043c7867e821799c4c
 publication_changelog_review_sha: 01fc0e8032c94d12d6a06d4238cd5606ef4e9eff
 social_preview_sha256: 9210b672ed24604c83a2b21966e6d75bb9afa1531025d656e04cef8099a9880b
