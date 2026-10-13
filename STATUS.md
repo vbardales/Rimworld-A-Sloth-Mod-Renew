@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: publish[1.1.0]
+workflow_stage: followUp[1.1.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -19,7 +19,7 @@ showcase:     complete
 tested_on:    RimWorld 1.6.4871 (Pickle runs 2026-10-10 to 2026-10-13, Linux WSL) and RimWorld 1.7 unstable English (2026-10-13)
 tested_1_7:   yes
 dry_run: 1.1.0 on 414de05ec9c97501aeb26c2c184dcac0a5391e48, run 38414526235 (2026-10-13, green, log read: update_preview and update_tags; preview sha256 4aadb9ed equals the social preview; tags Mod, 1.6 become Mod, 1.6, 1.7). Earlier: 1.1.0 on ae37ccc void (Preview changed since), 1.0.0 on 5ac3a96, run 38400219841
-publish: 1.1.0 uploaded 2026-10-13, run 38422420800 green (approved by Virginie), tag v1.1.0 and GitHub release by the CI on 414de05; Steam API checked: preview replaced (sha256 4aadb9ed equal to Mod/About/Preview.png), tags still Mod and 1.6: update_tags had no effect. Cause found: the template pins semantic-release-steam 2.1.3, which has no tag route (steamcmd ignores the tags key of workshop.vdf; 2.2.0 adds applyWorkshopTags); reported to the CI/CD session through the Ticket Manager. Earlier: 1.0.0 uploaded 2026-10-13, run 38409430019 green (approved by Virginie), tag v1.0.0 and GitHub release by the CI on 5ac3a96; public since 2026-10-13 (Virginie); Steam API checked: visibility 0, title and description as sent, preview sha256 9210b672 equal to Mod/About/Preview.png, tags Mod and 1.6 only (no 1.7 tag despite update_tags and 1.7 in supportedVersions)
+publish: 1.1.0 uploaded 2026-10-13, run 38422420800 green (approved by Virginie), tag v1.1.0 and GitHub release by the CI on 414de05; Steam API checked: preview replaced (sha256 4aadb9ed equal to Mod/About/Preview.png); tags were still Mod and 1.6 after the CI (update_tags had no effect), then set by the owner with steam-apply-tags.mjs: Steam API reports Mod, 1.6, 1.7 (2026-10-13). Cause found: the template pins semantic-release-steam 2.1.3, which has no tag route (steamcmd ignores the tags key of workshop.vdf; 2.2.0 adds applyWorkshopTags); reported to the CI/CD session through the Ticket Manager. Earlier: 1.0.0 uploaded 2026-10-13, run 38409430019 green (approved by Virginie), tag v1.0.0 and GitHub release by the CI on 5ac3a96; public since 2026-10-13 (Virginie); Steam API checked: visibility 0, title and description as sent, preview sha256 9210b672 equal to Mod/About/Preview.png, tags Mod and 1.6 only (no 1.7 tag despite update_tags and 1.7 in supportedVersions)
 code_review_sha: bc13c11d8059e8ffb3bad07e44c1feac7c8953da
 publication_changelog_review_sha: a49a3f068397eccca9b5b6fa1c85abc6ec92f9c4
 social_preview_sha256: 4aadb9ed49560ac53ec8ca05bee8bcadc0e9112435d1adebd75646a67b66a5e6
@@ -27,7 +27,7 @@ echo_review_sha: bc13c11d8059e8ffb3bad07e44c1feac7c8953da
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); 2026-10-13 pass 3/3 in docs/runs/history.md. <li>1.7</li> is in supportedVersions since 892e498 (Virginie confirmed 2026-10-13)
-  - defect: the 1.7 Steam tag is not on the page after 1.1.0 (run 38422420800: update_tags sent Mod, 1.6, 1.7, Steam still reports Mod and 1.6). Template pins semantic-release-steam 2.1.3, with no tag route; owner to run Release-Admin scripts/steam-refresh-token.mjs and steam-apply-tags.mjs (32a3a01) or wait for the CI/CD session; the next tag change is a patch (1.1.1, update_tags only) once the template applies tags
+  - unverified: the 1.7 Steam tag came from a local run of Release-Admin scripts/steam-apply-tags.mjs (owner, 2026-10-13), not from the CI: update_tags in the template has no effect with semantic-release-steam 2.1.3 (steamcmd ignores the VDF tags key). The next version that changes tags needs the CI/CD session to move the template to 2.2.0 (applyWorkshopTags, STEAM_REFRESH_TOKEN in steam-production)
   - todo: Virginie to confirm gallery images 1 and 2 are uploaded by hand on the Steam page (the CI does not send them), and that she subscribed to her own item (AUDIT 13.b). The 1.1.0 Preview (echo-source.png, derived from the accepted portrait capture, chosen by Virginie 2026-10-13 over echo-preview.png, removed) is on Steam (sha256 4aadb9ed checked) and as GitHub social preview (hash checked). code_review_sha moved to bc13c11: the only Mod/ change since the review at 1b4aa0a is Preview.png (an image)
   - unverified: commerce scenario [no-stock] never replayed green (flaky in the f156f38 run: the colony sloth is tradeable); AUDIT 12.f asks every red test to be seen green in a targeted replay: waived or replay it at the next ticket
   - unverified: Preview contrast (AUDIT 10.d) not re-measured on the 1.1.0 render; only the echo and the badge digits changed, the text colours did not
@@ -41,8 +41,8 @@ remaining:
   - unverified: FRENCH_REVIEW.md regenerated 2026-10-10 with scripts/Make-FrenchReview.ps1 (the mod's own generator was deleted 2026-10-11: the shared script does the job); texts are unchanged since Virginie's review of 2026-10-01 but the new file's review line is empty: a session never fills it, Virginie records it translation_fr is partial since 2026-10-13 until she records the line
   - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ done 2026-10-13 (code_review_sha), tested_on and docs/runs/ lines written
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-10-13, 1.1.0 uploaded (v1.1.0, tag and release by the CI, Preview on Steam checked); the 1.7 Steam tag is NOT on the page (defect above); stage stays publish[1.1.0] until the tag is on the page; AUDIT replay 1 to 13 done 2026-10-13
-protocols_read_sha: b9e70d5f65c63f769ac01131f6873b6055e4face
+updated:      2026-10-13, 1.1.0 published (v1.1.0, tag and release by the CI, Preview on Steam checked, tags Mod, 1.6, 1.7 on the page, Use This Instead comment and the three comments posted); followUp[1.1.0]: non-regression on the published build, thank-you messages already posted
+protocols_read_sha: b483dd6813cb9e000e9a71d4a0d631de555c7aac
 ---
 
 # A Sloth Mod Renew — status
