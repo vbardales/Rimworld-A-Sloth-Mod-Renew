@@ -56,7 +56,7 @@ Older dated sections moved to docs/runs/status-journal-2026-10-11.md.
 
 | Index | File | Shows | Accepted | On the Steam page |
 |---|---|---|---|---|
-| 0 | `0-preview.png` | the Preview, byte copy of `Mod/About/Preview.png` (sha256 4aadb9ed) | Virginie, 2026-10-13 | header image, sent by the CI |
+| 0 | `0-preview.png` | the Preview, byte copy of `Mod/About/Preview.png` (sha256 4aadb9ed) | Virginie, 2026-10-13 | gallery image 0 replaced by hand 2026-10-13 (sha256 ce26a415 checked on Steam); the header image (preview) is still the old one until a publish with --preview |
 | 1 | `1-portrait.png` | one sloth in a flower garden, 25 percent of the frame (the weak one) | Virginie, 2026-10-13 | by hand, to confirm |
 | 2 | `2-family.png` | three sloths | Virginie, 2026-10-13 | by hand, to confirm |
 
