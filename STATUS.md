@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: followUp[1.0.0]
+workflow_stage: code[1.1.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE to be added once the seven f156f38 tickets are done, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -27,7 +27,7 @@ echo_review_sha: 892e4983b90ba90d3d34d8259de0cbc395b4580d
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); 2026-10-13 pass 3/3 in docs/runs/history.md. <li>1.7</li> is in supportedVersions since 892e498 (Virginie confirmed 2026-10-13)
-  - todo: Steam tag 1.7 absent on item 3811289805 (tags read: Mod, 1.6): check whether Steam offers a 1.7 tag yet; set it by hand if so. Gallery images 1 and 2 are uploaded by hand on the Steam page (the CI does not send them): Virginie to confirm done
+  - todo: 1.1.0 carries the 1.7 Steam tag (update_tags); Steam tag 1.7 absent on item 3811289805 (tags read: Mod, 1.6): check whether Steam offers a 1.7 tag yet; set it by hand if so. Gallery images 1 and 2 are uploaded by hand on the Steam page (the CI does not send them): Virginie to confirm done
   - unverified: the nineteen scenarios of TESTING.md now have a disposition (table in TESTING.md, 2026-10-10): automated, pinned offline (Test-Mod.ps1, 147 checks green), or not applicable. F (biome patch) is an XML unit test, automated; G (trade, `08-trade`, pass commerce) and P (ADS 2 recipes, in `03`) are automated with PickleTools steps (NPT, 72570e9, compiled, never played), F biome lists asserted in `01` and `02`; first runs will calibrate step wording and the spawn of a tamed sloth; nothing is played in game yet
   - unverified: new Pickle features never played: 06-incompat (pass incompat-slothmod, map ids to re-check on the original's Workshop page), 07-labels-english and 07-labels-french (one pass per language, @review captures to read)
   - unverified: Pickle clean-tree passes minimal (19b0, 3/3) and with-optionals (b69a, 7/7) are green on 3682682, before the Pickle suite changes and the icon chain regeneration; both are rerun on the frozen tree
@@ -38,7 +38,7 @@ remaining:
   - unverified: FRENCH_REVIEW.md regenerated 2026-10-10 with scripts/Make-FrenchReview.ps1 (the mod's own generator was deleted 2026-10-11: the shared script does the job); texts are unchanged since Virginie's review of 2026-10-01 but the new file's review line is empty: a session never fills it, Virginie records it translation_fr is partial since 2026-10-13 until she records the line
   - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ done 2026-10-13 (code_review_sha), tested_on and docs/runs/ lines written
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-10-13, 1.7 added (892e498), gallery 1 and 2 accepted, Preview and social preview regenerated, docs and code review done, FRENCH_REVIEW.md review line to be recorded by Virginie (translation_fr partial until then)
+updated:      2026-10-13, 1.0.0 published (v1.0.0, public); chain reopened at code[1.1.0] for the RimWorld 1.7 tag (minor version, AUDIT.md); no change in Mod/ so far, code_review_sha stays valid
 protocols_read_sha: b9e70d5f65c63f769ac01131f6873b6055e4face
 ---
 

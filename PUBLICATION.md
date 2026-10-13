@@ -169,6 +169,14 @@ contain nothing mature.
 Written at upload time. Unlike the description, they go out again on every update. The version stands
 alone on the first line, in BBCode, or the CI refuses the note.
 
+### 1.1.0
+
+```
+[b]1.1.0[/b]
+
+Declared for RimWorld 1.7 as well as 1.6: the Steam tag set now lists both versions. The 1.7 run passed in English; no change to the sloth, its patches or its texts.
+```
+
 ### 1.0.0
 
 ```

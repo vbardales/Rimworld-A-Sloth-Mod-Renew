@@ -4,6 +4,14 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
+## [Unreleased] - 1.1.0
+
+Minor version for the RimWorld 1.7 tag (1.0.x becomes 1.1.0, never a patch).
+
+### Changed
+
+- The Steam tag set lists 1.7 as well as 1.6 (`update_tags`); `supportedVersions` already did since 1.0.0. The RimWorld 1.7 run passed in English (3 of 3); no change to the sloth, its patches or its texts.
+
 ## [1.0.0] - 2026-10-13
 
 The CI creates the `v1.0.0` tag and the matching GitHub release after a successful Workshop upload.
