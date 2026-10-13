@@ -22,8 +22,8 @@ dry_run: 1.1.0 on 414de05ec9c97501aeb26c2c184dcac0a5391e48, run 38414526235 (202
 publish: 1.1.0 uploaded 2026-10-13, run 38422420800 green (approved by Virginie), tag v1.1.0 and GitHub release by the CI on 414de05; Steam API checked: preview replaced (sha256 4aadb9ed equal to Mod/About/Preview.png); tags were still Mod and 1.6 after the CI (update_tags had no effect), then set by the owner with steam-apply-tags.mjs: Steam API reports Mod, 1.6, 1.7 (2026-10-13). Cause found: the template pins semantic-release-steam 2.1.3, which has no tag route (steamcmd ignores the tags key of workshop.vdf; 2.2.0 adds applyWorkshopTags); reported to the CI/CD session through the Ticket Manager. Earlier: 1.0.0 uploaded 2026-10-13, run 38409430019 green (approved by Virginie), tag v1.0.0 and GitHub release by the CI on 5ac3a96; public since 2026-10-13 (Virginie); Steam API checked: visibility 0, title and description as sent, preview sha256 9210b672 equal to Mod/About/Preview.png, tags Mod and 1.6 only (no 1.7 tag despite update_tags and 1.7 in supportedVersions)
 code_review_sha: bc13c11d8059e8ffb3bad07e44c1feac7c8953da
 publication_changelog_review_sha: a49a3f068397eccca9b5b6fa1c85abc6ec92f9c4
-social_preview_sha256: 4aadb9ed49560ac53ec8ca05bee8bcadc0e9112435d1adebd75646a67b66a5e6
-echo_review_sha: bc13c11d8059e8ffb3bad07e44c1feac7c8953da
+social_preview_sha256: ce26a4156fc672ffdde06aea1b97f0d544e358e0e3035ec1d36600013adbc565
+echo_review_sha: 6e077cb6b7865ac2df6e0628bd04177711a79102
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); 2026-10-13 pass 3/3 in docs/runs/history.md. <li>1.7</li> is in supportedVersions since 892e498 (Virginie confirmed 2026-10-13)
