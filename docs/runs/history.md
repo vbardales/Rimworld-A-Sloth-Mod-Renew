@@ -1,1 +1,2 @@
 2026-10-13 RimWorld 1.7 EN, pass sans-facultatifs (01-repair): 3/3 passed, exit 0, Tests/Pickle/Evidence/p17-slothmod-01-repair; tested_1_7 yes (English only).
+2026-10-13 playTests exit: Pickle on RimWorld 1.6.4871: minimal, with-optionals, English, French, trade (1 pass, 1 flaky no-stock), gallery 2/2, incompat 1/1 (runs f156f38, 0e09424, 2ded753; evidence under Tests/Pickle/Evidence); no pass on the final tree by rule (AGENTS.md, no final pass); code review of Mod/ at 1b4aa0ab184cafefb9cde5043c7867e821799c4c.

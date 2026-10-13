@@ -9,17 +9,17 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: playTests[1.0.0]
+workflow_stage: shootGallery[1.0.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE to be added once the seven f156f38 tickets are done, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
 upstream_mod_remotes: N/A (checked 2026-10-01: no repository of the author on GitHub; emipa606/ModRequests only mirrors the original About.xml, it is not a source repository)
 dependencies: none
 showcase:     complete
-tested_on:
+tested_on:    RimWorld 1.6.4871 (Pickle runs 2026-10-10 to 2026-10-13, Linux WSL) and RimWorld 1.7 unstable English (2026-10-13)
 tested_1_7:   yes
 dry_run: 1.0.0 on faa5cfcebfa1417c5022363cc592be372df520e8, run 38398534567 (2026-10-13, green, log read: 17 files 0.63 MB, preview sha256 9210b672..., description 5200 chars, options preview+description+title+tags; public page unreadable, item private)
-code_review_sha: 0eceaa55063f10e05a3927de77b3aae1576b7654
+code_review_sha: 1b4aa0ab184cafefb9cde5043c7867e821799c4c
 publication_changelog_review_sha: 01fc0e8032c94d12d6a06d4238cd5606ef4e9eff
 social_preview_sha256: 9210b672ed24604c83a2b21966e6d75bb9afa1531025d656e04cef8099a9880b
 echo_review_sha: 892e4983b90ba90d3d34d8259de0cbc395b4580d
@@ -38,7 +38,7 @@ remaining:
   - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ done 2026-10-13 (code_review_sha), tested_on and docs/runs/ lines written
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
 updated:      2026-10-13, 1.7 added (892e498), gallery 1 and 2 accepted, Preview and social preview regenerated, docs and code review done, FRENCH_REVIEW.md review line to be recorded by Virginie (translation_fr partial until then)
-protocols_read_sha: 8ca1edc7ab50f4a7d9ecf725bcfa2641baa8fc8c
+protocols_read_sha: 2f4e0002e2543fcde57999c51ff8b2f0dfc8efdb
 ---
 
 # A Sloth Mod Renew — status
