@@ -17,9 +17,10 @@ upstream_mod_remotes: N/A (checked 2026-10-01: no repository of the author on Gi
 dependencies: none
 showcase:     complete
 tested_on:
-tested_1_7:   yes (English only, AUDIT.md "Passe 1.7"; 2026-10-13, pass sans-facultatifs 3/3, Tests/Pickle/Evidence/p17-slothmod-01-repair; <li>1.7</li> only after Virginie confirms)
+tested_1_7:   yes
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
+  - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); 2026-10-13 pass 3/3 in docs/runs/history.md. Add <li>1.7</li> to supportedVersions only after Virginie confirms
   - todo: Art/Preview.config.json now uses Art/echo-preview.png (flipX true, 2026-10-12). Regenerating the Preview (`node ../scripts/Render-Preview.cjs`, writes Mod/About/Preview.png and Art/Gallery/0-preview.png) is deferred: Mod/ is frozen until the two 0e09424 tickets finish. Then inspect at full size and at 268 px, set `echo_review_sha` and `social_preview_sha256`, send the GitHub social preview (PUBLISHING.md)
   - unverified: the nineteen scenarios of TESTING.md now have a disposition (table in TESTING.md, 2026-10-10): automated, pinned offline (Test-Mod.ps1, 147 checks green), or not applicable. F (biome patch) is an XML unit test, automated; G (trade, `08-trade`, pass commerce) and P (ADS 2 recipes, in `03`) are automated with PickleTools steps (NPT, 72570e9, compiled, never played), F biome lists asserted in `01` and `02`; first runs will calibrate step wording and the spawn of a tamed sloth; nothing is played in game yet
   - unverified: new Pickle features never played: 06-incompat (pass incompat-slothmod, map ids to re-check on the original's Workshop page), 07-labels-english and 07-labels-french (one pass per language, @review captures to read)
