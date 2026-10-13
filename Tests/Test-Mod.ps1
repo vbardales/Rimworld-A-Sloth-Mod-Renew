@@ -26,7 +26,7 @@ Assert ($meta.loadBefore.li -contains 'SamBucher.ADogSaidAnimalProsthetics2') 'l
 Assert ($meta.loadAfter.li -contains 'Mlie.XNDNocturnalAnimals') 'loadAfter Nocturnal Animals missing'
 Assert (-not ($meta.loadAfter.li -contains 'SamBucher.ADogSaidAnimalProsthetics2')) 'ADS 2 must not be in loadAfter'
 Assert (-not $meta.modDependencies) 'Optional mods must not become hard dependencies'
-Assert ($meta.description.TrimEnd().EndsWith('[url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew]Source code on GitHub[/url]')) 'Description must end with the Source code on GitHub link'
+Assert ($meta.description.TrimEnd().EndsWith('Source code on GitHub (https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew)')) 'Description must end with the Source code on GitHub link (plain text, synced from PUBLICATION.md)'
 $defs = Read-Xml (Join-Path $ModRoot 'Defs/ThingDefs_Animals.xml')
 $thing = $defs.SelectSingleNode('/Defs/ThingDef[defName="Sloth"]')
 $kind = $defs.SelectSingleNode('/Defs/PawnKindDef[defName="Sloth"]')
