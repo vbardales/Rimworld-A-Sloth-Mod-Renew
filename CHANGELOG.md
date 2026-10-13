@@ -18,7 +18,7 @@ First release of the 1.6 update of **A Sloth Mod**, by ThatRubishGamer.
 ### Added
 
 - French translations for the sloth's animal and pawn-kind labels, description and claw labels.
-- Support for RimWorld 1.6.
+- Support for RimWorld 1.6 and 1.7.
 - **The sloth can now be obtained.** It was in no biome and its only trade tag, `AnimalCommon`, is
   in no trader's sell or buy list in Core or the five expansions, so the original animal was
   reachable by nothing short of the debug menu.

@@ -40,7 +40,7 @@ One animal: the sloth. A small, slow, harmless animal that sleeps most of the da
 
 No DLC, no dependency, no assembly. Two defs, four textures and guarded XML patches.
 
-I am not the author of this mod. The sloth, its artwork and its stats are ThatRubishGamer's. All I did was bring it forward to 1.6, make it obtainable, and write the French. Credit goes to them; mistakes in the update are mine.
+I am not the author of this mod. The sloth, its artwork and its stats are ThatRubishGamer's. All I did was bring it forward to the latest RimWorld version, make it obtainable, and write the French. Credit goes to them; mistakes in the update are mine.
 
 Original mod: [A Sloth Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2253087891), last updated in July 2021 for 1.3. Abandoned, not withdrawn.
 
@@ -51,7 +51,7 @@ Original mod: [A Sloth Mod](https://steamcommunity.com/sharedfiles/filedetails/?
 
 ## What changed
 
-**The repair.** Wildness stopped being a field of the animal in 1.6 and became a stat. The old form is not an error, it is simply never read, and the stat defaults to -1, outside the range the game uses, so the sloth would have tamed for almost nothing. It is now a stat under `statBases`, written the way vanilla's own animals write it.
+**The repair.** Wildness stopped being a field of the animal in a recent version and became a stat. The old form is not an error, it is simply never read, and the stat defaults to -1, outside the range the game uses, so the sloth would have tamed for almost nothing. It is now a stat under `statBases`, written the way vanilla's own animals write it.
 
 **On purpose, and not a repair.** The original sloth could not be obtained in a normal game. It was in no biome's wild animal list, and its only trade tag, `AnimalCommon`, is in no trader's sell or buy list in Core or the five expansions. This mod adds the tag `AnimalUncommon`, the one the monkey and the tortoise carry and the one exotic caravans and orbital ships sell, and adds the sloth to tropical rainforest (0.5) and tropical swamp (0.4). That is design, not porting, and it is said here rather than buried.
 
@@ -103,7 +103,7 @@ saying what the automated runs cover, which is left out until a run is green.
 
 ## Images
 
-- **Preview** (`Mod/About/Preview.png`, 896 x 504, about 0.55 MB): a sloth clinging to a post in lamplight, the title, an "(unofficial)" line and a `1.6` corner banner, with the ModIcon badge cropped by the bottom-left corner. Rendered by `node ../scripts/Render-Preview.cjs` from `Art/Preview-source.png` (illustration without overlay), `Art/echo.png` and `Art/Preview.config.json` (palette, title parts, `iconBadge` with `translate`); regenerated on 2026-10-10 and the crop validated by the owner the same day. Its mean value (0.272) is under the 0.30 floor of the source rule: the owner kept it on 2026-10-11.
+- **Preview** (`Mod/About/Preview.png`, 896 x 504, about 0.55 MB): a sloth clinging to a post in lamplight, the title, an "(unofficial)" line and a `1.7` corner banner, with the ModIcon badge cropped by the bottom-left corner. Rendered by `node ../scripts/Render-Preview.cjs` from `Art/Preview-source.png` (illustration without overlay), `Art/echo.png` and `Art/Preview.config.json` (palette, title parts, `iconBadge` with `translate`); regenerated on 2026-10-10 and the crop validated by the owner the same day. Its mean value (0.272) is under the 0.30 floor of the source rule: the owner kept it on 2026-10-11.
 - **ModIcon** (`Mod/About/ModIcon.png`, 128 x 128, about 29 KB): a sleeping sloth head with a ponytail and a sparkle, from the owner's `Art/ModIcon-source.png` (changed 2026-10-04). Derived by `Render-Preview.cjs` (`modIconSource` key) and confirmed by the owner on 2026-10-10, readable at 32 px. The source is hers; sessions never edit it.
 
 ## Screenshots, in this order
@@ -127,7 +127,7 @@ that is the reason for the "half the frame" rule of the Dalmatians ruling, and i
 
 ## Dependencies and DLCs
 
-**No DLC and no mod is required.** `supportedVersions` declares 1.6 only. `modDependencies` is empty
+**No DLC and no mod is required.** `supportedVersions` declares 1.6 and 1.7. `modDependencies` is empty
 and `Tests/Test-Mod.ps1` asserts it.
 
 | Declared | packageId | Actually required |
@@ -173,10 +173,10 @@ alone on the first line, in BBCode, or the CI refuses the note.
 ```
 [b]1.0.0[/b]
 
-First release. Port of ThatRubishGamer's A Sloth Mod to RimWorld 1.6.
+First release. Port of ThatRubishGamer's A Sloth Mod to the latest RimWorld version.
 
 [list]
-[*]Wildness is a stat now, as in 1.6, so it reads 50% instead of defaulting to -1.
+[*]Wildness is a stat now, as in current versions, so it reads 50% instead of defaulting to -1.
 [*]The sloth can be obtained: exotic traders sell it and it lives in tropical rainforest and swamp.
 [*]Optional patches for More Vanilla Biomes, Alpha Biomes, A Dog Said... Animal Prosthetics 2 and Nocturnal Animals (Continued).
 [*]English and French.
