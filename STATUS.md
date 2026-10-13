@@ -18,6 +18,7 @@ dependencies: none
 showcase:     complete
 tested_on:
 tested_1_7:   yes
+dry_run: 1.0.0 on faa5cfcebfa1417c5022363cc592be372df520e8, run 38398534567 (2026-10-13, green, log read: 17 files 0.63 MB, preview sha256 9210b672..., description 5200 chars, options preview+description+title+tags; public page unreadable, item private)
 code_review_sha: 0eceaa55063f10e05a3927de77b3aae1576b7654
 publication_changelog_review_sha: 01fc0e8032c94d12d6a06d4238cd5606ef4e9eff
 social_preview_sha256: 9210b672ed24604c83a2b21966e6d75bb9afa1531025d656e04cef8099a9880b
