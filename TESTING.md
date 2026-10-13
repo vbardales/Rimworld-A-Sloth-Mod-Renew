@@ -13,7 +13,7 @@ most of what follows asks one question: *did ThatRubishGamer's animal survive th
 exceptions are B and C, which test the repair, and F and G, which test the two changes this port
 made on purpose so that the animal can be met at all.
 
-## Pickle scope: written 2026-09-28, narrower than it first looks
+## Pickle scope
 
 This mod ships no assembly, no `MainButtonDef`, no window and no button, so there is nothing of
 its own making for Pickle to click through — no dialog it opens, no field it validates. That part
@@ -31,7 +31,7 @@ scenario. A one-line result per pass belongs in `docs/runs/`, per `AGENTS.md`; t
 under `Tests/Pickle/Evidence/` is disposable once that line is written, per `AUDIT.md`'s Pickle
 section on archived reports.
 
-## Disposition of the nineteen scenarios (2026-10-10, AUDIT.md 8.g and 8.k)
+## Disposition of the nineteen scenarios (AUDIT.md 8.g and 8.k)
 
 No manual scenario is left to tick by hand: each is automated, covered offline, or justified not applicable. Rule applied: we test what the mod ships (two Defs, four patches, load-order declarations), not what the game does with them (`AUDIT.md`, "On ne teste pas le jeu"). `Tests/Test-Mod.ps1` (147 checks) pins every value of the Defs; Pickle plays only what needs a running game.
 
@@ -42,14 +42,14 @@ No manual scenario is left to tick by hand: each is automated, covered offline, 
 | C negative control | A one-time demonstration of the engine's handling of a broken def: not applicable |
 | D, E taming, manhunter | Values pinned offline. Consequences are the engine's: not applicable |
 | F natural spawn | **Automated, XML unit test**: `Test-Mod.ps1` applies the shipped XPath and patch operations to synthetic biome fixtures (neither optional mod, each alone, both) and checks the exact commonalities and the untouched biomes. Pickle `01` and `02` assert against the real installed defs that each patched biome lists the sloth among its wild animals (`the biome ... lists the wild animal`, DefFieldSteps). Which animals a generated map then picks is the engine's random selection: not tested |
-| G trade | **Automated, written 2026-10-10, never played** (`08-trade`, pass `commerce`, TradeSteps): (1) an exotic trader offers a sloth, tagged `@flaky-stock`: Pickle has no runtime skip, so a stockless trader fails with the prefix `[no-stock]`, read as a skip to study, not a defect; (2) a pirate merchant, which buys `AnimalUncommon`, takes the colony's sloth (deterministic). The tag is also pinned offline |
+| G trade | **Automated** (`08-trade`, pass `commerce`, TradeSteps; played 2026-10-10: the pirate-merchant scenario passed, the exotic-trader one hit `[no-stock]`, never replayed green, `docs/runs/history.md`): (1) an exotic trader offers a sloth, tagged `@flaky-stock`: Pickle has no runtime skip, so a stockless trader fails with the prefix `[no-stock]`, read as a skip to study, not a defect; (2) a pirate merchant, which buys `AnimalUncommon`, takes the colony's sloth (deterministic). The tag is also pinned offline |
 | H, J, K food, leather, breeding | Values of the original, pinned offline since 2026-10-10. Behaviour is the engine's: not applicable |
 | I textures | Four files byte-identical to the original's (checked offline). The east-only dessicated corpse is the original's gap: not applicable |
-| L collision with the original | Pickle `06-incompat`, pass `incompat-slothmod` (new, never played) |
+| L collision with the original | Pickle `06-incompat`, pass `incompat-slothmod` (green, 1 of 1 on 0e09424) |
 | M saves | Add, swap and removal are the engine's; the `defName` is unchanged (stated in the README): not applicable |
 | N mod list entry, images | Offline (`Check-Status.ps1`, file sizes). The numbers in N were refreshed |
-| O English and French | Pickle `07-labels-english` / `07-labels-french`, one pass per language, `@review` captures read by Virginie |
-| P ADS 2 load order and copy | Pickle `03` (never played): load order, ADS 2's own copy ran, `InstallDentureAnimal` offered for the race Sloth, and the surgery recipes of Sloth match those of Husky (def-level read, DefFieldSteps; not the Health tab itself) |
+| O English and French | Pickle `07-labels-english` / `07-labels-french`, one pass per language (each 1 of 1 green on f156f38), `@review` captures read by Virginie |
+| P ADS 2 load order and copy | Pickle `03` (green in the with-optionals pass): load order, ADS 2's own copy ran, `InstallDentureAnimal` offered for the race Sloth, and the surgery recipes of Sloth match those of Husky (def-level read, DefFieldSteps; not the Health tab itself) |
 | Q, R ADS 2 wrong order, absent | Q tests the engine's load order; R is the minimal pass (the guarded patch is silent): not applicable / covered by the minimal pass |
 | S Nocturnal Animals | Pickle `03` (loads after it, Sloth patched by this port). The schedule is that mod's behaviour: not applicable |
 
@@ -69,7 +69,7 @@ trader stock and combat tool labels. English must show `sloth`, the original des
 `left claw` and `right claw`; French must show `paresseux`, the French description,
 `griffe gauche` and `griffe droite`. Check baby, juvenile and adult sloths and a corpse
 for generated labels, raw keys, English fallback, formatting errors and clipping.
-Record the game version, language and results in STATUS.md. These checks have not been run.
+Both language passes ran green (see the disposition table); results are in `docs/runs/history.md`.
 
 ## Load order
 
@@ -369,10 +369,7 @@ commonalities, untouched wildlife and unpatched biomes. Missing patch targets fa
 These fixtures do not validate installed third-party biome names, Core inheritance, or the
 actual RimWorld patch engine. The disposition table above says which scenarios Pickle plays and which are not applicable.
 
-Latest offline run: 2026-10-10 — **PASS, 147 checks** (8 added for scenarios A, H, J, K).
-Earlier: 2026-09-12 — PASS, 93 checks.
-Audit run: 2026-09-13 — **PASS, 95 checks**, including the two French XML files.
-Scenario O corrected on 2026-09-13 to match those resources; distributed files unchanged.
-Manual execution: **not run**. For each scenario record game version, active mods, steps,
+Latest offline run: 2026-10-13, **PASS, 147 checks** (history of earlier runs: `docs/runs/`).
+Manual execution: none by hand; the nineteen scenarios are automated, covered offline or not applicable (disposition table). For each scenario record game version, active mods, steps,
 observed result, PASS/FAIL/INCONCLUSIVE and any relevant log excerpt. Random non-occurrence
 (spawning, stock, bonding) is inconclusive, not proof of a broken feature.

@@ -3,17 +3,17 @@
 What the Workshop page needs and the rest of the repository does not hold. It serves twice: for the
 first release, and for whoever takes the mod over.
 
-**Status, 2026-10-13: 1.0.0 published and public; 1.1.0 published too (run 38422420800, tag `v1.1.0`).** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
+**Status: `1.0.0` and `1.1.0` are published and public** (item 3811289805, `PublishedFileId.txt`; the CI created `v1.0.0` and `v1.1.0`). The current stage is in `STATUS.md`.
 
-## What blocks the publication
+## Current state
 
 Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
-- `1.0.0` is published and public. Nothing blocks it any more; the rollback target is its commit `5ac3a96`.
-- `1.1.0` is published (run 38422420800 on `414de05`, dry-run 38414526235; Preview and change note sent by the CI; the 1.7 tag was set by the owner with `steam-apply-tags.mjs` because the template pins semantic-release-steam 2.1.3, which cannot set tags). Nothing blocks it; the rollback target is `5ac3a96` (1.0.0).
-- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` exist, the two captures accepted on 2026-10-13. The CI never sends them: they are uploaded by hand on the Steam page (done, confirmed by the owner 2026-10-13). A trader's-stock picture 3 is optional (see "Screenshots").
-- Comments on the other mods' pages and the Use This Instead comment are posted (owner, 2026-10-13).
-- In-game verification: Pickle green on RimWorld 1.6.4871 (minimal, with optionals, English, French, gallery, incompatibility; trade has one flaky `[no-stock]` replay left) and on 1.7 in English (3 of 3). The nineteen scenarios of `TESTING.md` each have a disposition, none was played by hand. Verdicts are in `STATUS.md` and `docs/runs/`.
+- `1.1.0` and `1.0.0` are published and public. Nothing blocks the next version. Rollback target: `414de05`, the commit of 1.1.0 (see "Fail fast").
+- Sent by the CI: `Mod/` and, with `--preview`, the header image; with `update_tags`, the tags (the 2.1.3 template cannot apply them: the 1.7 tag was set by the owner with `steam-apply-tags.mjs`). The Steam header image is still the 1.0.0 Preview; the next publish uses `--preview` to send the new echo.
+- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` are on the page, uploaded by hand (the CI never sends them). A trader's-stock picture 3 is optional (see "Screenshots").
+- Comments on other mods' pages and the Use This Instead comment are posted (`WORKSHOP_COMMENTS.md`, `USE_THIS_INSTEAD.md`; drafts in `docs/runs/posted-comments-2026-10-13.md`).
+- In-game verification: see `STATUS.md` and `docs/runs/`.
 
 ## Description
 
@@ -114,10 +114,10 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 
 | Order | File | What it shows | Source |
 |---|---|---|---|
-| 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-10 |
+| 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-13 with the new echo; uploaded by hand |
 | 1 | `1-portrait.png` | The portrait: one sloth in a quarter of the frame in the flower garden | Pickle `05-gallery`, pass `galerie`, run `2ded753` (green); accepted 2026-10-13, the weaker of the two, to recompose later |
 | 2 | `2-family.png` | The family: three sloths in a row (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle `05-gallery`, run `0e09424` (green); accepted 2026-10-13. The information card with Wildness 50 % stays a manual capture, not taken |
-| 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) is written, not yet played. A manual capture, or none |
+| 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none |
 
 The shots are `@review` evidence, not proof: a green capture scenario shows the journey ran, not that
 the image shows anything. The game's camera has a minimum zoom, at which a 0.15-size animal is small;
@@ -141,19 +141,7 @@ needs Vanilla Expanded Framework; that is its dependency, not this mod's.
 
 ## Manual validations of the owner
 
-`AUDIT.md` lists them among the things a `publish` does not skip without saying which. A proposal
-drawn from `TESTING.md`; it is hers to change.
-
-| # | What to look at | Why a test cannot |
-|---|---|---|
-| 1 | Subscribe to the item once it exists, start a game with the installed copy, tame a sloth: the information card reads Wildness 50 % | The installed copy is what players get; the suite plays the working tree |
-| 2 | Optional, F is automated (patches, biome lists) in `TESTING.md`: a sloth appears in a tropical rainforest or swamp map | Map generation is a runtime outcome no def check stands in for |
-| 3 | Optional, G is automated (`08-trade`, flaky stock): an exotic trader offers one | Same, for trade-stock generation |
-| 4 | Optional, P is automated at def level in `03`: with ADS 2, the Health tab offers the surgeries a husky is offered | The look of the tab is vanilla's; the patch mechanism is asserted |
-| 5 | A real save with a sloth, then the mod removed: the animal is destroyed | A changed mod list is the game's handling |
-| 6 | The gallery: which captures, in which order | A composition is a choice |
-| 7 | The description pasted on the page, read once more | The page is edited by hand after creation |
-| 8 | Then, and only then, the visibility, the comments subscription and "Watch all activity" (`PUBLISHING.md`) | Steam, by hand, by the owner |
+Done on 2026-10-13: subscription to the item, gallery uploaded, description read on the page, visibility set to public, comments posted. Scenarios F, G and P are automated (`TESTING.md`); a real save with the mod removed (the game's handling) and the Health tab look were not played by hand.
 
 ## Mature content checkboxes
 
@@ -164,31 +152,14 @@ contain nothing mature.
 ## Steam change notes
 
 Written at upload time. Unlike the description, they go out again on every update. The version stands
-alone on the first line, in BBCode, or the CI refuses the note.
+alone on the first line, in BBCode, or the CI refuses the note. The CI reads the section of the version it publishes (`### x.y.z`); the notes of 1.0.0 and 1.1.0 are in `docs/runs/steam-change-notes-sent.md`.
 
-### 1.1.0
-
-```
-[b]1.1.0[/b]
-
-Declared for RimWorld 1.7 as well as 1.6: the Steam tag set now lists both versions, and the header image has a new line-art sloth. The 1.7 run passed in English; no change to the sloth, its patches or its texts.
-```
-
-### 1.0.0
+### x.y.z
 
 ```
-[b]1.0.0[/b]
+[b]x.y.z[/b]
 
-First release. Port of ThatRubishGamer's A Sloth Mod to the latest RimWorld version.
-
-[list]
-[*]Wildness is a stat now, as in current versions, so it reads 50% instead of defaulting to -1.
-[*]The sloth can be obtained: exotic traders sell it and it lives in tropical rainforest and swamp.
-[*]Optional patches for More Vanilla Biomes, Alpha Biomes, A Dog Said... Animal Prosthetics 2 and Nocturnal Animals (Continued).
-[*]English and French.
-[/list]
-
-No stat, tool or sound was rebalanced.
+What changed, in one or two lines.
 ```
 
 ## Fail fast: the rollback target
@@ -198,63 +169,5 @@ good commit and the next patch number, and the note reads "Rolls back to <what>,
 failed>". Version numbers only go up and an existing tag is refused. Visibility is not touched by the
 CI.
 
-**The rollback target is `5ac3a96`**, the commit of 1.0.0 (published 2026-10-13, dry-run run 38400219841 green, publish run 38409430019). A rollback is a new publication with `ref` = that SHA and a version above every existing tag (`1.1.0` once it is out, so `1.1.1` or higher). Before the `publish`, every
-scenario that failed has a green replay, the gallery is done and the owner's manual validations are
-made; only the regression pass may follow it.
+**The rollback target is `414de05`**, the commit of 1.1.0 (published 2026-10-13, dry-run run 38414526235 green, publish run 38422420800; `5ac3a96` is 1.0.0). A rollback is a new publication with `ref` = that SHA and a version above every existing tag (`1.1.1` or higher, or the next minor). Before the `publish`, every scenario that failed has a green replay, the gallery is done and the owner's manual validations are made; only the regression pass may follow it.
 
-## Use This Instead comment
-
-The mod replaces a source mod, so the maintainer of Use This Instead gets one short message with the
-fields of the rule (`USE_THIS_INSTEAD.md`, row drafted). Posted by the owner under her own account on
-[Use This Instead](https://steamcommunity.com/sharedfiles/filedetails/?id=3396308787), now that the item is public.
-
-```
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2253087891]A Sloth Mod[/url] by ThatRubishGamer (packageId ThatRubishGamer.RubishMods.SlothMod, last updated for 1.3) has a working continuation: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew (unofficial)[/url] (packageId nelim.aslothmod), for 1.6 and 1.7. It declares the original incompatible, so it is one or the other. Same defNames; swapping them on an existing save is not tested. Thanks for keeping the list!
-```
-
-## Comments on other mods' pages
-
-`WORKSHOP_COMMENTS.md` decides; it is keyed by Workshop id. To post **only once the item is public**,
-under 1000 characters each, BBCode link hidden behind the mod's name, in the owner's own voice (short
-lines, one honest detail, no stock phrase). The drafts below are starting points to rewrite, not text
-to paste.
-
-| Recipient | Id | State | What to do |
-|---|---|---|---|
-| A Dog Said... Animal Prosthetics 2 | 3238353862 | already `posted` | Only `Covers` changes: add `A Sloth Mod Renew`. Post nothing |
-| Nocturnal Animals (Continued) | 2269731409 | already `posted`, crediting Mlie and XeoNovaDan in one message | Same: add to `Covers`, post nothing |
-| Nocturnal Animals (original) | 2004368312 | `not_applicable` | No second message on the original's page |
-| Pickle | 3791648678 | already `posted` | Add `A Sloth Mod Renew` to `Covers` |
-| Alpha Biomes | 1841354677 | to add as `drafted` | Draft below. Author on the page to be confirmed |
-| More Vanilla Biomes | 1931453053 | to add as `drafted` | Draft below. Author on the page to be confirmed |
-| A Sloth Mod (original) | 2253087891 | to add as `drafted` | Draft below. Also the way ThatRubishGamer can reach the owner |
-| Better Crossbreeding | 3520675842 | no row | Nothing depends on it and no compatibility is claimed |
-| PickleTools | 3806142401 | `not_applicable` | Same author; not used by this suite |
-
-### Alpha Biomes, 1841354677
-
-Not seen working in game: the guard was checked against its real def names and run by Pickle only.
-
-```
-Made a sloth port and it drops into your mangrove, mycotic and feralisk jungles. The feralisk one gets 0.05, since everything there is a tenth of normal :) Optional, does nothing without Alpha Biomes. Thanks for the biomes! [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
-```
-
-### More Vanilla Biomes, 1931453053
-
-```
-The cloud forest was the obvious home for a sloth, so my port adds one there (0.5, same as the vanilla rainforest). Optional patch, silent without your mod. Thanks! [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
-```
-
-### A Sloth Mod (original), 2253087891
-
-```
-Hi ThatRubishGamer! I ported your sloth to the latest RimWorld version (unofficially, credit and a link to your page are in the description). One line was broken, wildness, and the sloth was in no biome and no trader's stock, so I fixed both. I also added optional compatibility patches and French translations. Your textures and the original animal stats are preserved, apart from restoring Wildness. If you'd rather I take it down, just tell me and it's gone. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
-```
-
-Check the last comments of each page first, and whether it takes comments, as `WORKSHOP_COMMENTS.md`
-asks. The item id is 3811289805 since 2026-10-01 (public since 2026-10-13).
-
-Note on the "AI-generated" section: the mention of Codex (OpenAI) rests on the owner's word of 2026-09-28,
-not on the Git history. No commit carries a Codex trailer; four commits of 2026-09-12 and 2026-09-13
-(`2b9bbc4`, `43f2850`, `53ce7ea`, `b3ffdb8`) carry no trailer at all and are not from a Claude session
-of this repository.
