@@ -18,11 +18,12 @@ dependencies: none
 showcase:     complete
 tested_on:
 tested_1_7:   yes
+social_preview_sha256: 9210b672ed24604c83a2b21966e6d75bb9afa1531025d656e04cef8099a9880b
 echo_review_sha: 892e4983b90ba90d3d34d8259de0cbc395b4580d
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); 2026-10-13 pass 3/3 in docs/runs/history.md. Add <li>1.7</li> to supportedVersions only after Virginie confirms
-  - todo: Preview regenerated 2026-10-13 on 892e498 (1.7 badge, echo-preview.png, 0- copy byte-identical). Still to do: inspect at 268 px, set social_preview_sha256, send the GitHub social preview (PUBLISHING.md)
+  - todo: Preview regenerated 2026-10-13 on 892e498 (1.7 badge, echo-preview.png, 0- copy byte-identical). GitHub social preview sent 2026-10-13 (sha256 checked against og:image). Still to do: inspect at 268 px
   - unverified: the nineteen scenarios of TESTING.md now have a disposition (table in TESTING.md, 2026-10-10): automated, pinned offline (Test-Mod.ps1, 147 checks green), or not applicable. F (biome patch) is an XML unit test, automated; G (trade, `08-trade`, pass commerce) and P (ADS 2 recipes, in `03`) are automated with PickleTools steps (NPT, 72570e9, compiled, never played), F biome lists asserted in `01` and `02`; first runs will calibrate step wording and the spawn of a tamed sloth; nothing is played in game yet
   - unverified: new Pickle features never played: 06-incompat (pass incompat-slothmod, map ids to re-check on the original's Workshop page), 07-labels-english and 07-labels-french (one pass per language, @review captures to read)
   - unverified: Pickle clean-tree passes minimal (19b0, 3/3) and with-optionals (b69a, 7/7) are green on 3682682, before the Pickle suite changes and the icon chain regeneration; both are rerun on the frozen tree
