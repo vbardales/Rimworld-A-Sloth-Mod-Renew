@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: prepareRelease[1.1.0]
+workflow_stage: publish[1.1.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE to be added once the seven f156f38 tickets are done, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -18,7 +18,7 @@ dependencies: none
 showcase:     complete
 tested_on:    RimWorld 1.6.4871 (Pickle runs 2026-10-10 to 2026-10-13, Linux WSL) and RimWorld 1.7 unstable English (2026-10-13)
 tested_1_7:   yes
-dry_run: 1.0.0 on 5ac3a96ec6d2b8efe22aae7c747eccaf9b19ae5a, run 38400219841 (2026-10-13, green, same options and payload as run 38398534567; CHANGELOG [1.0.0] dated)
+dry_run: 1.1.0 on ae37cccb3aac471c8b17a0aa67781f40e08205ef, run 38411008156 (2026-10-13, green, log read: update_tags only, tags on the page Mod, 1.6 become Mod, 1.6, 1.7; Mod/ unchanged since v1.0.0). Earlier: 1.0.0 on 5ac3a96, run 38400219841
 publish: 1.0.0 uploaded 2026-10-13, run 38409430019 green (approved by Virginie), tag v1.0.0 and GitHub release by the CI on 5ac3a96; public since 2026-10-13 (Virginie); Steam API checked: visibility 0, title and description as sent, preview sha256 9210b672 equal to Mod/About/Preview.png, tags Mod and 1.6 only (no 1.7 tag despite update_tags and 1.7 in supportedVersions)
 code_review_sha: 1b4aa0ab184cafefb9cde5043c7867e821799c4c
 publication_changelog_review_sha: 01fc0e8032c94d12d6a06d4238cd5606ef4e9eff
