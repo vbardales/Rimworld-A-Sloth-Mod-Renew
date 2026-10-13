@@ -202,6 +202,16 @@ CI.
 scenario that failed has a green replay, the gallery is done and the owner's manual validations are
 made; only the regression pass may follow it.
 
+## Use This Instead comment
+
+The mod replaces a source mod, so the maintainer of Use This Instead gets one short message with the
+fields of the rule (`USE_THIS_INSTEAD.md`, row drafted). Posted by the owner under her own account on
+[Use This Instead](https://steamcommunity.com/sharedfiles/filedetails/?id=3396308787), now that the item is public.
+
+```
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2253087891]A Sloth Mod[/url] by ThatRubishGamer (packageId ThatRubishGamer.RubishMods.SlothMod, last updated for 1.3) has a working continuation: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew (unofficial)[/url] (packageId nelim.aslothmod), for 1.6 and 1.7. It declares the original incompatible, so it is one or the other. Same defNames; swapping them on an existing save is not tested. Thanks for keeping the list!
+```
+
 ## Comments on other mods' pages
 
 `WORKSHOP_COMMENTS.md` decides; it is keyed by Workshop id. To post **only once the item is public**,

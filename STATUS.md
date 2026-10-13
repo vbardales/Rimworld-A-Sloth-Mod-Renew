@@ -11,7 +11,7 @@ visibility:   public
 detached:     yes
 workflow_stage: publish[1.1.0]
 licence:      silent
-licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE to be added once the seven f156f38 tickets are done, with the About.xml comment fix)
+licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
 upstream_mod_remotes: N/A (checked 2026-10-01: no repository of the author on GitHub; emipa606/ModRequests only mirrors the original About.xml, it is not a source repository)
 dependencies: none
@@ -19,15 +19,19 @@ showcase:     complete
 tested_on:    RimWorld 1.6.4871 (Pickle runs 2026-10-10 to 2026-10-13, Linux WSL) and RimWorld 1.7 unstable English (2026-10-13)
 tested_1_7:   yes
 dry_run: 1.1.0 on 414de05ec9c97501aeb26c2c184dcac0a5391e48, run 38414526235 (2026-10-13, green, log read: update_preview and update_tags; preview sha256 4aadb9ed equals the social preview; tags Mod, 1.6 become Mod, 1.6, 1.7). Earlier: 1.1.0 on ae37ccc void (Preview changed since), 1.0.0 on 5ac3a96, run 38400219841
-publish: 1.0.0 uploaded 2026-10-13, run 38409430019 green (approved by Virginie), tag v1.0.0 and GitHub release by the CI on 5ac3a96; public since 2026-10-13 (Virginie); Steam API checked: visibility 0, title and description as sent, preview sha256 9210b672 equal to Mod/About/Preview.png, tags Mod and 1.6 only (no 1.7 tag despite update_tags and 1.7 in supportedVersions)
+publish: 1.1.0 uploaded 2026-10-13, run 38422420800 green (approved by Virginie), tag v1.1.0 and GitHub release by the CI on 414de05; Steam API checked: preview replaced (sha256 4aadb9ed equal to Mod/About/Preview.png), tags still Mod and 1.6: update_tags had no effect. Cause found: the template pins semantic-release-steam 2.1.3, which has no tag route (steamcmd ignores the tags key of workshop.vdf; 2.2.0 adds applyWorkshopTags); reported to the CI/CD session through the Ticket Manager. Earlier: 1.0.0 uploaded 2026-10-13, run 38409430019 green (approved by Virginie), tag v1.0.0 and GitHub release by the CI on 5ac3a96; public since 2026-10-13 (Virginie); Steam API checked: visibility 0, title and description as sent, preview sha256 9210b672 equal to Mod/About/Preview.png, tags Mod and 1.6 only (no 1.7 tag despite update_tags and 1.7 in supportedVersions)
 code_review_sha: bc13c11d8059e8ffb3bad07e44c1feac7c8953da
-publication_changelog_review_sha: 01fc0e8032c94d12d6a06d4238cd5606ef4e9eff
+publication_changelog_review_sha: a49a3f068397eccca9b5b6fa1c85abc6ec92f9c4
 social_preview_sha256: 4aadb9ed49560ac53ec8ca05bee8bcadc0e9112435d1adebd75646a67b66a5e6
 echo_review_sha: bc13c11d8059e8ffb3bad07e44c1feac7c8953da
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); 2026-10-13 pass 3/3 in docs/runs/history.md. <li>1.7</li> is in supportedVersions since 892e498 (Virginie confirmed 2026-10-13)
-  - todo: 1.1.0 carries the 1.7 Steam tag (update_tags) and the new Preview (echo-source.png, derived from the accepted portrait capture, chosen by Virginie 2026-10-13 over echo-preview.png, which is removed); GitHub social preview resent and checked by hash. Gallery images 1 and 2 are uploaded by hand on the Steam page (the CI does not send them): Virginie to confirm done. code_review_sha moved to bc13c11: the only Mod/ change since the review is Preview.png (an image)
+  - defect: the 1.7 Steam tag is not on the page after 1.1.0 (run 38422420800: update_tags sent Mod, 1.6, 1.7, Steam still reports Mod and 1.6). Template pins semantic-release-steam 2.1.3, with no tag route; owner to run Release-Admin scripts/steam-refresh-token.mjs and steam-apply-tags.mjs (32a3a01) or wait for the CI/CD session; the next tag change is a patch (1.1.1, update_tags only) once the template applies tags
+  - todo: Virginie to confirm gallery images 1 and 2 are uploaded by hand on the Steam page (the CI does not send them), and that she subscribed to her own item (AUDIT 13.b). The 1.1.0 Preview (echo-source.png, derived from the accepted portrait capture, chosen by Virginie 2026-10-13 over echo-preview.png, removed) is on Steam (sha256 4aadb9ed checked) and as GitHub social preview (hash checked). code_review_sha moved to bc13c11: the only Mod/ change since the review at 1b4aa0a is Preview.png (an image)
+  - todo: Use This Instead comment (AUDIT 13.b): BBCode in PUBLICATION.md, to post by Virginie on the page of the collection; the row of USE_THIS_INSTEAD.md stays drafted until she says it is posted
+  - unverified: commerce scenario [no-stock] never replayed green (flaky in the f156f38 run: the colony sloth is tradeable); AUDIT 12.f asks every red test to be seen green in a targeted replay: waived or replay it at the next ticket
+  - unverified: Preview contrast (AUDIT 10.d) not re-measured on the 1.1.0 render; only the echo and the badge digits changed, the text colours did not
   - unverified: the nineteen scenarios of TESTING.md now have a disposition (table in TESTING.md, 2026-10-10): automated, pinned offline (Test-Mod.ps1, 147 checks green), or not applicable. F (biome patch) is an XML unit test, automated; G (trade, `08-trade`, pass commerce) and P (ADS 2 recipes, in `03`) are automated with PickleTools steps (NPT, 72570e9, compiled, never played), F biome lists asserted in `01` and `02`; first runs will calibrate step wording and the spawn of a tamed sloth; nothing is played in game yet
   - unverified: new Pickle features never played: 06-incompat (pass incompat-slothmod, map ids to re-check on the original's Workshop page), 07-labels-english and 07-labels-french (one pass per language, @review captures to read)
   - unverified: Pickle clean-tree passes minimal (19b0, 3/3) and with-optionals (b69a, 7/7) are green on 3682682, before the Pickle suite changes and the icon chain regeneration; both are rerun on the frozen tree
@@ -38,7 +42,7 @@ remaining:
   - unverified: FRENCH_REVIEW.md regenerated 2026-10-10 with scripts/Make-FrenchReview.ps1 (the mod's own generator was deleted 2026-10-11: the shared script does the job); texts are unchanged since Virginie's review of 2026-10-01 but the new file's review line is empty: a session never fills it, Virginie records it translation_fr is partial since 2026-10-13 until she records the line
   - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ done 2026-10-13 (code_review_sha), tested_on and docs/runs/ lines written
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-10-13, 1.0.0 published (v1.0.0, public); chain reopened at code[1.1.0] for the RimWorld 1.7 tag (minor version, AUDIT.md); no change in Mod/ so far, code_review_sha stays valid
+updated:      2026-10-13, 1.1.0 uploaded (v1.1.0, tag and release by the CI, Preview on Steam checked); the 1.7 Steam tag is NOT on the page (defect above); stage stays publish[1.1.0] until the tag is on the page; AUDIT replay 1 to 13 done 2026-10-13
 protocols_read_sha: b9e70d5f65c63f769ac01131f6873b6055e4face
 ---
 
@@ -49,6 +53,16 @@ protocols_read_sha: b9e70d5f65c63f769ac01131f6873b6055e4face
 Old `done` maps to `playTests`. Out-of-game criteria of `writeTests` re-checked today: `Tests/Test-Mod.ps1` 139 checks green; French reviewed by Virginie (2026-10-01); Pickle suite written (`Tests/Pickle/`; minimal and with-optionals passes green on 3682682). Not established, hence `playTests`: the nineteen manual scenarios (TESTING.md) unplayed, gallery captures 1 and 2 unusable, no `code_review_sha`, no `tested_on`. Mod root cleaned: `.editorconfig` removed, `_tools/` became `scripts/`. `Mod/About/ModIcon.png` (older than `Art/ModIcon-source.png`) and the Preview chain (`Preview.png`, `Art/Gallery/0-preview.png`, both `.ico`) regenerated; the uncommitted changes to `Art/ModIcon-source.png` are the owner's. `Art/Preview.config.json` now carries `modIconSource` (STYLE_RIMWORLD.md), so `Render-Preview.cjs` writes `ModIcon.png` itself: 128 x 128, 29,693 bytes, inside the 20 to 30 KB window. Preview badge cropped by the frame again at Virginie's request ("le avant est mieux rognée", 2026-10-10), validated by her ("je valide") on the rendered Preview: `iconBadge.translate` `-12%,14%` in `Art/Preview.config.json`, since the new source is tightly trimmed and would otherwise sit whole in the corner. ModIcon.png (128 x 128, 29,693 bytes) confirmed by Virginie in chat on 2026-10-10, readability at 32 px included.
 
 Older dated sections moved to docs/runs/status-journal-2026-10-11.md.
+
+## Gallery and description ending (AUDIT 9.e, 11.b), 2026-10-13
+
+| Index | File | Shows | Accepted | On the Steam page |
+|---|---|---|---|---|
+| 0 | `0-preview.png` | the Preview, byte copy of `Mod/About/Preview.png` (sha256 4aadb9ed) | Virginie, 2026-10-13 | header image, sent by the CI |
+| 1 | `1-portrait.png` | one sloth in a flower garden, 25 percent of the frame (the weak one) | Virginie, 2026-10-13 | by hand, to confirm |
+| 2 | `2-family.png` | three sloths | Virginie, 2026-10-13 | by hand, to confirm |
+
+Description ending checked on About.xml and PUBLICATION.md: `Source code on GitHub (https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew)` is the last line, after THANKS and the ATTRIBUTION line; the link is the exact repository of the mod (`<url>` of About.xml too). THANKS names ThatRubishGamer, Mlie and XeoNovaDan, Zylleon, Sarg, SamBucher and the authors of Pickle (development only).
 
 Full replay of states 1 to 7 on 2026-10-10, against the current protocols (AUDIT.md 16): 1 setupRepo, remote and repository, README title and status mention, ATTRIBUTION identical in Mod/: OK except LICENSE (defect above). 2 makeSources, sources and Art/ minimal set present, no PROMPT file, ModIcon derived, palette of Preview-source: defect above. 3 code, no C#, CHANGELOG [1.0.0] unreleased: OK. 4 declareDependencies, modDependencies empty, incompatibleWith original, loadAfter/loadBefore declared, patches guarded; four animal integrations: ADS 2 (patched, loadBefore), Nocturnal Animals (patched), Better Crossbreeding (nothing to patch: opt-in field, empty by default), **Dogs mate (Mlie.DogsMate, 2441132298) not applicable**: its 1.6 groups (Canidae, Felidae, Mammalia, Rodentia files) hold no sloth group, the Armadillo group names sloths only in its description with an empty pawnKinds, and the sloth is a lone species with no crossbreeding partner here; read on 2026-10-10 from the Workshop copy. 5 auditSettings, no settings, no MainButtons, no C# found in Mod/ (settings_audit not_applicable stands). 6 localize, Check-DefInjected 5 keys, 0 errors; FRENCH_REVIEW.md regenerated (above). 7 writeTests, Test-Mod.ps1 147 checks green, scenarios in TESTING.md, Pickle suite written, translations complete.
 
