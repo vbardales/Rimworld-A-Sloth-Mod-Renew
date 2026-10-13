@@ -19,6 +19,7 @@ showcase:     complete
 tested_on:
 tested_1_7:   yes
 code_review_sha: 0eceaa55063f10e05a3927de77b3aae1576b7654
+publication_changelog_review_sha: 01fc0e8032c94d12d6a06d4238cd5606ef4e9eff
 social_preview_sha256: 9210b672ed24604c83a2b21966e6d75bb9afa1531025d656e04cef8099a9880b
 echo_review_sha: 892e4983b90ba90d3d34d8259de0cbc395b4580d
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
