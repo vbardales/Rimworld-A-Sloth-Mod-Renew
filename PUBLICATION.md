@@ -3,16 +3,16 @@
 What the Workshop page needs and the rest of the repository does not hold. It serves twice: for the
 first release, and for whoever takes the mod over.
 
-**Status, 2026-10-13: 1.0.0 published and public; 1.1.0 prepared, not published.** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
+**Status, 2026-10-13: 1.0.0 published and public; 1.1.0 published too (run 38422420800, tag `v1.1.0`).** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
 
 ## What blocks the publication
 
 Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
 - `1.0.0` is published and public. Nothing blocks it any more; the rollback target is its commit `5ac3a96`.
-- `1.1.0` is not published: the owner's go and her approval of the `steam-production` deployment are pending (dry-run run 38414526235 on `414de05`, green).
-- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` exist, the two captures accepted on 2026-10-13. The CI never sends them: they are uploaded by hand on the Steam page. A trader's-stock picture 3 is optional (see "Screenshots").
-- Comments on the other mods' pages are to be posted by the owner (see "Comments on other mods' pages").
+- `1.1.0` is published (run 38422420800 on `414de05`, dry-run 38414526235; Preview and change note sent by the CI; the 1.7 tag was set by the owner with `steam-apply-tags.mjs` because the template pins semantic-release-steam 2.1.3, which cannot set tags). Nothing blocks it; the rollback target is `5ac3a96` (1.0.0).
+- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` exist, the two captures accepted on 2026-10-13. The CI never sends them: they are uploaded by hand on the Steam page (done, confirmed by the owner 2026-10-13). A trader's-stock picture 3 is optional (see "Screenshots").
+- Comments on the other mods' pages and the Use This Instead comment are posted (owner, 2026-10-13).
 - In-game verification: Pickle green on RimWorld 1.6.4871 (minimal, with optionals, English, French, gallery, incompatibility; trade has one flaky `[no-stock]` replay left) and on 1.7 in English (3 of 3). The nineteen scenarios of `TESTING.md` each have a disposition, none was played by hand. Verdicts are in `STATUS.md` and `docs/runs/`.
 
 ## Description
