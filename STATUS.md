@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: publish[1.0.0]
+workflow_stage: followUp[1.0.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE to be added once the seven f156f38 tickets are done, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -19,7 +19,7 @@ showcase:     complete
 tested_on:    RimWorld 1.6.4871 (Pickle runs 2026-10-10 to 2026-10-13, Linux WSL) and RimWorld 1.7 unstable English (2026-10-13)
 tested_1_7:   yes
 dry_run: 1.0.0 on 5ac3a96ec6d2b8efe22aae7c747eccaf9b19ae5a, run 38400219841 (2026-10-13, green, same options and payload as run 38398534567; CHANGELOG [1.0.0] dated)
-publish: 1.0.0 uploaded 2026-10-13, run 38409430019 green (approved by Virginie), tag v1.0.0 and GitHub release created by the CI on 5ac3a96; item 3811289805 still private; public page not yet verified
+publish: 1.0.0 uploaded 2026-10-13, run 38409430019 green (approved by Virginie), tag v1.0.0 and GitHub release by the CI on 5ac3a96; public since 2026-10-13 (Virginie); Steam API checked: visibility 0, title and description as sent, preview sha256 9210b672 equal to Mod/About/Preview.png, tags Mod and 1.6 only (no 1.7 tag despite update_tags and 1.7 in supportedVersions)
 code_review_sha: 1b4aa0ab184cafefb9cde5043c7867e821799c4c
 publication_changelog_review_sha: 01fc0e8032c94d12d6a06d4238cd5606ef4e9eff
 social_preview_sha256: 9210b672ed24604c83a2b21966e6d75bb9afa1531025d656e04cef8099a9880b
@@ -27,7 +27,7 @@ echo_review_sha: 892e4983b90ba90d3d34d8259de0cbc395b4580d
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); 2026-10-13 pass 3/3 in docs/runs/history.md. <li>1.7</li> is in supportedVersions since 892e498 (Virginie confirmed 2026-10-13)
-  - todo: Preview regenerated 2026-10-13 on 892e498 (1.7 badge, echo-preview.png, 0- copy byte-identical). GitHub social preview sent 2026-10-13 (sha256 checked against og:image). Still to do: inspect at 268 px
+  - todo: Steam tag 1.7 absent on item 3811289805 (tags read: Mod, 1.6): check whether Steam offers a 1.7 tag yet; set it by hand if so. Gallery images 1 and 2 are uploaded by hand on the Steam page (the CI does not send them): Virginie to confirm done
   - unverified: the nineteen scenarios of TESTING.md now have a disposition (table in TESTING.md, 2026-10-10): automated, pinned offline (Test-Mod.ps1, 147 checks green), or not applicable. F (biome patch) is an XML unit test, automated; G (trade, `08-trade`, pass commerce) and P (ADS 2 recipes, in `03`) are automated with PickleTools steps (NPT, 72570e9, compiled, never played), F biome lists asserted in `01` and `02`; first runs will calibrate step wording and the spawn of a tamed sloth; nothing is played in game yet
   - unverified: new Pickle features never played: 06-incompat (pass incompat-slothmod, map ids to re-check on the original's Workshop page), 07-labels-english and 07-labels-french (one pass per language, @review captures to read)
   - unverified: Pickle clean-tree passes minimal (19b0, 3/3) and with-optionals (b69a, 7/7) are green on 3682682, before the Pickle suite changes and the icon chain regeneration; both are rerun on the frozen tree
@@ -39,7 +39,7 @@ remaining:
   - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ done 2026-10-13 (code_review_sha), tested_on and docs/runs/ lines written
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
 updated:      2026-10-13, 1.7 added (892e498), gallery 1 and 2 accepted, Preview and social preview regenerated, docs and code review done, FRENCH_REVIEW.md review line to be recorded by Virginie (translation_fr partial until then)
-protocols_read_sha: 2f4e0002e2543fcde57999c51ff8b2f0dfc8efdb
+protocols_read_sha: b9e70d5f65c63f769ac01131f6873b6055e4face
 ---
 
 # A Sloth Mod Renew — status
