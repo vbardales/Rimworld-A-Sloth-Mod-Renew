@@ -198,8 +198,7 @@ good commit and the next patch number, and the note reads "Rolls back to <what>,
 failed>". Version numbers only go up and an existing tag is refused. Visibility is not touched by the
 CI.
 
-**The rollback target is not chosen and cannot be yet**: no validated functional release has been published yet, so no rollback target has been selected. The first real target is the
-SHA of the 1.0.0 that passes its dry-run; write it here at that moment. Before the `publish`, every
+**The rollback target is `5ac3a96`**, the commit of 1.0.0 (published 2026-10-13, dry-run run 38400219841 green, publish run 38409430019). A rollback is a new publication with `ref` = that SHA and a version above every existing tag (`1.1.0` once it is out, so `1.1.1` or higher). Before the `publish`, every
 scenario that failed has a green replay, the gallery is done and the owner's manual validations are
 made; only the regression pass may follow it.
 
@@ -243,7 +242,7 @@ Hi ThatRubishGamer! I ported your sloth to the latest RimWorld version (unoffici
 ```
 
 Check the last comments of each page first, and whether it takes comments, as `WORKSHOP_COMMENTS.md`
-asks. The item id is 3811289805 since 2026-10-01 (private until the owner makes it public).
+asks. The item id is 3811289805 since 2026-10-01 (public since 2026-10-13).
 
 Note on the "AI-generated" section: the mention of Codex (OpenAI) rests on the owner's word of 2026-09-28,
 not on the Git history. No commit carries a Codex trailer; four commits of 2026-09-12 and 2026-09-13
