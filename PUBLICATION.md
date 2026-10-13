@@ -14,7 +14,7 @@ Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
 - In-game verification is open. Earlier Pickle passes were green (minimal 3/3, with optionals 7/7, on `3682682`); everything written since is **not verified**: scenarios G, P, the incompatibility pass, the English and French label passes, the gallery rewrite and the biome-list assertions. Seven initial tickets were filed on `f156f38` on 2026-10-10. The nineteen scenarios of `TESTING.md` each have a disposition (automated, pinned offline or not applicable); none was played by hand. Verdicts are in `STATUS.md` and `docs/runs/`.
 - The Workshop item exists since 2026-10-01 (0.1.0 prepublication, private; the CI can now update it). History: the CI cannot create an item, so the first publication was an in-game upload of a private item, with `Mod/About/PublishedFileId.txt` committed and pushed at once.
-- The gallery is not made (see "Screenshots").
+- The gallery is made: `0-preview.png`, `1-portrait.png`, `2-family.png`, the two captures accepted by Virginie on 2026-10-13; a trader's-stock picture 3 is optional (see "Screenshots").
 - The rollback target cannot exist before the first publish (see "Fail fast").
 - The owner's manual validations (see below).
 
@@ -36,7 +36,7 @@ block once more before pasting.
 ```markdown
 **UNOFFICIAL.** This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-One animal: the sloth. A small, slow, harmless animal that sleeps most of the day and eats the rest. It reaches a colony through tropical rainforest and swamp, and through exotic traders.
+One animal: the sloth. A small, slow, harmless animal that sleeps most of the day and eats the rest. It can be found in tropical rainforests and swamps, and bought from exotic traders.
 
 No DLC, no dependency, no assembly. Two defs, four textures and guarded XML patches.
 
@@ -118,8 +118,8 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | Order | File | What it shows | Source |
 |---|---|---|---|
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-10 |
-| 1 | `1-…` | The portrait: one sloth in a quarter of the frame in the flower garden | Pickle `05-gallery` v2 (staged: golden hour, torch, close frame), pass `galerie`; first version green but unusable (sloth too small); v2 written 2026-10-02, not yet run |
-| 2 | `2-…` | The family: three sloths in a row (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle for the sloth, manual for the card |
+| 1 | `1-…` | The portrait: one sloth in a quarter of the frame in the flower garden | Pickle `05-gallery`, pass `galerie`, run `2ded753` (green); accepted 2026-10-13, the weaker of the two, to recompose later |
+| 2 | `2-…` | The family: three sloths in a row (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle `05-gallery`, run `0e09424` (green); accepted 2026-10-13. The information card with Wildness 50 % stays a manual capture, not taken |
 | 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) is written, not yet played. A manual capture, or none |
 
 The shots are `@review` evidence, not proof: a green capture scenario shows the journey ran, not that
@@ -161,8 +161,8 @@ drawn from `TESTING.md`; it is hers to change.
 ## Mature content checkboxes
 
 **None of them.** The mod adds one animal. The two pictures it ships were opened: a sloth on a post,
-and a sleeping mascot head. The gallery is not produced; each image must be opened before this answer
-is final.
+and a sleeping mascot head. The gallery images (`1-portrait.png`, a sloth in a flower garden, and `2-family.png`, three sloths) were opened and
+contain nothing mature.
 
 ## Steam change notes
 

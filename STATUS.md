@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: complete
+translation_fr: partial
 settings_audit: not_applicable
 mod:          A Sloth Mod Renew (unofficial)
 packageId:    nelim.aslothmod
@@ -23,7 +23,7 @@ social_preview_sha256: 9210b672ed24604c83a2b21966e6d75bb9afa1531025d656e04cef809
 echo_review_sha: 892e4983b90ba90d3d34d8259de0cbc395b4580d
 workshop:      3811289805; 0.1.0 prepublication by the owner on 2026-10-01: an upload that only creates the item (private, as Steam creates them) and its PublishedFileId.txt. An act, not the `prepublished` stage; visibility and the live page were not queried
 remaining:
-  - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); 2026-10-13 pass 3/3 in docs/runs/history.md. Add <li>1.7</li> to supportedVersions only after Virginie confirms
+  - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); 2026-10-13 pass 3/3 in docs/runs/history.md. <li>1.7</li> is in supportedVersions since 892e498 (Virginie confirmed 2026-10-13)
   - todo: Preview regenerated 2026-10-13 on 892e498 (1.7 badge, echo-preview.png, 0- copy byte-identical). GitHub social preview sent 2026-10-13 (sha256 checked against og:image). Still to do: inspect at 268 px
   - unverified: the nineteen scenarios of TESTING.md now have a disposition (table in TESTING.md, 2026-10-10): automated, pinned offline (Test-Mod.ps1, 147 checks green), or not applicable. F (biome patch) is an XML unit test, automated; G (trade, `08-trade`, pass commerce) and P (ADS 2 recipes, in `03`) are automated with PickleTools steps (NPT, 72570e9, compiled, never played), F biome lists asserted in `01` and `02`; first runs will calibrate step wording and the spawn of a tamed sloth; nothing is played in game yet
   - unverified: new Pickle features never played: 06-incompat (pass incompat-slothmod, map ids to re-check on the original's Workshop page), 07-labels-english and 07-labels-french (one pass per language, @review captures to read)
@@ -32,10 +32,10 @@ remaining:
   - feature: PUBLICATION.md drafted 2026-09-28; screenshots and Workshop-comments rows pending (item now exists, private)
   - unverified: seven initial Pickle tickets played 2026-10-10 on f156f38 (evidence Tests/Pickle/Evidence/<pass>-f156f38): minimal, avec-facultatifs, english, french passed; commerce 1 pass + 1 [no-stock] flaky (the colony sloth is tradeable); galerie failed (fixture nelim-zen-meadow-studio deleted 2026-10-08) and incompat failed (exit 1, original 2253087891 not in the WSL cache). Fixed 2026-10-12: gallery moved to the Sanctuary (Nelims-tribe, flower-garden, 0e09424), original downloaded. Two tickets filed on 0e09424 (tree frozen on Mod/ and Tests/ until RUN_DONE): `20261012-042722-487-9b2f` galerie, `20261012-042723-091-b903` incompat; evidence under Tests/Pickle/Evidence/<pass>-0e09424. Read 2026-10-13: galerie accepted, 06 incompat green (1/1 on 0e09424); the [no-stock] commerce replay is optional
   - 2.e: Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; hue families 2 (OK). Virginie decided in chat on 2026-10-11 to keep it ("on conserve preview"): override recorded, the criterion is waived for this source and the retained state stays playTests[1.0.0]
-  - unverified: FRENCH_REVIEW.md regenerated 2026-10-10 with scripts/Make-FrenchReview.ps1 (the mod's own generator was deleted 2026-10-11: the shared script does the job); texts are unchanged since Virginie's review of 2026-10-01 but the new file's review line is empty: a session never fills it, Virginie records it
+  - unverified: FRENCH_REVIEW.md regenerated 2026-10-10 with scripts/Make-FrenchReview.ps1 (the mod's own generator was deleted 2026-10-11: the shared script does the job); texts are unchanged since Virginie's review of 2026-10-01 but the new file's review line is empty: a session never fills it, Virginie records it translation_fr is partial since 2026-10-13 until she records the line
   - unverified: playTests exit (AUDIT.md 8): tree frozen, Pickle passes minimal, with-optionals, incompat-slothmod, English, French and gallery run green on it, @review captures opened, code review of Mod/ done 2026-10-13 (code_review_sha), tested_on and docs/runs/ lines written
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
-updated:      2026-10-10, re-audit against AUDIT.md (workflow_stage playTests[1.0.0]); root cleaned; ModIcon.png and Preview chain regenerated
+updated:      2026-10-13, 1.7 added (892e498), gallery 1 and 2 accepted, Preview and social preview regenerated, docs and code review done, FRENCH_REVIEW.md review line to be recorded by Virginie (translation_fr partial until then)
 protocols_read_sha: 8ca1edc7ab50f4a7d9ecf725bcfa2641baa8fc8c
 ---
 
