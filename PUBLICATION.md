@@ -88,6 +88,7 @@ The port work (the XML, the patches, the tests, the documentation and the two pi
 
 - ThatRubishGamer, for the sloth, its artwork and its stats.
 - Mlie, who maintains Nocturnal Animals (Continued), and XeoNovaDan, its original author.
+- Zylleon, for More Vanilla Biomes.
 - Sarg, for Alpha Biomes.
 - SamBucher, for A Dog Said... Animal Prosthetics 2.
 - The authors of [Pickle](https://steamcommunity.com/sharedfiles/filedetails/?id=3791648678), used to test the port in game. It is for development only and never a dependency of this mod.

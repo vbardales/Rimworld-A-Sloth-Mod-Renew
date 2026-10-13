@@ -48,6 +48,10 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 The update work was done with the help of an AI assistant (Claude, by Anthropic).
 
+THANKS
+
+ThatRubishGamer, for the sloth, its artwork and its stats. Mlie, who maintains Nocturnal Animals (Continued), and XeoNovaDan, its original author. Zylleon, for More Vanilla Biomes. Sarg, for Alpha Biomes. SamBucher, for A Dog Said... Animal Prosthetics 2. The authors of Pickle, used to test the port in game; it is for development only and never a dependency of this mod.
+
 [url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew]Source code on GitHub[/url]</description>
   <!-- The source mod defines the same defNames as this port. RimWorld resolves a duplicate defName by
        load order and logs "Adding duplicate" (TESTING.md), but with both enabled one still stands in for
