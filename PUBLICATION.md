@@ -242,7 +242,7 @@ The cloud forest was the obvious home for a sloth, so my port adds one there (0.
 ### A Sloth Mod (original), 2253087891
 
 ```
-Hi ThatRubishGamer! I ported your sloth to 1.6 (unofficially, credit and a link to your page are in the description). One line was broken, wildness, and the sloth was in no biome and no trader's stock, so I fixed both. I also added optional compatibility patches and French translations. Your textures and the original animal stats are preserved, apart from restoring Wildness. If you'd rather I take it down, just tell me and it's gone. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
+Hi ThatRubishGamer! I ported your sloth to the latest RimWorld version (unofficially, credit and a link to your page are in the description). One line was broken, wildness, and the sloth was in no biome and no trader's stock, so I fixed both. I also added optional compatibility patches and French translations. Your textures and the original animal stats are preserved, apart from restoring Wildness. If you'd rather I take it down, just tell me and it's gone. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811289805]A Sloth Mod Renew[/url]
 ```
 
 Check the last comments of each page first, and whether it takes comments, as `WORKSHOP_COMMENTS.md`
