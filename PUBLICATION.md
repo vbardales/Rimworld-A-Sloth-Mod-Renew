@@ -3,25 +3,22 @@
 What the Workshop page needs and the rest of the repository does not hold. It serves twice: for the
 first release, and for whoever takes the mod over.
 
-**Status: drafted, 2026-09-28; item created 2026-10-01 (0.1.0 prepublication, `PublishedFileId.txt` 3811289805, private).** Earlier text below saying no item exists is superseded. Formerly: there was no
-`Mod/About/PublishedFileId.txt`, no `0.1.0` prepublication, no Git tag and no GitHub release (the
-CI creates the last two after a successful upload). Nothing below has been posted or pasted
-anywhere. The workflow stage is `playTests[1.0.0]` (see `STATUS.md`).
+**Status, 2026-10-13: 1.0.0 published and public; 1.1.0 prepared, not published.** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
 
 ## What blocks the publication
 
 Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
-- In-game verification is mostly done. Pickle on `f156f38` (2026-10-10): minimal, with optionals, English and French passed, trade 1 pass and 1 `[no-stock]` flaky; gallery (2 of 2, `2ded753` and `0e09424`) and incompatibility (1 of 1, `0e09424`) passed after the 2026-10-12 fixes; RimWorld 1.7, English, 3 of 3 on 2026-10-13. What is left of `playTests`: the passes are not yet rerun on the final tree (`892e498` and later), the `[no-stock]` trade replay is optional, and the nineteen scenarios of `TESTING.md` each have a disposition (automated, pinned offline or not applicable) but none was played by hand. Verdicts are in `STATUS.md` and `docs/runs/`.
-- The Workshop item exists since 2026-10-01 (0.1.0 prepublication, private; the CI can now update it). History: the CI cannot create an item, so the first publication was an in-game upload of a private item, with `Mod/About/PublishedFileId.txt` committed and pushed at once.
-- The gallery is made: `0-preview.png`, `1-portrait.png`, `2-family.png`, the two captures accepted by Virginie on 2026-10-13; a trader's-stock picture 3 is optional (see "Screenshots").
-- The rollback target cannot exist before the first publish (see "Fail fast").
-- The owner's manual validations (see below).
+- `1.0.0` is published and public. Nothing blocks it any more; the rollback target is its commit `5ac3a96`.
+- `1.1.0` is not published: the owner's go and her approval of the `steam-production` deployment are pending (dry-run run 38414526235 on `414de05`, green).
+- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` exist, the two captures accepted on 2026-10-13. The CI never sends them: they are uploaded by hand on the Steam page. A trader's-stock picture 3 is optional (see "Screenshots").
+- Comments on the other mods' pages are to be posted by the owner (see "Comments on other mods' pages").
+- In-game verification: Pickle green on RimWorld 1.6.4871 (minimal, with optionals, English, French, gallery, incompatibility; trade has one flaky `[no-stock]` replay left) and on 1.7 in English (3 of 3). The nineteen scenarios of `TESTING.md` each have a disposition, none was played by hand. Verdicts are in `STATUS.md` and `docs/runs/`.
 
 ## Description
 
-The one-source standard of 2026-09-25 applies: the item exists (private), but the page has not been
-written from this source yet. The description is written once, in Markdown, in the block below. The CI converts it
+The one-source standard of 2026-09-25 applies: the page was written from this source by the CI on 2026-10-13, and
+any later change goes through `update_description`. The description is written once, in Markdown, in the block below. The CI converts it
 to Steam BBCode and generates the plain-text `<description>` of `About.xml` from it
 (`--about-from-description`), and a dry-run or publish stops if they differ. **The hand-written
 `About.xml` description therefore changes at the first `--write`: read the diff, commit, redo the
