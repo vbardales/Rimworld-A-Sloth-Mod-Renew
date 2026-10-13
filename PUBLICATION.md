@@ -117,7 +117,7 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | Order | File | What it shows | Source |
 |---|---|---|---|
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-10 |
-| 1 | `1-…` | The portrait: one sloth filling half the frame in the flower glade | Pickle `05-gallery` v2 (staged: golden hour, torch, close frame), pass `galerie`; first version green but unusable (sloth too small); v2 written 2026-10-02, not yet run |
+| 1 | `1-…` | The portrait: one sloth in a quarter of the frame in the flower garden | Pickle `05-gallery` v2 (staged: golden hour, torch, close frame), pass `galerie`; first version green but unusable (sloth too small); v2 written 2026-10-02, not yet run |
 | 2 | `2-…` | The family: three sloths in a row (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle for the sloth, manual for the card |
 | 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) is written, not yet played. A manual capture, or none |
 

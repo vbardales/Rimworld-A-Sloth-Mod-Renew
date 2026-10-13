@@ -9,7 +9,7 @@
 # Its framing is an estimate in the Sanctuary's own table: the first run tells whether the cells are free,
 # a blocked cell fails naming it.
 # THE STORY. A lazy late afternoon in the flower garden, golden light (hour 17, clear weather). Picture 1
-# is the portrait, one sloth filling half the frame; picture 2 is the family, three sloths in a row. The
+# is the portrait, one sloth in a quarter of the frame (the game bounds the zoom: a single cell cannot fill 50 percent, run 0e09424); picture 2 is the family, three sloths in a row. The
 # animals of the save are sent away first, the set is placed, photographed, removed.
 # Pass "galerie": -DepMap wsl-deps.galerie.map. @review: a green run shows the journey ran, not that
 # the image is good; each picture is opened before it is uploaded. The information card (Wildness
@@ -28,11 +28,11 @@ Feature: Gallery pictures of the sloth
     And I set the weather to "Clear"
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
 
-  Scenario: the portrait, a single sloth filling half the frame
+  Scenario: the portrait, a single sloth in a quarter of the frame
     Given Nelim's Pickle Tools: 1 adult animals of kind "Sloth" are spawned in a row from (154, 105), spacing 1
     And Nelim's Pickle Tools: the animals of kind "Sloth" have food at 100 percent
     And Nelim's Pickle Tools: the animal "coat-1" stands at (154, 105) facing South
-    When Nelim's Pickle Tools: I frame the cells (154, 105) to (154, 105) filling 50 percent of the screen
+    When Nelim's Pickle Tools: I frame the cells (154, 105) to (154, 105) filling 25 percent of the screen
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "gallery sloth portrait"
     Then no errors were logged
