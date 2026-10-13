@@ -12,7 +12,7 @@ anywhere. The workflow stage is `playTests[1.0.0]` (see `STATUS.md`).
 
 Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
-- In-game verification is open. Earlier Pickle passes were green (minimal 3/3, with optionals 7/7, on `3682682`); everything written since is **not verified**: scenarios G, P, the incompatibility pass, the English and French label passes, the gallery rewrite and the biome-list assertions. Seven initial tickets were filed on `f156f38` on 2026-10-10. The nineteen scenarios of `TESTING.md` each have a disposition (automated, pinned offline or not applicable); none was played by hand. Verdicts are in `STATUS.md` and `docs/runs/`.
+- In-game verification is mostly done. Pickle on `f156f38` (2026-10-10): minimal, with optionals, English and French passed, trade 1 pass and 1 `[no-stock]` flaky; gallery (2 of 2, `2ded753` and `0e09424`) and incompatibility (1 of 1, `0e09424`) passed after the 2026-10-12 fixes; RimWorld 1.7, English, 3 of 3 on 2026-10-13. What is left of `playTests`: the passes are not yet rerun on the final tree (`892e498` and later), the `[no-stock]` trade replay is optional, and the nineteen scenarios of `TESTING.md` each have a disposition (automated, pinned offline or not applicable) but none was played by hand. Verdicts are in `STATUS.md` and `docs/runs/`.
 - The Workshop item exists since 2026-10-01 (0.1.0 prepublication, private; the CI can now update it). History: the CI cannot create an item, so the first publication was an in-game upload of a private item, with `Mod/About/PublishedFileId.txt` committed and pushed at once.
 - The gallery is made: `0-preview.png`, `1-portrait.png`, `2-family.png`, the two captures accepted by Virginie on 2026-10-13; a trader's-stock picture 3 is optional (see "Screenshots").
 - The rollback target cannot exist before the first publish (see "Fail fast").
@@ -118,8 +118,8 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | Order | File | What it shows | Source |
 |---|---|---|---|
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-10 |
-| 1 | `1-…` | The portrait: one sloth in a quarter of the frame in the flower garden | Pickle `05-gallery`, pass `galerie`, run `2ded753` (green); accepted 2026-10-13, the weaker of the two, to recompose later |
-| 2 | `2-…` | The family: three sloths in a row (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle `05-gallery`, run `0e09424` (green); accepted 2026-10-13. The information card with Wildness 50 % stays a manual capture, not taken |
+| 1 | `1-portrait.png` | The portrait: one sloth in a quarter of the frame in the flower garden | Pickle `05-gallery`, pass `galerie`, run `2ded753` (green); accepted 2026-10-13, the weaker of the two, to recompose later |
+| 2 | `2-family.png` | The family: three sloths in a row (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle `05-gallery`, run `0e09424` (green); accepted 2026-10-13. The information card with Wildness 50 % stays a manual capture, not taken |
 | 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) is written, not yet played. A manual capture, or none |
 
 The shots are `@review` evidence, not proof: a green capture scenario shows the journey ran, not that
