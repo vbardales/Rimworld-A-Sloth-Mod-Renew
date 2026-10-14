@@ -35,7 +35,7 @@ remaining:
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
 updated:      2026-10-13, dormant. AUDIT replay 1 to 13 and the followUp cleanup (14.c) done: STATUS, PUBLICATION and TESTING reduced to current state, older text in docs/runs/, evidence pruned (minimal-4 and avec-facultatifs-6 deleted; english-f156f38 kept as the only 1.6 English proof), WSL cache: the original A Sloth Mod (2253087891) removed, Nocturnal Animals (2269731409) and ADS 2 (3238353862) kept because other mods name them. 1.1.0 and 1.0.0 published and public, comments and Use This Instead posted, translation_fr complete
-protocols_read_sha: 65e09838c8023b798d4ba0ff04df04284a96f11e
+protocols_read_sha: 1eba2baf4d52f146b4fe4f01d90bdd9f0988979e
 ---
 
 # A Sloth Mod Renew — status
