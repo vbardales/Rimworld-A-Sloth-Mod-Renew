@@ -115,9 +115,20 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | Order | File | What it shows | Source |
 |---|---|---|---|
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-13 with the new echo; uploaded by hand |
-| 1 | `1-portrait.png` | The portrait: one sloth in a quarter of the frame in the flower garden | Pickle `05-gallery`, pass `galerie`, run `2ded753` (green); accepted 2026-10-13, the weaker of the two, to recompose later |
-| 2 | `2-family.png` | The family: three sloths in a row (from `05-gallery`); the information card with Wildness 50 % stays a manual capture | Pickle `05-gallery`, run `0e09424` (green); accepted 2026-10-13. The information card with Wildness 50 % stays a manual capture, not taken |
-| 3 | `3-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none |
+| 1 | `1-meeting.png` | The meeting: Nelim notices a sloth in the flower garden (15h) | Pickle `05-gallery` rewritten 2026-10-15 (ticket 20261015-205807-180-3219), pass `galerie`; candidate until opened and accepted. Replaces `1-portrait.png` (accepted 2026-10-13, the weak one) |
+| 2 | `2-hay.png` | The hay: Nelim brings an armful to the sloth in the golden light (17h) | Same run, candidate. Replaces `2-family.png` |
+| 3 | `3-family.png` | The family: three sloths turned to the camera, Nelim behind them (18h) | Same run, candidate |
+| 4 | `4-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none. The information card with Wildness 50 % is also a manual capture, not taken |
+
+**Subtitles (owner, 2026-10-15).** Each story image without an interface window carries an English movie-style subtitle drawn at the bottom (white text, black outline). `0-preview.png` has none, and a menu or window capture (the information card, a trader's stock) has none. The texts, with no hour:
+
+| Page # | File | Subtitle |
+| --- | --- | --- |
+| 1 | `1-meeting.png` | A sloth in the flower garden, and someone who noticed. |
+| 2 | `2-hay.png` | An armful of hay, offered slowly. |
+| 3 | `3-family.png` | Two grown sloths and a young one, in no hurry. |
+
+Draw each subtitle on a copy of the accepted image and keep the original without text (git history, or the run's evidence) for any redraw: never redraw on the captioned file. The wording is a proposal until the owner reads it.
 
 The shots are `@review` evidence, not proof: a green capture scenario shows the journey ran, not that
 the image shows anything. The game's camera has a minimum zoom, at which a 0.15-size animal is small;
