@@ -35,7 +35,7 @@ remaining:
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
 session:      local_eebc4d1e-c168-44da-939d-76f74f8b704f
 updated:      2026-10-15, dormant confirmed by an AUDIT replay (section "Audit 2026-10-15"). Before: 2026-10-13, dormant. AUDIT replay 1 to 13 and the followUp cleanup (14.c) done: STATUS, PUBLICATION and TESTING reduced to current state, older text in docs/runs/, evidence pruned (minimal-4 and avec-facultatifs-6 deleted; english-f156f38 kept as the only 1.6 English proof), WSL cache: the original A Sloth Mod (2253087891) removed, Nocturnal Animals (2269731409) and ADS 2 (3238353862) kept because other mods name them. 1.1.0 and 1.0.0 published and public, comments and Use This Instead posted, translation_fr complete
-protocols_read_sha: 583ce1259235b54ebacca29e1116689d1d24e589
+protocols_read_sha: 365bc5e7ed448e16d54cfddabad386ef26fad04d
 ---
 
 # A Sloth Mod Renew — status
@@ -45,6 +45,8 @@ State: followUp cleanup done, 1.1.0 and 1.0.0 published and public. The older da
 ## Audit 2026-10-15
 
 Audited revision bc2ec56, working tree clean, 0 commits ahead or behind origin. `workflow_stage: dormant` kept. Rechecked: `Check-Status.ps1` 0 error 0 warning; `Tests/Test-Mod.ps1` PASS 147 checks (replayed today); `Check-DefInjected.ps1 -TransMod` 5 keys, 0 errors; About.xml description identical to PUBLICATION.md (`sync-about-description.mjs`); ModIcon 128x128 29.7 KB; Preview 896x504, byte copy as gallery 0, sha256 equals `social_preview_sha256`; gallery 0-2 contiguous; tags v1.0.0 and v1.1.0; the `code_review_sha` diff to HEAD under `Mod/` is `Preview.png` only (8.m exception, no reopening). Protocols changed since the last read: GALLERY.md only (series protagonist, front-facing animals, per-image hour); it binds future galleries, the accepted gallery 1 and 2 stand. Not verified (no game launched): non-regression 14.a, contrast 10.d on the 1.1.0 render, French on 1.7; all already in `remaining`.
+
+Second pass 2026-10-15 on revision a07a1c3 (working tree clean, 0 ahead or behind): `Test-Mod.ps1` PASS 147 checks replayed; `Check-Status.ps1` (pwsh; Windows PowerShell 5 lacks `Get-FileHash` here) 0 error 0 warning; `git diff bc13c11..HEAD -- Mod Source` is `Preview.png` only, review not reopened. Protocols changed since the last read: AGENTS.md and README.md (session markers, no effect on this mod); `Mark-ProtocolsRead.ps1` rerun, `protocols_read_sha` 365bc5e7. No game launched. `workflow_stage: dormant` confirmed.
 
 ## Gallery and description ending (AUDIT 9.e, 11.b), 2026-10-13
 
