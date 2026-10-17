@@ -16,10 +16,11 @@
 #   2. 17:00  The hay. The light turns golden. Nelim carries an armful of hay (drawn in her hands) towards the sloth, with a
 #             small smile; the sloth faces the camera. The picture says: what it eats (VegetarianRoughAnimal) and that it is
 #             tamed by a kindness, not a leash. Tighter than 1.
-#   3. 18:30  The family. Low gold light. Nelim stands behind three sloths, two adults and a juvenile of the life stage
+#   3. 18:00  The family. Low gold light. Nelim stands behind three sloths, two adults and a juvenile of the life stage
 #             Juvenile, all three turned to the camera, in a row; she looks at them, peaceful. The picture says: they come
-#             in litters and the young follows its mothers (the litter size curve of the Def).
-# Nelim wears a light teal shirt (28, 98, 104) and the dark trousers of the save: teal against the orange of the flowers and the
+#             one young at a time and it follows the adults (the Def: one young per birth).
+# Nelim wears a light teal shirt (28, 98, 104) and dark trousers (51, 51, 51, the DarkBlack of the hair dyes; the first
+# "wears" step undresses her, so the trousers are dressed explicitly): teal against the orange of the flowers and the
 # brown fur is the one cool note of the series. Her hair is a Bob, her own colour. Her face follows the story: a calm smirk (her
 # own face), a small smile, a peaceful one. The only animals are the sloths; they are awake at 15, 17 and 18:30 because the
 # game is paused and nothing gives them a job. No mod is added: the story is carried by the pawn, the hay and the light,
@@ -47,6 +48,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (51, 51, 51)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Nelim" stands at (152, 105) facing East
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (154, 105)
@@ -74,6 +76,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (51, 51, 51)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Nelim" stands at (153, 105) facing East
     And Nelim's Pickle Tools: "Nelim" carries 12 of the item "Hay"
@@ -105,6 +108,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (51, 51, 51)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Nelim" stands at (154, 106) facing South
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (153, 105)
