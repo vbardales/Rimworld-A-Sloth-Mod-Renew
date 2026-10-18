@@ -56,7 +56,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     When I wait 20 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cells (152, 105) to (155, 105) filling 60 percent of the screen
+    And Nelim's Pickle Tools: I frame the cells (151, 105) to (155, 105) filling 60 percent of the screen
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: I let 5 frames pass
@@ -85,7 +85,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     When I wait 20 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cells (153, 105) to (154, 105) filling 60 percent of the screen
+    And Nelim's Pickle Tools: I frame the cells (152, 105) to (156, 105) filling 60 percent of the screen
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
@@ -120,7 +120,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     When I wait 20 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cells (153, 105) to (155, 106) filling 60 percent of the screen
+    And Nelim's Pickle Tools: I frame the cells (152, 105) to (155, 106) filling 60 percent of the screen
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"

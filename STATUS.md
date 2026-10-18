@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: dormant[1.1.0]
+workflow_stage: shootGallery[1.1.1]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -35,8 +35,8 @@ remaining:
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
   - blocked: ticket 3219 (05-gallery.feature, evidence galerie-73e7bcf) exit 1, 3/3 scenarios failed. CameraZoomSteps.FrameCells asserts exact root size; CameraDriver clamps RootSize at a floor of 2 on this save, and all three "filling 60 percent" cells compute a target below that (1.875/0.9375/1.667). Per GALLERY.md not fixed in the mod (no percent/rect edit); relayed to NPT (PickleTools) via Ticket Manager, 2026-10-16, NPT not live. Redeposit only after NPT answers. 2026-10-17: TM registered aSM (code aSM, session local_12d0dac6), NPT still unreachable (holiday), TM cannot wake on its answer; TM does not block a redeposit but GALLERY.md says wait for NPT. Owner decision 2026-10-17: wait for NPT (no replan). Session title carries (NPT) next to the pastille. 2026-10-18 (Audit rule via TM): gallery scenarios polished against the NPT catalogues (trousers dressed explicitly, hour and litter wording in the comments fixed); weapon and tattoo of Nelim not controlled (no unequip step known), image 2 still reads as a handover; 9a gameplay steps and 9b GALLERY-PROPS: the mod adds no prop, apparel or hairstyle, nothing to register.
 session:      local_12d0dac6-1de2-4cb2-8698-e6cfe53c1fdc
-updated:      2026-10-16, gallery run 3219 failed on a shared-tool camera floor, relayed to NPT via Ticket Manager, not redeposited yet. Before: 2026-10-15, dormant confirmed by an AUDIT replay (section "Audit 2026-10-15"). Before: 2026-10-13, dormant. AUDIT replay 1 to 13 and the followUp cleanup (14.c) done: STATUS, PUBLICATION and TESTING reduced to current state, older text in docs/runs/, evidence pruned (minimal-4 and avec-facultatifs-6 deleted; english-f156f38 kept as the only 1.6 English proof), WSL cache: the original A Sloth Mod (2253087891) removed, Nocturnal Animals (2269731409) and ADS 2 (3238353862) kept because other mods name them. 1.1.0 and 1.0.0 published and public, comments and Use This Instead posted, translation_fr complete
-protocols_read_sha: e552fd9823504a685ddedd14953c3f62a699851b
+updated:      2026-10-18, gallery reopened by the owner (stage shootGallery[1.1.1]); frames widened above the camera floor of 2 (5, 5 and 4 cells at 60 percent), ticket to be filed. Before: 2026-10-16, gallery run 3219 failed on a shared-tool camera floor, relayed to NPT via Ticket Manager, not redeposited yet. Before: 2026-10-15, dormant confirmed by an AUDIT replay (section "Audit 2026-10-15"). Before: 2026-10-13, dormant. AUDIT replay 1 to 13 and the followUp cleanup (14.c) done: STATUS, PUBLICATION and TESTING reduced to current state, older text in docs/runs/, evidence pruned (minimal-4 and avec-facultatifs-6 deleted; english-f156f38 kept as the only 1.6 English proof), WSL cache: the original A Sloth Mod (2253087891) removed, Nocturnal Animals (2269731409) and ADS 2 (3238353862) kept because other mods name them. 1.1.0 and 1.0.0 published and public, comments and Use This Instead posted, translation_fr complete
+protocols_read_sha: bde324699b1b844b8b097ba0703df79f6d2dc746
 ---
 
 # A Sloth Mod Renew — status
