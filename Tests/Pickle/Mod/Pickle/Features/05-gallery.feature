@@ -3,6 +3,14 @@
 # the save "Nelims-tribe", the pass "galerie" (wsl-deps.galerie.map). Rewritten 2026-10-15 (the first series of 2026-10-13 had
 # no pawn: two portraits of sloths in a row, a flat light, green outlines on the grass, a bed corner in the frame).
 #
+# SHOTLIST (write-shotlist, 2026-10-18; estimate 1 to 5 before playing, every scene must reach 4). Framing is a camera zoom (root
+# size N: 2N cells tall, 3.56N wide), never "filling N percent": the Sanctuary floors N at 2 (ticket 3219 failed 3/3 on it).
+#   | # | hour | zoom (centre)   | says                                  | est | main risk                                      |
+#   | 1 | 15h  | 2.4 (153, 105)  | a sloth is small, Nelim noticed it    | 4   | frame (148.8-157.2) may show the garden edge    |
+#   | 2 | 17h  | 2   (154, 105)  | she brings it hay, golden light       | 4   | hay not visible in her hands; reads as handover |
+#   | 3 | 18h  | 2.5 (154, 105)  | three sloths, the young among them    | 4   | juvenile stage 1 may look like an adult         |
+# Real verdicts go next to the estimates in STATUS.md after the run.
+#
 # THE PLACE. "flower-garden" (SANCTUAIRE-LIEUX.md): the garden of lilies and roses north of the statue field, centre (154, 105).
 # A sloth is a leafy, quiet animal; this is the softest, greenest corner that is not a building, with no roof and no furniture.
 # The row z = 105, x 152 to 156, is known free (run 0e09424). The camera is centred on x = 153 so that the right edge of the
@@ -56,7 +64,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     When I wait 20 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cells (151, 105) to (155, 105) filling 60 percent of the screen
+    And Nelim's Pickle Tools: I frame the cell (153, 105) at zoom 2.4
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: I let 5 frames pass
@@ -85,7 +93,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     When I wait 20 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cells (152, 105) to (156, 105) filling 60 percent of the screen
+    And Nelim's Pickle Tools: I frame the cell (154, 105) at zoom 2
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
@@ -120,7 +128,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     When I wait 20 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cells (152, 105) to (155, 106) filling 60 percent of the screen
+    And Nelim's Pickle Tools: I frame the cell (154, 105) at zoom 2.5
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
