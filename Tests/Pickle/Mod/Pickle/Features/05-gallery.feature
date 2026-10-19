@@ -6,11 +6,12 @@
 #
 # SHOTLIST (write-shotlist, 2026-10-20; estimate 1 to 5 before playing, every scene must reach 4). Framing is a camera zoom (root
 # size N: 2N cells tall, 3.56N wide), never "filling N percent": the Sanctuary floors N at 2 (ticket 3219 failed 3/3 on it).
-#   | # | hour | zoom (centre)   | says                                    | est | main risk                                             |
-#   | 1 | 14h  | 2.4 (153, 105)  | a sloth is small, Nelim noticed it      | 4   | accepted on the run 5fab5d8 (only the hour moves)     |
-#   | 2 | 18h  | 2   (154, 105)  | hay left within reach, light going down | 4   | hay pile small; the glow at 18h may still read as day |
-#   | 3 | 19h  | 2.5 (154, 106)  | a mother and her baby, Nelim behind     | 4   | baby 1.0 against 1.25 is a 20 percent difference; 19h may be dark |
-# The sky glow is logged and asserted before each capture (at least 0.6 at 18h, 0.4 at 19h), so a flat light shows as a red step.
+#   | # | hour | zoom (centre)   | outfit (named colours)                       | action, decor                               | says                                  | est | main risk, plan                                                    |
+#   | 1 | 14h  | 2.4 (153, 105)  | deep blue shirt, brown trousers              | carries 12 hay; fully grown daylily         | a sloth is small, Nelim noticed it    | 4   | accepted on 5fab5d8, only the outfit and hour move: reread it      |
+#   | 2 | 18h  | 2   (154, 105)  | beige shirt, forest green trousers           | carries 4 hay; a hay pile in front of it    | hay left within reach, light going down | 4 | pile small and light still day: assert the glow at 0.6, else hour 19 |
+#   | 3 | 19h  | 2.5 (154, 106)  | emerald shirt, charcoal trousers, brown jacket | carries 2 hay; a lit torch lamp           | a mother and her baby, Nelim behind   | 4   | baby 20 percent smaller, may be dark: baby turned West, lamp lit, glow at 0.4 |
+# No hat, so Nelim keeps her canon ponytail. The three outfits differ on purpose (GALLERY.md, criterion d). The sky glow is logged and
+# asserted before each of 2 and 3, so a flat light shows as a red step with its value.
 # Real verdicts go next to the estimates in STATUS.md after the run.
 #
 # THE PLACE. "flower-garden" (SANCTUAIRE-LIEUX.md): the garden of lilies and roses north of the statue field, centre (154, 105).
@@ -26,14 +27,17 @@
 #   2. 18:00  The hay. The light is going down. A pile of hay lies on the ground right in front of the sloth, which faces the
 #             camera; Nelim stands beside it with a small smile, hands empty. The picture says: what it eats
 #             (VegetarianRoughAnimal) and that it is won by a kindness, not a leash. Tighter than 1.
-#   3. 19:00  The young one. Dusk. A mother sloth (adult) and her baby (life stage 0) side by side, both turned to the camera;
-#             Nelim stands behind them, peaceful. The picture says: they have one young at a time (the Def: one young per
-#             birth) and the family is in no hurry.
+#   3. 19:00  The young one. Dusk, a torch lamp lit beside them. A mother sloth (adult) turned to the camera and her baby (life
+#             stage 0) turned West towards her, not in a row; Nelim stands behind them with what is left of the hay,
+#             peaceful. The picture says: they have one young at a time (the Def: one young per birth) and the family is in
+#             no hurry.
 # Nelim is drawn from her canon (SanctuaryBacklot/docs/NELIM-PROFIL.md): a high ponytail (the Core "Ponytails", the canon
-# Roo_HD_Hair_Highpony is not in the pass map), near-black brown hair, a deep blue shirt (the palette's "bleu profond": the one
-# cool note against the orange of the flowers and the green leaves), brown trousers, the Body_Heart tattoo. The first "wears"
-# step undresses her, so the shirt and the trousers are dressed explicitly. Her face follows the story: a calm smirk (her
-# own face), a small smile, a peaceful one. The only animals are the sloths; they are awake because the game is paused and
+# Roo_HD_Hair_Highpony is not in the pass map), near-black brown hair, the Body_Heart tattoo, and a DIFFERENT outfit in each
+# scene, in the palette of her sheet: 1 a deep blue shirt ("bleu profond": the one cool note against the orange of the
+# flowers) with brown trousers; 2 a beige shirt with forest green trousers; 3 an emerald shirt, charcoal trousers and a brown
+# jacket for the cooling evening. She holds the hay of the story in her hands (12, then 4, then 2). The first "wears" step
+# undresses her, so every garment is dressed explicitly. Her face follows the story: a calm smirk (her own face), a small
+# smile, a peaceful one. The only animals are the sloths; they are awake because the game is paused and
 # nothing gives them a job. No mod is added.
 # The map is set to 20 degrees so that the face shows no sweat; the face is set last, after every wait, because Facial
 # Animation recomputes it at every tick (SanctuaryBacklot, run 56b0). Every scenario reloads the save, removes the animals of the
@@ -63,6 +67,8 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" stands at (152, 105) facing East
+    And Nelim's Pickle Tools: "Nelim" carries 12 of the item "Hay"
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (155, 105) fully grown
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (154, 105)
     And Nelim's Pickle Tools: the animal "Mossy" stands at (154, 105) facing South
     When I wait 20 ticks
@@ -88,12 +94,13 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (32, 64, 128)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 64, 44)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (212, 196, 164)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (44, 72, 52)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" stands at (153, 105) facing East
+    And Nelim's Pickle Tools: "Nelim" carries 4 of the item "Hay"
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (154, 105)
     And Nelim's Pickle Tools: the animal "Mossy" stands at (154, 105) facing South
     And Nelim's Pickle Tools: I place the decor "Hay" at (154, 104)
@@ -124,16 +131,20 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (32, 64, 128)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 64, 44)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (24, 100, 76)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (51, 51, 51)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (96, 64, 44)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
-    And Nelim's Pickle Tools: "Nelim" stands at (154, 107) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (154, 106) facing South
+    And Nelim's Pickle Tools: "Nelim" carries 2 of the item "Hay"
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (155, 105)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (155, 105) is lit
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (153, 105)
     And Nelim's Pickle Tools: an animal of kind "Sloth" named "Pip" is spawned at (154, 105) at life stage 0
     And Nelim's Pickle Tools: the animal "Mossy" stands at (153, 105) facing South
-    And Nelim's Pickle Tools: the animal "Pip" stands at (154, 105) facing South
+    And Nelim's Pickle Tools: the animal "Pip" stands at (154, 105) facing West
     When I wait 20 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
