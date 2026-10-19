@@ -17,6 +17,8 @@ desktop.ini
 # screenshots and logs grow without limit. What is worth versioning is a short text summary under
 # docs/runs/, one line per run. TESTING.md says which files are worth keeping.
 Tests/Pickle/Evidence/
+Tests/Pickle/Inbox/
+Tests/Pickle/Parked/
 evidence/
 
 # Reproducible Preview diagnostics generated locally by the shared renderer.
