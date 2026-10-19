@@ -116,8 +116,8 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 |---|---|---|---|
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-13 with the new echo; uploaded by hand |
 | 1 | `1-meeting.png` | The meeting: Nelim notices a sloth in the flower garden (15h) | Pickle `05-gallery` rewritten 2026-10-15 (ticket 20261015-205807-180-3219), pass `galerie`; candidate until opened and accepted. Replaces `1-portrait.png` (accepted 2026-10-13, the weak one) |
-| 2 | `2-hay.png` | The hay: Nelim brings an armful to the sloth in the golden light (17h) | Same run, candidate. Replaces `2-family.png` |
-| 3 | `3-family.png` | The family: three sloths turned to the camera, Nelim behind them (18h) | Same run, candidate |
+| 2 | `2-hay.png` | The hay: a pile of hay within reach of the sloth, Nelim beside it, the light going down (18h) | Recomposed 2026-10-20 after the refusal of the 5fab5d8 capture; candidate. Replaces `2-family.png` |
+| 3 | `3-young.png` | The young one: a mother sloth and her baby turned to the camera, Nelim behind them, dusk (19h) | Recomposed 2026-10-20 (the juvenile was only 12 percent smaller than an adult, a bed corner showed); candidate |
 | 4 | `4-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none. The information card with Wildness 50 % is also a manual capture, not taken |
 
 **Subtitles (owner, 2026-10-15).** Each story image without an interface window carries an English movie-style subtitle drawn at the bottom (white text, black outline). `0-preview.png` has none, and a menu or window capture (the information card, a trader's stock) has none. The texts, with no hour:
@@ -125,8 +125,8 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | Page # | File | Subtitle |
 | --- | --- | --- |
 | 1 | `1-meeting.png` | A sloth in the flower garden, and someone who noticed. |
-| 2 | `2-hay.png` | An armful of hay, offered slowly. |
-| 3 | `3-family.png` | Two grown sloths and a young one, in no hurry. |
+| 2 | `2-hay.png` | Hay, left within reach. |
+| 3 | `3-young.png` | A mother and her baby, in no hurry. |
 
 Draw each subtitle on a copy of the accepted image and keep the original without text (git history, or the run's evidence) for any redraw: never redraw on the captioned file. The wording is a proposal until the owner reads it.
 
