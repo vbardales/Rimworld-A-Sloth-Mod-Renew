@@ -22,7 +22,7 @@ dry_run: 1.1.0 on 414de05ec9c97501aeb26c2c184dcac0a5391e48, run 38414526235 (202
 publish: 1.1.0 uploaded 2026-10-13, run 38422420800 (tag v1.1.0 and release by the CI on 414de05); the 1.7 Steam tag was set by the owner with Release-Admin scripts/steam-apply-tags.mjs, the Steam API reports Mod, 1.6, 1.7. 1.0.0 uploaded 2026-10-13, run 38409430019 (tag v1.0.0 on 5ac3a96), public since 2026-10-13. Item 3811289805, visibility 0
 code_review_sha: bc13c11d8059e8ffb3bad07e44c1feac7c8953da
 publication_changelog_review_sha: a49a3f068397eccca9b5b6fa1c85abc6ec92f9c4
-social_preview_sha256: ce26a4156fc672ffdde06aea1b97f0d544e358e0e3035ec1d36600013adbc565
+social_preview_sha256: c270d74fa978e876e9e89b9a8956ff80cf4c6184428546d33143d9293c2ea01f
 echo_review_sha: 6e077cb6b7865ac2df6e0628bd04177711a79102
 workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 created the item and its PublishedFileId.txt; an act, not a stage)
 remaining:
