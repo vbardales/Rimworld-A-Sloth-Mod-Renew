@@ -8,8 +8,8 @@
 # size N: 2N cells tall, 3.56N wide), never "filling N percent": the Sanctuary floors N at 2 (ticket 3219 failed 3/3 on it).
 #   | # | hour | zoom (centre)   | outfit (named colours)                       | action, decor                               | says                                  | est | main risk, plan                                                    |
 #   | 1 | 14h  | 2.4 (153, 105)  | deep blue shirt, brown trousers              | carries 12 hay; fully grown daylily         | a sloth is small, Nelim noticed it    | 4   | accepted on 5fab5d8, only the outfit and hour move: reread it      |
-#   | 2 | 18h  | 2   (154, 105)  | beige shirt, forest green trousers           | carries 4 hay; a hay pile in front of it    | hay left within reach, light going down | 4 | pile small and light still day: assert the glow at 0.6, else hour 19 |
-#   | 3 | 19h  | 2.5 (154, 106)  | emerald shirt, charcoal trousers, brown jacket | carries 2 hay; a lit torch lamp           | a mother and her baby, Nelim behind   | 4   | baby 20 percent smaller, may be dark: baby turned West, lamp lit, glow at 0.4 |
+#   | 2 | 17h  | 2   (154, 105)  | beige shirt, forest green trousers           | carries 4 hay; a hay pile in front of it    | hay left within reach, light going down | 4 | pile small and light still day: run 9f78 measured glow 0.49 at 18h, so hour 17, glow 0.6 |
+#   | 3 | 18h  | 2.5 (154, 106)  | emerald shirt, charcoal trousers, brown jacket | carries 2 hay; a lit torch lamp           | a mother and her baby, Nelim behind   | 4   | baby 20 percent smaller, may be dark: run 9f78 measured glow 0.14 at 19h, so hour 18, glow 0.4 |
 # No hat, so Nelim keeps her canon ponytail. The three outfits differ on purpose (GALLERY.md, criterion d). The sky glow is logged and
 # asserted before each of 2 and 3, so a flat light shows as a red step with its value.
 # Real verdicts go next to the estimates in STATUS.md after the run.
@@ -24,10 +24,10 @@
 #   1. 14:00  The meeting. Nelim stands in the garden, turned East, with a smirk; a sloth hangs about two cells from her, turned
 #             to the camera (South): the animal is seen from the front. The picture says: a sloth is small and slow, and
 #             she has noticed it. Wide enough to show the flowers, with the sloth off centre to the right.
-#   2. 18:00  The hay. The light is going down. A pile of hay lies on the ground right in front of the sloth, which faces the
+#   2. 17:00  The hay. The light is going down. A pile of hay lies on the ground right in front of the sloth, which faces the
 #             camera; Nelim stands beside it with a small smile, hands empty. The picture says: what it eats
 #             (VegetarianRoughAnimal) and that it is won by a kindness, not a leash. Tighter than 1.
-#   3. 19:00  The young one. Dusk, a torch lamp lit beside them. A mother sloth (adult) turned to the camera and her baby (life
+#   3. 18:00  The young one. Dusk, a torch lamp lit beside them. A mother sloth (adult) turned to the camera and her baby (life
 #             stage 0) turned West towards her, not in a row; Nelim stands behind them with what is left of the hay,
 #             peaceful. The picture says: they have one young at a time (the Def: one young per birth) and the family is in
 #             no hurry.
@@ -90,7 +90,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: the screen is clear
     And Nelim's Pickle Tools: all filth is cleaned
-    And I set the hour to 18
+    And I set the hour to 17
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
@@ -127,7 +127,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: the screen is clear
     And Nelim's Pickle Tools: all filth is cleaned
-    And I set the hour to 19
+    And I set the hour to 18
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
