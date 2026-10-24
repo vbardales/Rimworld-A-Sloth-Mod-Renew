@@ -115,18 +115,20 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | Order | File | What it shows | Source |
 |---|---|---|---|
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-13 with the new echo; uploaded by hand |
-| 1 | `1-meeting.png` | The meeting: Nelim notices a sloth in the flower garden (15h) | Pickle `05-gallery` rewritten 2026-10-15 (ticket 20261015-205807-180-3219), pass `galerie`; candidate until opened and accepted. Replaces `1-portrait.png` (accepted 2026-10-13, the weak one) |
-| 2 | `2-hay.png` | The hay: a pile of hay within reach of the sloth, Nelim beside it, the light going down (18h) | Recomposed 2026-10-20 after the refusal of the 5fab5d8 capture; candidate. Replaces `2-family.png` |
-| 3 | `3-young.png` | The young one: a mother sloth and her baby turned to the camera, Nelim behind them, dusk (19h) | Recomposed 2026-10-20 (the juvenile was only 12 percent smaller than an adult, a bed corner showed); candidate |
-| 4 | `4-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none. The information card with Wildness 50 % is also a manual capture, not taken |
+| 1 | `1-wide-garden.png` | Wide, 15h: Nelim mid-stride with hay crosses the flower garden, Mossy asleep (frame moved to 153, 106) | Series of 2026-10-23 ("the sloth hour", one outfit all afternoon); scene 1 recomposed in ticket 20261024-141550-091-7ec6, queued. Replaces `1-portrait.png` (the weak one) |
+| 2 | `2-hay.jpg` | Medium, 15h13: Nelim bends and sets hay down, Mossy awake and facing the camera | Candidate kept from run 0ddc (`Art/Gallery/2-candidate-hay.jpg`), accepted by the session 2026-10-24. Replaces `2-family.png` |
+| 3 | `3-follows.jpg` | Close, 17h: Nelim walks East with hay, Mossy and Pip follow in file | Candidate kept from run 0ddc (`Art/Gallery/3-candidate-follows.jpg`), accepted by the session 2026-10-24 |
+| 4 | `4-closing.png` | Closing, 18h: Nelim leaves West, Mossy and Pip asleep by a lit torch lamp | Scene 4 recomposed in ticket 7ec6 (Nelim kept on row z = 105, Mossy standing fixed); queued |
+| 5 | `5-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none. The information card with Wildness 50 % is also a manual capture, not taken |
 
 **Subtitles (owner, 2026-10-15).** Each story image without an interface window carries an English movie-style subtitle drawn at the bottom (white text, black outline). `0-preview.png` has none, and a menu or window capture (the information card, a trader's stock) has none. The texts, with no hour:
 
 | Page # | File | Subtitle |
 | --- | --- | --- |
-| 1 | `1-meeting.png` | A sloth in the flower garden, and someone who noticed. |
-| 2 | `2-hay.png` | Hay, left within reach. |
-| 3 | `3-young.png` | A mother and her baby, in no hurry. |
+| 1 | `1-wide-garden.png` | Nelim crosses the flower garden and notices the sloth. |
+| 2 | `2-hay.jpg` | A pile of hay, left within reach. |
+| 3 | `3-follows.jpg` | It follows the one who brought the hay. |
+| 4 | `4-closing.png` | A mother, her baby, and no hurry. |
 
 Draw each subtitle on a copy of the accepted image and keep the original without text (git history, or the run's evidence) for any redraw: never redraw on the captioned file. The wording is a proposal until the owner reads it.
 
