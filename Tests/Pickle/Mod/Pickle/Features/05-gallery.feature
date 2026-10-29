@@ -30,6 +30,12 @@
 # pause, the hay is then on the ground and still reads; (c) only row z = 105, x 152 to 156 is known free, so every path stays
 # in that block; (d) the sloth faces the camera in 2 only because it is placed so, the one posed element of the series, on
 # purpose (criterion c).
+# Run 7ec6 (2026-10-28, 2 of 2 green) read: 1 and 4 refused again, and recomposed 2026-10-29. Bed corner: it sits about x >= 157.4,
+# z <= 103.3, so every frame keeps its bottom edge at z >= 103.8 (1: (153, 107) zoom 3.0; 4: (154, 106) zoom 2.2). 1: Nelim now walks
+# South toward the camera, her face shows, from (153, 108) to (153, 106), Mossy at (153, 105) in profile, small smile. 4: lamp moved
+# to (156, 106) inside the frame, the hay is carried after the 40 ticks wait (she dropped it during the idle wait), all on rows 105 and 106.
+# STILL OPEN: Mossy in 1 and the sloths in 4 must be ASLEEP, which needs a step that holds sleep (asked of NPT through the TM 2026-10-29);
+# until it exists the two scenes are not refiled.
 # Real verdicts go next to the estimates in STATUS.md after the run.
 #
 # THE PLACE. "flower-garden" (SANCTUAIRE-LIEUX.md): the garden of lilies and roses north of the statue field, centre (154, 105).
@@ -62,18 +68,21 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
-    And Nelim's Pickle Tools: "Nelim" stands at (152, 105) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (153, 108) facing South
     And Nelim's Pickle Tools: "Nelim" carries 12 of the item "Hay"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (156, 106) fully grown
-    And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (154, 104)
-    And Nelim's Pickle Tools: the animal "Mossy" stands at (154, 104) facing South
-    And Nelim's Pickle Tools: "Nelim" is forced to walk to (156, 105)
+    And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (153, 105)
+    And Nelim's Pickle Tools: the animal "Mossy" stands at (153, 105) facing East
+    And Nelim's Pickle Tools: "Nelim" is forced to walk to (153, 106)
     When Nelim's Pickle Tools: I let 18 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (153, 106) at zoom 3
+    And Nelim's Pickle Tools: I frame the cell (153, 107) at zoom 3
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
-    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: I let 5 frames pass
     And Nelim's Pickle Tools: "Nelim" face state is logged
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
@@ -170,20 +179,20 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (156, 104)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (156, 104) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (156, 106)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (156, 106) is lit
     And Nelim's Pickle Tools: "Nelim" stands at (156, 105) facing West
-    And Nelim's Pickle Tools: "Nelim" carries 8 of the item "Hay"
-    And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (154, 104)
-    And Nelim's Pickle Tools: an animal of kind "Sloth" named "Pip" is spawned at (155, 104) at life stage 0
-    And Nelim's Pickle Tools: the animal "Mossy" stands at (154, 104) facing South
+    And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (153, 106)
+    And Nelim's Pickle Tools: an animal of kind "Sloth" named "Pip" is spawned at (155, 106) at life stage 0
+    And Nelim's Pickle Tools: the animal "Mossy" stands at (153, 106) facing South
     And Nelim's Pickle Tools: "Pip" lies down
     And Nelim's Pickle Tools: I let 40 ticks pass
-    And Nelim's Pickle Tools: "Nelim" is forced to walk to (155, 105)
+    And Nelim's Pickle Tools: "Nelim" carries 8 of the item "Hay"
+    And Nelim's Pickle Tools: "Nelim" is forced to walk to (154, 105)
     When Nelim's Pickle Tools: I let 8 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (155, 105) at zoom 2.4
+    And Nelim's Pickle Tools: I frame the cell (154, 106) at zoom 2.2
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
