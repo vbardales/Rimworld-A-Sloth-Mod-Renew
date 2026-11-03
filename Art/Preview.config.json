@@ -30,9 +30,7 @@
   "backgroundFile": "Preview-source.png",
   "echo": {
     "file": "echo-source.png",
-    "color": "var(--accent)",
-    "width": 175,
-    "height": 175
+    "color": "var(--accent)"
   },
   "icon": {
     "file": "ModIcon-source.png"
