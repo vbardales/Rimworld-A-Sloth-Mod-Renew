@@ -54,6 +54,24 @@ protocols_read_sha: 82e451796f5f32be72292d2338f9b7cfbf251067
 
 State: followUp cleanup done, 1.1.0 and 1.0.0 published and public. The older dated sections (re-audit of 2026-10-10, translation audits, replay of states 1 to 7) are in `docs/runs/status-journal-2026-10-11.md` and `docs/runs/status-journal-2026-10-13.md`.
 
+## NSB
+
+Sync of 2026-11-05 (sync-nsb). Rules of the owner (2026-11-05): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs her express validation; a colonist's properties (hair, face, body, tattoos, genes...) change only with it; every outfit is free. NSB changed since the last read: Nelim's wardrobe (14 outfits), animals catalogue and "Qui une galerie peut utiliser" (2026-11-05); `flower-garden` (154, 105) unchanged. Left alone: the story and scenes (no NSB change shows in the image). Found: the scenes set Nelim's hairstyle to the Core `Ponytails` and her hair colour to rgb (62, 48, 40), where the canon is `Roo_HD_Hair_Highpony` and `Hair_DarkSaturatedReddish` #382412 (NELIM-PROFIL.md, NSB-ROSTER.md): a changed property, PENDING the owner's validation (or play the canon: Roo's HD Hairstyles is not in `wsl-deps.galerie.map`).
+
+Places read: 2026-11-05. Tribe read: 2026-11-05.
+
+| Place | Shots | Changes made for the gallery | Last read |
+|---|---|---|---|
+| `flower-garden` (154, 105) | 1, 2, 3, 4 | hour 15, 15, 17, 18, Clear, 20 degrees; daylily (156, 106) in 1; torch lamp near (156, 106) lit in 4; bed corner hidden (hide-buildings, radius 2 at (158, 102)) in 1 and 4 | 2026-11-05 |
+
+| Colonist | Shots | Outfit per shot | Last read | Exceptions |
+|---|---|---|---|---|
+| Nelim (NSB) | 1, 2, 3, 4 | one outfit all afternoon: `Apparel_BasicShirt` deep blue (32, 64, 128) and `Apparel_Pants` brown (90, 64, 44), the NSB palette (deep blue, brown), practical at 20 degrees; mouth `MouthSmile` or `MouthLipsSmallSmile` (smile by default, owner rule) | 2026-11-05 (NELIM-PROFIL.md) | hairstyle `Ponytails` and hair colour rgb (62, 48, 40) differ from the canon: PENDING validation |
+
+| Animal | Shots | Outfit | Last read | Exceptions |
+|---|---|---|---|---|
+| Mossy, Pip (the mod's own sloths, created by the scenario) | 1 to 4 | none | not in CATALOGUE-ANIMAUX.md (read 2026-11-05) | outside NSB, named by the gallery: they are the creature of the mod under test, not a pet or livestock of the save; flagged to the owner with the hair question |
+
 ## Audit 2026-10-15
 
 Audited revision bc2ec56, working tree clean, 0 commits ahead or behind origin. `workflow_stage: dormant` kept. Rechecked: `Check-Status.ps1` 0 error 0 warning; `Tests/Test-Mod.ps1` PASS 147 checks (replayed today); `Check-DefInjected.ps1 -TransMod` 5 keys, 0 errors; About.xml description identical to PUBLICATION.md (`sync-about-description.mjs`); ModIcon 128x128 29.7 KB; Preview 896x504, byte copy as gallery 0, sha256 equals `social_preview_sha256`; gallery 0-2 contiguous; tags v1.0.0 and v1.1.0; the `code_review_sha` diff to HEAD under `Mod/` is `Preview.png` only (8.m exception, no reopening). Protocols changed since the last read: GALLERY.md only (series protagonist, front-facing animals, per-image hour); it binds future galleries, the accepted gallery 1 and 2 stand. Not verified (no game launched): non-regression 14.a, contrast 10.d on the 1.1.0 render, French on 1.7; all already in `remaining`.
