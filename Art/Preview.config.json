@@ -4,7 +4,8 @@
     "titleParts": [
       { "text": "A", "scale": 0.65 },
       { "text": "Sloth" },
-      { "text": "Mod Renew (unofficial)", "suffix": true }
+      { "text": "Mod", "scale": 0.65 },
+      { "text": "Renew (unofficial)", "suffix": true }
     ],
     "description": "A small, slow, harmless animal that sleeps most of the day."
   },
