@@ -37,6 +37,10 @@
 # NPT answered 2026-10-29: `the animal "X" is kept asleep` (holds LayDown every frame, adult and baby; compiled, not played; needs the
 # ColonistRace DLL of NPT's last commit staged) and `the artificial buildings within N cells of (x, z) are hidden` (logs [hide-buildings]
 # with each def and cell). Used: Mossy asleep in 1, Pip asleep in 4 (Mossy awake, watching), the bed hidden at (158, 102) radius 2 in both.
+# Run 3caf (2026-11-03, 2 of 2 green) read 2026-11-05: both refused again, recomposed 2026-11-05. 1: the carried hay hid her face walking South, so she now
+# walks East in profile on row 105 from (152, 105) to (154, 105) (as in 3, accepted), Mossy kept asleep at (153, 106) below her path. 4: Nelim was cut by the
+# right edge and the lamp at (156, 106) was not visible (cause asked of NPT: the vanilla lamps near the bed corner are hidden by the hide step, the placed decor lamp did
+# not show): she is now stood at (155, 105) after the wait and walks West to (153, 105), well inside the frame.
 # Real verdicts go next to the estimates in STATUS.md after the run.
 #
 # THE PLACE. "flower-garden" (SANCTUAIRE-LIEUX.md): the garden of lilies and roses north of the statue field, centre (154, 105).
@@ -70,13 +74,13 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: the artificial buildings within 2 cells of (158, 102) are hidden
-    And Nelim's Pickle Tools: "Nelim" stands at (153, 108) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (152, 105) facing East
     And Nelim's Pickle Tools: "Nelim" carries 12 of the item "Hay"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (156, 106) fully grown
-    And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (153, 105)
-    And Nelim's Pickle Tools: the animal "Mossy" stands at (153, 105) facing East
+    And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (153, 106)
+    And Nelim's Pickle Tools: the animal "Mossy" stands at (153, 106) facing South
     And Nelim's Pickle Tools: the animal "Mossy" is kept asleep
-    And Nelim's Pickle Tools: "Nelim" is forced to walk to (153, 106)
+    And Nelim's Pickle Tools: "Nelim" is forced to walk to (154, 105)
     When Nelim's Pickle Tools: I let 18 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -184,15 +188,15 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (156, 106)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (156, 106) is lit
-    And Nelim's Pickle Tools: "Nelim" stands at (156, 105) facing West
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (153, 106)
     And Nelim's Pickle Tools: an animal of kind "Sloth" named "Pip" is spawned at (155, 106) at life stage 0
     And Nelim's Pickle Tools: the animal "Mossy" stands at (153, 106) facing South
     And Nelim's Pickle Tools: the animal "Pip" is kept asleep
     And Nelim's Pickle Tools: I let 40 ticks pass
     And Nelim's Pickle Tools: the artificial buildings within 2 cells of (158, 102) are hidden
+    And Nelim's Pickle Tools: "Nelim" stands at (155, 105) facing West
     And Nelim's Pickle Tools: "Nelim" carries 8 of the item "Hay"
-    And Nelim's Pickle Tools: "Nelim" is forced to walk to (154, 105)
+    And Nelim's Pickle Tools: "Nelim" is forced to walk to (153, 105)
     When Nelim's Pickle Tools: I let 8 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
