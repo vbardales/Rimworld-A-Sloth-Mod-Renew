@@ -7,7 +7,7 @@
 # THE STORY, "the sloth hour". One summer afternoon in the flower garden. Nelim crosses it with hay, finds the sloth awake,
 # sets hay down for it, walks on with it and its young trailing behind her, and leaves them at dusk by a torch lamp. Axis: she walks
 # West to East in 1 to 3, and turns back West in 4. Hours: 15h, 15h and a quarter, 17h, 18h. Nelim keeps ONE outfit all day
-# (deep blue shirt rgb (32, 64, 128), brown trousers rgb (90, 64, 44), Ponytails, near-black hair, Body_Heart): no change, the
+# (deep blue shirt rgb (32, 64, 128), brown trousers rgb (90, 64, 44), Roo_HD_Hair_Highpony, hair colour from her genes (canon), Body_Heart): no change, the
 # afternoon is one afternoon (GALLERY.md, criterion d). No hat. The map is 20 degrees and Clear, so no jacket either.
 # Hay: she carries 12 in 1, sets 4 down in 2, and carries the remaining 8 in 3 and 4.
 #
@@ -46,7 +46,7 @@
 # THE PLACE. "flower-garden" (SANCTUAIRE-LIEUX.md): the garden of lilies and roses north of the statue field, centre (154, 105).
 # The softest, greenest corner that is not a building, with no roof and no furniture. A bed corner sits at about (158, 102):
 # frames centred on (154, 105) at zoom 2 or more stay clear of it. Nelim is drawn from her canon (SanctuaryBacklot/docs/NELIM-PROFIL.md):
-# a high ponytail (the Core "Ponytails"), near-black brown hair, the Body_Heart tattoo. The first "wears" step undresses her, so
+# a high ponytail (Roo_HD_Hair_Highpony, the canon, played from 2026-11-05), her canon hair colour from her genes, the Body_Heart tattoo. The first "wears" step undresses her, so
 # every garment is dressed explicitly. The face is set last, after every wait, because Facial Animation recomputes it at every
 # tick (SanctuaryBacklot, run 56b0). Every scenario reloads the save, removes the animals of the save, cleans the filth, sets
 # the hour and the weather, places the set, photographs it. Nothing asserts about the image but the sky glow of 4: a person opens
@@ -70,8 +70,8 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (32, 64, 128)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 64, 44)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: the artificial buildings within 2 cells of (158, 102) are hidden
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (156, 106) fully grown
@@ -111,8 +111,8 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: I let 208 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (32, 64, 128)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 64, 44)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" stands at (153, 104) facing East
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (154, 105)
@@ -146,8 +146,8 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (32, 64, 128)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 64, 44)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: "Nelim" stands at (154, 105) facing East
     And Nelim's Pickle Tools: "Nelim" carries 8 of the item "Hay"
@@ -184,8 +184,8 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (32, 64, 128)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 64, 44)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 48, 40)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: the artificial buildings within 2 cells of (158, 102) are hidden
     And Nelim's Pickle Tools: I place the decor "TorchLamp" near (156, 106)
