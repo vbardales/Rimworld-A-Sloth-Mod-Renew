@@ -41,6 +41,9 @@
 # walks East in profile on row 105 from (152, 105) to (154, 105) (as in 3, accepted), Mossy kept asleep at (153, 106) below her path. 4: Nelim was cut by the
 # right edge and the lamp at (156, 106) was not visible (cause asked of NPT: the vanilla lamps near the bed corner are hidden by the hide step, the placed decor lamp did
 # not show): she is now stood at (155, 105) after the wait and walks West to (153, 105), well inside the frame.
+# Runs 9e9e and 24b0 (2026-11-06, 4 of 4 green) read: all four refused, the carried hay hid her face and mouth. Recomposed 2026-11-06 with NPT's
+# new steps (00edff8, compiled, not played): `"Nelim" puts down what it carries [at (x, z)]` (hands empty, hay stays on the ground) after each walk,
+# in 2 at (154, 106) in front of Mossy; and `the animal "Pip" stands at least 3 cells from "Nelim"` in 4 (the baby overlapped her), she now leaves West to (152, 105).
 # Real verdicts go next to the estimates in STATUS.md after the run.
 #
 # THE PLACE. "flower-garden" (SANCTUAIRE-LIEUX.md): the garden of lilies and roses north of the statue field, centre (154, 105).
@@ -83,6 +86,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Nelim" carries 12 of the item "Hay"
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (154, 105)
     When Nelim's Pickle Tools: I let 18 ticks pass
+    And Nelim's Pickle Tools: "Nelim" puts down what it carries
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (153, 107) at zoom 3
@@ -119,8 +123,9 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Nelim" stands at (153, 106) facing East
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (154, 105)
     And Nelim's Pickle Tools: the animal "Mossy" stands at (154, 105) facing South
-    And Nelim's Pickle Tools: "Nelim" is forced to haul 4 of the item "Hay" to (154, 106)
-    When Nelim's Pickle Tools: I let 24 ticks pass
+    And Nelim's Pickle Tools: "Nelim" carries 4 of the item "Hay"
+    And Nelim's Pickle Tools: "Nelim" puts down what it carries at (154, 106)
+    When Nelim's Pickle Tools: I let 2 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (155, 106) at zoom 2.2
@@ -159,6 +164,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Pip" follows "Mossy" within 1 cells
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (156, 105)
     When Nelim's Pickle Tools: I let 20 ticks pass
+    And Nelim's Pickle Tools: "Nelim" puts down what it carries
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (154, 105) at zoom 2
@@ -195,12 +201,15 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (153, 106)
     And Nelim's Pickle Tools: an animal of kind "Sloth" named "Pip" is spawned at (155, 106) at life stage 0
     And Nelim's Pickle Tools: the animal "Mossy" stands at (153, 106) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (154, 105) facing West
+    And Nelim's Pickle Tools: the animal "Pip" stands at least 3 cells from "Nelim"
     And Nelim's Pickle Tools: the animal "Pip" is kept asleep
     And Nelim's Pickle Tools: I let 40 ticks pass
-    And Nelim's Pickle Tools: "Nelim" stands at (155, 105) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (154, 105) facing West
     And Nelim's Pickle Tools: "Nelim" carries 8 of the item "Hay"
-    And Nelim's Pickle Tools: "Nelim" is forced to walk to (153, 105)
+    And Nelim's Pickle Tools: "Nelim" is forced to walk to (152, 105)
     When Nelim's Pickle Tools: I let 8 ticks pass
+    And Nelim's Pickle Tools: "Nelim" puts down what it carries
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (154, 106) at zoom 2.2
