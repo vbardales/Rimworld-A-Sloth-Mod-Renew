@@ -58,21 +58,25 @@ State: followUp cleanup done, 1.1.0 and 1.0.0 published and public. The older da
 
 ## NSB
 
-Sync of 2026-11-05 (sync-nsb). Rules of the owner (2026-11-05): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs her express validation; a colonist's properties (hair, face, body, tattoos, genes...) change only with it; every outfit is free. NSB changed since the last read: Nelim's wardrobe (14 outfits), animals catalogue and "Qui une galerie peut utiliser" (2026-11-05); `flower-garden` (154, 105) unchanged. Left alone: the story and scenes (no NSB change shows in the image). Found: the scenes set Nelim's hairstyle to the Core `Ponytails` and her hair colour to rgb (62, 48, 40), where the canon is `Roo_HD_Hair_Highpony` and `Hair_DarkSaturatedReddish` #382412 (NELIM-PROFIL.md, NSB-ROSTER.md): a changed property, PENDING the owner's validation (or play the canon: Roo's HD Hairstyles is not in `wsl-deps.galerie.map`).
+Sync of 2026-11-06 (sync-nsb). Rules of the owner (2026-11-05): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs her express validation; a colonist's properties (hair, face, body, tattoos, genes...) change only with it; every outfit is free. Rule 5 (2026-11-06): every animal the mod includes appears in the gallery. NSB since the 2026-11-05 sync: no commit, no doc newer than the sync for the places and animals; `NSB-ROSTER.md` touched 2026-11-05 22:39, Nelim's hair rows unchanged (`Roo_HD_Hair_Highpony`, `Hair_DarkSaturatedReddish` #382412), the scenes already play the canon (owner "Play canon", 2026-11-05). `flower-garden` (154, 105) unchanged. Updated: nothing in the scenes, only this section. Left alone: story, scenes, ticket 9e9e (waiting). Included animals: one, the Sloth (defs `ThingDef`/`PawnKindDef` Sloth), shown in all four shots.
 
-Places read: 2026-11-05. Tribe read: 2026-11-05.
+Places read: 2026-11-06. Tribe read: 2026-11-06.
 
 | Place | Shots | Changes made for the gallery | Last read |
 |---|---|---|---|
-| `flower-garden` (154, 105) | 1, 2, 3, 4 | hour 15, 15, 17, 18, Clear, 20 degrees; daylily (156, 106) in 1; torch lamp near (156, 106) lit in 4; bed corner hidden (hide-buildings, radius 2 at (158, 102)) in 1 and 4 | 2026-11-05 |
+| `flower-garden` (154, 105) | 1, 2, 3, 4 | hour 15, 15, 17, 18, Clear, 20 degrees; daylily (156, 106) in 1; torch lamp near (156, 106) lit in 4; bed corner hidden (hide-buildings, radius 2 at (158, 102)) in 1 and 4 | 2026-11-06 |
 
 | Colonist | Shots | Outfit per shot | Last read | Exceptions |
 |---|---|---|---|---|
-| Nelim (NSB) | 1, 2, 3, 4 | one outfit all afternoon: `Apparel_BasicShirt` deep blue (32, 64, 128) and `Apparel_Pants` brown (90, 64, 44), the NSB palette (deep blue, brown), practical at 20 degrees; mouth `MouthSmile` or `MouthLipsSmallSmile` (smile by default, owner rule) | 2026-11-05 (NELIM-PROFIL.md) | played as canon from 2026-11-05 (owner: "Play canon"): Roo_HD_Hair_Highpony, colour from her genes; none pending |
+| Nelim (NSB) | 1, 2, 3, 4 | one outfit all afternoon: `Apparel_BasicShirt` deep blue (32, 64, 128) and `Apparel_Pants` brown (90, 64, 44), the NSB palette (deep blue, brown), practical at 20 degrees; mouth `MouthSmile` or `MouthLipsSmallSmile` (smile by default, owner rule) | 2026-11-06 (NELIM-PROFIL.md, NSB-ROSTER.md hair rows) | played as canon from 2026-11-05 (owner: "Play canon"): Roo_HD_Hair_Highpony, colour from her genes; none pending |
 
 | Animal | Shots | Outfit | Last read | Exceptions |
 |---|---|---|---|---|
-| Mossy, Pip (the mod's own sloths, created by the scenario) | 1 to 4 | none | not in CATALOGUE-ANIMAUX.md (read 2026-11-05) | outside NSB, named by the gallery: they are the creature of the mod under test, not a pet or livestock of the save; flagged to the owner with the hair question |
+| Mossy, Pip (the mod's own sloths, created by the scenario) | 1 to 4 | none | not in CATALOGUE-ANIMAUX.md (read 2026-11-06) | outside NSB, named by the gallery: they are the creature of the mod under test, not a pet or livestock of the save; flagged to the owner with the hair question |
+
+| Included animal (rule 5) | Shots |
+|---|---|
+| Sloth (Mossy, Pip) | 1, 2, 3, 4 |
 
 ## Audit 2026-10-15
 
