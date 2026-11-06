@@ -14,7 +14,7 @@
 # SHOTLIST (write-shotlist, 2026-10-23; estimate 1 to 5 before playing, every scene must reach 4). Framing is a camera zoom
 # (root size N: 2N cells tall, 3.56N wide); the Sanctuary floors N at 2 (ticket 3219).
 #   1 | 15h   | wide, (153, 107) zoom 3.0   | Nelim mid-stride South, face shown, with 12 hay, just after she spotted it. Forced walk (153,108) to (153,106), 18 ticks, then paused | Mossy kept asleep at (153, 105) (was: awake facing South at (154, 104), daylily (156, 106) | a sloth is small, she noticed it | est 4
-#   2 | 15h13 | medium, (154, 105) zoom 2.4 | Nelim bends to set 4 hay down, just before it touches the ground. Forced haul to (154, 104), 8 ticks, then paused | Mossy awake, facing South (the one front view) | a kindness, not a leash | est 4
+#   2 | 15h13 | medium, (155, 106) zoom 2.2 (7.8 x 4.4 cells, bottom edge z 103.8 clears the bed corner, hidden anyway) | Nelim beside the hay she just set down in front of Mossy, hands free, in profile facing East, small smile, gaze toward the sloth; before Mossy eats. Forced haul of 4 hay from (153, 106) to (154, 106), 24 ticks, then paused (if the drop is late the hay is still carried and still reads) | Mossy awake at (154, 105) facing South, head toward the hay (the one front view); Plant_Daylily (156, 104), shared with 1; bed hidden | a kindness, not a leash | est 4.5 (Opus pass 2026-11-06: kept off-centre frame; refused pause-before-drop, her face hid behind the stack in 3; refused 25 hay, the story count is 12, 4, 8; refused Pip, the young one first shows in 3)
 #   3 | 17h   | close, (154, 105) zoom 2.0  | Nelim mid-stride East with 8 hay, just after the hay was eaten; Mossy then Pip follow in file. Forced walk (154,105) to (156,105), follows within 1 cell, 20 ticks | Mossy and Pip (life stage 0) trailing in profile | it follows whoever brought the hay | est 4
 #   4 | 18h   | closing, (154, 106) zoom 2.2 | Nelim half turned, leaving West with 8 hay; just after the baby fell asleep. Pip kept asleep (NPT step), then forced walk (156,105) to (154,105), 8 ticks | Mossy awake, watching, Pip asleep by a lit torch lamp (156, 104), glow asserted 0.4 | they stay, one young at a time, no hurry | est 4
 # Faces: 1 her own face (smirk); 2 a small smile; 3 and 4 a small peaceful smile. Wide 3.0, medium 2.4, close 2.0, pull back 2.4:
@@ -114,14 +114,16 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
-    And Nelim's Pickle Tools: "Nelim" stands at (153, 104) facing East
+    And Nelim's Pickle Tools: the artificial buildings within 2 cells of (158, 102) are hidden
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (156, 104) fully grown
+    And Nelim's Pickle Tools: "Nelim" stands at (153, 106) facing East
     And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (154, 105)
     And Nelim's Pickle Tools: the animal "Mossy" stands at (154, 105) facing South
-    And Nelim's Pickle Tools: "Nelim" is forced to haul 4 of the item "Hay" to (154, 104)
-    When Nelim's Pickle Tools: I let 8 ticks pass
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 4 of the item "Hay" to (154, 106)
+    When Nelim's Pickle Tools: I let 24 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (154, 105) at zoom 2.4
+    And Nelim's Pickle Tools: I frame the cell (155, 106) at zoom 2.2
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
