@@ -61,11 +61,11 @@ State: followUp cleanup done, 1.1.0 and 1.0.0 published and public. The older da
 
 Sync of 2026-11-06 (sync-nsb). Rules of the owner (2026-11-05): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs her express validation; a colonist's properties (hair, face, body, tattoos, genes...) change only with it; every outfit is free. Rule 5 (2026-11-06): every animal the mod includes appears in the gallery. NSB since the 2026-11-05 sync: no commit, no doc newer than the sync for the places and animals; `NSB-ROSTER.md` touched 2026-11-05 22:39, Nelim's hair rows unchanged (`Roo_HD_Hair_Highpony`, `Hair_DarkSaturatedReddish` #382412), the scenes already play the canon (owner "Play canon", 2026-11-05). `flower-garden` (154, 105) unchanged. Updated: nothing in the scenes, only this section. Left alone: story, scenes, ticket 9e9e (waiting). Included animals: one, the Sloth (defs `ThingDef`/`PawnKindDef` Sloth), shown in all four shots.
 
-Places read: 2026-11-06. Tribe read: 2026-11-06.
+Places read: 2026-11-07 (SANCTUAIRE-LIEUX flower-garden rows, VALIDE.md). Tribe read: 2026-11-07 (VALIDE.md Nelim and animals sections, CATALOGUE-ANIMAUX.md; profiles not reopened). NSB since 2026-11-06: places revalidated on photo 2e61 (flower-garden unchanged in content), Nelim body hair 1.7 validated (no effect on 1.6 scenes), decorated save not yet copied to Fixtures (the garden content of the decorated version is still to define in NSB, so flowers may change when it lands). Sloths are not in CATALOGUE-ANIMAUX.md: kept as the mod's own creature, not a pet or livestock of the save (earlier chat summary calling them NSB domestic animals was wrong).
 
 | Place | Shots | Changes made for the gallery | Last read |
 |---|---|---|---|
-| `flower-garden` (154, 105) | 1, 2, 3, 4 | hour 15, 15, 17, 18, Clear, 20 degrees; daylily (156, 106) in 1; torch lamp near (156, 106) lit in 4; bed corner hidden (hide-buildings, radius 2 at (158, 102)) in 1 and 4 | 2026-11-06 |
+| `flower-garden` (154, 110), radius 10.5 (NSB commit 8795927, 2026-11-06 22:12; the mod wrote (154, 105); scenes use explicit cells x 152-156, z 105-107, inside the garden) | 1, 2, 3, 4 | hour 15, 15, 17, 18, Clear, 20 degrees; daylily (156, 106) in 1; torch lamp near (156, 106) lit in 4; bed corner hidden (hide-buildings, radius 2 at (158, 102)) in 1 and 4 | 2026-11-07 |
 
 | Colonist | Shots | Outfit per shot | Last read | Exceptions |
 |---|---|---|---|---|
