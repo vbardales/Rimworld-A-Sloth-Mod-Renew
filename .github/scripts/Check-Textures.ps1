@@ -65,7 +65,10 @@ $ignored = New-Object System.Collections.Generic.HashSet[string] ([StringCompare
 $inGit = $false
 try { $inGit = (& git -C $ModRoot rev-parse --is-inside-work-tree 2>$null) -eq 'true' } catch { }
 if ($inGit) {
-  foreach ($rel in (& git -C $ModRoot -c core.quotePath=false ls-files -o -i --exclude-standard 2>$null)) { if ($rel) { [void]$ignored.Add((Join-Path $ModRoot ($rel -replace '/', '\'))) } }
+  # A git warning on stderr (a dangling ignored symlink, 2026-11-09, EdenGarden) is a NativeCommandError under Stop: run this call under Continue.
+  $eap = $ErrorActionPreference; $ErrorActionPreference = 'Continue'
+  try { foreach ($rel in (& git -C $ModRoot -c core.quotePath=false ls-files -o -i --exclude-standard 2>$null)) { if ($rel) { [void]$ignored.Add((Join-Path $ModRoot ($rel -replace '/', '\'))) } } }
+  finally { $ErrorActionPreference = $eap }
 }
 
 # ---- content roots
