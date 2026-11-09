@@ -12,8 +12,8 @@ Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 - `1.1.0` and `1.0.0` are published and public. Nothing blocks the next version. Rollback target: `414de05`, the commit of 1.1.0 (see "Fail fast").
 - Sent by the CI: `Mod/` and, with `--preview`, the header image; with `update_tags`, the tags (the 2.1.3 template cannot apply them: the 1.7 tag was set by the owner with `steam-apply-tags.mjs`). The Steam header image is still the 1.0.0 Preview; the next publish uses `--preview` to send the new echo.
 - Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` are on the page, uploaded by hand (the CI never sends them). A trader's-stock picture 3 is optional (see "Screenshots").
-- Comments on other mods' pages and the Use This Instead comment are posted (`WORKSHOP_COMMENTS.md`, `USE_THIS_INSTEAD.md`; drafts in `docs/runs/posted-comments-2026-10-13.md`).
-- In-game verification: see `STATUS.md` and `docs/runs/`.
+- Comments on other mods' pages and the Use This Instead comment are posted (`WORKSHOP_COMMENTS.md`, `USE_THIS_INSTEAD.md`; drafts in `Docs/runs/posted-comments-2026-10-13.md`).
+- In-game verification: see `STATUS.md` and `Docs/runs/`.
 
 ## Description
 
@@ -25,7 +25,7 @@ to Steam BBCode and generates the plain-text `<description>` of `About.xml` from
 dry-run.** The block holds no code fence and ends with `[Source code on GitHub](URL)`.
 
 Numbers below were read from `Mod/Defs/ThingDefs_Animals.xml` on 2026-09-28. Refresh the sentence
-about what the automated runs cover to whatever `docs/runs/` shows that day, and read the whole
+about what the automated runs cover to whatever `Docs/runs/` shows that day, and read the whole
 block once more before pasting.
 
 ## Steam description
@@ -165,7 +165,7 @@ contain nothing mature.
 ## Steam change notes
 
 Written at upload time. Unlike the description, they go out again on every update. The version stands
-alone on the first line, in BBCode, or the CI refuses the note. The CI reads the section of the version it publishes (`### x.y.z`); the notes of 1.0.0 and 1.1.0 are in `docs/runs/steam-change-notes-sent.md`.
+alone on the first line, in BBCode, or the CI refuses the note. The CI reads the section of the version it publishes (`### x.y.z`); the notes of 1.0.0 and 1.1.0 are in `Docs/runs/steam-change-notes-sent.md`.
 
 ### x.y.z
 

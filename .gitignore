@@ -15,7 +15,7 @@ desktop.ini
 
 # In-game test evidence (Pickle reports, captures, Player.log). Kept on disk only, never in git:
 # screenshots and logs grow without limit. What is worth versioning is a short text summary under
-# docs/runs/, one line per run. TESTING.md says which files are worth keeping.
+# Docs/runs/, one line per run. TESTING.md says which files are worth keeping.
 Tests/Pickle/Evidence/
 Tests/Pickle/Inbox/
 Tests/Pickle/Parked/
