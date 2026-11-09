@@ -29,6 +29,8 @@ ria.cuterkidsforfacialanimation 3807706870
 Moshii.NLFA.InitFix 3609895011
 ccj.nlfaloadfix 3721489042
 RaccoonCuddler.ShowHair 3255379190
+# [LTS] Raiments: LTS_Tunika + LTS_Skirt, Nelim daily outfit (NELIM-PROFIL.md, validated 2026-11-04); vanilla Apparel_Pants does not show on this stack (NPT ticket dd05)
+limetreesnake.raiments 3751997843
 nelim.aslothmod path:ASlothModRenew/Mod
 
 # Nelim canon hairstyle Roo_HD_Hair_Highpony (NELIM-PROFIL.md, owner 2026-11-05: play canon): Roo HD Hairstyles continued.
