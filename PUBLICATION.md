@@ -60,7 +60,7 @@ None of these is required, and each patch does nothing when its mod is absent.
 
 - [More Vanilla Biomes](https://steamcommunity.com/sharedfiles/filedetails/?id=1931453053): the sloth joins the cloud forest (0.5).
 - [Alpha Biomes](https://steamcommunity.com/sharedfiles/filedetails/?id=1841354677): it joins the miasmic mangrove (0.4), the mycotic jungle (0.3) and the feralisk infested jungle (0.05, a low spawn weight, consistent with the other animals there).
-- [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862): it is offered the same animal surgeries as vanilla's huskies. This mod must load before it, which its metadata declares.
+- [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862): it is offered the same animal surgeries as vanilla's huskies. This mod must load before A Dog Said... Animal Prosthetics 2, as declared in this mod's metadata.
 - [Nocturnal Animals (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409): the sloth gets a nocturnal cycle, matching its own description.
 
 Better Crossbreeding needed nothing: the sloth declares no crossbreeding partners.
