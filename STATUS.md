@@ -68,6 +68,8 @@ protocols_read_sha: 4a2ac53b4d377c2a9cdd47e3e1df154f3fd6f94f
 
 State: followUp cleanup done, 1.1.0 and 1.0.0 published and public. The older dated sections (re-audit of 2026-10-10, translation audits, replay of states 1 to 7) are in `Docs/runs/status-journal-2026-10-11.md` and `Docs/runs/status-journal-2026-10-13.md`.
 
+Ecosystem: none found, scan 2026-11-12.
+
 ## NSB
 
 Sync of 2026-11-06 (sync-nsb). Rules of the owner (2026-11-05): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs her express validation; a colonist's properties (hair, face, body, tattoos, genes...) change only with it; every outfit is free. Rule 5 (2026-11-06): every animal the mod includes appears in the gallery. NSB since the 2026-11-05 sync: no commit, no doc newer than the sync for the places and animals; `NSB-ROSTER.md` touched 2026-11-05 22:39, Nelim's hair rows unchanged (`Roo_HD_Hair_Highpony`, `Hair_DarkSaturatedReddish` #382412), the scenes already play the canon (owner "Play canon", 2026-11-05). `flower-garden` (154, 105) unchanged. Updated: nothing in the scenes, only this section. Left alone: story, scenes, ticket 9e9e (waiting). Included animals: one, the Sloth (defs `ThingDef`/`PawnKindDef` Sloth), shown in all four shots.
