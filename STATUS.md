@@ -9,12 +9,13 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: declareDependencies[1.1.1]
+workflow_stage: localize[1.1.1]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
 upstream_mod_remotes: N/A (checked 2026-10-01: no repository of the author on GitHub; emipa606/ModRequests only mirrors the original About.xml, it is not a source repository)
 dependencies: none
+workshop_required_items: n/a, no modDependencies in About.xml (checked 2026-11-12)
 showcase:     complete
 tested_on:    RimWorld 1.6.4871 (Pickle runs 2026-10-10 to 2026-10-13, Linux WSL) and RimWorld 1.7 unstable English (2026-10-13)
 tested_1_7:   yes
@@ -26,6 +27,7 @@ social_preview_sha256: c270d74fa978e876e9e89b9a8956ff80cf4c6184428546d33143d9293
 echo_review_sha: 6e077cb6b7865ac2df6e0628bd04177711a79102
 workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 created the item and its PublishedFileId.txt; an act, not a stage)
 remaining:
+  - defect: replay 2026-11-12 from zero, back to localize (6.g, 6.i): no ChatGPT review was ever run for this mod and Virginie's validation of 2026-10-13 (4d337ae) predates /review-translation; AUDIT 6.g: a validation not resting on a read ChatGPT review is redone. Next: run review.ps1 from the mod root in the background (-Check first, then -Page N), apply or refuse each remark (refusals to Docs/review-refusals.md), regenerate TRANSLATION_REVIEW.md once, commit, all pages on the frozen text, copy ChatGPT's PROPER NOUNS section at the top of the report to Virginie (TM item 25, apply nothing, 🟠 which forms to keep), then Virginie validates the French. The gallery work (ticket c3b6 read, scene 3 candidate, 1 2 4 REDO, NPT fixed the frame floor) waits and resumes at shootGallery
   - fixed 2026-11-12 (4.b, 4.e, 4.g): Mod/About/OptionalCompat.xml written with Check-OptionalCompat.ps1 -Write (sarg.alphabiomes 1841354677 patch, zylle.MoreVanillaBiomes 1931453053 patch; Workshop ids from the registry; Check OK 2 patched, 2 declared; ADS 2 and Nocturnal Animals are named by loadBefore and loadAfter so the check excludes them by design). Optional integrations at 2026-11-12: Alpha Biomes, More Vanilla Biomes (OptionalCompat.xml), ADS 2 (loadBefore), Nocturnal Animals (loadAfter). Replay again to return to shootGallery. Also seen: Check-ModBasics WARN About description must end with the [url=...]Source code on GitHub[/url] BBCode link (About.xml ends with the plain text line), 11.b
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); <li>1.7</li> in supportedVersions since 892e498
   - unverified: non-regression on the published build (AUDIT 14.a) not played and the commerce scenario [no-stock] never replayed green (flaky, the colony sloth is tradeable): owner decision 2026-10-13 to go dormant without them
@@ -61,8 +63,8 @@ remaining:
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
   - shotlist 2026-10-23 (rate-gallery of the old plan: 3 each, k weak: no wide or close shot, outfit changed per scene, no instant; Opus director pass kept): ONE story "the sloth hour", one outfit all afternoon (deep blue shirt, brown trousers, Ponytails), axis West to East then back. 1 wide 15h zoom 3.0 (154,105): Nelim mid-stride with 12 hay, Mossy asleep, daylily; 2 medium 15h13 zoom 2.4: she sets 4 hay down, Mossy awake facing South; 3 close 17h zoom 2.0: she walks East with 8 hay, Mossy and Pip follow in file; 4 closing 18h zoom 2.4: Nelim leaving West, Mossy and Pip asleep by a lit torch lamp, glow 0.4. Estimates 4, 4, 4, 4. Risks: gesture steps (forced walk, haul, follows, lies down) never played with a pause after "I let N ticks pass"; x beyond 156 and z other than 105 not known free; sloth about 25 px in a 268 px thumbnail at 3.0. Subtitles: 1 Nelim crosses the flower garden and notices the sloth. 2 A pile of hay, left within reach. 3 It follows the one who brought the hay. 4 A mother, her baby, and no hurry. Old shotlist 2026-10-20 (3 shots, estimates 4, verdicts: 1 accepted candidate, 2 and 3 failed the glow assertion) superseded
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-12, AUDIT replay 1 to 4 from zero (ledger .replays/ASlothModRenew-20261112.tsv, 31 rows, Check-Replay OK, weak proofs 4): first open 4.b, workflow_stage shootGallery[1.1.1] to declareDependencies[1.1.1]; Check-Status 0 errors, ModBasics PASS with 1 WARN (About description link), Translations PASS, Run-UnitTests n/a, Test-Mod.ps1 6 passed. Before: 2026-10-29, AUDIT replay 1 to 9: workflow_stage shootGallery[1.1.1] confirmed (first open sub-step 9.a, scenes 1 and 4 refused, then 9.b indexes and 9.d/9.e once accepted); Check-Status 0, ModBasics PASS, Translations PASS, Test-Mod.ps1 PASS 147, Run-UnitTests n/a (no C#, no test project), Check-DefInjected n/a (not a translation mod); Mod/ and Source/ unchanged since code_review_sha bc13c11 except Preview.png; weak proofs 3 (6.g, 8.c, 8.g rest on STATUS.md and Docs/runs/history.md, Evidence not re-read). Before: 2026-10-18, gallery reopened by the owner (stage shootGallery[1.1.1]); frames widened above the camera floor of 2 (5, 5 and 4 cells at 60 percent), ticket to be filed. Before: 2026-10-16, gallery run 3219 failed on a shared-tool camera floor, relayed to NPT via Ticket Manager, not redeposited yet. Before: 2026-10-15, dormant confirmed by an AUDIT replay (section "Audit 2026-10-15"). Before: 2026-10-13, dormant. AUDIT replay 1 to 13 and the followUp cleanup (14.c) done: STATUS, PUBLICATION and TESTING reduced to current state, older text in Docs/runs/, evidence pruned (minimal-4 and avec-facultatifs-6 deleted; the English 1.6 run kept in Evidence/ (its RELEASE.md says when it goes) as the only 1.6 English proof), WSL cache: the original A Sloth Mod (2253087891) removed, Nocturnal Animals (2269731409) and ADS 2 (3238353862) kept because other mods name them. 1.1.0 and 1.0.0 published and public, comments and Use This Instead posted, translation_fr complete
-protocols_read_sha: ae1bc0d3489cf0d344266e4423f10bc6d6415207
+updated:      2026-11-12, replay-audit from zero (Check-Replay OK 48 rows, sections 1..6): workflow_stage localize[1.1.1], first open 6.g; OptionalCompat.xml declared (4.b, 4.e, 4.g done); Check-Status 0 errors
+protocols_read_sha: 2409c0bfc5e7f134e8f128e2a079a6cb5703ab56
 ---
 
 # A Sloth Mod Renew — status
@@ -70,6 +72,10 @@ protocols_read_sha: ae1bc0d3489cf0d344266e4423f10bc6d6415207
 State: followUp cleanup done, 1.1.0 and 1.0.0 published and public. The older dated sections (re-audit of 2026-10-10, translation audits, replay of states 1 to 7) are in `Docs/runs/status-journal-2026-10-11.md` and `Docs/runs/status-journal-2026-10-13.md`.
 
 Ecosystem: none found, scan 2026-11-12.
+
+## Dependencies and optional integrations
+
+Recorded 2026-11-12 at revision 353e8c7 (AUDIT 4.g). Required: none (`modDependencies` empty, no DLC needed; `loadAfter` names the DLC ids only for ordering). Incompatible: ThatRubishGamer.RubishMods.SlothMod (the original). Optional, declared in `Mod/About/OptionalCompat.xml`: sarg.alphabiomes (Workshop 1841354677, patch), zylle.MoreVanillaBiomes (Workshop 1931453053, patch). Optional by ordering, not in that file by design: Mlie.XNDNocturnalAnimals (`loadAfter`, Compat_NocturnalAnimals.xml), SamBucher.ADogSaidAnimalProsthetics2 (`loadBefore`, Compat_ADogSaidAnimalProsthetics2.xml). Dogs mate and Better Crossbreeding: nothing to patch (read 2026-10-10, see the replay paragraph below). `Check-OptionalCompat.ps1`: OK, 2 patched targets, 2 declared.
 
 ## NSB
 
