@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OptionalCompat>
+  <li><packageId>sarg.alphabiomes</packageId><workshopId>1841354677</workshopId><kind>patch</kind></li>
+  <li><packageId>zylle.MoreVanillaBiomes</packageId><workshopId>1931453053</workshopId><kind>patch</kind></li>
+</OptionalCompat>
