@@ -12,5 +12,5 @@
 | Mossy, Pip | kept as is | First names of two gallery sloths, never translated | 2026-11-12 |
 | Pickle | kept as is | Named only in the thanks (authors of Pickle): a name that appears only in the thanks is not translated, decided by Virginie | 2026-11-12 |
 | Core | kept as is | Technical name of the base game content, not a mod title | 2026-11-12 |
-| A Sloth Mod Renew (unofficial) | A Sloth Mod Renew (unofficial / Un mod de paresseux, renouvelé, non officiel) | Our own title, decided by Virginie; the Steam title and About.xml stay English until she says yes | 2026-11-13 |
+| A Sloth Mod Renew (unofficial) | A Sloth Mod Renew (unofficial / Un mod de paresseux, renouvelé, non-officiel) | Our own title, decided by Virginie; the Steam title and About.xml stay English until she says yes | 2026-11-13 |
 | A Sloth Mod | A Sloth Mod (Un mod de paresseux) | Title of the original mod, same wording, decided by Virginie | 2026-11-13 |
