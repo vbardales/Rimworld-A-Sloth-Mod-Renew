@@ -11,7 +11,7 @@ Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
 - `1.1.0` and `1.0.0` are published and public. Nothing blocks the next version. Rollback target: `414de05`, the commit of 1.1.0 (see "Fail fast").
 - Sent by the CI: `Mod/` and, with `--preview`, the header image; with `update_tags`, the tags (the 2.1.3 template cannot apply them: the 1.7 tag was set by the owner with `steam-apply-tags.mjs`). The Steam header image is still the 1.0.0 Preview; the next publish uses `--preview` to send the new echo.
-- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` are on the page, uploaded by hand (the CI never sends them). A trader's-stock picture 3 is optional (see "Screenshots").
+- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` are on the page, uploaded by hand (the CI never sends them). A picture of a trader's stock (no. 3) is optional (see "Screenshots").
 - Comments on other mods' pages and the Use This Instead comment are posted (`WORKSHOP_COMMENTS.md`, `USE_THIS_INSTEAD.md`; drafts in `Docs/runs/posted-comments-2026-10-13.md`).
 - In-game verification: see `STATUS.md` and `Docs/runs/`.
 
@@ -96,7 +96,7 @@ Licence and what was carried over: see ATTRIBUTION.md in the source repository.
 ```
 
 Before pasting, verify the following; none of it has been done yet: the author credit for More Vanilla Biomes (read its page;
-its `packageId` is `zylle.MoreVanillaBiomes`), the four Workshop links need to be opened, and the sentence
+its `packageId` is `zylle.MoreVanillaBiomes`), the six Workshop links in the description need to be opened, and the sentence
 saying what the automated runs cover, which is left out until a run is green.
 
 ## Images
@@ -117,7 +117,7 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-13 with the new echo; uploaded by hand |
 | 1 | `1-meeting.jpg` | Wide, 15h: Nelim crosses the flower garden mid-stride, carrying hay, Mossy asleep (frame moved to 153, 106) | Series of 2026-10-23 ("the sloth hour", one outfit all afternoon); scene 1 recomposed in ticket 20261024-141550-091-7ec6, queued. Replaces `1-portrait.png` (the weak one) |
 | 2 | `2-hay.jpg` | Medium, 15h13: Nelim stands beside the hay she just set down, Mossy awake and facing the camera | Scene 2 rewritten 2026-11-06 (old candidate deleted, GALLERY.md rule); not played yet. Replaces `2-family.png` |
-| 3 | `3-follows.jpg` | Close, 17h: Nelim walks East with hay, Mossy and Pip follow in file | Candidate kept from run 0ddc (`Art/Gallery/3-candidate-follows.jpg`), accepted by the session 2026-10-24 |
+| 3 | `3-follows.jpg` | Close, 17h: Nelim walks East with hay, Mossy and Pip follow in single file | Candidate kept from run 0ddc (`Art/Gallery/3-candidate-follows.jpg`), accepted by the session 2026-10-24 |
 | 4 | `4-closing.jpg` | Closing, 18h: Nelim leaves West, Mossy and Pip asleep by a lit torch lamp | Scene 4 recomposed in ticket 7ec6 (Nelim kept on row z = 105, Mossy standing fixed); queued |
 | 5 | `5-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none. The information card with Wildness 50 % is also a manual capture, not taken |
 
