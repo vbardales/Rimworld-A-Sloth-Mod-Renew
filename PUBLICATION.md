@@ -119,7 +119,7 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | 2 | `2-hay.jpg` | Medium, 15h13: Nelim stands beside the hay she just set down, Mossy awake and facing the camera | Scene 2 rewritten 2026-11-06 (old candidate deleted, GALLERY.md rule); not played yet. Replaces `2-family.png` |
 | 3 | `3-follows.jpg` | Medium, 17h: Nelim walks East, Mossy and Pip follow in single file, the hay set down ahead | Candidate from ticket c3b6 (`Art/Gallery-clean/3-candidate-follows.jpg`), kept by the session 2026-11-12, not subtitled yet |
 | 4 | `4-closing.jpg` | Closing, 18h: Nelim leaves West, Mossy and Pip awake by a lit torch lamp | Scene 4 recomposed (hay put down, Pip awake), to be refiled once the camera floor fix of NPT is staged |
-| 5 | `5-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none. The information card with Wildness 50 % is also a manual capture, not taken |
+| 5 | `5-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none. The information card with Wildness 50 % is also a manual capture, not yet taken |
 
 **Subtitles (owner, 2026-10-15).** Each story image without an interface window carries an English movie-style subtitle drawn at the bottom (white text, black outline). `0-preview.png` has none, and a menu or window capture (the information card, a trader's stock) has none. The texts, with no hour:
 
