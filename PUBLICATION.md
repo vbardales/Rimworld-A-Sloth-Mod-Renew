@@ -11,7 +11,7 @@ Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
 - `1.1.0` and `1.0.0` are published and public. Nothing blocks the next version. Rollback target: `414de05`, the commit of 1.1.0 (see "Fail fast").
 - Sent by the CI: `Mod/` and, with `--preview`, the header image; with `update_tags`, the tags (the 2.1.3 template cannot apply them: the 1.7 tag was set by the owner with `steam-apply-tags.mjs`). The Steam header image is still the 1.0.0 Preview; the next publish uses `--preview` to send the new echo.
-- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` are on the page, uploaded by hand (the CI never sends them). A picture of a trader's stock (no. 3) is optional (see "Screenshots").
+- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` are on the page, uploaded by hand (the CI never sends them). An optional trader-stock picture is listed as number 5 (see "Screenshots").
 - Comments on other mods' pages and the Use This Instead comment are posted (`WORKSHOP_COMMENTS.md`, `USE_THIS_INSTEAD.md`; drafts in `Docs/runs/posted-comments-2026-10-13.md`).
 - In-game verification: see `STATUS.md` and `Docs/runs/`.
 
