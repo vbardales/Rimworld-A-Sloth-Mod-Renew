@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: pending_review
+translation_fr: complete
 settings_audit: not_applicable
 mod:          A Sloth Mod Renew (unofficial)
 packageId:    nelim.aslothmod
@@ -125,6 +125,8 @@ Full replay of states 1 to 7 on 2026-10-10, against the current protocols (AUDIT
 ## Translation audit
 
 French lives in `Mod/Languages/French/DefInjected` (five texts: `Sloth.label` twice, `Sloth.description`, both claw labels), listed in `FRENCH_REVIEW.md`. English is the native text of the Defs, so no English DefInjected exists. No text agrees with a pawn, so no gender switch is needed. `Check-DefInjected.ps1` checks the five keys without error; Virginie reviewed the French on 2026-10-01 and recorded it in `FRENCH_REVIEW.md` on 2026-10-13 (`translation_fr` complete). Older audit text: `Docs/runs/status-journal-2026-10-13.md`.
+
+Review 2026-11-13 (6.g): ChatGPT review (12 answers on the one page of TRANSLATION_REVIEW.md, revision f3658fb, texts of revision c38fa61 for the last) read, remarks applied or refused as listed in `remaining`. Virginie validated the French on 2026-11-13 in chat (four keys unchanged: paresseux, the description, both claws) and decided every proper name (Docs/review-names.md; titles recorded by Audit; the Steam title and About name stay English). Reviewer Virginie, date 2026-11-13, revision c38fa61, corrections requested: none on the French; names decided as in Docs/review-names.md. Keep a Changelog: question open with Audit (keep as is proposed).
 
 ## What this mod is no longer a straight port of
 
