@@ -48,11 +48,11 @@ Original mod: [A Sloth Mod](https://steamcommunity.com/sharedfiles/filedetails/?
 
 ## What changed
 
-**The repair.** Wildness stopped being a field of the animal in a recent version and became a stat. The old form is not an error, it is simply never read, and the stat defaults to -1, outside the range the game uses, so the sloth could have been tamed for almost nothing. It is now a stat under `statBases`, written the way vanilla's own animals write it.
+**The repair.** Wildness stopped being a field of the animal in a recent version and became a stat. The old form is not an error; it is simply never read, and the stat defaults to -1, outside the range the game uses, so the sloth could have been tamed for almost nothing. It is now a stat under `statBases`, written the way vanilla's own animals write it.
 
 **On purpose, and not a repair.** The original sloth could not be obtained in a normal game. It was in no biome's wild animal list, and its only trade tag, `AnimalCommon`, is in no trader's sell or buy list in Core or the five expansions. This mod adds the tag `AnimalUncommon`, which the monkey and the tortoise carry and which exotic caravans and orbital traders sell, and adds the sloth to tropical rainforest (0.5) and tropical swamp (0.4). That is design, not porting, and it is said here rather than buried.
 
-No stat, tool, sound or texture was rebalanced. The sloth's defName is unchanged. Switching an existing save between the original mod and this continuation has not yet been validated in game.
+No stat was rebalanced, and no tool, sound or texture was altered. The sloth's defName is unchanged. Switching an existing save between the original mod and this continuation has not yet been validated in game.
 
 ## Optional compatibility
 
@@ -154,7 +154,7 @@ needs Vanilla Expanded Framework; that is its dependency, not this mod's.
 
 ## Manual validations of the owner
 
-Done on 2026-10-13: subscription to the item, gallery uploaded, description read on the page, visibility set to public, comments posted. Scenarios F, G and P are automated (`TESTING.md`); a real save with the mod removed (the game's handling) and the Health tab look were not played by hand.
+Done on 2026-10-13: subscription to the item, gallery uploaded, description read on the page, visibility set to public, comments posted. Scenarios F, G and P are automated (`TESTING.md`); the game's handling of a real save with the mod removed and the look of the Health tab have not been checked by hand.
 
 ## Mature content checkboxes
 
