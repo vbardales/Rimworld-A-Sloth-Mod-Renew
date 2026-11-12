@@ -25,7 +25,7 @@ to Steam BBCode and generates the plain-text `<description>` of `About.xml` from
 dry-run.** The block holds no code fence and ends with `[Source code on GitHub](URL)`.
 
 Numbers below were read from `Mod/Defs/ThingDefs_Animals.xml` on 2026-09-28. Refresh the sentence
-about what the automated runs cover to whatever `Docs/runs/` shows that day, and read the whole
+about what the automated runs cover to reflect what `Docs/runs/` shows that day, and read the whole
 block once more before pasting.
 
 ## Steam description
@@ -50,7 +50,7 @@ Original mod: [A Sloth Mod](https://steamcommunity.com/sharedfiles/filedetails/?
 
 **The repair.** Wildness stopped being a field of the animal in a recent version and became a stat. The old form is not an error; it is simply never read, and the stat defaults to -1, outside the range the game uses, so the sloth could have been tamed for almost nothing. It is now a stat under `statBases`, written the way vanilla's own animals write it.
 
-**On purpose, and not a repair.** The original sloth could not be obtained in a normal game. It was in no biome's wild animal list, and its only trade tag, `AnimalCommon`, is in no trader's sell or buy list in Core or the five expansions. This mod adds the tag `AnimalUncommon`, which the monkey and the tortoise carry and which exotic caravans and orbital traders sell, and adds the sloth to tropical rainforest (0.5) and tropical swamp (0.4). That is design, not porting, and it is said here rather than buried.
+**On purpose, and not a repair.** The original sloth could not be obtained in a normal game. It was in no biome's wild animal list, and its only trade tag, `AnimalCommon`, is in no trader's sell or buy list in Core or the five expansions. This mod adds the tag `AnimalUncommon`, which the monkey and the tortoise carry and which exotic caravans and orbital traders sell, and adds the sloth to tropical rainforest (0.5) and tropical swamp (0.4). That is a design choice, not porting, and it is said here rather than buried.
 
 No stat was rebalanced, and no tool, sound or texture was altered. The sloth's defName is unchanged. Switching an existing save between the original mod and this continuation has not yet been validated in game.
 
