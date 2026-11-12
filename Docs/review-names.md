@@ -14,3 +14,4 @@
 | Core | kept as is | Technical name of the base game content, not a mod title | 2026-11-12 |
 | A Sloth Mod Renew (unofficial) | A Sloth Mod Renew (unofficial / Un mod de paresseux, renouvelé, non-officiel) | Our own title, decided by Virginie; the Steam title and About.xml stay English (Virginie, 2026-11-13: no) | 2026-11-13 |
 | A Sloth Mod | A Sloth Mod (Un mod de paresseux) | Title of the original mod, same wording, decided by Virginie | 2026-11-13 |
+| Keep a Changelog | kept as is | Standard name, technical identifier (Audit ruling 2026-11-13; Virginie can overrule) | 2026-11-13 |
