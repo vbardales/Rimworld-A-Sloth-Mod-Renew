@@ -37,7 +37,7 @@ One animal: the sloth. A small, slow, harmless animal that sleeps most of the da
 
 No DLC, no dependency, no assembly. Two defs, four textures and guarded XML patches.
 
-I am not the author of this mod. The sloth, its artwork and its stats are ThatRubishGamer's. All I did was bring it forward to the latest RimWorld version, make it obtainable, and write the French. Credit goes to them; mistakes in the update are mine.
+I am not the author of this mod. The sloth, its artwork and its stats are ThatRubishGamer's. All I did was bring it forward to the latest RimWorld version, make it obtainable, and translate it into French. Credit goes to them; mistakes in the update are mine.
 
 Original mod: [A Sloth Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2253087891), last updated in July 2021 for 1.3. Abandoned, not withdrawn.
 
@@ -67,7 +67,7 @@ Better Crossbreeding needed nothing: the sloth declares no crossbreeding partner
 
 ## Credit and removal
 
-ThatRubishGamer declared no licence: no file in the mod, nothing in its About.xml, no linked repository, and nothing on its Steam page. It is republished here under the usual convention for abandoned mods: full credit, a link to the original, and removal on request. If they would rather this port did not exist, say so and it comes down, no argument, no delay.
+ThatRubishGamer declared no licence: no file in the mod, nothing in its About.xml, no linked repository, and nothing on its Steam page. It is republished here under the usual convention for abandoned mods: full credit, a link to the original, and removal on request. If they would rather this port did not exist, they can say so and it will be taken down, no argument, no delay.
 
 The original is declared incompatible: run one or the other.
 
@@ -96,7 +96,7 @@ Licence and what was carried over: see ATTRIBUTION.md in the source repository.
 ```
 
 To verify before pasting, none of it done yet: the author credit for More Vanilla Biomes (read its page;
-its `packageId` is `zylle.MoreVanillaBiomes`), the four Workshop links opened, and the sentence
+its `packageId` is `zylle.MoreVanillaBiomes`), the four Workshop links need to be opened, and the sentence
 saying what the automated runs cover, which is left out until a run is green.
 
 ## Images
@@ -165,7 +165,7 @@ contain nothing mature.
 ## Steam change notes
 
 Written at upload time. Unlike the description, they go out again on every update. The version stands
-alone on the first line, in BBCode, or the CI refuses the note. The CI reads the section of the version it publishes (`### x.y.z`); the notes of 1.0.0 and 1.1.0 are in `Docs/runs/steam-change-notes-sent.md`.
+alone on the first line, in BBCode, or the CI refuses the note. The CI reads the section for the version it publishes (`### x.y.z`); the notes of 1.0.0 and 1.1.0 are in `Docs/runs/steam-change-notes-sent.md`.
 
 ### x.y.z
 
