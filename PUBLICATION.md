@@ -48,7 +48,7 @@ Original mod: [A Sloth Mod](https://steamcommunity.com/sharedfiles/filedetails/?
 
 ## What changed
 
-**The repair.** Wildness stopped being a field of the animal in a recent version and became a stat. The old form is not an error, it is simply never read, and the stat defaults to -1, outside the range the game uses, so the sloth would have tamed for almost nothing. It is now a stat under `statBases`, written the way vanilla's own animals write it.
+**The repair.** Wildness stopped being a field of the animal in a recent version and became a stat. The old form is not an error, it is simply never read, and the stat defaults to -1, outside the range the game uses, so the sloth could have been tamed for almost nothing. It is now a stat under `statBases`, written the way vanilla's own animals write it.
 
 **On purpose, and not a repair.** The original sloth could not be obtained in a normal game. It was in no biome's wild animal list, and its only trade tag, `AnimalCommon`, is in no trader's sell or buy list in Core or the five expansions. This mod adds the tag `AnimalUncommon`, the one the monkey and the tortoise carry and the one exotic caravans and orbital ships sell, and adds the sloth to tropical rainforest (0.5) and tropical swamp (0.4). That is design, not porting, and it is said here rather than buried.
 
@@ -95,7 +95,7 @@ Licence and what was carried over: see ATTRIBUTION.md in the source repository.
 [Source code on GitHub](https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew)
 ```
 
-To verify before pasting, none of it done yet: the author credit for More Vanilla Biomes (read its page;
+Before pasting, verify the following; none of it has been done yet: the author credit for More Vanilla Biomes (read its page;
 its `packageId` is `zylle.MoreVanillaBiomes`), the four Workshop links need to be opened, and the sentence
 saying what the automated runs cover, which is left out until a run is green.
 
@@ -115,7 +115,7 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | Order | File | What it shows | Source |
 |---|---|---|---|
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-13 with the new echo; uploaded by hand |
-| 1 | `1-meeting.jpg` | Wide, 15h: Nelim mid-stride with hay crosses the flower garden, Mossy asleep (frame moved to 153, 106) | Series of 2026-10-23 ("the sloth hour", one outfit all afternoon); scene 1 recomposed in ticket 20261024-141550-091-7ec6, queued. Replaces `1-portrait.png` (the weak one) |
+| 1 | `1-meeting.jpg` | Wide, 15h: Nelim crosses the flower garden mid-stride, carrying hay, Mossy asleep (frame moved to 153, 106) | Series of 2026-10-23 ("the sloth hour", one outfit all afternoon); scene 1 recomposed in ticket 20261024-141550-091-7ec6, queued. Replaces `1-portrait.png` (the weak one) |
 | 2 | `2-hay.jpg` | Medium, 15h13: Nelim stands beside the hay she just set down, Mossy awake and facing the camera | Scene 2 rewritten 2026-11-06 (old candidate deleted, GALLERY.md rule); not played yet. Replaces `2-family.png` |
 | 3 | `3-follows.jpg` | Close, 17h: Nelim walks East with hay, Mossy and Pip follow in file | Candidate kept from run 0ddc (`Art/Gallery/3-candidate-follows.jpg`), accepted by the session 2026-10-24 |
 | 4 | `4-closing.jpg` | Closing, 18h: Nelim leaves West, Mossy and Pip asleep by a lit torch lamp | Scene 4 recomposed in ticket 7ec6 (Nelim kept on row z = 105, Mossy standing fixed); queued |
