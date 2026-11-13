@@ -55,7 +55,7 @@ protocols_read_sha: 97c9943e52a79c1480f74a68dbca167e5614861f
 
 State: followUp cleanup done, 1.1.0 and 1.0.0 published and public. The older dated sections (re-audit of 2026-10-10, translation audits, replay of states 1 to 7) are in `Docs/runs/status-journal-2026-10-11.md` and `Docs/runs/status-journal-2026-10-13.md`.
 
-Ecosystem: none found, scan 2026-11-12.
+Ecosystem: none found, scans 2026-11-12 and 2026-11-13 (candidate mode for this mod alone, pattern nelim.aslothmod, A Sloth Mod Renew and the original id ThatRubishGamer.RubishMods.SlothMod, 5285 of 5289 folders read, 7 hits: the original 2253087891, our own Workshop copy 3811289805 and our local mount; no patch, retexture, link, translation or fork of ours or of the original). Table not written to docs/inventory/ecosystem.tsv (shared, Audit refreshes it).
 
 ## Dependencies and optional integrations
 
