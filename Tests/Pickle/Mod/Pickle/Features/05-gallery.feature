@@ -15,20 +15,20 @@
 # (the floor of 2 is lifted: the visible area is 3.56 N cells wide by 2 N tall, a sloth is about 45 / N px at 268 px, a baby about 22 / N) played with "I frame the area centred on the point (x, z) at root size N".
 # Animals and hay lie on row z = 105 (the bare free row, every hay cell emptied first); the lamp and the daylilies sit on row 106 behind them; Nelim's face is always shown (hay is put down, never carried in frame).
 #   1. the-meeting, 15h, Clear, 20 degrees, flower-garden, OPENING (wide of the series): frame the point (153.5, 105.4) at root size 1.15 (x 151.4 to 155.6; RECOMPOSED 2026-11-15 after fdfd, REDO on j: sleeper seen from behind, Mossy now awake facing West, no Z, side-on like 3; REFRAMED 2026-11-15 twice, bbfa then c7ff: Nelim stays near x 152.0 after the walk (a cell centre is its integer coordinate), still cut at 1.3 / 154.3; TorchLamp moved to (153, 106) so the Z of the sleeper is free).
-#        Nelim in LTS_Tunika rgb (31, 122, 92) and LTS_Skirt rgb (90, 64, 44), Roo_HD_Hair_Highpony, Body_Heart, MouthSmile, walks East from (152, 105) to (153, 105) in 10 ticks, hands free, 10 hay put down at (154, 105) on an emptied cell, between her and the sleeping sloth.
-#        RECOMPOSED again 2026-11-15 after 8d08 (Mossy cut by the right edge, a side-on sloth is 1.3 cells long): hay (153, 105), Mossy awake facing West at (154, 105), no Z. [Older plan: Mossy kept asleep at (155, 105), Z visible; TorchLamp near (156, 106) lit (diagonal to Mossy so the flame and the Z do not overlap); Plant_Daylily (154, 106) behind the hay; bed corner hidden around (158, 102).
-#        Instant: she has just laid the hay down and walks up to the sleeper (forced walk of 10 ticks, paused at the end). Says: she came with hay and walks up to a sleeping sloth. Mossy about 32 px at 268 px, the widest shot of the series.
-#   2. the-hay, 15h, Clear, 20 degrees, flower-garden, CLOSE: frame the point (154, 105.4) at root size 1.0 (x 152.2 to 155.8, z 104.4 to 106.4; REFRAMED 2026-11-15 after bbfa: at 0.85 the left edge (152.5) cut Nelim standing at 153).
+#        Nelim in LTS_Tunika rgb (31, 122, 92) and LTS_Skirt rgb (90, 64, 44), Roo_HD_Hair_Highpony, Body_Heart, MouthSmile, walks East from (152, 105) toward (153, 105) in 16 ticks, hands free, 10 hay put down at (153, 105) on an emptied cell, between her and the sloth.
+#        RECOMPOSED again 2026-11-15 after 8d08 (Mossy cut by the right edge, a side-on sloth is 1.3 cells long): Mossy awake facing West at (154, 105), no Z; TorchLamp near (153, 106) lit; Plant_Daylily (154, 106) behind the hay; bed corner hidden around (158, 102).
+#        Instant: she has just laid the hay down and walks up to the sloth, which has noticed her (forced walk of 16 ticks, paused at the end). Says: she came with hay and walks up to a sloth that watches her come. Mossy about 39 px at 268 px (measured about 65 px).
+#   2. the-hay, 15h, Clear, 20 degrees, flower-garden, CLOSE: frame the point (154, 105.2) at root size 1.0 (x 152.2 to 155.8, z 104.2 to 106.2; REFRAMED 2026-11-15: at 0.85 the left edge cut Nelim; after c7ff the South-facing sloth chin touched the bottom edge and the daylily at (153, 106) showed a hard rectangular cut of the flowers, daylily removed).
 #        Nelim stands at (153, 105) facing East in the same outfit, MouthSmile, hands free after putting 8 hay down at (154, 105) two ticks before, in profile, gaze toward the sloth.
-#        Mossy awake at (155, 105) facing South, the front view of the series, beside the hay (about 53 px at 268 px); TorchLamp near (154, 106) lit behind the hay; Plant_Daylily (153, 106); bed corner hidden.
+#        Mossy awake at (155, 105) facing South, the front view of the series, beside the hay (about 53 px at 268 px); TorchLamp near (154, 106) lit behind the hay; no daylily; bed corner hidden.
 #        Instant: the hay has just touched the ground (put-down, 2 ticks, paused), the sloth is about to eat. Says: a kindness, not a leash.
 #   3. the-young-one-follows, 17h, Clear, 20 degrees, flower-garden, MEDIUM: frame the point (153.5, 105.4) at root size 1.1 (x 151.5 to 155.5).
 #        Nelim has put 8 hay down at (155, 105), then is forced to walk East from (153, 105) to (154, 105) in 10 ticks, hands free, small smile, MouthLipsSmallSmile, same outfit.
 #        Mossy spawned at (152, 105) then Pip at (151, 105), life stage 0, follow in file (about 41 px and 20 px at 268 px, Mossy carries the image); TorchLamp near (155, 106) lit above the hay; Plant_Daylily (153, 106); bed corner hidden.
 #        Instant: the two sloths trail her toward the hay she left, about to reach it. Says: it follows whoever brought the hay.
 #   4. the-sloth-hour-ends, 18h, Clear, 20 degrees, flower-garden, CLOSING: frame the point (153.5, 105.4) at root size 1.15 (x 151.4 to 155.6; RECOMPOSED 2026-11-15 after fdfd, REDO on j: sloths head-down at 30 px; set tightened, hay at (153, 105), Mossy (154, 105) and Pip (155, 105) facing West, side-on like 3), sun glow at least 0.4.
-#        Nelim stands at (153, 105) facing West, puts 8 hay down at (154, 105), then is forced to walk to (152, 105) in 8 ticks empty-handed: small smile, MouthLipsSmallSmile, same outfit.
-#        Mossy awake at (155, 105) facing South at the hay (about 35 px at 268 px); Pip life stage 0 awake at (156, 105) facing South beside her (the baby no longer sleeps: asleep it was about 16 px, a REDO on j, and row 106 hides it); TorchLamp near (153, 106) lit behind Nelim; Plant_Daylily (154, 106); bed corner hidden.
+#        Nelim stands at (153, 105) facing West, puts 8 hay down at (153, 105), then is forced to walk to (152, 105) in 8 ticks empty-handed: small smile, MouthLipsSmallSmile, same outfit.
+#        Mossy awake at (154, 105) facing West at the hay (about 39 px at 268 px); Pip life stage 0 awake at (155, 105) facing West beside her (the baby no longer sleeps: asleep it was about 16 px, a REDO on j, and row 106 hides it); TorchLamp near (153, 106) lit behind Nelim; Plant_Daylily (154, 106); bed corner hidden.
 #        Instant: the hay is down and she walks off, the mother is about to eat, the baby beside her. Says: a mother, her baby, a pile of hay left, no hurry. Risk j: Pip about 17 px.
 # Faces: 1 a small smile; 2 a small smile; 3 and 4 a small peaceful smile. Root sizes 1.4 (opening), 0.85 (close), 1.1 (medium), 1.3 (closing): variety of shots, an opening
 # image that sets the garden, a closing one that leaves. Subtitles (PUBLICATION.md): 1 Nelim crosses the flower garden and notices the sloth.
@@ -114,7 +114,6 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: "Nelim" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Nelim" body tattoo is "Body_Heart"
     And Nelim's Pickle Tools: the artificial buildings within 2 cells of (158, 102) are hidden
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (153, 106) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" near (154, 106)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (154, 106) is lit
     And Nelim's Pickle Tools: "Nelim" stands at (153, 105) facing East
@@ -126,7 +125,7 @@ Feature: Gallery pictures of the sloth, the sloth hour
     When Nelim's Pickle Tools: I let 2 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the area centred on the point (154, 105.4) at root size 1.0
+    And Nelim's Pickle Tools: I frame the area centred on the point (154, 105.2) at root size 1.0
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
