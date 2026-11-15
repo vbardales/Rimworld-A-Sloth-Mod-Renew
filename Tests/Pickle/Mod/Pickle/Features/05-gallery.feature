@@ -16,7 +16,7 @@
 # Animals and hay lie on row z = 105 (the bare free row, every hay cell emptied first); the lamp and the daylilies sit on row 106 behind them; Nelim's face is always shown (hay is put down, never carried in frame).
 #   1. the-meeting, 15h, Clear, 20 degrees, flower-garden, OPENING (wide of the series): frame the point (153.5, 105.4) at root size 1.15 (x 151.4 to 155.6; RECOMPOSED 2026-11-15 after fdfd, REDO on j: sleeper seen from behind, Mossy now awake facing West, no Z, side-on like 3; REFRAMED 2026-11-15 twice, bbfa then c7ff: Nelim stays near x 152.0 after the walk (a cell centre is its integer coordinate), still cut at 1.3 / 154.3; TorchLamp moved to (153, 106) so the Z of the sleeper is free).
 #        Nelim in LTS_Tunika rgb (31, 122, 92) and LTS_Skirt rgb (90, 64, 44), Roo_HD_Hair_Highpony, Body_Heart, MouthSmile, walks East from (152, 105) to (153, 105) in 10 ticks, hands free, 10 hay put down at (154, 105) on an emptied cell, between her and the sleeping sloth.
-#        Mossy kept asleep at (155, 105), Z visible; TorchLamp near (156, 106) lit (diagonal to Mossy so the flame and the Z do not overlap); Plant_Daylily (154, 106) behind the hay; bed corner hidden around (158, 102).
+#        RECOMPOSED again 2026-11-15 after 8d08 (Mossy cut by the right edge, a side-on sloth is 1.3 cells long): hay (153, 105), Mossy awake facing West at (154, 105), no Z. [Older plan: Mossy kept asleep at (155, 105), Z visible; TorchLamp near (156, 106) lit (diagonal to Mossy so the flame and the Z do not overlap); Plant_Daylily (154, 106) behind the hay; bed corner hidden around (158, 102).
 #        Instant: she has just laid the hay down and walks up to the sleeper (forced walk of 10 ticks, paused at the end). Says: she came with hay and walks up to a sleeping sloth. Mossy about 32 px at 268 px, the widest shot of the series.
 #   2. the-hay, 15h, Clear, 20 degrees, flower-garden, CLOSE: frame the point (154, 105.4) at root size 1.0 (x 152.2 to 155.8, z 104.4 to 106.4; REFRAMED 2026-11-15 after bbfa: at 0.85 the left edge (152.5) cut Nelim standing at 153).
 #        Nelim stands at (153, 105) facing East in the same outfit, MouthSmile, hands free after putting 8 hay down at (154, 105) two ticks before, in profile, gaze toward the sloth.
@@ -71,13 +71,13 @@ Feature: Gallery pictures of the sloth, the sloth hour
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (154, 106) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" near (153, 106)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (153, 106) is lit
-    And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (155, 105)
-    And Nelim's Pickle Tools: the animal "Mossy" stands at (155, 105) facing West
+    And Nelim's Pickle Tools: an adult animal of kind "Sloth" named "Mossy" is spawned at (154, 105)
+    And Nelim's Pickle Tools: the animal "Mossy" stands at (154, 105) facing West
     And Nelim's Pickle Tools: I let 200 ticks pass
     And Nelim's Pickle Tools: "Nelim" stands at (152, 105) facing East
-    And Nelim's Pickle Tools: the area from (154, 105) to (154, 105) is emptied
+    And Nelim's Pickle Tools: the area from (153, 105) to (153, 105) is emptied
     And Nelim's Pickle Tools: "Nelim" carries 10 of the item "Hay"
-    And Nelim's Pickle Tools: "Nelim" puts down what it carries at (154, 105)
+    And Nelim's Pickle Tools: "Nelim" puts down what it carries at (153, 105)
     And Nelim's Pickle Tools: "Nelim" stands at (152, 105) facing East
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (153, 105)
     When Nelim's Pickle Tools: I let 16 ticks pass
