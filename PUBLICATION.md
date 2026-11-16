@@ -3,15 +3,15 @@
 What the Workshop page needs and the rest of the repository does not hold. It serves twice: for the
 first release, and for whoever takes the mod over.
 
-**Status: `1.0.0` and `1.1.0` are published and public** (item 3811289805, `PublishedFileId.txt`; the CI created `v1.0.0` and `v1.1.0`). The current stage is in `STATUS.md`.
+**Status: `1.0.0`, `1.1.0` and `1.1.1` are published and public** (item 3811289805, `PublishedFileId.txt`; the CI created `v1.0.0`, `v1.1.0` and `v1.1.1`). The current stage is in `STATUS.md`.
 
 ## Current state
 
 Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
-- `1.1.0` and `1.0.0` are published and public. Nothing blocks the next version. Rollback target: `414de05`, the commit of 1.1.0 (see "Fail fast").
-- Sent by the CI: `Mod/` and, with `--preview`, the header image; with `update_tags`, the tags (the 2.1.3 template cannot apply them: the 1.7 tag was set by the owner with `steam-apply-tags.mjs`). The Steam header image is still the 1.0.0 Preview; the next publish uses `--preview` to send the new echo.
-- Gallery: `0-preview.png`, `1-portrait.png` and `2-family.png` are on the page, uploaded by hand (the CI never sends them). An optional trader-stock picture is listed as number 5 (see "Screenshots").
+- `1.1.1`, `1.1.0` and `1.0.0` are published and public. Nothing blocks the next version. Rollback target: `414de05`, the commit of 1.1.0 (see "Fail fast").
+- Sent by the CI: `Mod/` and, with `--preview`, the header image; with `update_tags`, the tags (the 2.1.3 template cannot apply them: the 1.7 tag was set by the owner with `steam-apply-tags.mjs`). The 1.1.1 publish (run 43959600883, 2026-11-16) sent the new header image with `--preview` and the description with `--description`.
+- Gallery: `0-preview.png`, `1-meeting.jpg`, `2-hay.jpg`, `3-follows.jpg` and `4-closing.jpg` are on the page, uploaded by hand on 2026-11-16 (the CI never sends them). An optional trader-stock picture is listed as number 5 (see "Screenshots").
 - Comments on other mods' pages and the Use This Instead comment are posted (`WORKSHOP_COMMENTS.md`, `USE_THIS_INSTEAD.md`; drafts in `Docs/runs/posted-comments-2026-10-13.md`).
 - In-game verification: see `STATUS.md` and `Docs/runs/`.
 
@@ -101,7 +101,7 @@ saying what the automated runs cover, which is left out until a run is green.
 
 ## Images
 
-- **Preview** (`Mod/About/Preview.png`, 896 x 504, about 0.55 MB): a sloth clinging to a post in lamplight, the title, an "(unofficial)" line and a `1.7` corner banner, with the ModIcon badge cropped by the bottom-left corner. Rendered by `node ../scripts/Render-Preview.cjs` from `Art/Preview-source.png` (illustration without overlay), `Art/echo.png` and `Art/Preview.config.json` (palette, title parts, `iconBadge` with `translate`); regenerated on 2026-10-10 and the crop validated by the owner the same day. Its mean value (0.272) is under the 0.30 floor of the source rule: the owner kept it on 2026-10-11.
+- **Preview** (`Mod/About/Preview.png`, 896 x 504, 665,835 bytes, sha256 `fb59bebb`): a mother sloth and her baby on hay in a flower garden with a colonist walking past, the title, an "(unofficial)" line, a line-art echo and a `1.7` corner banner, with the ModIcon badge cropped by the bottom-right corner. Rendered on 2026-11-16 by `node ../scripts/Render-Preview.cjs` from `Art/Preview-source.png` (illustration without overlay, generated with DALL-E from the gallery screenshots), `Art/echo-source.png` and `Art/Preview.config.json` (palette, title parts, `panelBare`).
 - **ModIcon** (`Mod/About/ModIcon.png`, 128 x 128, about 29 KB): a sleeping sloth head with a ponytail and a sparkle, from the owner's `Art/ModIcon-source.png` (changed 2026-10-04). Derived by `Render-Preview.cjs` (`modIconSource` key) and confirmed by the owner on 2026-10-10, readable at 32 px. The source is hers; sessions never edit it.
 
 ## Screenshots, in this order
@@ -114,11 +114,11 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 
 | Order | File | What it shows | Source |
 |---|---|---|---|
-| 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-10-13 with the new echo; uploaded by hand |
-| 1 | `1-meeting.jpg` | Wide, 15h: Nelim crosses the flower garden mid-stride, after leaving a pile of hay for Mossy, who sleeps | Series of 2026-10-23 ("the sloth hour", one outfit all afternoon); scene 1 recomposed, to be refiled once the camera floor fix of NPT is staged (ticket c3b6 showed the same area in all four scenes). Replaces `1-portrait.png` (the weak one) |
-| 2 | `2-hay.jpg` | Medium, 15h13: Nelim stands beside the hay she just set down, Mossy awake and facing the camera | Scene 2 rewritten 2026-11-06 (old candidate deleted, GALLERY.md rule); not played yet. Replaces `2-family.png` |
-| 3 | `3-follows.jpg` | Medium, 17h: Nelim walks East, Mossy and Pip follow in single file, the hay set down ahead | Candidate from ticket c3b6 (`Art/Gallery-clean/3-follows.jpg`), kept by the session 2026-11-12, not subtitled yet |
-| 4 | `4-closing.jpg` | Closing, 18h: Nelim leaves West, Mossy and Pip awake by a lit torch lamp | Scene 4 recomposed (hay put down, Pip awake), to be refiled once the camera floor fix of NPT is staged |
+| 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` (badged), byte for byte | Done, regenerated 2026-11-16; uploaded to Steam by the 1.1.1 publish (`--preview`) and by hand in the gallery |
+| 1 | `1-meeting.jpg` | Wide, 15h: Nelim crosses the flower garden mid-stride, after leaving a pile of hay for Mossy, who sleeps | Accepted by the owner and uploaded 2026-11-16 (ticket a21c); replaced `1-portrait.png` |
+| 2 | `2-hay.jpg` | Medium, 15h13: Nelim stands beside the hay she just set down, Mossy awake and facing the camera | Accepted by the owner and uploaded 2026-11-16 (ticket f113); replaced `2-family.png` |
+| 3 | `3-follows.jpg` | Medium, 17h: Nelim walks East, Mossy and Pip follow in single file, the hay set down ahead | Accepted by the owner and uploaded 2026-11-16 (ticket c3b6), subtitled |
+| 4 | `4-closing.jpg` | Closing, 18h: Nelim leaves West, Mossy and Pip awake by a lit torch lamp | Accepted by the owner and uploaded 2026-11-16 (ticket 8d08), subtitled |
 | 5 | `5-…` | A trader's stock offering a sloth | Needs a forced exotic trader whose stock is random; scenario G (`08-trade`, `@flaky-stock`) played once with a `[no-stock]` flake. A manual capture, or none. The information card with Wildness 50 % is also a manual capture, not yet taken |
 
 **Subtitles (owner, 2026-10-15).** Each story image without an interface window carries an English movie-style subtitle drawn at the bottom (white text, black outline). `0-preview.png` has none, and a menu or window capture (the information card, a trader's stock) has none. The texts, with no hour:
@@ -130,7 +130,7 @@ Image 0 is a copy of the badged `Preview.png` itself, numbered one digit (`0-`, 
 | 3 | `3-follows.jpg` | It follows the one who brought the hay. |
 | 4 | `4-closing.jpg` | A mother, her baby, and no hurry. |
 
-Draw each subtitle on a copy of the accepted image and keep the original without text (git history, or the run's evidence) for any redraw: never redraw on the captioned file. The wording is a proposal until the owner reads it.
+Draw each subtitle on a copy of the accepted image and keep the original without text (git history, or the run's evidence) for any redraw: never redraw on the captioned file. The subtitles of the four published images were read and accepted by the owner on 2026-11-16.
 
 The shots are `@review` evidence, not proof: a green capture scenario shows the journey ran, not that
 the image shows anything. The game's camera has a minimum zoom, at which a 0.15-size animal is small;
@@ -154,7 +154,7 @@ needs Vanilla Expanded Framework; that is its dependency, not this mod's.
 
 ## Manual validations of the owner
 
-Done on 2026-10-13: subscription to the item, gallery uploaded, description read on the page, visibility set to public, comments posted. Scenarios F, G and P are automated (`TESTING.md`); the game's handling of a real save with the mod removed and the look of the Health tab have not been checked by hand.
+Done on 2026-10-13: subscription to the item, gallery uploaded, description read on the page, visibility set to public, comments posted. Done on 2026-11-16 for 1.1.1: new Preview, echo and four-picture gallery accepted and uploaded, change notes pasted, publish approved, subscribe test by PiI (byte-identical files). Scenarios F, G and P are automated (`TESTING.md`); the game's handling of a real save with the mod removed and the look of the Health tab have not been checked by hand.
 
 ## Mature content checkboxes
 
