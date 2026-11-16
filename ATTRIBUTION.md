@@ -87,7 +87,6 @@ The gallery images were played in the Sanctuary of Nelim (Sanctuary Backlot, dev
 | [VK]FacialAnimation add closed eyes | Vi/Kirisaki | [3694711465](https://steamcommunity.com/sharedfiles/filedetails/?id=3694711465) | the eyes |
 | Vanilla Experimentals for Facial Animation | SunshineyDays | [3753978140](https://steamcommunity.com/sharedfiles/filedetails/?id=3753978140) | the eyes |
 | Visual beauty for Facial Animation | SleepyFrieren | [3685072616](https://steamcommunity.com/sharedfiles/filedetails/?id=3685072616) | the face |
-| Cuter Kids for Facial Animation | ria | [3807706870](https://steamcommunity.com/sharedfiles/filedetails/?id=3807706870) | the face, young pawns |
 | NL Facial Animation – Init Fix | Moshii | [3609895011](https://steamcommunity.com/sharedfiles/filedetails/?id=3609895011) | the face, load fix |
 | NL Facial Animation – Load Fix | CCJ | [3721489042](https://steamcommunity.com/sharedfiles/filedetails/?id=3721489042) | the face, load fix |
 
