@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: postOnSteam[1.1.1]
+workflow_stage: runNoRegression[1.1.1]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -50,8 +50,8 @@ remaining:
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-16, Preview done, stage writeReleaseDocs; earlier gallery accepted, stage mountPreview; earlier 2026-11-16, resume (protocols read 8e28c63f, sync-nsb-npt done, awaiting Virginie on the four candidates); earlier 2026-11-13, resume (protocols read 97c9943e, STATUS journal moved), replay from zero to shootGallery[1.1.1] (first open 9.a), French validated by Virginie 2026-11-13, OptionalCompat.xml written, code_review_sha moved to HEAD (images and text only)
-protocols_read_sha: a598bbb1e103d81d7f4c668d245e5d305cbdb348
+updated:      2026-11-16, stage runNoRegression[1.1.1] (14.i), thank-yous posted (5 rows posted in WORKSHOP_COMMENTS.md)
+protocols_read_sha: be4423754614e7195f84d0b9bc32eb62820f3cfb
 ---
 
 # A Sloth Mod Renew — status
