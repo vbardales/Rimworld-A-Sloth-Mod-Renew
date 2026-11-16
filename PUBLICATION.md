@@ -172,8 +172,16 @@ alone on the first line, in BBCode, or the CI refuses the note. The CI reads the
 ```
 [b]x.y.z[/b]
 
-What changed, in one or two lines.
+One line of context.
+
+[list]
+[*]A user-visible change from the CHANGELOG section.
+[/list]
+
+Full list: [url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew/blob/main/CHANGELOG.md]CHANGELOG.md[/url]
 ```
+
+Before sending a publish, read the note printed in the dry-run log and say so in `STATUS.md` (AUDIT 12.f).
 
 ## Fail fast: the rollback target
 
