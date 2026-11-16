@@ -66,6 +66,33 @@ itself.
 
 The sprites under `Mod/Textures/` are untouched and remain ThatRubishGamer's.
 
+## Gallery set
+
+The gallery images were played in the Sanctuary of Nelim (Sanctuary Backlot, development only) with the mods below. None of them ships with this mod and none is required; they are credited because the pictures show their work. Nothing here is a dependency.
+
+| Mod | Author | Workshop id | What the gallery uses it for |
+|---|---|---|---|
+| [LTS] Raiments | LimeTreeSnake | [3751997843](https://steamcommunity.com/sharedfiles/filedetails/?id=3751997843) | Nelim's tunic and skirt |
+| Roo's HD Hairstyles (continued) | Qux | [3559870636](https://steamcommunity.com/sharedfiles/filedetails/?id=3559870636) | Nelim's high ponytail |
+| WDI's Realistic Bodies | Windonsi, Starkz | [3527486510](https://steamcommunity.com/sharedfiles/filedetails/?id=3527486510) | the colonist's body |
+| Female Body Variants Continued | DanZinagri and tiagocc0 | [3798082132](https://steamcommunity.com/sharedfiles/filedetails/?id=3798082132) | the colonist's body |
+| Female Apparel Variants Continued | DanZinagri and tiagocc0 | [3799726535](https://steamcommunity.com/sharedfiles/filedetails/?id=3799726535) | how the clothes sit on the body |
+| AB's Visible Pants | aedbia | [2986402536](https://steamcommunity.com/sharedfiles/filedetails/?id=2986402536) | the trousers and skirt drawn on the legs |
+| [NL] Facial Animation - WIP | Nals | [1635901197](https://steamcommunity.com/sharedfiles/filedetails/?id=1635901197) | Nelim's face and smile |
+| [NL] Facial Animation - Experimentals | Nals | [2581693737](https://steamcommunity.com/sharedfiles/filedetails/?id=2581693737) | the face |
+| Vanilla Textures Expanded - [NL] Facial Animation | Oracle of Thessia | [2816938779](https://steamcommunity.com/sharedfiles/filedetails/?id=2816938779) | the face |
+| Akeron Extras - Facial Animations | Newton Zephyr | [2889716301](https://steamcommunity.com/sharedfiles/filedetails/?id=2889716301) | the face |
+| EyeGenes3 | Lucius | [3745223213](https://steamcommunity.com/sharedfiles/filedetails/?id=3745223213) | the eyes |
+| Facial Animation Performance Patch | astryl | [3790129900](https://steamcommunity.com/sharedfiles/filedetails/?id=3790129900) | the face, load patch |
+| [VK]FacialAnimation add closed eyes | Vi/Kirisaki | [3694711465](https://steamcommunity.com/sharedfiles/filedetails/?id=3694711465) | the eyes |
+| Vanilla Experimentals for Facial Animation | SunshineyDays | [3753978140](https://steamcommunity.com/sharedfiles/filedetails/?id=3753978140) | the eyes |
+| Visual beauty for Facial Animation | SleepyFrieren | [3685072616](https://steamcommunity.com/sharedfiles/filedetails/?id=3685072616) | the face |
+| Cuter Kids for Facial Animation | ria | [3807706870](https://steamcommunity.com/sharedfiles/filedetails/?id=3807706870) | the face, young pawns |
+| NL Facial Animation – Init Fix | Moshii | [3609895011](https://steamcommunity.com/sharedfiles/filedetails/?id=3609895011) | the face, load fix |
+| NL Facial Animation – Load Fix | CCJ | [3721489042](https://steamcommunity.com/sharedfiles/filedetails/?id=3721489042) | the face, load fix |
+
+Show Hair Under Stuff (Raccoon Cuddler, 3255379190) is in the same staging map for hats; no gallery scene here puts a hat on Nelim, so it is not credited.
+
 ## What was left alone, and why
 
 - **Its voice is the boomrat's.** The adult life stage borrows `Pawn_Boomrat_Wounded`,

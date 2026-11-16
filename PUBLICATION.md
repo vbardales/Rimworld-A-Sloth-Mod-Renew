@@ -183,6 +183,23 @@ Full list: [url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew/blob/mai
 
 Before sending a publish, read the note printed in the dry-run log and say so in `STATUS.md` (AUDIT 12.f).
 
+### 1.1.1
+
+```
+[b]1.1.1[/b]
+
+New pictures and credits only. No change to the sloth, its patches or its texts.
+
+[list]
+[*]New header image: a mother sloth and her baby on hay in a flower garden.
+[*]New four-picture gallery, each picture with a subtitle.
+[*]The description now says the banner illustration was generated with DALL-E.
+[*]The mods the gallery pictures show are credited in ATTRIBUTION.md.
+[/list]
+
+Full list: [url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew/blob/main/CHANGELOG.md]CHANGELOG.md[/url]
+```
+
 ## Fail fast: the rollback target
 
 A rollback is a **new publication**: the workflow is dispatched with `ref` = the full SHA of the last

@@ -4,6 +4,17 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
+## [Unreleased]
+
+Patch version: new pictures and credits only. No change to the sloth, its patches or its texts.
+
+### Changed
+
+- New Workshop header image: a mother sloth and her baby on hay in a flower garden, a colonist walking past, with a new line-art echo.
+- New four-picture gallery, each picture with a subtitle (the two older gallery pictures are replaced).
+- The description says the banner illustration was generated with DALL-E.
+- `ATTRIBUTION.md` credits the mods the gallery pictures show.
+
 ## [1.1.0] - 2026-10-13
 
 Minor version for the RimWorld 1.7 tag (1.0.x becomes 1.1.0, never a patch).
