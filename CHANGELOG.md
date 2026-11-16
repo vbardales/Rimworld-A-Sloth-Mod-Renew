@@ -4,7 +4,7 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
-## [Unreleased]
+## [1.1.1] - 2026-11-16
 
 Patch version: new pictures and credits only. No change to the sloth, its patches or its texts.
 
