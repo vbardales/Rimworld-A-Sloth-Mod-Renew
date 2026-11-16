@@ -56,7 +56,7 @@ Two files in `Mod/About/` were made for this port and contain none of the origin
 
 | File | What it is |
 |---|---|
-| `Preview.png` | the Workshop banner: a sloth clinging to a post in a lit colony corner |
+| `Preview.png` | the Workshop banner: a mother sloth and her baby on hay in a flower garden, a colonist walking past; the illustration was generated with DALL-E (OpenAI) from in-game screenshots |
 | `ModIcon.png` | the mod list icon: a sloth mascot head |
 
 Both are AI-generated images, made here rather than inherited. The original shipped a `Preview.png`

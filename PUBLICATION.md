@@ -79,7 +79,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## AI-generated
 
-The port work (the XML, the patches, the tests, the documentation and the two pictures) was done with the help of AI assistants, Claude (Anthropic) and Codex (OpenAI), under human direction.
+The port work (the XML, the patches, the tests, the documentation and the two pictures) was done with the help of AI assistants, Claude (Anthropic) and Codex (OpenAI), under human direction. The banner illustration was generated with DALL-E (OpenAI) from in-game screenshots.
 
 ## Thanks
 
@@ -158,8 +158,8 @@ Done on 2026-10-13: subscription to the item, gallery uploaded, description read
 
 ## Mature content checkboxes
 
-**None of them.** The mod adds one animal. The two pictures it ships were opened: a sloth on a post,
-and a sleeping mascot head. The gallery images (`1-portrait.png`, a sloth in a flower garden, and `2-family.png`, three sloths) were opened and
+**None of them.** The mod adds one animal. The two pictures it ships were opened: a mother sloth and her baby on hay in a flower garden,
+and a sleeping mascot head. The gallery images (`1-meeting.jpg`, `2-hay.jpg`, `3-follows.jpg` and `4-closing.jpg`) were opened and
 contain nothing mature.
 
 ## Steam change notes
