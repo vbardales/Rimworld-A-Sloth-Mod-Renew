@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: cleanUp[1.1.1]
+workflow_stage: dormant[1.1.1]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -27,15 +27,15 @@ social_preview_sha256: fb59bebbe3d2f6ca884b53f7fd33019c5a1da248947bacf3e539df850
 echo_review_sha: 6e9b76c2180aa93af46016856f3a6657897b1edb
 workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 created the item and its PublishedFileId.txt; an act, not a stage)
 remaining:
-  - cleanUp 2026-11-17: 14.c done except the WSL step (mods the Pickle sessions of this mod staged in the WSL install: not removed yet, needs machine lock and cross-mod wsl-deps check; list to give Virginie), 14.d nothing to do (main is the only branch), then 14.e to dormant[1.1.1]. Done: STATUS.md trimmed (journal in Docs/runs/status-journal-2026-11-17.md), posted thank-you texts moved to Docs/runs/posted-comments-2026-11-16.md, gallery evidence deleted (gallery accepted and published), noreg-* runs kept in Evidence with RELEASE.md.
+  - cleanUp 2026-11-17 done: STATUS.md trimmed (journal Docs/runs/status-journal-2026-11-17.md), posted thank-you texts in Docs/runs/posted-comments-2026-11-16.md, gallery evidence deleted, noreg-* kept in Evidence with RELEASE.md, 14.d nothing (main only), WSL (Virginie go, Use-Wsl.ps1 under the machine lock, exit 0): removed 2253087891 (A Sloth Mod original) from ~/workshop-cache; kept every other id of this mod's maps (named by another mod's wsl-deps); Alpha Biomes 1841354677 and More Vanilla Biomes 1931453053 were not in the cache. Nothing to unsubscribe (nothing subscribed, ecosystem note).
   - 14.a non-regression on 1.1.1 done 2026-11-17 (b842f68): minimal, optionals, incompat, English, French green; commerce 1 passed, 1 `[no-stock]` (known, @flaky-stock, read as skip). Verdict green. Details Docs/runs/history.md.
   - todo: the next version that changes tags needs the CI/CD session to move the publish template to semantic-release-steam 2.2.0 (applyWorkshopTags, STEAM_REFRESH_TOKEN in steam-production): the 2.1.3 template ignores update_tags
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); <li>1.7</li> in supportedVersions since 892e498
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-17, stage cleanUp[1.1.1] (14.j), non-regression green (commerce [no-stock] known skip)
-protocols_read_sha: 0340cb1a14a478ad75a449f26dab1cf248218639
+updated:      2026-11-17, stage dormant[1.1.1] (14.e), cleanUp done
+protocols_read_sha: 615b066c69e28c2b9ae66aa9fee76d9c39aaaa19
 ---
 
 # A Sloth Mod Renew — status
