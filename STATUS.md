@@ -58,6 +58,8 @@ Sync of 2026-11-16 (sync-nsb-npt, rules of the owner 2026-11-05 unchanged): NSB 
 
 Sync of 2026-11-17 (sync-nsb-npt, NPT part only: mod at code[1.2.0], no gallery work; rules of the owner 2026-11-05 unchanged: NSB free, colonist or domestic animal outside NSB and colonist properties need her words, outfits free, every included animal shown). NPT since 2026-11-16: two catalogue commits on `face-parts.md` (vanilla face photographed without Facial Animation, no vanilla mouth), no step added, renamed or removed. NSB docs since 2026-11-16: VALIDE (Miel, Quo, Quaren), Iori and BiB test notes, Pawn.gender note; nothing for Nelim, the flower-garden or animals. Nothing updated in the scenes. Sloth shown in all four shots (rule 5). Steps read: 2026-11-17.
 
+Places read: 2026-11-13 (flower-garden row unchanged). Tribe read: 2026-11-13 (Nelim and animals, no content change since). Steps read: 2026-11-17 (NPT steps.md and catalogues log since 2026-11-16: two face-parts.md commits, no step touched).
+
 | Place | Shots | Changes made for the gallery | Last read |
 |---|---|---|---|
 | `flower-garden` (154, 110), radius 10.5 (NSB commit 8795927, 2026-11-06 22:12; the mod wrote (154, 105); scenes use explicit cells x 152-156, z 105-107, inside the garden) | 1, 2, 3, 4 | hour 15, 15, 17, 18, Clear, 20 degrees; daylily (156, 106) in 1; torch lamp near (156, 106) lit in 4; bed corner hidden (hide-buildings, radius 2 at (158, 102)) in 1 and 4 | 2026-11-07 |
