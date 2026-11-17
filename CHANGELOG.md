@@ -4,6 +4,15 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
+## [1.2.0] - unreleased
+
+Minor version for the RimWorld 1.7 move (1.1.x becomes 1.2.0, never a patch).
+
+### Changed
+
+- The RimWorld 1.7 diagnostic was redone on the current 1.7 build (English): 5 of 5 scenarios passed. No change to the sloth, its patches or its texts.
+- The repository checks and the publish workflow were regenerated from the shared template.
+
 ## [1.1.1] - 2026-11-16
 
 Patch version: new pictures and credits only. No change to the sloth, its patches or its texts.
