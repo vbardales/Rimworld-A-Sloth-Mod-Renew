@@ -4,7 +4,7 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
-## [1.2.0] - unreleased
+## [Unreleased]
 
 Minor version for the RimWorld 1.7 move (1.1.x becomes 1.2.0, never a patch).
 

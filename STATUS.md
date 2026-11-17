@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: code[1.2.0]
+workflow_stage: writeReleaseDocs[1.2.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -27,7 +27,7 @@ social_preview_sha256: fb59bebbe3d2f6ca884b53f7fd33019c5a1da248947bacf3e539df850
 echo_review_sha: 6e9b76c2180aa93af46016856f3a6657897b1edb
 workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 created the item and its PublishedFileId.txt; an act, not a stage)
 remaining:
-  - 1.7 state 2026-11-17 (owner: embark the CI regeneration with the move to 1.7): target 1.2.0 (1.7 tag = next minor, AUDIT Passe 1.7), chain reopened at code[1.2.0]. Embarked, already committed: .github regenerated (3904c6d) and Tests/Test-Mod.ps1 regenerated and validated by CI/CD (afccfe4, 6/6 green). Done 2026-11-17: (1) 1.7 diagnostic redone, English, 5/5 green (ticket 20261117-212544-000-7703, evidence p17-2026-11-17-sans-facultatifs, Docs/runs/history.md), tested_1_7 yes; (2) CHANGELOG [1.2.0] drafted. (3) Preview checked 2026-11-17: committed Preview.png shows the 1.7 badge, no re-render needed. To do: (3) Preview and badge follow supportedVersions (already 1.6 and 1.7, check the render is the 1.7 badge); (4) the dry-run of 1.1.1 (run 43959368322) is void since the CI template changed: redo the dry-run WITHOUT --tags only with the 1.2.0 publication, on Virginie's go; (5) tell Audit when the dry-run is redone.
+$N30
   - cleanUp 2026-11-17 done: STATUS.md trimmed (journal Docs/runs/status-journal-2026-11-17.md), posted thank-you texts in Docs/runs/posted-comments-2026-11-16.md, gallery evidence deleted, noreg-* kept in Evidence with RELEASE.md, 14.d nothing (main only), WSL (Virginie go, Use-Wsl.ps1 under the machine lock, exit 0): removed 2253087891 (A Sloth Mod original) from ~/workshop-cache; kept every other id of this mod's maps (named by another mod's wsl-deps); Alpha Biomes 1841354677 and More Vanilla Biomes 1931453053 were not in the cache. Nothing to unsubscribe (nothing subscribed, ecosystem note).
   - 14.a non-regression on 1.1.1 done 2026-11-17 (b842f68): minimal, optionals, incompat, English, French green; commerce 1 passed, 1 `[no-stock]` (known, @flaky-stock, read as skip). Verdict green. Details Docs/runs/history.md.
   - todo: the next version that changes tags needs the CI/CD session to move the publish template to semantic-release-steam 2.2.0 (applyWorkshopTags, STEAM_REFRESH_TOKEN in steam-production): the 2.1.3 template ignores update_tags
@@ -35,8 +35,8 @@ remaining:
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-17, stage code[1.2.0] (1.7 state prepared, CI regeneration embarked)
-protocols_read_sha: fbc6d5a5b3211d46ac440f7c8cd2208c8d7c68f0
+updated:      2026-11-17, stage writeReleaseDocs[1.2.0] (replay of the chain, first open 11.h)
+protocols_read_sha: 8bc315e3ec20718924896debe5d45d1bd533edae
 ---
 
 # A Sloth Mod Renew — status
