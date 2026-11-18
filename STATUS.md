@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: writeReleaseDocs[1.2.0]
+workflow_stage: publish[1.2.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -19,7 +19,7 @@ workshop_required_items: n/a, no modDependencies in About.xml (checked 2026-11-1
 showcase:     complete
 tested_on:    RimWorld 1.6.4871 (Pickle runs 2026-10-10 to 2026-10-13, Linux WSL) and RimWorld 1.7 unstable English (2026-10-13)
 tested_1_7:   yes
-dry_run: 1.1.1 on ee46d1ac847c1c02ff642707991e6b5a1ffc81a8, run 43959368322 (2026-11-16, green, update_preview and update_description on, read: change note with [list] and CHANGELOG link, preview fb59bebb to send against 4aadb9ed on the page, description 5380 characters with the DALL-E sentence). Earlier: 1.1.0 on 414de05, run 38414526235; 1.0.0 on 5ac3a96, run 38400219841
+dry_run: 1.2.0 on ba2ba1b768e6b5c3132c428a38a968f0978c700e, run 44218448468 (2026-11-18, green, no options: nothing but Mod/ and the change note; note read in the log: [b]1.2.0[/b], [list] of two items, CHANGELOG link; tags Mod, 1.6, 1.7 equal to the page; 18 files 0.74 MB; template d20db370c66b). Earlier: 1.1.1 on ee46d1ac847c1c02ff642707991e6b5a1ffc81a8, run 43959368322 (2026-11-16, green, update_preview and update_description on, read: change note with [list] and CHANGELOG link, preview fb59bebb to send against 4aadb9ed on the page, description 5380 characters with the DALL-E sentence). Earlier: 1.1.0 on 414de05, run 38414526235; 1.0.0 on 5ac3a96, run 38400219841
 publish: 1.1.1 uploaded 2026-11-16 on ee46d1a with --preview --description, run 43959600883 (approved by Virginie, publish and tag-and-release green, tag v1.1.1 and release by the CI); item 3811289805 unchanged, PublishedFileId.txt already committed; subscribe test OK 2026-11-16 (PiI): re-downloaded item 3811289805, About.xml and Preview.png byte-identical to Mod/, 18 files identical, no version tag in About.xml so identity by cmp. startWatch done 2026-11-16 (Virginie: GitHub watch, Steam comment notifications, collection 3815982565). Gallery 0 to 4 (Art/Gallery) uploaded by Virginie 2026-11-16 ("fait"), old 1-portrait and 2-family replaced. Earlier: 1.1.0 uploaded 2026-10-13, run 38422420800 (tag v1.1.0 and release by the CI on 414de05); the 1.7 Steam tag was set by the owner with Release-Admin scripts/steam-apply-tags.mjs, the Steam API reports Mod, 1.6, 1.7. 1.0.0 uploaded 2026-10-13, run 38409430019 (tag v1.0.0 on 5ac3a96), public since 2026-10-13. Item 3811289805, visibility 0
 code_review_sha: 9fcd3e0d2221e3e04899b2574c9adf3f88dd2b8a
 publication_changelog_review_sha: e2d618ebe2c62c01af360a10ffb1c1ec2f706b11
@@ -37,8 +37,8 @@ $N30
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-18, stage writeReleaseDocs[1.2.0] (resume: NPT synced, thanks_drafted_line none: 1.2.0 adds no credit or integration, 1.1 thanks posted 2026-11-16)
-protocols_read_sha: 24804c4bceb132de12b36cf69053a088aee201ec
+updated:      2026-11-18, stage publish[1.2.0] (12.e dry-run green on ba2ba1b, 12.f note read, 12.h done; publish waits for Virginie go)
+protocols_read_sha: b1143f5dcd7a85683fc57d9469de33ddd5e00ed5
 ---
 
 # A Sloth Mod Renew — status
