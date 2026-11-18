@@ -32,6 +32,7 @@ $N30
   - cleanUp 2026-11-17 done: STATUS.md trimmed (journal Docs/runs/status-journal-2026-11-17.md), posted thank-you texts in Docs/runs/posted-comments-2026-11-16.md, gallery evidence deleted, noreg-* kept in Evidence with RELEASE.md, 14.d nothing (main only), WSL (Virginie go, Use-Wsl.ps1 under the machine lock, exit 0): removed 2253087891 (A Sloth Mod original) from ~/workshop-cache; kept every other id of this mod's maps (named by another mod's wsl-deps); Alpha Biomes 1841354677 and More Vanilla Biomes 1931453053 were not in the cache. Nothing to unsubscribe (nothing subscribed, ecosystem note).
   - 14.a non-regression on 1.1.1 done 2026-11-17 (b842f68): minimal, optionals, incompat, English, French green; commerce 1 passed, 1 `[no-stock]` (known, @flaky-stock, read as skip). Verdict green. Details Docs/runs/history.md.
   - 11.i 1.2.0 change note written in PUBLICATION.md 2026-11-18; 11.h none; closing pass step 6 done 2026-11-18 (/review-translation page 1 of 1: no proper name to decide, no correction on the 4 French keys, PUBLICATION.md and CHANGELOG.md untouched, 0 applied, round recorded, page clean; Check-Translations PASS, TRANSLATION_REVIEW.md unchanged); 11.j done 2026-11-18 (Virginie: "je valide", 1.2 line, publication_changelog_review_sha e2d618e); 12.a code_review_sha 9fcd3e0 current (no Mod/Source commit since); 12.b dependencies unchanged since 353e8c7 (About.xml diff is description text only); 12.c lint -Strict 0 error 0 warn; 12.c bis docs minified at 1.1.1 (ee46d1a) and unchanged since, nothing to redo
+  - minimal 1.2.0 read 2026-11-18: 4 passed, 0 failed, 14 skipped (sans-facultatifs, exitReason passed) = expected 4/4; five tickets still to read
   - 14.a non-regression 1.2.0 on ba2ba1b (Mod/ identical to 1.1.1 but one ATTRIBUTION line) filed 2026-11-18: six 1.6 tickets b25c minimal, c77d optionals, e54c incompat, c645 English, 78a4 French, 2b33 commerce, evidence Tests/Pickle/Inbox/noreg-*; on RUN_DONE read each summary.json (total, passed, exitReason) then junit, record verdict in STATUS and Docs/runs/history.md, then cleanUp (14.j); expect minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed plus known [no-stock] skip
   - todo: the next version that changes tags needs the CI/CD session to move the publish template to semantic-release-steam 2.2.0 (applyWorkshopTags, STEAM_REFRESH_TOKEN in steam-production): the 2.1.3 template ignores update_tags
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); <li>1.7</li> in supportedVersions since 892e498
@@ -39,7 +40,7 @@ $N30
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
 updated:      2026-11-18, stage runNoRegression[1.2.0] (14.h nothing to post: no thanks recipient (thanks_drafted_line none), gallery unchanged since the 1.1.1 upload, no Use This Instead comment (rule dropped 2026-11-18); 14.i)
-protocols_read_sha: ba5bc2537242b9d2c7d46e7dd6db6046f7c1387b
+protocols_read_sha: 92a681dcd1f94dbf91341382f486dd23ed4ef44d
 ---
 
 # A Sloth Mod Renew — status
