@@ -30,13 +30,13 @@ workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 creat
 remaining:
   - cleanUp[1.2.0] 2026-11-18: 14.c done (STATUS.md, PUBLICATION.md, journal Docs/runs/status-journal-2026-11-18.md; TESTING.md already current only); 14.d nothing (main only); WSL 2026-11-18 (Virginie go, Use-Wsl.ps1 under the machine lock, list only): nothing removed, Alpha Biomes 1841354677 and More Vanilla Biomes 1931453053 not in ~/workshop-cache; Nocturnal Animals 2269731409 and A Dog Said 3238353862 kept (named by other mods wsl-deps); 14.e done
   - 14.a non-regression 1.2.0 green on ba2ba1b (minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed plus known [no-stock] skip); evidence Tests/Pickle/Evidence/noreg-*, details Docs/runs/history.md
-  - Preview 2026-11-18 (Virginie generated a new Art/Preview-source.png from Docs/PROMPT_ASlothModRenew.md; image model: DALL-E, stated by Virginie 2026-11-18; the AI-generated line of PUBLICATION.md and About.xml already names DALL-E (OpenAI) from in-game screenshots, no text change): Measure-Palette 95.14% vivid, family 0 (hue 0-30) 76.2%, so the old 0.272 waiver lapses; floor mean #643215 (crop 55% x 75%), veil #744323 to #663B24 (OKLCH L 0.40, C 0.8 x floor, same hue), inks unchanged: ink on floor 8.9:1, secondary 7.0:1, accent 9.2:1; panelBare kept (floor >= 5:1); icon.corner bottom-left added (ModIcon under the text panel, bottom-right overlapped the flowers); render checked, echo and title clear
+  - Preview 2026-11-18 (Virginie generated a new Art/Preview-source.png from Docs/PROMPT_ASlothModRenew.md; image model: DALL-E, stated by Virginie 2026-11-18; the AI-generated line of PUBLICATION.md and About.xml already names DALL-E (OpenAI) from in-game screenshots, no text change): Measure-Palette 95.14% vivid, family 0 (hue 0-30) 76.2%, so the old 0.272 waiver lapses; floor mean #643215 (crop 55% x 75%), veil #744323 to #663B24 (OKLCH L 0.40, C 0.8 x floor, same hue), inks unchanged: ink on floor 8.9:1, secondary 7.0:1, accent 9.2:1; panelBare kept (floor >= 5:1); ModIcon under the text panel: bottom-left, now the renderer default with panelBare (no icon.corner written; one written then removed, render byte-identical); render checked, echo and title clear
   - todo: the next version that changes tags needs the CI/CD session to move the publish template to semantic-release-steam 2.2.0 (applyWorkshopTags, STEAM_REFRESH_TOKEN in steam-production): the 2.1.3 template ignores update_tags
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); <li>1.7</li> in supportedVersions since 892e498
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
 updated:      2026-11-18, stage dormant[1.2.0] (14.c to 14.e done)
-protocols_read_sha: ab437501baa79c4bfbd996f1f2b61bc89ab0bf7a
+protocols_read_sha: f6e4d7baacd1ad1471e5117c3236da804c80d42f
 ---
 
 # A Sloth Mod Renew — status
