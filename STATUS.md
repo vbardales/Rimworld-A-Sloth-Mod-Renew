@@ -25,6 +25,7 @@ code_review_sha: 9fcd3e0d2221e3e04899b2574c9adf3f88dd2b8a
 publication_changelog_review_sha: bf6a193ea1d4ee55a8bbcecc18d9640ca82b5ef8
 social_preview_sha256: fb59bebbe3d2f6ca884b53f7fd33019c5a1da248947bacf3e539df8509d0ab2c
 echo_review_sha: 6e9b76c2180aa93af46016856f3a6657897b1edb
+thanks_drafted_line: none
 workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 created the item and its PublishedFileId.txt; an act, not a stage)
 remaining:
 $N30
@@ -35,8 +36,8 @@ $N30
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-17, stage writeReleaseDocs[1.2.0] (replay of the chain, first open 11.h)
-protocols_read_sha: 8bc315e3ec20718924896debe5d45d1bd533edae
+updated:      2026-11-18, stage writeReleaseDocs[1.2.0] (resume: NPT synced, thanks_drafted_line none: 1.2.0 adds no credit or integration, 1.1 thanks posted 2026-11-16)
+protocols_read_sha: 24804c4bceb132de12b36cf69053a088aee201ec
 ---
 
 # A Sloth Mod Renew — status
@@ -56,9 +57,11 @@ Recorded 2026-11-12 at revision 353e8c7 (AUDIT 4.g). Required: none (`modDepende
 
 Sync of 2026-11-16 (sync-nsb-npt, rules of the owner 2026-11-05 unchanged): NSB docs: no commit since 2026-11-14, nothing changed for Nelim, the flower-garden or the animals. NPT since 2026-11-14: e647e9f (StageDecor filth step), c6deb77 (StageDecor blueprint FinishFrame, hover), b6dec3e (ColonistRace Beauty2 mouth vertical offset), plus catalogues of other mods (Yukiyuki creatures, style packs); none serves these scenes. Protocols read 2026-11-16 (GALLERY.md): captures kept go to Art/Gallery-clean under their FINAL name (no `candidate` prefix, owner 2026-11-15), no reindex pass after acceptance; varied orientations when one subject appears several times (2026-11-15). The four `N-candidate-*` files are renamed to final names when Virginie accepts. Nothing updated in the scenes. Sloth shown in all four shots (rule 5). Steps read on 2026-11-16.
 
-Sync of 2026-11-17 (sync-nsb-npt, NPT part only: mod at code[1.2.0], no gallery work; rules of the owner 2026-11-05 unchanged: NSB free, colonist or domestic animal outside NSB and colonist properties need her words, outfits free, every included animal shown). NPT since 2026-11-16: two catalogue commits on `face-parts.md` (vanilla face photographed without Facial Animation, no vanilla mouth), no step added, renamed or removed. NSB docs since 2026-11-16: VALIDE (Miel, Quo, Quaren), Iori and BiB test notes, Pawn.gender note; nothing for Nelim, the flower-garden or animals. Nothing updated in the scenes. Sloth shown in all four shots (rule 5). Steps read: 2026-11-17.
+Sync of 2026-11-17 (sync-nsb-npt, NPT part only: mod at code[1.2.0], no gallery work; rules of the owner 2026-11-05 unchanged: NSB free, colonist or domestic animal outside NSB and colonist properties need her words, outfits free, every included animal shown). NPT since 2026-11-16: two catalogue commits on `face-parts.md` (vanilla face photographed without Facial Animation, no vanilla mouth), no step added, renamed or removed. NSB docs since 2026-11-16: VALIDE (Miel, Quo, Quaren), Iori and BiB test notes, Pawn.gender note; nothing for Nelim, the flower-garden or animals. Nothing updated in the scenes. Sloth shown in all four shots (rule 5). Steps read on 2026-11-17.
 
-Places read: 2026-11-13 (flower-garden row unchanged). Tribe read: 2026-11-17 (git log of NSB docs since 2026-11-16: VALIDE rows of Miel, Quo and Quaren, Iori and BiB test notes, Pawn.gender note; nothing for Nelim or the animals, profiles not reopened). Steps read: 2026-11-17 (NPT steps.md and catalogues log since 2026-11-16: two face-parts.md commits, no step touched).
+Sync of 2026-11-18 (sync-nsb-npt, NPT part only: mod at writeReleaseDocs[1.2.0], no gallery work; rules of the owner 2026-11-05 unchanged). NPT since 2026-11-17: ColonistRace steps added or extended in `docs/steps.md` (head type assertion, ScreenTextSteps, attack and haul orders, game component field and float menu option, def metadata log); no catalogue entry, nothing renamed or removed, none serves these scenes. NSB docs since 2026-11-17 (log only, not opened): Iori, BiB gene renames, VALIDE rows; nothing for Nelim or the animals. Nothing updated in the scenes. Sloth shown in all four shots (rule 5).
+
+Places read: 2026-11-13 (flower-garden row unchanged). Tribe read: 2026-11-17 (git log of NSB docs since 2026-11-16: VALIDE rows of Miel, Quo and Quaren, Iori and BiB test notes, Pawn.gender note; nothing for Nelim or the animals, profiles not reopened). Steps read: 2026-11-18 (NPT steps.md and catalogues log since 2026-11-17: five steps.md commits, no catalogue, none used by this mod).
 
 | Place | Shots | Changes made for the gallery | Last read |
 |---|---|---|---|
