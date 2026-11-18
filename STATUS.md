@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: runNoRegression[1.2.0]
+workflow_stage: cleanUp[1.2.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -37,7 +37,7 @@ $N30
   - incompat 1.2.0 read 2026-11-18: 1 passed, 0 failed (incompat-slothmod, exitReason passed) = expected 1/1
   - English 1.2.0 read 2026-11-18 (ticket c645, run 20261118-112129-072-c645, 1.6): 1 passed, 0 failed, 0 skipped (sans-facultatifs, exitReason passed) = expected 1/1
   - French 1.2.0 read 2026-11-18 (ticket 78a4, run 20261118-112130-701-78a4, 1.6): 1 passed, 0 failed, 0 skipped (sans-facultatifs, exitReason passed) = expected 1/1
-  - commerce 1.2.0 read 2026-11-18 (ticket 2b33, run 20261118-112132-032-2b33, 1.6): 1 passed (merchant takes the sloth), 1 `[no-stock]` (exotic trader, known, @flaky-stock, read as skip, same as 1.1.1; TESTING.md G trade); exitReason failed is that skip. Verdict 14.a 1.2.0 green: minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed + known skip. Next: history line, cleanUp (14.j)
+  - commerce 1.2.0 read 2026-11-18 (ticket 2b33, run 20261118-112132-032-2b33, 1.6): 1 passed (merchant takes the sloth), 1 `[no-stock]` (exotic trader, known, @flaky-stock, read as skip, same as 1.1.1; TESTING.md G trade); exitReason failed is that skip. Verdict 14.a 1.2.0 green: minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed + known skip. History line written. Inbox triaged 2026-11-18: minimal, optionals, incompat, English, French minified into Tests/Pickle/Evidence/noreg-* with RELEASE.md (condition: Mod/ change after ba2ba1b or next non-regression); commerce deleted (known skip); 1.1.1 noreg-incompat and noreg-optionals removed (superseded, their own condition); p17-2026-11-17-sans-facultatifs kept (1.7 proof). 14.j done 2026-11-18, now cleanUp: 14.c to 14.e remain
   - 14.a non-regression 1.2.0 on ba2ba1b (Mod/ identical to 1.1.1 but one ATTRIBUTION line) filed 2026-11-18: six 1.6 tickets b25c minimal, c77d optionals, e54c incompat, c645 English, 78a4 French, 2b33 commerce, evidence Tests/Pickle/Inbox/noreg-*; on RUN_DONE read each summary.json (total, passed, exitReason) then junit, record verdict in STATUS and Docs/runs/history.md, then cleanUp (14.j); expect minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed plus known [no-stock] skip
   - todo: the next version that changes tags needs the CI/CD session to move the publish template to semantic-release-steam 2.2.0 (applyWorkshopTags, STEAM_REFRESH_TOKEN in steam-production): the 2.1.3 template ignores update_tags
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); <li>1.7</li> in supportedVersions since 892e498
