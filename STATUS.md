@@ -35,7 +35,8 @@ $N30
   - minimal 1.2.0 read 2026-11-18: 4 passed, 0 failed, 14 skipped (sans-facultatifs, exitReason passed) = expected 4/4
   - optionals 1.2.0 read 2026-11-18: 11 passed, 0 failed, 7 skipped (avec-facultatifs, exitReason passed) = expected 7/7 optional scenarios
   - incompat 1.2.0 read 2026-11-18: 1 passed, 0 failed (incompat-slothmod, exitReason passed) = expected 1/1
-  - English 1.2.0 read 2026-11-18 (ticket c645, run 20261118-112129-072-c645, 1.6): 1 passed, 0 failed, 0 skipped (sans-facultatifs, exitReason passed) = expected 1/1; two tickets still to read (French 78a4, commerce 2b33)
+  - English 1.2.0 read 2026-11-18 (ticket c645, run 20261118-112129-072-c645, 1.6): 1 passed, 0 failed, 0 skipped (sans-facultatifs, exitReason passed) = expected 1/1
+  - French 1.2.0 read 2026-11-18 (ticket 78a4, run 20261118-112130-701-78a4, 1.6): 1 passed, 0 failed, 0 skipped (sans-facultatifs, exitReason passed) = expected 1/1; one ticket still to read (commerce 2b33)
   - 14.a non-regression 1.2.0 on ba2ba1b (Mod/ identical to 1.1.1 but one ATTRIBUTION line) filed 2026-11-18: six 1.6 tickets b25c minimal, c77d optionals, e54c incompat, c645 English, 78a4 French, 2b33 commerce, evidence Tests/Pickle/Inbox/noreg-*; on RUN_DONE read each summary.json (total, passed, exitReason) then junit, record verdict in STATUS and Docs/runs/history.md, then cleanUp (14.j); expect minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed plus known [no-stock] skip
   - todo: the next version that changes tags needs the CI/CD session to move the publish template to semantic-release-steam 2.2.0 (applyWorkshopTags, STEAM_REFRESH_TOKEN in steam-production): the 2.1.3 template ignores update_tags
   - unverified: tested_1_7 yes is English only (1.7 ships no French pack, AUDIT.md "Langues"); <li>1.7</li> in supportedVersions since 892e498
