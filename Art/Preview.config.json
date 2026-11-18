@@ -12,9 +12,9 @@
   },
   "background": { "file": "Preview-source.png" },
   "echo": { "file": "echo-source.png" },
-  "icon": { "file": "ModIcon-source.png" },
+  "icon": { "file": "ModIcon-source.png", "corner": "bottom-left" },
   "palette": {
-    "veil": "#744323",
+    "veil": "#663B24",
     "inkPrimary": "#F2ECE1",
     "inkSecondary": "#FFCB88",
     "accent": "#FEF72F",
