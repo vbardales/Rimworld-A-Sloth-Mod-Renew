@@ -9,7 +9,7 @@ first release, and for whoever takes the mod over.
 
 Only what is specific to this mod; the gates themselves are in `AUDIT.md`.
 
-- `1.1.1`, `1.1.0` and `1.0.0` are published and public. Nothing blocks the next version. Rollback target: `414de05`, the commit of 1.1.0 (see "Fail fast").
+- `1.1.1`, `1.1.0` and `1.0.0` are published and public. `1.2.0` is being prepared (change note written, owner reread pending). Rollback target: `414de05`, the commit of 1.1.0 (see "Fail fast").
 - Sent by the CI: `Mod/` and, with `--preview`, the header image; with `update_tags`, the tags (the 2.1.3 template cannot apply them: the 1.7 tag was set by the owner with `steam-apply-tags.mjs`). The 1.1.1 publish (run 43959600883, 2026-11-16) sent the new header image with `--preview` and the description with `--description`.
 - Gallery: `0-preview.png`, `1-meeting.jpg`, `2-hay.jpg`, `3-follows.jpg` and `4-closing.jpg` are on the page, uploaded by hand on 2026-11-16 (the CI never sends them). An optional trader-stock picture is listed as number 5 (see "Screenshots").
 - Comments on other mods' pages and the Use This Instead comment are posted (`WORKSHOP_COMMENTS.md`, `USE_THIS_INSTEAD.md`; drafts in `Docs/runs/posted-comments-2026-10-13.md`).
@@ -195,6 +195,21 @@ New pictures and credits only. No change to the sloth, its patches or its texts.
 [*]New four-picture gallery, each picture with a subtitle.
 [*]The description now says the banner illustration was generated with DALL-E.
 [*]The mods the gallery pictures show are credited in ATTRIBUTION.md.
+[/list]
+
+Full list: [url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew/blob/main/CHANGELOG.md]CHANGELOG.md[/url]
+```
+
+### 1.2.0
+
+```
+[b]1.2.0[/b]
+
+Minor version for the latest RimWorld version. No change to the sloth, its patches or its texts.
+
+[list]
+[*]The mod was tested again on the latest RimWorld version (English): all five test scenarios passed.
+[*]The repository checks and the publish workflow were refreshed from the shared template.
 [/list]
 
 Full list: [url=https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew/blob/main/CHANGELOG.md]CHANGELOG.md[/url]
