@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: startWatch[1.2.0]
+workflow_stage: postOnSteam[1.2.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -37,7 +37,7 @@ $N30
   - note: 2.e, Art/Preview-source.png measures a mean value of 0.272 (Measure-Palette.sh), under the 0.30 floor; Virginie decided to keep it on 2026-10-11, the criterion is waived for this source
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-18, stage startWatch[1.2.0] (1.2.0 uploaded, tag v1.2.0, subscribe test asked of PiI)
+updated:      2026-11-18, stage postOnSteam[1.2.0] (14.f done (watch, comments, collection and subscription test unchanged since 1.1.x, 14.f test OK 2026-11-18); 14.g)
 protocols_read_sha: ba5bc2537242b9d2c7d46e7dd6db6046f7c1387b
 ---
 
