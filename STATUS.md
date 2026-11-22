@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: writeReleaseDocs[1.2.0]
+workflow_stage: cleanUp[1.2.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -30,7 +30,7 @@ preview_source_decision: keep, 2026-11-22
 thanks_drafted_line: none
 workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 created the item and its PublishedFileId.txt; an act, not a stage)
 remaining:
-  - replay 2026-11-22 range writeReleaseDocs.. (ledger .replays/ASlothModRenew-20261122-writeReleaseDocs-end.tsv): 12.a to 12.h read, Check-Status -Strict 0 errors 0 warnings; 12.c bis done 2026-11-22 (compress-docs: TESTING.md already minified at 1.1.1 in ee46d1a and unchanged since, skipped; Tests/Pickle/README.md compressed now, diff read, identifiers intact; STATUS.md body skipped because Check-Status parses its NSB, Settings audit and Translation audit sections; Docs/*.md skipped: prompt read by the owner, review files sent to ChatGPT, PROTOCOLS-READ.md to be deleted); sections 13 and 14 not read. Note: Mod/About/Preview.png (a04d151) and Mod/ATTRIBUTION.md (4a6e103) are newer than the published ba2ba1b, so the next publish needs a new dry-run and --preview; migration pending: Docs/PROTOCOLS-READ.md, Docs/runs/* other than pickle.md (8.l)
+  - replay 2026-11-22 range writeReleaseDocs.. (ledger .replays/ASlothModRenew-20261122-writeReleaseDocs-end.tsv): sections 12 and 13 done (item public, in collection 3815982565, checked by Steam API 2026-11-22); first open 14.c: AGENTS migration of 2026-11-19 not done (delete Docs/PROTOCOLS-READ.md, keep one Docs/runs/pickle.md, drop status-journal-*, posted-comments-*, steam-change-notes-sent.md and 2026-09-28-pickle.md after repointing the STATUS.md fields dry_run and publish and any doc that cites them), then 14.e to dormant. Note: Mod/About/Preview.png (a04d151) and Mod/ATTRIBUTION.md (4a6e103) are newer than the published ba2ba1b, so the next publish needs a new dry-run and --preview
   - cleanUp[1.2.0] 2026-11-18: 14.c done (STATUS.md, PUBLICATION.md, journal Docs/runs/status-journal-2026-11-18.md; TESTING.md already current only); 14.d nothing (main only); WSL 2026-11-18 (Virginie go, Use-Wsl.ps1 under the machine lock, list only): nothing removed, Alpha Biomes 1841354677 and More Vanilla Biomes 1931453053 not in ~/workshop-cache; Nocturnal Animals 2269731409 and A Dog Said 3238353862 kept (named by other mods wsl-deps); 14.e done
   - 14.a non-regression 1.2.0 green on ba2ba1b (minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed plus known [no-stock] skip); evidence Tests/Pickle/Evidence/noreg-*, details Docs/runs/history.md
   - Preview 2026-11-18 (Virginie generated a new Art/Preview-source.png from Docs/PROMPT_ASlothModRenew.md; image model: DALL-E, stated by Virginie 2026-11-18; the AI-generated line of PUBLICATION.md and About.xml already names DALL-E (OpenAI) from in-game screenshots, no text change): Measure-Palette 95.14% vivid, family 0 (hue 0-30) 76.2%, so the old 0.272 waiver lapses; floor mean #643215 (crop 55% x 75%), veil #744323 to #663B24 (OKLCH L 0.40, C 0.8 x floor, same hue), inks unchanged: ink on floor 8.9:1, secondary 7.0:1, accent 9.2:1; panelBare kept (floor >= 5:1); ModIcon under the text panel: bottom-left, now the renderer default with panelBare (no icon.corner written; one written then removed, render byte-identical); render checked, echo and title clear
@@ -39,8 +39,8 @@ remaining:
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 ecosystem_line: 1.2
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-22, stage writeReleaseDocs[1.2.0] (replay-audit writeReleaseDocs.., 12.c bis open)
-protocols_read_sha: 8b89a5e1d68ec95f555da89f47eb7c1ac0ae1ec5
+updated:      2026-11-22, stage cleanUp[1.2.0] (replay-audit writeReleaseDocs.., owner typed, 14.c open)
+protocols_read_sha: 659329ea9fe0d90c31a8fed2f607a7c6ed58756a
 ---
 
 # A Sloth Mod Renew — status
