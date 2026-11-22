@@ -90,6 +90,8 @@ The gallery images were played in the Sanctuary of Nelim (Sanctuary Backlot, dev
 | NL Facial Animation – Init Fix | Moshii | [3609895011](https://steamcommunity.com/sharedfiles/filedetails/?id=3609895011) | the face, load fix |
 | NL Facial Animation – Load Fix | CCJ | [3721489042](https://steamcommunity.com/sharedfiles/filedetails/?id=3721489042) | the face, load fix |
 
+Not used in the captures: 3807706870 (Cuter Kids for Facial Animation, by ria; it is in the gallery pass map but the four pictures show one adult colonist and sloths, no child).
+
 Show Hair Under Stuff (Raccoon Cuddler, 3255379190) is in the same staging map for hats; no gallery scene here puts a hat on Nelim, so it is not credited.
 
 ## What was left alone, and why
