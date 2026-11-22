@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: cleanUp[1.2.0]
+workflow_stage: dormant[1.2.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -30,7 +30,7 @@ preview_source_decision: keep, 2026-11-22
 thanks_drafted_line: none
 workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 created the item and its PublishedFileId.txt; an act, not a stage)
 remaining:
-  - 14.c AGENTS migration done 2026-11-22: PROTOCOLS-READ.md and the status journals deleted, history.md renamed pickle.md (earlier run lines merged), posted-comments-* and steam-change-notes-sent.md kept because WORKSHOP_COMMENTS.md and PUBLICATION.md cite them; next: 14.e dormant. Mod/About/Preview.png (a04d151) and Mod/ATTRIBUTION.md (4a6e103) are newer than the published ba2ba1b, so the next publish needs a new dry-run and --preview
+  - 14.c AGENTS migration done 2026-11-22 (Docs/runs: pickle.md plus posted-comments-* and steam-change-notes-sent.md kept because WORKSHOP_COMMENTS.md and PUBLICATION.md cite them); replay cleanUp.. found nothing open. Mod/About/Preview.png (a04d151) and Mod/ATTRIBUTION.md (4a6e103) are newer than the published ba2ba1b: the next publish needs a new dry-run and --preview
   - cleanUp[1.2.0] 2026-11-18: 14.c done (STATUS.md, PUBLICATION.md, journal Docs/runs/pickle.md; TESTING.md already current only); 14.d nothing (main only); WSL 2026-11-18 (Virginie go, Use-Wsl.ps1 under the machine lock, list only): nothing removed, Alpha Biomes 1841354677 and More Vanilla Biomes 1931453053 not in ~/workshop-cache; Nocturnal Animals 2269731409 and A Dog Said 3238353862 kept (named by other mods wsl-deps); 14.e done
   - 14.a non-regression 1.2.0 green on ba2ba1b (minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed plus known [no-stock] skip); evidence Tests/Pickle/Evidence/noreg-*, details Docs/runs/pickle.md
   - Preview 2026-11-18 (Virginie generated a new Art/Preview-source.png from Docs/PROMPT_ASlothModRenew.md; image model: DALL-E, stated by Virginie 2026-11-18; the AI-generated line of PUBLICATION.md and About.xml already names DALL-E (OpenAI) from in-game screenshots, no text change): Measure-Palette 95.14% vivid, family 0 (hue 0-30) 76.2%, so the old 0.272 waiver lapses; floor mean #643215 (crop 55% x 75%), veil #744323 to #663B24 (OKLCH L 0.40, C 0.8 x floor, same hue), inks unchanged: ink on floor 8.9:1, secondary 7.0:1, accent 9.2:1; panelBare kept (floor >= 5:1); ModIcon under the text panel: bottom-left, now the renderer default with panelBare (no icon.corner written; one written then removed, render byte-identical); render checked, echo and title clear
@@ -39,13 +39,13 @@ remaining:
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 ecosystem_line: 1.2
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-22, stage cleanUp[1.2.0] (replay-audit writeReleaseDocs.., owner typed, 14.c open)
-protocols_read_sha: 659329ea9fe0d90c31a8fed2f607a7c6ed58756a
+updated:      2026-11-22, stage dormant[1.2.0] (replay-audit cleanUp.., owner typed, nothing open)
+protocols_read_sha: 8f43e41905547c8284e04497ed501774e2ccbe30
 ---
 
 # A Sloth Mod Renew — status
 
-State: cleanUp[1.2.0], 1.2.0, 1.1.1, 1.1.0 and 1.0.0 published and public. The older dated sections (re-audit of 2026-10-10, translation audits, replay of states 1 to 7) are in git history (the journals were deleted at the 14.c migration of 2026-11-22).md`.
+State: dormant[1.2.0], 1.2.0, 1.1.1, 1.1.0 and 1.0.0 published and public. The older dated sections (re-audit of 2026-10-10, translation audits, replay of states 1 to 7) are in git history (the journals were deleted at the 14.c migration of 2026-11-22).md`.
 
 Ecosystem: none found, scans 2026-11-12 and 2026-11-13 (candidate mode for this mod alone, pattern nelim.aslothmod, A Sloth Mod Renew and the original id ThatRubishGamer.RubishMods.SlothMod, 5285 of 5289 folders read, 7 hits: the original 2253087891, our own Workshop copy 3811289805 and our local mount; no patch, retexture, link, translation or fork of ours or of the original). Table not written to docs/inventory/ecosystem.tsv (shared, Audit refreshes it). Same-thing pass (AUDIT 1.a, 2026-11-13, same-pattern on defName Sloth and label sloth, 5302 of 5306 folders read, 8 hits): one mod shares the Defs, the original A Sloth Mod 2253087891 (fork-or-rewrite = the original itself); no other mod with a Sloth def or label, no fork, no replacement, no same-theme mod.
 ECOSYSTEM answered by PiI 2026-11-13 (docs/inventory/ecosystem-steam/ASlothModRenew.md, Steam search by Chrome plus our two corpus scans): no duplicate, no fork; Steam "Sloth" returns only the original 2253087891 (dead, 1.5 and before) and our copy; nothing subscribed, nothing to unsubscribe. The WebFetch read below is extra, from the same date and not in the PiI file: it also lists same-subject mods that are not duplicates. Steam pass (AUDIT 1.a rewritten, 2026-11-13; Chrome failed three times, tab reset to New Tab, so read by WebFetch of the public pages, searches "sloth", "A Sloth Mod", "megasloth", 4 item pages; registry mods-registre.tsv read first, local corpus passes above). Verdict: no duplicate, fork or replacement of the sloth animal. Same subject, different thing, none hangs on our Defs: Verbosemoth's Slothkins (Continued) 3137378088 (Zaljerem, humanoid sloth race, needs Humanoid Alien Races, 1.4 to 1.6, updated 2025-08-07, Steam); Megatherium 1.1+ 2132074958 (Holgast, renames the vanilla megasloth, 1.1 to 1.6, updated 2025-06-24, Steam); Freehand Animals Retexture 3791927678 (Cat No.10, retextures donkey, muffalo and vanilla megasloth, 1.6, Steam); The Return of the Megatherium 904663723 (Mehni, 0.18, dead). Slothborne - Nocturne and its patches (FlyingSloth) are unrelated (name only). No subscription made: nothing retained to study (no patch, retexture, fork or replacement of ours). The Steam banner "removed from the community" on fetched pages is bot protection, ignored.
@@ -106,7 +106,7 @@ Decision: no settings. Neither an empty page nor a MainButtons shortcut exists, 
 
 ## Translation audit
 
-French lives in `Mod/Languages/French/DefInjected` (five texts: `Sloth.label` twice, `Sloth.description`, both claw labels), listed in `FRENCH_REVIEW.md`. English is the native text of the Defs, so no English DefInjected exists. No text agrees with a pawn, so no gender switch is needed. `Check-DefInjected.ps1` checks the five keys without error; Virginie reviewed the French on 2026-10-01 and recorded it in `FRENCH_REVIEW.md` on 2026-10-13 (`translation_fr` complete). Older audit text: `Docs/runs/status-journal-2026-10-13.md`.
+French lives in `Mod/Languages/French/DefInjected` (five texts: `Sloth.label` twice, `Sloth.description`, both claw labels), listed in `FRENCH_REVIEW.md`. English is the native text of the Defs, so no English DefInjected exists. No text agrees with a pawn, so no gender switch is needed. `Check-DefInjected.ps1` checks the five keys without error; Virginie reviewed the French on 2026-10-01 and recorded it in `FRENCH_REVIEW.md` on 2026-10-13 (`translation_fr` complete). Older audit text: git history (journals deleted at the 14.c migration).
 
 Review 2026-11-13 (6.g): ChatGPT review (12 answers on the one page of TRANSLATION_REVIEW.md, revision f3658fb, texts of revision c38fa61 for the last) read, remarks applied or refused as listed in `remaining`. Virginie validated the French on 2026-11-13 in chat (four keys unchanged: paresseux, the description, both claws) and decided every proper name (Docs/review-names.md; titles recorded by Audit; the Steam title and About name stay English). Reviewer Virginie, date 2026-11-13, revision c38fa61, corrections requested: none on the French; names decided as in Docs/review-names.md. Keep a Changelog: question open with Audit (keep as is proposed).
 
