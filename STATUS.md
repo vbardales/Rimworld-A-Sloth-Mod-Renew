@@ -30,7 +30,7 @@ preview_source_decision: keep, 2026-11-22
 thanks_drafted_line: none
 workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 created the item and its PublishedFileId.txt; an act, not a stage)
 remaining:
-  - replay 2026-11-22 range mountPreview.. (ledger .replays/ASlothModRenew-20261122-mountPreview-end.tsv): section 10 done (echo kept, Preview illustration kept, social preview re-uploaded 2026-11-22); 11.j gallery-credits done 2026-11-22 (Not used line for 3807706870 in ATTRIBUTION.md and Mod/ATTRIBUTION.md, text copy only, no code); 11.k and the rest of section 12 to replay (writeReleaseDocs..); owner reread of PUBLICATION.md and CHANGELOG.md (publication_changelog_review_sha e2d618eb) to confirm for line 1.2. Later unread: 12 to 14; migration pending: Docs/PROTOCOLS-READ.md, Docs/runs/* other than pickle.md (8.l)
+  - replay 2026-11-22 range writeReleaseDocs.. (ledger .replays/ASlothModRenew-20261122-writeReleaseDocs-end.tsv): 12.a to 12.h read, Check-Status -Strict 0 errors 0 warnings; first open 12.c bis (caveman-compress of TESTING.md, Docs/*.md outside Docs/runs, STATUS.md body, Tests/**/*.md not traced for 1.2.0, skill mod-workflow:compress-docs); sections 13 and 14 not read. Note: Mod/About/Preview.png (a04d151) and Mod/ATTRIBUTION.md (4a6e103) are newer than the published ba2ba1b, so the next publish needs a new dry-run and --preview; migration pending: Docs/PROTOCOLS-READ.md, Docs/runs/* other than pickle.md (8.l)
   - cleanUp[1.2.0] 2026-11-18: 14.c done (STATUS.md, PUBLICATION.md, journal Docs/runs/status-journal-2026-11-18.md; TESTING.md already current only); 14.d nothing (main only); WSL 2026-11-18 (Virginie go, Use-Wsl.ps1 under the machine lock, list only): nothing removed, Alpha Biomes 1841354677 and More Vanilla Biomes 1931453053 not in ~/workshop-cache; Nocturnal Animals 2269731409 and A Dog Said 3238353862 kept (named by other mods wsl-deps); 14.e done
   - 14.a non-regression 1.2.0 green on ba2ba1b (minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed plus known [no-stock] skip); evidence Tests/Pickle/Evidence/noreg-*, details Docs/runs/history.md
   - Preview 2026-11-18 (Virginie generated a new Art/Preview-source.png from Docs/PROMPT_ASlothModRenew.md; image model: DALL-E, stated by Virginie 2026-11-18; the AI-generated line of PUBLICATION.md and About.xml already names DALL-E (OpenAI) from in-game screenshots, no text change): Measure-Palette 95.14% vivid, family 0 (hue 0-30) 76.2%, so the old 0.272 waiver lapses; floor mean #643215 (crop 55% x 75%), veil #744323 to #663B24 (OKLCH L 0.40, C 0.8 x floor, same hue), inks unchanged: ink on floor 8.9:1, secondary 7.0:1, accent 9.2:1; panelBare kept (floor >= 5:1); ModIcon under the text panel: bottom-left, now the renderer default with panelBare (no icon.corner written; one written then removed, render byte-identical); render checked, echo and title clear
@@ -39,7 +39,7 @@ remaining:
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 ecosystem_line: 1.2
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-22, stage writeReleaseDocs[1.2.0] (replay-audit mountPreview.., owner typed, 11.j open)
+updated:      2026-11-22, stage writeReleaseDocs[1.2.0] (replay-audit writeReleaseDocs.., 12.c bis open)
 protocols_read_sha: aa50245e206a05ca0202e571f55b447937ce6aef
 ---
 
