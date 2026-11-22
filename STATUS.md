@@ -36,7 +36,7 @@ remaining:
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
 updated:      2026-11-18, stage dormant[1.2.0] (14.c to 14.e done)
-protocols_read_sha: d4d9358c61723fa9b658201b61648bb857a3a462
+protocols_read_sha: 9076dc7ed32ed99800d4f0026157da2053469dd4
 ---
 
 # A Sloth Mod Renew — status
