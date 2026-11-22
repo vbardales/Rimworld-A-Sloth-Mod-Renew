@@ -42,7 +42,7 @@ No manual scenario left to tick by hand: each automated, covered offline, or jus
 | C negative control | A one-time demonstration of the engine's handling of a broken def: not applicable |
 | D, E taming, manhunter | Values pinned offline. Consequences are the engine's: not applicable |
 | F natural spawn | **Automated, XML unit test**: `Test-Mod.ps1` applies shipped XPath and patch operations to synthetic biome fixtures (neither optional mod, each alone, both) and checks exact commonalities and untouched biomes. Pickle `01` and `02` assert against real installed defs that each patched biome lists the sloth among its wild animals (`the biome ... lists the wild animal`, DefFieldSteps). Which animals a generated map then picks is the engine's random selection: not tested |
-| G trade | **Automated** (`08-trade`, pass `commerce`, TradeSteps; played 2026-10-10: the pirate-merchant scenario passed, the exotic-trader one hit `[no-stock]`, never replayed green, `Docs/runs/history.md`): (1) an exotic trader offers a sloth, tagged `@flaky-stock`: Pickle has no runtime skip, so a stockless trader fails with the prefix `[no-stock]`, read as a skip to study, not a defect; (2) a pirate merchant, which buys `AnimalUncommon`, takes the colony's sloth (deterministic). The tag is also pinned offline |
+| G trade | **Automated** (`08-trade`, pass `commerce`, TradeSteps; played 2026-10-10: the pirate-merchant scenario passed, the exotic-trader one hit `[no-stock]`, never replayed green, `Docs/runs/pickle.md`): (1) an exotic trader offers a sloth, tagged `@flaky-stock`: Pickle has no runtime skip, so a stockless trader fails with the prefix `[no-stock]`, read as a skip to study, not a defect; (2) a pirate merchant, which buys `AnimalUncommon`, takes the colony's sloth (deterministic). The tag is also pinned offline |
 | H, J, K food, leather, breeding | Values of the original, pinned offline since 2026-10-10. Behaviour is the engine's: not applicable |
 | I textures | Four files byte-identical to original's (checked offline). East-only dessicated corpse is original's gap: not applicable |
 | L collision with the original | Pickle `06-incompat`, pass `incompat-slothmod` (green, 1 of 1 on 0e09424) |
@@ -69,7 +69,7 @@ trader stock, combat tool labels. English must show `sloth`, original descriptio
 `left claw` and `right claw`; French must show `paresseux`, French description,
 `griffe gauche` and `griffe droite`. Check baby, juvenile, adult sloths and a corpse
 for generated labels, raw keys, English fallback, formatting errors, clipping.
-Both language passes ran green (see disposition table); results in `Docs/runs/history.md`.
+Both language passes ran green (see disposition table); results in `Docs/runs/pickle.md`.
 
 ## Load order
 
