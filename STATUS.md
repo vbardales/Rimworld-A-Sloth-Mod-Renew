@@ -40,7 +40,7 @@ remaining:
 ecosystem_line: 1.2
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
 updated:      2026-11-22, stage dormant[1.2.0] (replay-audit cleanUp.., owner typed, nothing open)
-protocols_read_sha: 8f43e41905547c8284e04497ed501774e2ccbe30
+protocols_read_sha: 51d6843251883952d75f3cfe09180eabc7ef6022
 ---
 
 # A Sloth Mod Renew — status
