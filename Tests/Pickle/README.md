@@ -1,78 +1,57 @@
 # In-game scenarios, run by Pickle
 
-Played inside a running RimWorld by [Pickle](https://github.com/RimWorks/Rimworld-Pickle)
-(`rimworks.pickle`, Workshop 3791648678). `Mod/` is a companion mod, **A Sloth Mod Renew -
-Pickle tests**, never published: it holds the feature files. It uses only Pickle's own built-in
-vocabulary - no PickleTools step, no local C# - because everything this port ships is XML: two
-Defs and four guarded patches, nothing a custom step would be needed to reach.
+Run inside live RimWorld by [Pickle](https://github.com/RimWorks/Rimworld-Pickle)
+(`rimworks.pickle`, Workshop 3791648678). `Mod/` = companion mod **A Sloth Mod Renew -
+Pickle tests**, never published, holds feature files. Only Pickle built-in vocabulary: no PickleTools step, no local C#. Port ships only XML (two Defs, four guarded patches), so no custom step needed.
 
 | Feature | Checks | Needs a save |
 | --- | --- | --- |
-| 01-repair | Both defs load; the two vanilla biome patches applied | No |
-| 02-optional-biomes | Cloud forest patched when More Vanilla Biomes is present; the three Alpha Biomes jungles patched when it is present | No |
-| 03-compat | With ADS 2: this port loads before it and its own copy ran on a concrete recipe. With Nocturnal Animals (Continued): this port loads after it and the Sloth def was patched | No |
-| 04-sloth-stat | `Wildness` reads 0.5 on a live spawned sloth, the fact this whole port repairs | Yes (`test-colony`) |
-| 05-gallery | Two `@review` captures for the Workshop gallery (one sloth, then three, in the Sanctuary's `flower-garden`); pass `galerie` only | Yes (`Nelims-tribe`) |
-| 08-trade | An exotic trader offers a sloth (`@flaky-stock`, may fail `[no-stock]`); a pirate merchant takes the colony's sloth | Yes (`test-colony`) |
-| 06-incompat | Pass `incompat-slothmod` only: the original A Sloth Mod is mounted beside this port and both stay loaded, in order (scenario L) | No |
-| 07-labels-english, 07-labels-french | The sloth is named `sloth` / `paresseux` in the inspect pane, with a `@review` capture; one language per pass (scenario O) | Yes (`test-colony`) |
+| 01-repair | Both defs load; two vanilla biome patches applied | No |
+| 02-optional-biomes | Cloud forest patched when More Vanilla Biomes present; three Alpha Biomes jungles patched when present | No |
+| 03-compat | ADS 2: port loads before it, own copy ran on concrete recipe. Nocturnal Animals (Continued): port loads after it, Sloth def patched | No |
+| 04-sloth-stat | `Wildness` = 0.5 on live spawned sloth, the core fact port repairs | Yes (`test-colony`) |
+| 05-gallery | Two `@review` captures for Workshop gallery (one sloth, then three, in Sanctuary's `flower-garden`); `galerie` pass only | Yes (`Nelims-tribe`) |
+| 08-trade | Exotic trader offers sloth (`@flaky-stock`, may fail `[no-stock]`); pirate merchant takes colony sloth | Yes (`test-colony`) |
+| 06-incompat | `incompat-slothmod` pass only: original A Sloth Mod mounted beside port, both stay loaded, in order (scenario L) | No |
+| 07-labels-english, 07-labels-french | Sloth named `sloth` / `paresseux` in inspect pane, with `@review` capture; one language per pass (scenario O) | Yes (`test-colony`) |
 
-Only 04 loads a save, because an animal has to exist to be read. Everything else reads the def
-database at the main menu.
+Only 04 loads save: animal must exist to read. Rest reads def database at main menu.
 
-**Not covered here, on purpose**, and still only checkable by playing (`../../TESTING.md`
-explains why for each): whether the sloth actually spawns on a generated rainforest or swamp map
-(scenario F), whether a trader actually offers one for sale (scenario G), and whether ADS 2's
-Health tab actually lists the copied operations in play (scenario P). A "was patched" pass proves
-the mechanism fired against the real installed file; it does not prove what a colonist sees.
+**Not covered here, on purpose**, still only checkable by playing (`../../TESTING.md` explains each): sloth actually spawning on generated rainforest/swamp map (scenario F), trader actually offering one (scenario G), ADS 2 Health tab actually listing copied operations in play (scenario P). "Was patched" pass proves mechanism fired against real installed file, not what colonist sees.
 
-**What the first three runs taught, 2026-09-28** (`fa14`, `f197`, `2ae1`; all the suite's own
-mistakes, none the mod's, and invisible to `Tests/Test-Mod.ps1`'s synthetic fixtures):
+**What first three runs taught, 2026-09-28** (`fa14`, `f197`, `2ae1`; all suite's own mistakes, none mod's, invisible to `Tests/Test-Mod.ps1` synthetic fixtures):
 
-- `was patched by mod` matches the mod's **display name**, not its packageId, unlike `mod {string}
+- `was patched by mod` matches mod **display name**, not packageId, unlike `mod {string}
   is loaded`.
-- `Sloth` names both a `ThingDef` and a `PawnKindDef`. `raw stat` refuses the ambiguity, and the
-  `of type` qualifier its message suggests exists only on `exists`: `raw stat ... of type` and
-  `was patched ... of type` are undefined steps. `was patched` accepts the shared name as it is;
-  for the stat, 04 reads a spawned animal instead, which is stronger anyway.
-- **Pickle cannot see an Abstract def.** `ADS_Cat1/2/3` are abstract RecipeDefs, kept only as
-  XPath targets, and the lookup reports "no def named 'ADS_Cat1' in any database". 03 asserts the
-  two facts the patch depends on instead: load order, and ADS 2's own copy on `InstallDentureAnimal`.
-- The staging script does not resolve a mod's dependencies recursively: Alpha Biomes needs
-  Vanilla Expanded Framework, and without it the first with-optionals run stalled (`98ce`).
+- `Sloth` names both `ThingDef` and `PawnKindDef`. `raw stat` refuses ambiguity; `of type` qualifier its message suggests exists only on `exists`: `raw stat ... of type` and
+  `was patched ... of type` are undefined steps. `was patched` accepts shared name as-is; for stat, 04 reads spawned animal instead, stronger anyway.
+- **Pickle cannot see Abstract def.** `ADS_Cat1/2/3` = abstract RecipeDefs, kept only as XPath targets; lookup reports "no def named 'ADS_Cat1' in any database". 03 asserts the two facts patch depends on instead: load order, and ADS 2 own copy on `InstallDentureAnimal`.
+- Staging script no recursive dependency resolution: Alpha Biomes needs Vanilla Expanded Framework; without it first with-optionals run stalled (`98ce`).
 
 ## Setup, once
 
 1. Enable Pickle.
-2. Stage `ASlothModRenew` through the shared launcher (below); it enables `A Sloth Mod Renew`
-   then this companion.
+2. Stage `ASlothModRenew` via shared launcher (below); enables `A Sloth Mod Renew` then this companion.
 
 ## Passes
 
-- **Minimal** (`wsl-deps.sans-facultatifs.map`, which stages DefFieldSteps only; `01` and `04` apply; `02`, `03` and `06` skip on `@requires`).
-- **With optionals** (`wsl-deps.avec-facultatifs.map`, which also names this mod itself between Nocturnal Animals and ADS 2 to set its declared load order): all four mods this port has a guarded
-  patch for, together - none conflicts with another, so one pass covers all four rather than one
-  per mod.
-- **Incompat-slothmod** (`wsl-deps.incompat-slothmod.map`): mounts the original A Sloth Mod
-  (2253087891), which `About.xml` declares in `incompatibleWith`; only `06` applies. It answers one
-  question, whether the incompatibility is still true.
+- **Minimal** (`wsl-deps.sans-facultatifs.map`, stages DefFieldSteps only; `01` and `04` apply; `02`, `03`, `06` skip on `@requires`).
+- **With optionals** (`wsl-deps.avec-facultatifs.map`, also names this mod between Nocturnal Animals and ADS 2 to set declared load order): all four mods port has guarded patch for, together. None conflict, so one pass covers all four, not one per mod.
+- **Incompat-slothmod** (`wsl-deps.incompat-slothmod.map`): mounts original A Sloth Mod (2253087891), declared in `About.xml` `incompatibleWith`; only `06` applies. Answers one question: incompatibility still true?
 - **Languages**: one pass per language, `-Language English` with `-Filter '07-labels-english'` and
-  `-Language French` with `-Filter '07-labels-french'`. A run of the whole suite must exclude both
-  (`-Filter 'A Sloth Mod Renew - Pickle tests,!07-labels-english,!07-labels-french'`), since one of
-  them fails in any given language by design.
-- **Galerie** (`wsl-deps.galerie.map`, the Sanctuary's minimum mod list plus this port): `05` only.
-- **Commerce** (`wsl-deps.commerce.map`, TradeSteps): `08` only; `[no-stock]` failures of its `@flaky-stock` scenario are skips to study.
+  `-Language French` with `-Filter '07-labels-french'`. Whole-suite run must exclude both
+  (`-Filter 'A Sloth Mod Renew - Pickle tests,!07-labels-english,!07-labels-french'`), since one fails in any given language by design.
+- **Galerie** (`wsl-deps.galerie.map`, Sanctuary minimum mod list plus port): `05` only.
+- **Commerce** (`wsl-deps.commerce.map`, TradeSteps): `08` only; `[no-stock]` failures of `@flaky-stock` scenario = skips to study.
 
 ## Run
 
-- **In game**: dev mode on, debug actions menu, *Pickle*, tick the suite, *Run selected*.
+- **In game**: dev mode on, debug actions menu, *Pickle*, tick suite, *Run selected*.
 - **Unattended, minimal pass**:
   `powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod ASlothModRenew`.
 - **Unattended, with optionals**:
   `powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod ASlothModRenew -DepMap wsl-deps.avec-facultatifs.map`.
-  `-DepMap` takes a bare filename, looked for in `Tests/Pickle/`; a path separator makes it a
-  full path instead, which a relative one then fails to resolve.
-- No session launches either directly: deposit both as tickets with `Submit-PickleRun.ps1`
-  instead - see `AUDIT.md`, "Déposer un run au lieu de le lancer".
+  `-DepMap` takes bare filename, looked up in `Tests/Pickle/`; path separator makes it full path, so relative one fails to resolve.
+- No session launches either directly: deposit both as tickets with `Submit-PickleRun.ps1` instead. See `AUDIT.md`, "Déposer un run au lieu de le lancer".
 
-Nothing here clicks through OS input or opens a window.
+No OS input clicks, no window opened.
