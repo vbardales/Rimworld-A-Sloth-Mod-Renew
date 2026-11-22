@@ -9,7 +9,7 @@ repo:         Rimworld-A-Sloth-Mod-Renew
 remote:       https://github.com/vbardales/Rimworld-A-Sloth-Mod-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: mountPreview[1.2.0]
+workflow_stage: writeReleaseDocs[1.2.0]
 licence:      silent
 licence_port: MIT, limited to the port's own contributions (LICENSE at the root 2026-10-11; Mod/LICENSE added, with the About.xml comment fix)
 licence_at:   original files and Workshop checked 2026-09-12; no terms found; original mod last updated 2021-07-23 (1.3); original mod has no git repository of its own (checked 2026-09-27, GitHub search for the author turns up nothing)
@@ -30,7 +30,7 @@ preview_source_decision: keep, 2026-11-22
 thanks_drafted_line: none
 workshop:      3811289805 (0.1.0 prepublication by the owner on 2026-10-01 created the item and its PublishedFileId.txt; an act, not a stage)
 remaining:
-  - replay 2026-11-22 range shootGallery.. (ledger .replays/ASlothModRenew-20261122-shootGallery-end.tsv): section 9 done (gallery validated by the owner 2026-11-22, hash 8812b1ae); open in 10: 10.a done 2026-11-22 (echo kept, her oui, echo_review_sha written), 10.a bis done 2026-11-22 (keep, her answer), 10.f done 2026-11-22 (uploaded through Chrome, og:image sha256 equals Preview.png), 10.g transition. Later unread: 11 to 14; gallery-credits INFO ria.cuterkidsforfacialanimation 3807706870 not in ATTRIBUTION.md (11.j); migration pending: Docs/PROTOCOLS-READ.md, Docs/runs/* other than pickle.md (8.l)
+  - replay 2026-11-22 range mountPreview.. (ledger .replays/ASlothModRenew-20261122-mountPreview-end.tsv): section 10 done (echo kept, Preview illustration kept, social preview re-uploaded 2026-11-22); first open 11.j: gallery-credits, add the line "Not used in the captures: 3807706870 (<reason>)" for ria.cuterkidsforfacialanimation in the Gallery set of ATTRIBUTION.md and Mod/ATTRIBUTION.md (the gallery shows no child), then 11.k; owner reread of PUBLICATION.md and CHANGELOG.md (publication_changelog_review_sha e2d618eb) to confirm for line 1.2. Later unread: 12 to 14; migration pending: Docs/PROTOCOLS-READ.md, Docs/runs/* other than pickle.md (8.l)
   - cleanUp[1.2.0] 2026-11-18: 14.c done (STATUS.md, PUBLICATION.md, journal Docs/runs/status-journal-2026-11-18.md; TESTING.md already current only); 14.d nothing (main only); WSL 2026-11-18 (Virginie go, Use-Wsl.ps1 under the machine lock, list only): nothing removed, Alpha Biomes 1841354677 and More Vanilla Biomes 1931453053 not in ~/workshop-cache; Nocturnal Animals 2269731409 and A Dog Said 3238353862 kept (named by other mods wsl-deps); 14.e done
   - 14.a non-regression 1.2.0 green on ba2ba1b (minimal 4/4, optionals 7/7, incompat 1/1, English 1/1, French 1/1, commerce 1 passed plus known [no-stock] skip); evidence Tests/Pickle/Evidence/noreg-*, details Docs/runs/history.md
   - Preview 2026-11-18 (Virginie generated a new Art/Preview-source.png from Docs/PROMPT_ASlothModRenew.md; image model: DALL-E, stated by Virginie 2026-11-18; the AI-generated line of PUBLICATION.md and About.xml already names DALL-E (OpenAI) from in-game screenshots, no text change): Measure-Palette 95.14% vivid, family 0 (hue 0-30) 76.2%, so the old 0.272 waiver lapses; floor mean #643215 (crop 55% x 75%), veil #744323 to #663B24 (OKLCH L 0.40, C 0.8 x floor, same hue), inks unchanged: ink on floor 8.9:1, secondary 7.0:1, accent 9.2:1; panelBare kept (floor >= 5:1); ModIcon under the text panel: bottom-left, now the renderer default with panelBare (no icon.corner written; one written then removed, render byte-identical); render checked, echo and title clear
@@ -39,8 +39,8 @@ remaining:
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 ecosystem_line: 1.2
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-22, stage mountPreview[1.2.0] (replay-audit shootGallery.., owner typed, 10.a 10.a bis 10.f open)
-protocols_read_sha: 15eb1e61fa482b458f9508e69b85d8f7070f2ac4
+updated:      2026-11-22, stage writeReleaseDocs[1.2.0] (replay-audit mountPreview.., owner typed, 11.j open)
+protocols_read_sha: aa50245e206a05ca0202e571f55b447937ce6aef
 ---
 
 # A Sloth Mod Renew — status
