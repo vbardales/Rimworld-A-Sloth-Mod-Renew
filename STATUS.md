@@ -67,13 +67,23 @@ Sync of 2026-11-22 (sync-nsb-npt, NPT part only: mod at ecosystem[1.2.0], no sho
 
 Places read: 2026-11-13 (flower-garden row unchanged). Tribe read: 2026-11-17 (git log of NSB docs since 2026-11-16: VALIDE rows of Miel, Quo and Quaren, Iori and BiB test notes, Pawn.gender note; nothing for Nelim or the animals, profiles not reopened). Steps read: 2026-11-22 (NPT steps.md and catalogues log since 2026-11-18: step commits only, none used by this mod).
 
+| Gallery image | File | Hour | Framing (root size) | Subtitle |
+|---|---|---|---|---|
+| 0 | `0-preview.png` | n/a | copy of `Mod/About/Preview.png` | none |
+| 1 | `1-meeting.jpg` | 15h | opening, 1.15 | Nelim crosses the flower garden and notices the sloth. |
+| 2 | `2-hay.jpg` | 15h13 | close, 1.0 | A pile of hay, left within reach. |
+| 3 | `3-follows.jpg` | 17h | medium, 1.1 | It follows the one who brought the hay. |
+| 4 | `4-closing.jpg` | 18h | closing, 1.15 | A mother, her baby, and no hurry. |
+
+Gallery table recorded 2026-11-22 (9.e), aligned with PUBLICATION.md "Screenshots" and `Tests/Pickle/Mod/Pickle/Features/05-gallery.feature`; originals without subtitle in `Art/Gallery-clean/`.
+
 | Place | Shots | Changes made for the gallery | Last read |
 |---|---|---|---|
 | `flower-garden` (154, 110), radius 10.5 (NSB commit 8795927, 2026-11-06 22:12; the mod wrote (154, 105); scenes use explicit cells x 152-156, z 105-107, inside the garden) | 1, 2, 3, 4 | hour 15, 15, 17, 18, Clear, 20 degrees; daylily (156, 106) in 1; torch lamp near (156, 106) lit in 4; bed corner hidden (hide-buildings, radius 2 at (158, 102)) in 1 and 4 | 2026-11-07 |
 
 | Colonist | Shots | Outfit per shot | Last read | Exceptions |
 |---|---|---|---|---|
-| Nelim (NSB) | 1, 2, 3, 4 | one outfit all afternoon: `Apparel_BasicShirt` deep blue (32, 64, 128) and `Apparel_Pants` brown (90, 64, 44), the NSB palette (deep blue, brown), practical at 20 degrees; mouth `MouthSmile` or `MouthLipsSmallSmile` (smile by default, owner rule) | 2026-11-06 (NELIM-PROFIL.md, NSB-ROSTER.md hair rows) | played as canon from 2026-11-05 (owner: "Play canon"): Roo_HD_Hair_Highpony, colour from her genes; none pending |
+| Nelim (NSB) | 1, 2, 3, 4 | one outfit all afternoon (feature 05-gallery, 2026-11-09): `LTS_Tunika` emerald (31, 122, 92) and `LTS_Skirt` brown (90, 64, 44), the vanilla `Apparel_Pants` not showing on this stack (NPT ticket dd05), `Roo_HD_Hair_Highpony`, `Body_Heart`; mouth `MouthSmile` in 1 and 2, `MouthLipsSmallSmile` in 3 and 4 (smile by default, owner rule) | 2026-11-06 (NELIM-PROFIL.md, NSB-ROSTER.md hair rows) | played as canon from 2026-11-05 (owner: "Play canon"): Roo_HD_Hair_Highpony, colour from her genes; none pending |
 
 | Animal | Shots | Outfit | Last read | Exceptions |
 |---|---|---|---|---|
