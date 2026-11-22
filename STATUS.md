@@ -37,7 +37,7 @@ remaining:
   - owner rules 2026-10-25: outfits and expressions are suggestions, default expression is smiling; colonists other than NSB's need a special authorization; special requests go to NPT first, owner arbitrates if NPT refuses
 ecosystem_line: 1.2
 session:      local_73adad52-26b7-43b9-aad0-9a27801f4e1f
-updated:      2026-11-22, stage settings[1.2.0] (replay-audit ecosystem.., 5.a to 5.g)
+updated:      2026-11-22, stage settings[1.2.0] (Settings audit section written, 5.a to 5.g)
 protocols_read_sha: 5e55185c2894aa6ca5c357aa68a58231a15166a1
 ---
 
@@ -83,6 +83,14 @@ Places read: 2026-11-13 (flower-garden row unchanged). Tribe read: 2026-11-17 (g
 |---|---|
 | Sloth (Mossy, Pip) | 1, 2, 3, 4 |
 
+
+## Settings audit
+
+Redone 2026-11-22 at settings[1.2.0], revision f9b0ae6 (MOD_SETTINGS.md sections 1, 2 and 5). Files read: Mod/Defs/ThingDefs_Animals.xml (the Sloth ThingDef and PawnKindDef), Mod/Patches/Biomes_Vanilla.xml, Biomes_Mods.xml, Compat_ADogSaidAnimalProsthetics2.xml, Compat_NocturnalAnimals.xml, Mod/About/About.xml, Mod/About/OptionalCompat.xml. Counts now: 0 .cs or .dll files under Mod/ (git ls-files), 2 defs, 0 files naming ModSettings, MainButtonDef or SettingsCategory.
+
+Inventory: this is a fixed-content animal. Movement, hunger, taming, breeding, combat, trade tags and biome weights are authored balance values, not a promised player configuration. The two optional biome patches and the two compat patches switch on when their mods are present and add no control, no persistence and no input. No concrete player need justifies exposing these constants as options. No inherited custom settings exist in the original either.
+
+Decision: no settings. Neither an empty page nor a MainButtons shortcut exists, checked in the sources above. `Check-SettingsContract.ps1` run 2026-11-22: PASS, no code, no settings API, no MainButtonDef (MOD_SETTINGS.md section 1). `settings_audit: not_applicable` stands on that inventory. Input bounds, reset, defaults and migration, change timing, save and reload, and shortcut sharing tests are not applicable (5.c to 5.f). Nothing unverified.
 
 ## Translation audit
 
